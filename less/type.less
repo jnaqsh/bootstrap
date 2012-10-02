@@ -169,7 +169,7 @@ abbr.initialism {
 
 // Blockquotes
 blockquote {
-  padding: 0 0 0 15px;
+  padding: 0 15px 0 0;
   margin: 0 0 @baseLineHeight;
   border-right: 5px solid @grayLighter;
   p {
@@ -185,16 +185,16 @@ blockquote {
     }
   }
 
-  // Float right with text-align: right
-  &.pull-right {
-    float: right;
-    padding-right: 15px;
-    padding-left: 0;
-    border-right: 5px solid @grayLighter;
-    border-left: 0;
+  // Float left with text-align: left
+  &.pull-left {
+    float: left;
+    padding-left: 15px;
+    padding-right: 0;
+    border-left: 5px solid @grayLighter;
+    border-right: 0;
     p,
     small {
-      text-align: right;
+      text-align: left;
     }
     small {
       &:before {
