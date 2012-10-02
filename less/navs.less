@@ -7,7 +7,7 @@
 // ----------
 
 .nav {
-  margin-left: 0;
+  margin-right: 0;
   margin-bottom: @baseLineHeight;
   list-style: none;
 }
@@ -22,8 +22,8 @@
 }
 
 // Redeclare pull classes because of specifity
-.nav > .pull-right {
-  float: right;
+.nav > .pull-left {
+  float: left;
 }
 
 // Nav headers (for dropdowns and lists)
@@ -87,13 +87,13 @@
 }
 .nav-tabs > li,
 .nav-pills > li {
-  float: left;
+  float: right;
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
   padding-right: 12px;
   padding-left: 12px;
-  margin-right: 2px;
+  margin-left: 2px;
   line-height: 14px; // keeps the overall height an even number
 }
 
@@ -114,7 +114,7 @@
   padding-bottom: 8px;
   line-height: @baseLineHeight;
   border: 1px solid transparent;
-  .border-radius(4px 4px 0 0);
+  .border-radius(4px 0 0 4px);
   &:hover {
     border-color: @grayLighter @grayLighter #ddd;
   }
@@ -159,7 +159,7 @@
   float: none;
 }
 .nav-stacked > li > a {
-  margin-right: 0; // no need for the gap between nav items
+  margin-left: 0; // no need for the gap between nav items
 }
 
 // Tabs
@@ -195,7 +195,7 @@
 // ---------
 
 .nav-tabs .dropdown-menu {
-  .border-radius(0 0 6px 6px); // remove the top rounded corners here since there is a hard edge above the menu
+  .border-radius(0 6px 6px 0); // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-pills .dropdown-menu {
   .border-radius(6px); // make rounded corners match the pills
@@ -303,7 +303,7 @@
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
-  .border-radius(0 0 4px 4px);
+  .border-radius(0 4px 4px 0);
   &:hover {
     border-bottom-color: transparent;
     border-top-color: #ddd;
@@ -325,44 +325,44 @@
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
   min-width: 74px;
-  margin-right: 0;
+  margin-left: 0;
   margin-bottom: 3px;
-}
-
-// Tabs on the left
-.tabs-left > .nav-tabs {
-  float: left;
-  margin-right: 19px;
-  border-right: 1px solid #ddd;
-}
-.tabs-left > .nav-tabs > li > a {
-  margin-right: -1px;
-  .border-radius(4px 0 0 4px);
-}
-.tabs-left > .nav-tabs > li > a:hover {
-  border-color: @grayLighter #ddd @grayLighter @grayLighter;
-}
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
-  *border-right-color: @white;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
-  margin-left: 19px;
-  border-left: 1px solid #ddd;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
 }
 .tabs-right > .nav-tabs > li > a {
-  margin-left: -1px;
-  .border-radius(0 4px 4px 0);
+  margin-right: -1px;
+  .border-radius(4px 0 0 4px);
 }
 .tabs-right > .nav-tabs > li > a:hover {
-  border-color: @grayLighter @grayLighter @grayLighter #ddd;
+  border-color: @grayLighter #ddd @grayLighter @grayLighter;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: @white;
+}
+
+// Tabs on the left
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+.tabs-left > .nav-tabs > li > a {
+  margin-left: -1px;
+  .border-radius(0 4px 4px 0);
+}
+.tabs-left > .nav-tabs > li > a:hover {
+  border-color: @grayLighter @grayLighter @grayLighter #ddd;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: @white;
 }

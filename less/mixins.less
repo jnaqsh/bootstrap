@@ -537,18 +537,18 @@
 .tableColumns(@columnSpan: 1) {
   float: none; // undo default grid column styles
   width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
-  margin-left: 0; // undo default grid column styles
+  margin-right: 0; // undo default grid column styles
 }
 
 // Make a Grid
 // Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
 .makeRow() {
-  margin-left: @gridGutterWidth * -1;
+  margin-right: @gridGutterWidth * -1;
   .clearfix();
 }
 .makeColumn(@columns: 1, @offset: 0) {
-  float: left;
-  margin-left: (@gridColumnWidth * @offset) + (@gridGutterWidth * (@offset - 1)) + (@gridGutterWidth * 2);
+  float: right;
+  margin-right: (@gridColumnWidth * @offset) + (@gridGutterWidth * (@offset - 1)) + (@gridGutterWidth * 2);
   width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
 }
 
@@ -570,7 +570,7 @@
     .offsetX (0) {}
 
     .offset (@columns) {
-      margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
+      margin-right: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
     }
 
     .span (@columns) {
@@ -578,14 +578,14 @@
     }
 
     .row {
-      margin-left: @gridGutterWidth * -1;
+      margin-right: @gridGutterWidth * -1;
       .clearfix();
     }
 
     [class*="span"] {
-      float: left;
+      float: right;
       min-height: 1px; // prevent collapsing columns
-      margin-left: @gridGutterWidth;
+      margin-right: @gridGutterWidth;
     }
 
     // Set the container width, and override it for fixed navbars in media queries
@@ -616,13 +616,13 @@
     .offsetX (0) {}
 
     .offset (@columns) {
-      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
-  	  *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
+      margin-right: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
+  	  *margin-right: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
     }
 
     .offsetFirstChild (@columns) {
-      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
-      *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+      margin-right: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
+      *margin-right: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
     }
 
     .span (@columns) {
@@ -635,12 +635,12 @@
       .clearfix();
       [class*="span"] {
         .input-block-level();
-        float: left;
-        margin-left: @fluidGridGutterWidth;
-        *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+        float: right;
+        margin-right: @fluidGridGutterWidth;
+        *margin-right: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
       }
       [class*="span"]:first-child {
-        margin-left: 0;
+        margin-right: 0;
       }
 
       // generate .spanX and .offsetX
@@ -665,12 +665,12 @@
     input,
     textarea,
     .uneditable-input {
-      margin-left: 0; // override margin-left from core grid system
+      margin-right: 0; // override margin-right from core grid system
     }
 
     // Space grid-sized controls properly if multiple per line
     .controls-row [class*="span"] + [class*="span"] {
-      margin-left: @gridGutterWidth;
+      margin-right: @gridGutterWidth;
     }
 
     // generate .spanX

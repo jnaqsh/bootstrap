@@ -7,20 +7,20 @@
 
 // Make wrapper ul behave like the grid
 .thumbnails {
-  margin-left: -@gridGutterWidth;
+  margin-right: -@gridGutterWidth;
   list-style: none;
   .clearfix();
 }
-// Fluid rows have no left margin
+// Fluid rows have no right margin
 .row-fluid .thumbnails {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 // Float li to make thumbnails appear in a row
 .thumbnails > li {
-  float: left; // Explicity set the float since we don't require .span* classes
+  float: right; // Explicity set the float since we don't require .span* classes
   margin-bottom: @baseLineHeight;
-  margin-left: @gridGutterWidth;
+  margin-right: @gridGutterWidth;
 }
 
 // The actual thumbnail (can be `a` or `div`)
