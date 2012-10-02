@@ -144,16 +144,16 @@
           <p>{{_i}}یک مجموعه‌ از دکمه‌ها با کلاس <code>.btn</code> در داخل یک کلاس <code>.btn-group</code> قرار دهید.{{/i}}</p>
           <div class="bs-docs-example">
             <div class="btn-group" style="margin: 9px 0 5px;">
-              <button class="btn">{{_i}}چپ{{/i}}</button>
-              <button class="btn">{{_i}}وسط{{/i}}</button>
               <button class="btn">{{_i}}راست{{/i}}</button>
+              <button class="btn">{{_i}}وسط{{/i}}</button>
+              <button class="btn">{{_i}}چپ{{/i}}</button>
             </div>
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-  &lt;button class="btn"&gt;چپ&lt;/button&gt;
-  &lt;button class="btn"&gt;وسط&lt;/button&gt;
   &lt;button class="btn"&gt;راست&lt;/button&gt;
+  &lt;button class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button class="btn"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -205,8 +205,8 @@
           <hr class="bs-docs-separator">
 
 
-          <h4>{{_i}}Checkbox and radio flavors{{/i}}</h4>
-          <p>{{_i}}گروه‌های دکمه می‌توانند به مانند radios عمل کنند. وقتی که ممکن است یک دکمه فعال باشد و یا به مانند checkboxes که ممکن است چندین دکمه همزمان فعال باشند. برای اطلاعات بیشتر به <a href="./javascript.html#buttons">مستندات جاوااسکریپت</a> را ببینید.{{/i}}</p>
+          <h4>{{_i}}عملکرد به‌مانند Checkboxها و radioها{{/i}}</h4>
+          <p>{{_i}}گروه‌های دکمه می‌توانند به مانند radioها عمل کنند. وقتی که ممکن است یک دکمه فعال باشد و یا به مانند checkboxها که ممکن است چندین دکمه همزمان فعال باشند. برای اطلاعات بیشتر به <a href="./javascript.html#buttons">مستندات جاوااسکریپت</a> را ببینید.{{/i}}</p>
 
           <h4>{{_i}}افتادنی‌ها در گروه‌های دکمه{{/i}}</h4>
           <p><span class="label label-info">{{_i}}توجه کنید!{{/i}}</span> {{_i}}دکمه‌هایی که افتادنی هستند باید به‌صورت اختصاصی در <code>.btn-group</code> قرار گیرند سپس برای نمایش صحیح در داخل <code>.btn-toolbar</code> قرار گیرند.{{/i}}</p>
@@ -349,7 +349,7 @@
 
           <h3>{{_i}}جاوااسکریپت نیاز دارد{{/i}}</h3>
           <p>{{_i}}دکمه‌های افتادنی نیاز به <a href="./javascript.html#dropdowns">پلاگین افتادنی بوت‌استرپ</a> برای کار کردن، دارند.{{/i}}</p>
-          <p>{{_i}}در برخی از موارد، مانند موبایل‌ها، منوهای افتادنی از اندازه صفحه نمایش بزرگ‌تر می‌شوند. برای رفع این مشکل نیاز است که به صورت دستی و یا کد جاوااسکریپت سفارشی آن را درست کرد.{{/i}}</p>
+          <p>{{_i}}در برخی از موارد، مانند موبایل‌ها، منوهای افتادنی از اندازه صفحه نمایش بزرگ‌تر می‌شوند. برای رفع این مشکل نیاز است که به صورت دستی و یا کد جاوااسکریپت سفارشی، آن را درست کرد.{{/i}}</p>
 
 
           <hr class="bs-docs-separator">
@@ -598,7 +598,7 @@
 </pre>
 
           <h3>{{_i}}وضعیت غیرفعال{{/i}}</h3>
-          <p>{{_i}}برای هر جزء ناوبری (تب‌ها، پیل‌ها و یا فهرست‌ها) کلاس <code>.disabled</code> را اضافه کنید تا پیوندها به‌رنگ خاکستری درآید و جلوه‌های بصری ازبین برود. پیوندها همچنان قابل کلیک شدن هستند مگراین‌که کد جاوااسکرپتی نوشته شود تا جلوی کلیک شدن را بگیرد.{{/i}}</p>
+          <p>{{_i}}برای هر جزء ناوبری (تب‌ها، پیل‌ها و یا فهرست‌ها) کلاس <code>.disabled</code> را اضافه کنید تا پیوندها به‌رنگ خاکستری درآید و جلوه‌های بصری ازبین برود. پیوندها همچنان قابل کلیک شدن هستند مگر این‌که کد جاوااسکرپتی نوشته شود تا جلوی کلیک شدن را بگیرد.{{/i}}</p>
           <div class="bs-docs-example">
             <ul class="nav nav-pills">
               <li><a href="#">{{_i}}پیوند قابل کلیک{{/i}}</a></li>
@@ -1033,7 +1033,7 @@
           <div class="bs-docs-example">
             <div class="navbar">
               <div class="navbar-inner">
-                <form class="navbar-form pull-left">
+                <form class="navbar-form pull-right">
                   <input type="text" class="span2">
                   <button type="submit" class="btn">{{_i}}فرستادن{{/i}}</button>
                 </form>
@@ -1041,7 +1041,7 @@
             </div>
           </div>{{! /example }}
 <pre class="prettyprint linenums">
-&lt;form class="navbar-form pull-left"&gt;
+&lt;form class="navbar-form pull-right"&gt;
   &lt;input type="text" class="span2"&gt;
   &lt;button type="submit" class="btn"&gt;{{_i}}فرستادن{{/i}}&lt;/button&gt;
 &lt;/form&gt;
@@ -1052,14 +1052,14 @@
           <div class="bs-docs-example">
             <div class="navbar">
               <div class="navbar-inner">
-                <form class="navbar-search pull-left">
+                <form class="navbar-search pull-right">
                   <input type="text" class="search-query" placeholder="{{_i}}جستجو{{/i}}">
                 </form>
               </div>
             </div>
           </div>{{! /example }}
 <pre class="prettyprint linenums">
-&lt;form class="navbar-search pull-left"&gt;
+&lt;form class="navbar-search pull-right"&gt;
   &lt;input type="text" class="search-query" placeholder="{{_i}}جستجو{{/i}}"&gt;
 &lt;/form&gt;
 </pre>
@@ -1352,7 +1352,7 @@
           </div>
 
           <h2>{{_i}}صفحه‌بندی استاندارد{{/i}}</h2>
-          <p>{{_i}}صفحه‌بندی ساده برگرفته از سی است، این نوع صفحه‌بندی مناسب برای نتایج جستجوها و برنامه‌ها است. اندازه بزرگ بلاک‌ها کمک می‌کند که سریع‌تر پیدا شوند و همچنین قابلیت تغییر اندازه را دارند و همچنین فضای بزرگی را برای کلیک کردن فراهم می‌کنند.{{/i}}</p>
+          <p>{{_i}}صفحه‌بندی ساده برگرفته از Rdio است، این نوع صفحه‌بندی مناسب برای نتایج جستجوها و برنامه‌ها است. اندازه بزرگ بلاک‌ها کمک می‌کند که سریع‌تر پیدا شوند و همچنین قابلیت تغییر اندازه را دارند و همچنین فضای بزرگی را برای کلیک کردن فراهم می‌کنند.{{/i}}</p>
           <div class="bs-docs-example">
             <div class="pagination">
               <ul>
@@ -1409,7 +1409,7 @@
   &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
-          <p>{{_i}}همچنین برای این‌که قابلیت کلیک شدن برای پیوندهای فعال و. غیرفعال بگیرید از <code>&lt;span&gt;</code> استفاده کنید.{{/i}}</p>
+          <p>{{_i}}همچنین برای این‌که قابلیت کلیک شدن برای پیوندهای فعال و غیرفعال بگیرید، از <code>&lt;span&gt;</code> استفاده کنید.{{/i}}</p>
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
   &lt;ul&gt;
@@ -1421,7 +1421,7 @@
 </pre>
 
           <h3>{{_i}}همراستاسازی{{/i}}</h3>
-          <p>{{_i}}با اضافه دو کلاس اختیاری <code>.pagination-centered</code> و <code>.pagination-right</code> آن‌ها را در وسط و راست قرار دهید.{{/i}}</p>
+          <p>{{_i}}با اضافه کردن دو کلاس اختیاری <code>.pagination-centered</code> و <code>.pagination-right</code> آن‌ها را در وسط و راست قرار دهید.{{/i}}</p>
           <div class="bs-docs-example">
             <div class="pagination pagination-centered">
               <ul>
@@ -1467,7 +1467,7 @@
           <p>{{_i}}پیوندهای بعدی و قبلی برای پیاده‌سازی صفحه‌بندی ساده که با شیوهٔ نمایش و نشانه‌گذاری سبک ایجاد می‌شود برای وبلاگ‌ها و مجله‌ها خیلی مناسب است.{{/i}}</p>
 
           <h3>{{_i}}نمونه پیش‌فرض{{/i}}</h3>
-          <p>{{_i}}به‌صورت پیش‌فرض پیوندهای صفحه‌بند در وسط قرار دارند.{{/i}}</p>
+          <p>{{_i}}به‌صورت پیش‌فرض پیوندهای ناوبر صفحه در وسط قرار دارند.{{/i}}</p>
           <div class="bs-docs-example">
             <ul class="pager">
               <li><a href="#">{{_i}}قبلی{{/i}}</a></li>
@@ -1605,7 +1605,7 @@
                   <span class="badge">۱</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+                  <code>&lt;span class="badge"&gt;۱&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1613,10 +1613,10 @@
                   {{_i}}موفقیت{{/i}}
                 </td>
                 <td>
-                  <span class="badge badge-success">2</span>
+                  <span class="badge badge-success">۲</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-success"&gt;۲&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1624,10 +1624,10 @@
                   {{_i}}هشدار{{/i}}
                 </td>
                 <td>
-                  <span class="badge badge-warning">4</span>
+                  <span class="badge badge-warning">۴</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-warning"&gt;۴&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1635,10 +1635,10 @@
                   {{_i}}مهم{{/i}}
                 </td>
                 <td>
-                  <span class="badge badge-important">6</span>
+                  <span class="badge badge-important">۶</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-important"&gt;۶&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1646,10 +1646,10 @@
                   {{_i}}اطلاعات{{/i}}
                 </td>
                 <td>
-                  <span class="badge badge-info">8</span>
+                  <span class="badge badge-info">۸</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-info"&gt;۸&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1657,10 +1657,10 @@
                   {{_i}}متفاوت{{/i}}
                 </td>
                 <td>
-                  <span class="badge badge-inverse">10</span>
+                  <span class="badge badge-inverse">۱۰</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-inverse"&gt;۱۰&lt;/span&gt;</code>
                 </td>
               </tr>
             </tbody>
@@ -1688,8 +1688,8 @@
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="hero-unit"&gt;
-  &lt;h1&gt;{{_i}}Heading{{/i}}&lt;/h1&gt;
-  &lt;p&gt;{{_i}}Tagline{{/i}}&lt;/p&gt;
+  &lt;h1&gt;{{_i}}تیتر{{/i}}&lt;/h1&gt;
+  &lt;p&gt;{{_i}}متن مهم{{/i}}&lt;/p&gt;
   &lt;p&gt;
     &lt;a class="btn btn-primary btn-large"&gt;
       {{_i}}بیشتر بدانید{{/i}}
@@ -1787,7 +1787,7 @@
           </div>
 
           <h3>{{_i}}چرا از بندانگشتی‌ها استفاده کنم؟{{/i}}</h3>
-          <p>{{_i}}بندانگشتی‌ها بسیار مناسب برای شبکه‌ای از عکس‌ها یا ویدیوها، نتایج جستجوی عکس، محصولات تجاری، نمونه‌کارها و خیلی چیزهای است. آن‌ها می‌توانند پیوند به جایی شده‌باشند.{{/i}}</p>
+          <p>{{_i}}بندانگشتی‌ها بسیار مناسب برای شبکه‌ای از عکس‌ها یا ویدیوها، نتایج جستجوی عکس، محصولات تجاری، نمونه‌کارها و خیلی چیزهای دیگر است. آن‌ها می‌توانند پیوند به جایی شده‌باشند.{{/i}}</p>
 
           <h3>{{_i}}نشانه‌گذاری ساده و انعطاف‌پذیر{{/i}}</h3>
           <p>{{_i}}نشانه‌گذاری بندانگشتی یک <code>ul</code> ساده با تعدادی <code>li</code> است. فقط همین! همچنین قابلیت انعطاف بالایی دارد، به‌راحتی می‌توان هر نوع محتوایی را با کمی تغییر در آن قرار داد.{{/i}}</p>
@@ -1807,7 +1807,7 @@
   ...
 &lt;/ul&gt;
 </pre>
-          <p>{{_i}}برای محتوای سفارشی اچ‌تی‌ام‌ال در بندانگشتی‌ها، نشانه‌گذاری کمی تغییر می‌کند. برای این‌که از محتوای بلاکی استفاده کنیم، ما <code>&lt;a&gt;</code> با <code>&lt;div&gt;</code> عوض کردیم و نتیجه شد:{{/i}}</p>
+          <p>{{_i}}برای محتوای سفارشی اچ‌تی‌ام‌ال در بندانگشتی‌ها، نشانه‌گذاری کمی تغییر می‌کند. برای این‌که از محتوای بلاکی استفاده کنیم، ما <code>&lt;a&gt;</code> را با <code>&lt;div&gt;</code> عوض کردیم و نتیجه شد:{{/i}}</p>
 <pre class="prettyprint linenums">
 &lt;ul class="thumbnails"&gt;
   &lt;li class="span4"&gt;
@@ -1880,7 +1880,7 @@
           <h3>{{_i}}دکمه‌های حذف{{/i}}</h3>
           <p>{{_i}}مرورگرهای موبایل سافاری و اپرا، برای استفاده از دکمه‌های حذف پیام‌های هشدار نیاز به ویژگی <code>data-dismiss="alert"</code> و استفاده از <code>href="#"</code> را دارند.{{/i}}</p>
           <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;</pre>
-          <p>{{_i}}همچنین می‌توانید از عنصر <code>&lt;button&gt;</code> با ویژگی <code>data</code> که در مستندات آمده‌است، استفاده کنید وقتی از <code>&lt;button&gt;</code> استفاده می‌کنید باید <code>type="button"</code> رو به دکمهٔ خود اضافه کنیدو.{{/i}}</p>
+          <p>{{_i}}همچنین می‌توانید از عنصر <code>&lt;button&gt;</code> با ویژگی <code>data</code> که در مستندات آمده‌است، استفاده کنید وقتی از <code>&lt;button&gt;</code> استفاده می‌کنید باید <code>type="button"</code> رو به دکمهٔ خود اضافه کنید.{{/i}}</p>
           <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
 
           <h3>{{_i}}اخطارها را با جاوااسکریپت حذف کنید{{/i}}</h3>
@@ -2108,7 +2108,7 @@
         ================================================== -->
         <section id="misc">
           <div class="page-header">
-            <h1>{{_i}}مختلف{{/i}} <small>{{_i}}اجزا کمکی سبک{{/i}}</small></h1>
+            <h1>{{_i}}مختلف{{/i}} <small>{{_i}}اجزای کمکی سبک{{/i}}</small></h1>
           </div>
 
           <h2>{{_i}}چاه‌ها{{/i}}</h2>
@@ -2147,16 +2147,16 @@
 </pre>
 
           <h2>{{_i}}آیکن بستن{{/i}}</h2>
-          <p>{{_i}}از آیکن بستن برای حذف محتواهایی مانند مدال‌ها و اخطارها استفاده کنید.{{/i}}</p>
+          <p>{{_i}}از آیکن بستن برای حذف محتواهایی مانند مُدال‌ها و اخطارها استفاده کنید.{{/i}}</p>
           <div class="bs-docs-example">
             <p><button class="close" style="float: none;">&times;</button></p>
           </div>
           <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
-          <p>{{_i}}سیستم‌عامل iOS نیاز به یک href="#" برای کلیک کردن یک رویداد نیاز دارد.{{/i}}</p>
+          <p>{{_i}}سیستم‌عامل iOS نیاز به یک <code>href="#"</code> برای کلیک کردن یک رویداد نیاز دارد.{{/i}}</p>
           <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
 
           <h2>{{_i}}کلاس‌های کمکی{{/i}}</h2>
-          <p>{{_i}}کلاس‌های ساده برای استفاتده از صفحه نمایش‌های کوچک و تغییر رفتار.{{/i}}</p>
+          <p>{{_i}}کلاس‌های ساده برای استفاده از صفحه نمایش‌های کوچک و تغییر رفتار.{{/i}}</p>
 
           <h4>{{_i}}.pull-left{{/i}}</h4>
           <p>{{_i}}یک عنصر را به سمت چپ می‌برد.{{/i}}</p>
@@ -2192,7 +2192,7 @@ class="muted"
 </pre>
 
           <h4>{{_i}}.clearfix{{/i}}</h4>
-          <p>{{_i}}<code>float</code> در هر عنصری حذف می‌کند.{{/i}}</p>
+          <p>{{_i}}<code>float</code> در هر عنصری را حذف می‌کند.{{/i}}</p>
 <pre class="prettyprint linenums">
 class="clearfix"
 </pre>
