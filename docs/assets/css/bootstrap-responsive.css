@@ -93,7 +93,7 @@
 
 @media (min-width: 1200px) {
   .row {
-    margin-left: -30px;
+    margin-right: -30px;
     *zoom: 1;
   }
   .row:before,
@@ -106,9 +106,9 @@
     clear: both;
   }
   [class*="span"] {
-    float: left;
+    float: right;
     min-height: 1px;
-    margin-left: 30px;
+    margin-right: 30px;
   }
   .container,
   .navbar-static-top .container,
@@ -153,40 +153,40 @@
     width: 70px;
   }
   .offset12 {
-    margin-left: 1230px;
+    margin-right: 1230px;
   }
   .offset11 {
-    margin-left: 1130px;
+    margin-right: 1130px;
   }
   .offset10 {
-    margin-left: 1030px;
+    margin-right: 1030px;
   }
   .offset9 {
-    margin-left: 930px;
+    margin-right: 930px;
   }
   .offset8 {
-    margin-left: 830px;
+    margin-right: 830px;
   }
   .offset7 {
-    margin-left: 730px;
+    margin-right: 730px;
   }
   .offset6 {
-    margin-left: 630px;
+    margin-right: 630px;
   }
   .offset5 {
-    margin-left: 530px;
+    margin-right: 530px;
   }
   .offset4 {
-    margin-left: 430px;
+    margin-right: 430px;
   }
   .offset3 {
-    margin-left: 330px;
+    margin-right: 330px;
   }
   .offset2 {
-    margin-left: 230px;
+    margin-right: 230px;
   }
   .offset1 {
-    margin-left: 130px;
+    margin-right: 130px;
   }
   .row-fluid {
     width: 100%;
@@ -203,17 +203,17 @@
   }
   .row-fluid [class*="span"] {
     display: block;
-    float: left;
+    float: right;
     width: 100%;
     min-height: 30px;
-    margin-left: 2.564102564102564%;
-    *margin-left: 2.5109110747408616%;
+    margin-right: 2.564102564102564%;
+    *margin-right: 2.5109110747408616%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   .row-fluid [class*="span"]:first-child {
-    margin-left: 0;
+    margin-right: 0;
   }
   .row-fluid .span12 {
     width: 100%;
@@ -264,108 +264,108 @@
     *width: 5.929714493544281%;
   }
   .row-fluid .offset12 {
-    margin-left: 105.12820512820512%;
-    *margin-left: 105.02182214948171%;
+    margin-right: 105.12820512820512%;
+    *margin-right: 105.02182214948171%;
   }
   .row-fluid .offset12:first-child {
-    margin-left: 102.56410256410257%;
-    *margin-left: 102.45771958537915%;
+    margin-right: 102.56410256410257%;
+    *margin-right: 102.45771958537915%;
   }
   .row-fluid .offset11 {
-    margin-left: 96.58119658119658%;
-    *margin-left: 96.47481360247316%;
+    margin-right: 96.58119658119658%;
+    *margin-right: 96.47481360247316%;
   }
   .row-fluid .offset11:first-child {
-    margin-left: 94.01709401709402%;
-    *margin-left: 93.91071103837061%;
+    margin-right: 94.01709401709402%;
+    *margin-right: 93.91071103837061%;
   }
   .row-fluid .offset10 {
-    margin-left: 88.03418803418803%;
-    *margin-left: 87.92780505546462%;
+    margin-right: 88.03418803418803%;
+    *margin-right: 87.92780505546462%;
   }
   .row-fluid .offset10:first-child {
-    margin-left: 85.47008547008548%;
-    *margin-left: 85.36370249136206%;
+    margin-right: 85.47008547008548%;
+    *margin-right: 85.36370249136206%;
   }
   .row-fluid .offset9 {
-    margin-left: 79.48717948717949%;
-    *margin-left: 79.38079650845607%;
+    margin-right: 79.48717948717949%;
+    *margin-right: 79.38079650845607%;
   }
   .row-fluid .offset9:first-child {
-    margin-left: 76.92307692307693%;
-    *margin-left: 76.81669394435352%;
+    margin-right: 76.92307692307693%;
+    *margin-right: 76.81669394435352%;
   }
   .row-fluid .offset8 {
-    margin-left: 70.94017094017094%;
-    *margin-left: 70.83378796144753%;
+    margin-right: 70.94017094017094%;
+    *margin-right: 70.83378796144753%;
   }
   .row-fluid .offset8:first-child {
-    margin-left: 68.37606837606839%;
-    *margin-left: 68.26968539734497%;
+    margin-right: 68.37606837606839%;
+    *margin-right: 68.26968539734497%;
   }
   .row-fluid .offset7 {
-    margin-left: 62.393162393162385%;
-    *margin-left: 62.28677941443899%;
+    margin-right: 62.393162393162385%;
+    *margin-right: 62.28677941443899%;
   }
   .row-fluid .offset7:first-child {
-    margin-left: 59.82905982905982%;
-    *margin-left: 59.72267685033642%;
+    margin-right: 59.82905982905982%;
+    *margin-right: 59.72267685033642%;
   }
   .row-fluid .offset6 {
-    margin-left: 53.84615384615384%;
-    *margin-left: 53.739770867430444%;
+    margin-right: 53.84615384615384%;
+    *margin-right: 53.739770867430444%;
   }
   .row-fluid .offset6:first-child {
-    margin-left: 51.28205128205128%;
-    *margin-left: 51.175668303327875%;
+    margin-right: 51.28205128205128%;
+    *margin-right: 51.175668303327875%;
   }
   .row-fluid .offset5 {
-    margin-left: 45.299145299145295%;
-    *margin-left: 45.1927623204219%;
+    margin-right: 45.299145299145295%;
+    *margin-right: 45.1927623204219%;
   }
   .row-fluid .offset5:first-child {
-    margin-left: 42.73504273504273%;
-    *margin-left: 42.62865975631933%;
+    margin-right: 42.73504273504273%;
+    *margin-right: 42.62865975631933%;
   }
   .row-fluid .offset4 {
-    margin-left: 36.75213675213675%;
-    *margin-left: 36.645753773413354%;
+    margin-right: 36.75213675213675%;
+    *margin-right: 36.645753773413354%;
   }
   .row-fluid .offset4:first-child {
-    margin-left: 34.18803418803419%;
-    *margin-left: 34.081651209310785%;
+    margin-right: 34.18803418803419%;
+    *margin-right: 34.081651209310785%;
   }
   .row-fluid .offset3 {
-    margin-left: 28.205128205128204%;
-    *margin-left: 28.0987452264048%;
+    margin-right: 28.205128205128204%;
+    *margin-right: 28.0987452264048%;
   }
   .row-fluid .offset3:first-child {
-    margin-left: 25.641025641025642%;
-    *margin-left: 25.53464266230224%;
+    margin-right: 25.641025641025642%;
+    *margin-right: 25.53464266230224%;
   }
   .row-fluid .offset2 {
-    margin-left: 19.65811965811966%;
-    *margin-left: 19.551736679396257%;
+    margin-right: 19.65811965811966%;
+    *margin-right: 19.551736679396257%;
   }
   .row-fluid .offset2:first-child {
-    margin-left: 17.094017094017094%;
-    *margin-left: 16.98763411529369%;
+    margin-right: 17.094017094017094%;
+    *margin-right: 16.98763411529369%;
   }
   .row-fluid .offset1 {
-    margin-left: 11.11111111111111%;
-    *margin-left: 11.004728132387708%;
+    margin-right: 11.11111111111111%;
+    *margin-right: 11.004728132387708%;
   }
   .row-fluid .offset1:first-child {
-    margin-left: 8.547008547008547%;
-    *margin-left: 8.440625568285142%;
+    margin-right: 8.547008547008547%;
+    *margin-right: 8.440625568285142%;
   }
   input,
   textarea,
   .uneditable-input {
-    margin-left: 0;
+    margin-right: 0;
   }
   .controls-row [class*="span"] + [class*="span"] {
-    margin-left: 30px;
+    margin-right: 30px;
   }
   input.span12,
   textarea.span12,
@@ -428,19 +428,19 @@
     width: 56px;
   }
   .thumbnails {
-    margin-left: -30px;
+    margin-right: -30px;
   }
   .thumbnails > li {
-    margin-left: 30px;
+    margin-right: 30px;
   }
   .row-fluid .thumbnails {
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
-    margin-left: -20px;
+    margin-right: -20px;
     *zoom: 1;
   }
   .row:before,
@@ -453,9 +453,9 @@
     clear: both;
   }
   [class*="span"] {
-    float: left;
+    float: right;
     min-height: 1px;
-    margin-left: 20px;
+    margin-right: 20px;
   }
   .container,
   .navbar-static-top .container,
@@ -500,40 +500,40 @@
     width: 42px;
   }
   .offset12 {
-    margin-left: 764px;
+    margin-right: 764px;
   }
   .offset11 {
-    margin-left: 702px;
+    margin-right: 702px;
   }
   .offset10 {
-    margin-left: 640px;
+    margin-right: 640px;
   }
   .offset9 {
-    margin-left: 578px;
+    margin-right: 578px;
   }
   .offset8 {
-    margin-left: 516px;
+    margin-right: 516px;
   }
   .offset7 {
-    margin-left: 454px;
+    margin-right: 454px;
   }
   .offset6 {
-    margin-left: 392px;
+    margin-right: 392px;
   }
   .offset5 {
-    margin-left: 330px;
+    margin-right: 330px;
   }
   .offset4 {
-    margin-left: 268px;
+    margin-right: 268px;
   }
   .offset3 {
-    margin-left: 206px;
+    margin-right: 206px;
   }
   .offset2 {
-    margin-left: 144px;
+    margin-right: 144px;
   }
   .offset1 {
-    margin-left: 82px;
+    margin-right: 82px;
   }
   .row-fluid {
     width: 100%;
@@ -550,17 +550,17 @@
   }
   .row-fluid [class*="span"] {
     display: block;
-    float: left;
+    float: right;
     width: 100%;
     min-height: 30px;
-    margin-left: 2.7624309392265194%;
-    *margin-left: 2.709239449864817%;
+    margin-right: 2.7624309392265194%;
+    *margin-right: 2.709239449864817%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   .row-fluid [class*="span"]:first-child {
-    margin-left: 0;
+    margin-right: 0;
   }
   .row-fluid .span12 {
     width: 100%;
@@ -611,108 +611,108 @@
     *width: 5.747913483013988%;
   }
   .row-fluid .offset12 {
-    margin-left: 105.52486187845304%;
-    *margin-left: 105.41847889972962%;
+    margin-right: 105.52486187845304%;
+    *margin-right: 105.41847889972962%;
   }
   .row-fluid .offset12:first-child {
-    margin-left: 102.76243093922652%;
-    *margin-left: 102.6560479605031%;
+    margin-right: 102.76243093922652%;
+    *margin-right: 102.6560479605031%;
   }
   .row-fluid .offset11 {
-    margin-left: 96.96132596685082%;
-    *margin-left: 96.8549429881274%;
+    margin-right: 96.96132596685082%;
+    *margin-right: 96.8549429881274%;
   }
   .row-fluid .offset11:first-child {
-    margin-left: 94.1988950276243%;
-    *margin-left: 94.09251204890089%;
+    margin-right: 94.1988950276243%;
+    *margin-right: 94.09251204890089%;
   }
   .row-fluid .offset10 {
-    margin-left: 88.39779005524862%;
-    *margin-left: 88.2914070765252%;
+    margin-right: 88.39779005524862%;
+    *margin-right: 88.2914070765252%;
   }
   .row-fluid .offset10:first-child {
-    margin-left: 85.6353591160221%;
-    *margin-left: 85.52897613729868%;
+    margin-right: 85.6353591160221%;
+    *margin-right: 85.52897613729868%;
   }
   .row-fluid .offset9 {
-    margin-left: 79.8342541436464%;
-    *margin-left: 79.72787116492299%;
+    margin-right: 79.8342541436464%;
+    *margin-right: 79.72787116492299%;
   }
   .row-fluid .offset9:first-child {
-    margin-left: 77.07182320441989%;
-    *margin-left: 76.96544022569647%;
+    margin-right: 77.07182320441989%;
+    *margin-right: 76.96544022569647%;
   }
   .row-fluid .offset8 {
-    margin-left: 71.2707182320442%;
-    *margin-left: 71.16433525332079%;
+    margin-right: 71.2707182320442%;
+    *margin-right: 71.16433525332079%;
   }
   .row-fluid .offset8:first-child {
-    margin-left: 68.50828729281768%;
-    *margin-left: 68.40190431409427%;
+    margin-right: 68.50828729281768%;
+    *margin-right: 68.40190431409427%;
   }
   .row-fluid .offset7 {
-    margin-left: 62.70718232044199%;
-    *margin-left: 62.600799341718584%;
+    margin-right: 62.70718232044199%;
+    *margin-right: 62.600799341718584%;
   }
   .row-fluid .offset7:first-child {
-    margin-left: 59.94475138121547%;
-    *margin-left: 59.838368402492065%;
+    margin-right: 59.94475138121547%;
+    *margin-right: 59.838368402492065%;
   }
   .row-fluid .offset6 {
-    margin-left: 54.14364640883978%;
-    *margin-left: 54.037263430116376%;
+    margin-right: 54.14364640883978%;
+    *margin-right: 54.037263430116376%;
   }
   .row-fluid .offset6:first-child {
-    margin-left: 51.38121546961326%;
-    *margin-left: 51.27483249088986%;
+    margin-right: 51.38121546961326%;
+    *margin-right: 51.27483249088986%;
   }
   .row-fluid .offset5 {
-    margin-left: 45.58011049723757%;
-    *margin-left: 45.47372751851417%;
+    margin-right: 45.58011049723757%;
+    *margin-right: 45.47372751851417%;
   }
   .row-fluid .offset5:first-child {
-    margin-left: 42.81767955801105%;
-    *margin-left: 42.71129657928765%;
+    margin-right: 42.81767955801105%;
+    *margin-right: 42.71129657928765%;
   }
   .row-fluid .offset4 {
-    margin-left: 37.01657458563536%;
-    *margin-left: 36.91019160691196%;
+    margin-right: 37.01657458563536%;
+    *margin-right: 36.91019160691196%;
   }
   .row-fluid .offset4:first-child {
-    margin-left: 34.25414364640884%;
-    *margin-left: 34.14776066768544%;
+    margin-right: 34.25414364640884%;
+    *margin-right: 34.14776066768544%;
   }
   .row-fluid .offset3 {
-    margin-left: 28.45303867403315%;
-    *margin-left: 28.346655695309746%;
+    margin-right: 28.45303867403315%;
+    *margin-right: 28.346655695309746%;
   }
   .row-fluid .offset3:first-child {
-    margin-left: 25.69060773480663%;
-    *margin-left: 25.584224756083227%;
+    margin-right: 25.69060773480663%;
+    *margin-right: 25.584224756083227%;
   }
   .row-fluid .offset2 {
-    margin-left: 19.88950276243094%;
-    *margin-left: 19.783119783707537%;
+    margin-right: 19.88950276243094%;
+    *margin-right: 19.783119783707537%;
   }
   .row-fluid .offset2:first-child {
-    margin-left: 17.12707182320442%;
-    *margin-left: 17.02068884448102%;
+    margin-right: 17.12707182320442%;
+    *margin-right: 17.02068884448102%;
   }
   .row-fluid .offset1 {
-    margin-left: 11.32596685082873%;
-    *margin-left: 11.219583872105325%;
+    margin-right: 11.32596685082873%;
+    *margin-right: 11.219583872105325%;
   }
   .row-fluid .offset1:first-child {
-    margin-left: 8.56353591160221%;
-    *margin-left: 8.457152932878806%;
+    margin-right: 8.56353591160221%;
+    *margin-right: 8.457152932878806%;
   }
   input,
   textarea,
   .uneditable-input {
-    margin-left: 0;
+    margin-right: 0;
   }
   .controls-row [class*="span"] + [class*="span"] {
-    margin-left: 20px;
+    margin-right: 20px;
   }
   input.span12,
   textarea.span12,
@@ -794,10 +794,10 @@
     float: none;
     width: auto;
     clear: none;
-    text-align: left;
+    text-align: right;
   }
   .dl-horizontal dd {
-    margin-left: 0;
+    margin-right: 0;
   }
   .container {
     width: auto;
@@ -807,18 +807,18 @@
   }
   .row,
   .thumbnails {
-    margin-left: 0;
+    margin-right: 0;
   }
   .thumbnails > li {
     float: none;
-    margin-left: 0;
+    margin-right: 0;
   }
   [class*="span"],
   .row-fluid [class*="span"] {
     display: block;
     float: none;
     width: 100%;
-    margin-left: 0;
+    margin-right: 0;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -852,7 +852,7 @@
     width: auto;
   }
   .controls-row [class*="span"] + [class*="span"] {
-    margin-left: 0;
+    margin-right: 0;
   }
   .modal {
     position: fixed;
@@ -883,10 +883,10 @@
     float: none;
     width: auto;
     padding-top: 0;
-    text-align: left;
+    text-align: right;
   }
   .form-horizontal .controls {
-    margin-left: 0;
+    margin-right: 0;
   }
   .form-horizontal .control-list {
     padding-top: 0;
@@ -934,7 +934,7 @@
   .navbar .brand {
     padding-right: 10px;
     padding-left: 10px;
-    margin: 0 0 0 -5px;
+    margin: 0 -5px 0 0;
   }
   .nav-collapse {
     clear: both;
@@ -990,7 +990,7 @@
   .nav-collapse .dropdown-menu {
     position: static;
     top: auto;
-    left: auto;
+    right: auto;
     display: block;
     float: none;
     max-width: none;
@@ -1032,9 +1032,9 @@
     border-top-color: #111111;
     border-bottom-color: #111111;
   }
-  .navbar .nav-collapse .nav.pull-right {
+  .navbar .nav-collapse .nav.pull-left {
     float: none;
-    margin-left: 0;
+    margin-right: 0;
   }
   .nav-collapse,
   .nav-collapse.collapse {
