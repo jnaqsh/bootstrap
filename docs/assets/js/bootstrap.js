@@ -1680,12 +1680,13 @@
 
   , show: function () {
       var pos = $.extend({}, this.$element.offset(), {
-        height: this.$element[0].offsetHeight
+        height: this.$element[0].offsetHeight,
+        width: this.$element[0].offsetWidth
       })
 
       this.$menu.css({
         top: pos.top + pos.height
-      , left: pos.left
+      , right: pos.left - pos.width
       })
 
       this.$menu.show()

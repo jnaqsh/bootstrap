@@ -49,7 +49,7 @@
                 <a href="./getting-started.html">از این‌جا شروع کنید</a>
               </li>
               <li class="">
-                <a href="./scaffolding.html">چهارچوب اصلی</a>
+                <a href="./scaffolding.html">چارچوب اصلی</a>
               </li>
               <li class="">
                 <a href="./base-css.html">سی‌اس‌اس پایه</a>
@@ -86,19 +86,19 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> افتادنی‌ها</a></li>
-          <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> گروه‌های دکمه</a></li>
-          <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> افتادنی‌های دکمه‌ای</a></li>
-          <li><a href="#navs"><i class="icon-chevron-right"></i> ناوبری‌ها</a></li>
-          <li><a href="#navbar"><i class="icon-chevron-right"></i> نوارهای ناوبری</a></li>
-          <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> تکه کیک‌ها</a></li>
-          <li><a href="#pagination"><i class="icon-chevron-right"></i> صفحه‌بندی</a></li>
-          <li><a href="#labels-badges"><i class="icon-chevron-right"></i> برچسب‌ها و نشان‌ها</a></li>
-          <li><a href="#typography"><i class="icon-chevron-right"></i> گرافیک قلم</a></li>
-          <li><a href="#thumbnails"><i class="icon-chevron-right"></i> بندانگشتی‌ها</a></li>
-          <li><a href="#alerts"><i class="icon-chevron-right"></i> اخطارها</a></li>
-          <li><a href="#progress"><i class="icon-chevron-right"></i> نوارهای پیشرفت</a></li>
-          <li><a href="#misc"><i class="icon-chevron-right"></i> مختلف</a></li>
+          <li><a href="#dropdowns"><i class="icon-chevron-left"></i> افتادنی‌ها</a></li>
+          <li><a href="#buttonGroups"><i class="icon-chevron-left"></i> گروه‌های دکمه</a></li>
+          <li><a href="#buttonDropdowns"><i class="icon-chevron-left"></i> افتادنی‌های دکمه‌ای</a></li>
+          <li><a href="#navs"><i class="icon-chevron-left"></i> ناوبری‌ها</a></li>
+          <li><a href="#navbar"><i class="icon-chevron-left"></i> نوارهای ناوبری</a></li>
+          <li><a href="#breadcrumbs"><i class="icon-chevron-left"></i> تکه کیک‌ها</a></li>
+          <li><a href="#pagination"><i class="icon-chevron-left"></i> صفحه‌بندی</a></li>
+          <li><a href="#labels-badges"><i class="icon-chevron-left"></i> برچسب‌ها و نشان‌ها</a></li>
+          <li><a href="#typography"><i class="icon-chevron-left"></i> گرافیک قلم</a></li>
+          <li><a href="#thumbnails"><i class="icon-chevron-left"></i> بندانگشتی‌ها</a></li>
+          <li><a href="#alerts"><i class="icon-chevron-left"></i> اخطارها</a></li>
+          <li><a href="#progress"><i class="icon-chevron-left"></i> نوارهای پیشرفت</a></li>
+          <li><a href="#misc"><i class="icon-chevron-left"></i> مختلف</a></li>
         </ul>
       </div>
       <div class="span9">
@@ -215,16 +215,16 @@
           <p>یک مجموعه‌ از دکمه‌ها با کلاس <code>.btn</code> در داخل یک کلاس <code>.btn-group</code> قرار دهید.</p>
           <div class="bs-docs-example">
             <div class="btn-group" style="margin: 9px 0 5px;">
-              <button class="btn">چپ</button>
-              <button class="btn">وسط</button>
               <button class="btn">راست</button>
+              <button class="btn">وسط</button>
+              <button class="btn">چپ</button>
             </div>
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-  &lt;button class="btn"&gt;چپ&lt;/button&gt;
-  &lt;button class="btn"&gt;وسط&lt;/button&gt;
   &lt;button class="btn"&gt;راست&lt;/button&gt;
+  &lt;button class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button class="btn"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -276,8 +276,8 @@
           <hr class="bs-docs-separator">
 
 
-          <h4>Checkbox and radio flavors</h4>
-          <p>گروه‌های دکمه می‌توانند به مانند radios عمل کنند. وقتی که ممکن است یک دکمه فعال باشد و یا به مانند checkboxes که ممکن است چندین دکمه همزمان فعال باشند. برای اطلاعات بیشتر به <a href="./javascript.html#buttons">مستندات جاوااسکریپت</a> را ببینید.</p>
+          <h4>عملکرد به‌مانند Checkboxها و radioها</h4>
+          <p>گروه‌های دکمه می‌توانند به مانند radioها عمل کنند. وقتی که ممکن است یک دکمه فعال باشد و یا به مانند checkboxها که ممکن است چندین دکمه همزمان فعال باشند. برای اطلاعات بیشتر به <a href="./javascript.html#buttons">مستندات جاوااسکریپت</a> را ببینید.</p>
 
           <h4>افتادنی‌ها در گروه‌های دکمه</h4>
           <p><span class="label label-info">توجه کنید!</span> دکمه‌هایی که افتادنی هستند باید به‌صورت اختصاصی در <code>.btn-group</code> قرار گیرند سپس برای نمایش صحیح در داخل <code>.btn-toolbar</code> قرار گیرند.</p>
@@ -420,7 +420,7 @@
 
           <h3>جاوااسکریپت نیاز دارد</h3>
           <p>دکمه‌های افتادنی نیاز به <a href="./javascript.html#dropdowns">پلاگین افتادنی بوت‌استرپ</a> برای کار کردن، دارند.</p>
-          <p>در برخی از موارد، مانند موبایل‌ها، منوهای افتادنی از اندازه صفحه نمایش بزرگ‌تر می‌شوند. برای رفع این مشکل نیاز است که به صورت دستی و یا کد جاوااسکریپت سفارشی آن را درست کرد.</p>
+          <p>در برخی از موارد، مانند موبایل‌ها، منوهای افتادنی از اندازه صفحه نمایش بزرگ‌تر می‌شوند. برای رفع این مشکل نیاز است که به صورت دستی و یا کد جاوااسکریپت سفارشی، آن را درست کرد.</p>
 
 
           <hr class="bs-docs-separator">
@@ -669,7 +669,7 @@
 </pre>
 
           <h3>وضعیت غیرفعال</h3>
-          <p>برای هر جزء ناوبری (تب‌ها، پیل‌ها و یا فهرست‌ها) کلاس <code>.disabled</code> را اضافه کنید تا پیوندها به‌رنگ خاکستری درآید و جلوه‌های بصری ازبین برود. پیوندها همچنان قابل کلیک شدن هستند مگراین‌که کد جاوااسکرپتی نوشته شود تا جلوی کلیک شدن را بگیرد.</p>
+          <p>برای هر جزء ناوبری (تب‌ها، پیل‌ها و یا فهرست‌ها) کلاس <code>.disabled</code> را اضافه کنید تا پیوندها به‌رنگ خاکستری درآید و جلوه‌های بصری ازبین برود. پیوندها همچنان قابل کلیک شدن هستند مگر این‌که کد جاوااسکرپتی نوشته شود تا جلوی کلیک شدن را بگیرد.</p>
           <div class="bs-docs-example">
             <ul class="nav nav-pills">
               <li><a href="#">پیوند قابل کلیک</a></li>
@@ -1104,7 +1104,7 @@
           <div class="bs-docs-example">
             <div class="navbar">
               <div class="navbar-inner">
-                <form class="navbar-form pull-left">
+                <form class="navbar-form pull-right">
                   <input type="text" class="span2">
                   <button type="submit" class="btn">فرستادن</button>
                 </form>
@@ -1112,7 +1112,7 @@
             </div>
           </div>
 <pre class="prettyprint linenums">
-&lt;form class="navbar-form pull-left"&gt;
+&lt;form class="navbar-form pull-right"&gt;
   &lt;input type="text" class="span2"&gt;
   &lt;button type="submit" class="btn"&gt;فرستادن&lt;/button&gt;
 &lt;/form&gt;
@@ -1123,14 +1123,14 @@
           <div class="bs-docs-example">
             <div class="navbar">
               <div class="navbar-inner">
-                <form class="navbar-search pull-left">
+                <form class="navbar-search pull-right">
                   <input type="text" class="search-query" placeholder="جستجو">
                 </form>
               </div>
             </div>
           </div>
 <pre class="prettyprint linenums">
-&lt;form class="navbar-search pull-left"&gt;
+&lt;form class="navbar-search pull-right"&gt;
   &lt;input type="text" class="search-query" placeholder="جستجو"&gt;
 &lt;/form&gt;
 </pre>
@@ -1423,7 +1423,7 @@
           </div>
 
           <h2>صفحه‌بندی استاندارد</h2>
-          <p>صفحه‌بندی ساده برگرفته از سی است، این نوع صفحه‌بندی مناسب برای نتایج جستجوها و برنامه‌ها است. اندازه بزرگ بلاک‌ها کمک می‌کند که سریع‌تر پیدا شوند و همچنین قابلیت تغییر اندازه را دارند و همچنین فضای بزرگی را برای کلیک کردن فراهم می‌کنند.</p>
+          <p>صفحه‌بندی ساده برگرفته از Rdio است، این نوع صفحه‌بندی مناسب برای نتایج جستجوها و برنامه‌ها است. اندازه بزرگ بلاک‌ها کمک می‌کند که سریع‌تر پیدا شوند و همچنین قابلیت تغییر اندازه را دارند و همچنین فضای بزرگی را برای کلیک کردن فراهم می‌کنند.</p>
           <div class="bs-docs-example">
             <div class="pagination">
               <ul>
@@ -1480,7 +1480,7 @@
   &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
-          <p>همچنین برای این‌که قابلیت کلیک شدن برای پیوندهای فعال و. غیرفعال بگیرید از <code>&lt;span&gt;</code> استفاده کنید.</p>
+          <p>همچنین برای این‌که قابلیت کلیک شدن برای پیوندهای فعال و غیرفعال بگیرید، از <code>&lt;span&gt;</code> استفاده کنید.</p>
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
   &lt;ul&gt;
@@ -1492,7 +1492,7 @@
 </pre>
 
           <h3>همراستاسازی</h3>
-          <p>با اضافه دو کلاس اختیاری <code>.pagination-centered</code> و <code>.pagination-right</code> آن‌ها را در وسط و راست قرار دهید.</p>
+          <p>با اضافه کردن دو کلاس اختیاری <code>.pagination-centered</code> و <code>.pagination-right</code> آن‌ها را در وسط و راست قرار دهید.</p>
           <div class="bs-docs-example">
             <div class="pagination pagination-centered">
               <ul>
@@ -1538,7 +1538,7 @@
           <p>پیوندهای بعدی و قبلی برای پیاده‌سازی صفحه‌بندی ساده که با شیوهٔ نمایش و نشانه‌گذاری سبک ایجاد می‌شود برای وبلاگ‌ها و مجله‌ها خیلی مناسب است.</p>
 
           <h3>نمونه پیش‌فرض</h3>
-          <p>به‌صورت پیش‌فرض پیوندهای صفحه‌بند در وسط قرار دارند.</p>
+          <p>به‌صورت پیش‌فرض پیوندهای ناوبر صفحه در وسط قرار دارند.</p>
           <div class="bs-docs-example">
             <ul class="pager">
               <li><a href="#">قبلی</a></li>
@@ -1556,17 +1556,17 @@
           <p>همچنین شما می‌توانید پیوندها را در طرفین قرار دهید:</p>
           <div class="bs-docs-example">
             <ul class="pager">
-              <li class="previous"><a href="#">&larr; قبلی</a></li>
-              <li class="next"><a href="#">بعدی &rarr;</a></li>
+              <li class="previous"><a href="#">&rarr; قبلی</a></li>
+              <li class="next"><a href="#">بعدی &larr;</a></li>
             </ul>
           </div>
 <pre class="prettyprint linenums">
 &lt;ul class="pager"&gt;
   &lt;li class="previous"&gt;
-    &lt;a href="#"&gt;&amp;larr; قبلی&lt;/a&gt;
+    &lt;a href="#"&gt;&amp;rarr; قبلی&lt;/a&gt;
   &lt;/li&gt;
   &lt;li class="next"&gt;
-    &lt;a href="#"&gt;بعدی &amp;rarr;&lt;/a&gt;
+    &lt;a href="#"&gt;بعدی &amp;larr;&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
@@ -1575,14 +1575,14 @@
           <p>برای غیرفعال کردن می‌توانید از کلاس کلی <code>.disabled</code> استفاده کنید.</p>
           <div class="bs-docs-example">
             <ul class="pager">
-              <li class="previous disabled"><a href="#">&larr; قبلی</a></li>
-              <li class="next"><a href="#">بعدی &rarr;</a></li>
+              <li class="previous disabled"><a href="#">&rarr; قبلی</a></li>
+              <li class="next"><a href="#">بعدی &larr;</a></li>
             </ul>
           </div>
 <pre class="prettyprint linenums">
 &lt;ul class="pager"&gt;
   &lt;li class="previous disabled"&gt;
-    &lt;a href="#"&gt;&amp;larr; قبلی&lt;/a&gt;
+    &lt;a href="#"&gt;&amp;rarr; قبلی&lt;/a&gt;
   &lt;/li&gt;
   ...
 &lt;/ul&gt;
@@ -1676,7 +1676,7 @@
                   <span class="badge">۱</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+                  <code>&lt;span class="badge"&gt;۱&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1684,10 +1684,10 @@
                   موفقیت
                 </td>
                 <td>
-                  <span class="badge badge-success">2</span>
+                  <span class="badge badge-success">۲</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-success"&gt;۲&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1695,10 +1695,10 @@
                   هشدار
                 </td>
                 <td>
-                  <span class="badge badge-warning">4</span>
+                  <span class="badge badge-warning">۴</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-warning"&gt;۴&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1706,10 +1706,10 @@
                   مهم
                 </td>
                 <td>
-                  <span class="badge badge-important">6</span>
+                  <span class="badge badge-important">۶</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-important"&gt;۶&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1717,10 +1717,10 @@
                   اطلاعات
                 </td>
                 <td>
-                  <span class="badge badge-info">8</span>
+                  <span class="badge badge-info">۸</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-info"&gt;۸&lt;/span&gt;</code>
                 </td>
               </tr>
               <tr>
@@ -1728,10 +1728,10 @@
                   متفاوت
                 </td>
                 <td>
-                  <span class="badge badge-inverse">10</span>
+                  <span class="badge badge-inverse">۱۰</span>
                 </td>
                 <td>
-                  <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+                  <code>&lt;span class="badge badge-inverse"&gt;۱۰&lt;/span&gt;</code>
                 </td>
               </tr>
             </tbody>
@@ -1759,8 +1759,8 @@
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="hero-unit"&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
-  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;h1&gt;تیتر&lt;/h1&gt;
+  &lt;p&gt;متن مهم&lt;/p&gt;
   &lt;p&gt;
     &lt;a class="btn btn-primary btn-large"&gt;
       بیشتر بدانید
@@ -1858,7 +1858,7 @@
           </div>
 
           <h3>چرا از بندانگشتی‌ها استفاده کنم؟</h3>
-          <p>بندانگشتی‌ها بسیار مناسب برای شبکه‌ای از عکس‌ها یا ویدیوها، نتایج جستجوی عکس، محصولات تجاری، نمونه‌کارها و خیلی چیزهای است. آن‌ها می‌توانند پیوند به جایی شده‌باشند.</p>
+          <p>بندانگشتی‌ها بسیار مناسب برای شبکه‌ای از عکس‌ها یا ویدیوها، نتایج جستجوی عکس، محصولات تجاری، نمونه‌کارها و خیلی چیزهای دیگر است. آن‌ها می‌توانند پیوند به جایی شده‌باشند.</p>
 
           <h3>نشانه‌گذاری ساده و انعطاف‌پذیر</h3>
           <p>نشانه‌گذاری بندانگشتی یک <code>ul</code> ساده با تعدادی <code>li</code> است. فقط همین! همچنین قابلیت انعطاف بالایی دارد، به‌راحتی می‌توان هر نوع محتوایی را با کمی تغییر در آن قرار داد.</p>
@@ -1878,7 +1878,7 @@
   ...
 &lt;/ul&gt;
 </pre>
-          <p>برای محتوای سفارشی اچ‌تی‌ام‌ال در بندانگشتی‌ها، نشانه‌گذاری کمی تغییر می‌کند. برای این‌که از محتوای بلاکی استفاده کنیم، ما <code>&lt;a&gt;</code> با <code>&lt;div&gt;</code> عوض کردیم و نتیجه شد:</p>
+          <p>برای محتوای سفارشی اچ‌تی‌ام‌ال در بندانگشتی‌ها، نشانه‌گذاری کمی تغییر می‌کند. برای این‌که از محتوای بلاکی استفاده کنیم، ما <code>&lt;a&gt;</code> را با <code>&lt;div&gt;</code> عوض کردیم و نتیجه شد:</p>
 <pre class="prettyprint linenums">
 &lt;ul class="thumbnails"&gt;
   &lt;li class="span4"&gt;
@@ -1951,7 +1951,7 @@
           <h3>دکمه‌های حذف</h3>
           <p>مرورگرهای موبایل سافاری و اپرا، برای استفاده از دکمه‌های حذف پیام‌های هشدار نیاز به ویژگی <code>data-dismiss="alert"</code> و استفاده از <code>href="#"</code> را دارند.</p>
           <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;</pre>
-          <p>همچنین می‌توانید از عنصر <code>&lt;button&gt;</code> با ویژگی <code>data</code> که در مستندات آمده‌است، استفاده کنید وقتی از <code>&lt;button&gt;</code> استفاده می‌کنید باید <code>type="button"</code> رو به دکمهٔ خود اضافه کنیدو.</p>
+          <p>همچنین می‌توانید از عنصر <code>&lt;button&gt;</code> با ویژگی <code>data</code> که در مستندات آمده‌است، استفاده کنید وقتی از <code>&lt;button&gt;</code> استفاده می‌کنید باید <code>type="button"</code> رو به دکمهٔ خود اضافه کنید.</p>
           <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
 
           <h3>اخطارها را با جاوااسکریپت حذف کنید</h3>
@@ -2179,7 +2179,7 @@
         ================================================== -->
         <section id="misc">
           <div class="page-header">
-            <h1>مختلف <small>اجزا کمکی سبک</small></h1>
+            <h1>مختلف <small>اجزای کمکی سبک</small></h1>
           </div>
 
           <h2>چاه‌ها</h2>
@@ -2218,16 +2218,16 @@
 </pre>
 
           <h2>آیکن بستن</h2>
-          <p>از آیکن بستن برای حذف محتواهایی مانند مدال‌ها و اخطارها استفاده کنید.</p>
+          <p>از آیکن بستن برای حذف محتواهایی مانند مُدال‌ها و اخطارها استفاده کنید.</p>
           <div class="bs-docs-example">
             <p><button class="close" style="float: none;">&times;</button></p>
           </div>
           <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
-          <p>سیستم‌عامل iOS نیاز به یک href="#" برای کلیک کردن یک رویداد نیاز دارد.</p>
+          <p>سیستم‌عامل iOS نیاز به یک <code>href="#"</code> برای کلیک کردن یک رویداد نیاز دارد.</p>
           <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
 
           <h2>کلاس‌های کمکی</h2>
-          <p>کلاس‌های ساده برای استفاتده از صفحه نمایش‌های کوچک و تغییر رفتار.</p>
+          <p>کلاس‌های ساده برای استفاده از صفحه نمایش‌های کوچک و تغییر رفتار.</p>
 
           <h4>.pull-left</h4>
           <p>یک عنصر را به سمت چپ می‌برد.</p>
@@ -2263,7 +2263,7 @@ class="muted"
 </pre>
 
           <h4>.clearfix</h4>
-          <p><code>float</code> در هر عنصری حذف می‌کند.</p>
+          <p><code>float</code> در هر عنصری را حذف می‌کند.</p>
 <pre class="prettyprint linenums">
 class="clearfix"
 </pre>
@@ -2296,12 +2296,12 @@ class="clearfix"
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">برگشت به بالا</a></p>
-        <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/fat" target="_blank">@jnaqsh</a>.</p>
+        <p class="pull-left"><a href="#">برگشت به بالا</a></p>
+        <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/jnaqsh" target="_blank">@jnaqsh</a>.</p>
         <p>کد تحت اجازه‌نامهٔ <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a> می‌باشد. مستندات تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشد.</p>
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
-          <li><a href="http://blog.getbootstrap.com"><a href="http://blog.getrbootstrap.com">وبلاگ را بخوانید</a></a></li>
+          <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
           <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
           <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
         </ul>

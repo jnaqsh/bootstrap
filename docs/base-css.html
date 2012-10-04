@@ -49,7 +49,7 @@
                 <a href="./getting-started.html">از این‌جا شروع کنید</a>
               </li>
               <li class="">
-                <a href="./scaffolding.html">چهارچوب اصلی</a>
+                <a href="./scaffolding.html">چارچوب اصلی</a>
               </li>
               <li class="active">
                 <a href="./base-css.html">سی‌اس‌اس پایه</a>
@@ -74,7 +74,7 @@
 <header class="jumbotron subhead" id="overview">
   <div class="container">
     <h1>سی‌اس‌اس پایه</h1>
-    <p class="lead">با کلاس‌های توسعه‌یافته، اجزای اصلی اچ‌تی‌ام‌ال شکل و بهبود داده می‌شود.</p>
+    <p class="lead">با کلاس‌های توسعه‌یافته، اجزای اصلی اچ‌تی‌ام‌ال شکل و بهبود داده می‌شوند.</p>
   </div>
 </header>
 
@@ -86,13 +86,13 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#typography"><i class="icon-chevron-right"></i> گرافیک قلم</a></li>
-          <li><a href="#code"><i class="icon-chevron-right"></i> کد</a></li>
-          <li><a href="#tables"><i class="icon-chevron-right"></i> جدول‌ها</a></li>
-          <li><a href="#forms"><i class="icon-chevron-right"></i> فرم‌ها</a></li>
-          <li><a href="#buttons"><i class="icon-chevron-right"></i> دکمه‌ها</a></li>
-          <li><a href="#images"><i class="icon-chevron-right"></i> عکس‌ها</a></li>
-          <li><a href="#icons"><i class="icon-chevron-right"></i> آیکن‌ها</a></li>
+          <li><a href="#typography"><i class="icon-chevron-left"></i> گرافیک قلم</a></li>
+          <li><a href="#code"><i class="icon-chevron-left"></i> کد</a></li>
+          <li><a href="#tables"><i class="icon-chevron-left"></i> جدول‌ها</a></li>
+          <li><a href="#forms"><i class="icon-chevron-left"></i> فرم‌ها</a></li>
+          <li><a href="#buttons"><i class="icon-chevron-left"></i> دکمه‌ها</a></li>
+          <li><a href="#images"><i class="icon-chevron-left"></i> عکس‌ها</a></li>
+          <li><a href="#icons"><i class="icon-chevron-left"></i> آیکن‌ها</a></li>
         </ul>
       </div>
       <div class="span9">
@@ -135,7 +135,7 @@
           <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
 
           <h3>ساخته‌شده به‌وسیلهٔ Less</h3>
-          <p>اندازه گرافیک قلم براساس تو متغیر تعریف‌شده در فایل <strong>variables.less</strong> است: <code>@baseFontSize</code> و <code>@baseLineHeight</code>. نخستین اندازه فونت پایه است و دومی ارتفاع خطوط است. ما از آن متغیرها و کمی عملیات ریاضی ساده، اندازه حاشیه‌های داخلی و خارجی و ارتفاع خطوط را محاسبه می‌کنیم. آن‌ها را سفارشی کنید و از بوت‌استرپ استفاده کنید.</p>
+          <p>اندازه گرافیک قلم براساس دو متغیر تعریف‌شده در فایل <strong>variables.less</strong> است: <code>@baseFontSize</code> و <code>@baseLineHeight</code>. نخستین، اندازه فونت پایه است و دومی ارتفاع خطوط است. ما از آن متغیرها و کمی عملیات ریاضی ساده، اندازه حاشیه‌های داخلی و خارجی و ارتفاع خطوط را محاسبه می‌کنیم. آن‌ها را سفارشی کنید و از بوت‌استرپ استفاده کنید.</p>
 
 
           <hr class="bs-docs-separator">
@@ -193,7 +193,7 @@
 
 
           <h2 id="abbreviations">مخفف‌ها</h2>
-          <p>پیاده‌سازی کد مخفف <code>&lt;abbr&gt;</code> اچ‌تی‌ام‌ال برای هنگامی که موس بر روی مخفف قرار می‌گیرد، اصل کلمات نمایان شوند. مخفف‌های که خصوصیت <code>title</code> مشخص شده‌باشد بر زیر آن خط‌چینی کشیده می‌شود و وقتی موس بر روی آن قرار گرفته ‌می‌شود اصل کلمات نمایان می‌شود.</p>
+          <p>پیاده‌سازی کد مخفف <code>&lt;abbr&gt;</code> اچ‌تی‌ام‌ال برای هنگامی که موس بر روی مخفف قرار می‌گیرد، اصل کلمات نمایان شوند. مخفف‌هایی که خصوصیت <code>title</code> را داشته باشند، بر زیر آن خط‌چینی کشیده می‌شود و وقتی موس بر روی آن قرار گرفته ‌می‌شود اصل کلمات نمایان می‌شود.</p>
 
           <h3><code>&lt;abbr&gt;</code></h3>
           <p>برای این‌که اصل کلمات مخفف نمایان شود، در خصوصیت <code>title</code> اصل کلمات را قرار دهید.</p>
@@ -205,7 +205,7 @@
           <h3><code>&lt;abbr class="initialism"&gt;</code></h3>
           <p>کلاس <code>.initialism</code> به مخفف اضافه کنید تا کمی اندازه فونت آن کوچک‌تر شود.</p>
           <div class="bs-docs-example">
-            <p><abbr title="HyperText Markup Language" class="initialism">اچ‌تی‌ام‌ال</abbr>بهترین زبان نشانه‌گذاری است.</p>
+            <p><abbr title="HyperText Markup Language" class="initialism">اچ‌تی‌ام‌ال</abbr> بهترین زبان نشانه‌گذاری است.</p>
           </div>
           <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;اچ‌تی‌ام‌ال&lt;/abbr&gt;</pre>
 
@@ -223,7 +223,7 @@
               <strong>شرکت نقش</strong><br>
               خیابان آزادی، آزادی ۳۶، پلاک ۱۳<br>
               ایران، مشهد<br>
-              <abbr title="تلفن">ت:</abbr> (۹۸) ۵۱۱-۶۰۹۹۳۹۳
+              <abbr title="تلفن">ت:</abbr> ۶۰۹۹۳۹۳-۵۱۱ (۹۸)
             </address>
             <address>
               <strong>نام و نام خانوادگی</strong><br>
@@ -235,7 +235,7 @@
   &lt;strong&gt;شرکت نقش&lt;/strong&gt;&lt;br&gt;
   خیابان آزادی، آزادی ۳۶، پلاک ۱۳&lt;br&gt;
   ایران، مشهد&lt;br&gt;
-  &lt;abbr title="تلفن"&gt;ت:&lt;/abbr&gt; (۹۸) ۵۱۱-۶۰۹۹۳۹۳
+  &lt;abbr title="تلفن"&gt;ت:&lt;/abbr&gt; ۶۰۹۹۳۹۳-۵۱۱ (۹۸)
 &lt;/address&gt;
 
 &lt;address&gt;
@@ -268,7 +268,7 @@
           <p>شیوه نمایش و محتویات برای یک گفتاورد ساده می‌تواند چندین حالت داشته‌باشد.</p>
 
           <h4>آوردن نام منبع</h4>
-          <p>تگ <code>&lt;small&gt;</code> برای تشخیص منبع بیاورید. نام شخص یا منبع را در داخل تگ <code>&lt;cite&gt;</code> بیاورید..</p>
+          <p>تگ <code>&lt;small&gt;</code> برای تشخیص منبع بیاورید. نام شخص یا منبع را در داخل تگ <code>&lt;cite&gt;</code> بیاورید.</p>
           <div class="bs-docs-example">
             <blockquote>
               <p>شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.</p>
@@ -283,15 +283,15 @@
 </pre>
 
           <h4>نمایش متفاوت</h4>
-          <p>از تگ <code>.pull-right</code> برای این‌که گفتاورد راست‌چین شود استفاده کنید.</p>
+          <p>از تگ <code>.pull-left</code> برای این‌که گفتاورد چپ‌چین شود استفاده کنید.</p>
           <div class="bs-docs-example" style="overflow: hidden;">
-            <blockquote class="pull-right">
-              <p>شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.</p>
+            <blockquote class="pull-left">
+              <p>شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید.</p>
               <small>ریچارد متیو استالمن از  <cite title="مقالات بنیاد نرم‌افزار آزاد">مقالات بنیاد نرم‌افزار آزاد</cite></small>
             </blockquote>
           </div>
 <pre class="prettyprint linenums">
-&lt;blockquote class="pull-right"&gt;
+&lt;blockquote class="pull-left"&gt;
   ...
 &lt;/blockquote&gt;
 </pre>
@@ -451,7 +451,7 @@
 &lt;/pre&gt;
 </pre>
           <p><span class="label label-info">توجه کنید!</span> مطمئن شوید که در داخل تگ <code>&lt;pre&gt;</code> به‌اندازه کافی به سمت چپ رفته‌اید، به خاطر این‌که تمام فاصله‌ها نمایش داده خواهد شد.</p>
-          <p>شما ممکن است از کلاس <code>.pre-scrollable</code> برای قرارگیری اسکرول‌بار برای متون بیش از ۳۵۰ پیکسل استفاده کنید.</p>
+          <p>شما ممکن است از کلاس <code>.pre-scrollable</code> برای قرارگیری اسکرول‌بار برای متون بیش از ارتفاع ۳۵۰ پیکسل استفاده کنید.</p>
         </section>
 
 
@@ -873,7 +873,7 @@
           <form class="bs-docs-example">
             <legend>راهنما</legend>
             <label>نام برچسب</label>
-            <input type="text" placeholder="Type something…">
+            <input type="text" placeholder="یک چیزی بنویسید…">
             <span class="help-block">نمونه‌ای از نوشته راهنما که به‌صورت بلاکی است.</span>
             <label class="checkbox">
               <input type="checkbox"> مرا تیک بزنید
@@ -884,7 +884,7 @@
 &lt;form&gt;
   &lt;legend&gt;راهنما&lt;/legend&gt;
   &lt;label&gt;نام برچسب&lt;/label&gt;
-  &lt;input type="text" placeholder="یه چیزی بنویسید…"&gt;
+  &lt;input type="text" placeholder="یک چیزی بنویسید…"&gt;
   &lt;span class="help-block"&gt;نمونه‌ای از نوشته راهنما که به‌صورت بلاکی است&lt;/span&gt;
   &lt;label class="checkbox"&gt;
     &lt;input type="checkbox"&gt; مرا تیک بزنید
@@ -898,7 +898,7 @@
 
 
           <h2>لایه‌های اختیاری</h2>
-          <p>با استفاده بوت‌استرپ، سه لایهٔ فرم اختیاری برای استفاده‌های رایج به شما داده می‌شود.</p>
+          <p>با استفاده از بوت‌استرپ، سه لایهٔ فرم اختیاری برای استفاده‌های رایج به شما داده می‌شود.</p>
 
           <h3>فرم جستجو</h3>
           <p>کلاس <code>.form-search</code> را به فرم اضافه کنید و برای این‌که حاشیه‌های ورودی بیشتر گرد شود از کلاس <code>.search-query</code> برای <code>&lt;input&gt;</code> استفاده کنید.</p>
@@ -1075,7 +1075,7 @@
 &lt;/label&gt;
 </pre>
 
-          <h3>Selectها</h3>
+          <h3>انتخاب‌ها</h3>
           <p>از تنظیمات پیش‌فرض استفاده کنید و یا برای این‌که بتوان چندین انتخاب داشت کلاس <code>multiple="multiple"</code> به آن اضافه کنید.</p>
           <form class="bs-docs-example">
             <select>
@@ -1132,7 +1132,7 @@
             <br>
             <div class="input-append">
               <input class="span2" id="appendedInput" size="16" type="text">
-              <span class="add-on">٫..</span>
+              <span class="add-on">﷼</span>
             </div>
           </form>
 <pre class="prettyprint linenums">
@@ -1140,7 +1140,7 @@
   &lt;span class="add-on"&gt;@&lt;/span&gt;&lt;input class="span2" id="prependedInput" size="16" type="text" placeholder="نام کاربری"&gt;
 &lt;/div&gt;
 &lt;div class="input-append"&gt;
-  &lt;input class="span2" id="appendedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;٫..&lt;/span&gt;
+  &lt;input class="span2" id="appendedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;﷼&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1148,14 +1148,14 @@
           <p>از هر دو کلاس و دو نمونه از کلاس <code>.add-on</code> برای ایجاد یک ورودی با متن قبل و بعد استفاده کنید.</p>
           <form class="bs-docs-example form-inline">
             <div class="input-prepend input-append">
-              <span class="add-on">﷼</span>
-              <input class="span2" id="appendedPrependedInput" size="16" type="text">
               <span class="add-on">٫۰۰</span>
+              <input class="span2" id="appendedPrependedInput" size="16" type="text">
+              <span class="add-on">﷼</span>
             </div>
           </form>
 <pre class="prettyprint linenums">
 &lt;div class="input-prepend input-append"&gt;
-  &lt;span class="add-on"&gt;﷼&lt;/span&gt;&lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;٫۰۰&lt;/span&gt;
+  &lt;span class="add-on"&gt;٫۰۰&lt;/span&gt;&lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;﷼&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1230,7 +1230,7 @@
 &lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
 </pre>
           <p>
-            <span class="label label-info">توجه کنید!</span> در نسخه‌های آینده، وقتی شما از کلاس‌های نسبی برای اندازه استفاده کنید، اندازه ورودی با اندازه دکمه‌ها با یکدیگر متناسب می‌شوند. برای مثال اگر شما <code>.input-large</code> استفاده کنید اندازه حاشیه و اندازه فونت ورودی نیز تغییر می‌کند.
+            <span class="label label-info">توجه کنید!</span> در نسخه‌های آینده، وقتی شما از کلاس‌های نسبی برای اندازه استفاده کنید، اندازه ورودی با اندازه دکمه‌ها با یکدیگر متناسب می‌شوند. برای مثال اگر شما از <code>.input-large</code> استفاده کنید اندازه حاشیه و اندازه فونت ورودی نیز تغییر می‌کند.
           </p>
 
           <h4>اندازه شبکه‌ای</h4>
@@ -1278,7 +1278,7 @@
 &lt;/select&gt;
 </pre>
 
-          <p>برای استفاده چندین ورودی شبکه‌ای در هر خط از کلاس <code>.controls-row</code> استفاده کنید. با روش فضاهای اضافه از بین می‌روند، حاشیه مناسب داده می‌شودو متحرک‌های اضافه پاک می‌شوند.</p>
+          <p>برای استفاده چندین ورودی شبکه‌ای در هر خط از کلاس <code>.controls-row</code> استفاده کنید. با این روش فضاهای اضافه از بین می‌روند، حاشیه مناسب داده می‌شودو متحرک‌های اضافه پاک می‌شوند.</p>
           <form class="bs-docs-example" style="padding-bottom: 15px;">
             <div class="controls">
               <input class="span5" type="text" placeholder=".span5">
@@ -1321,7 +1321,7 @@
 </pre>
 
           <h3>عملیات فرم</h3>
-          <p>در پایان یک فرم یک گروه از عملیات (دکمه‌ها) وجود دارد. وقتی آن‌ها را در یک کلاس <code>.form-horizontal</code> قرار دهید آن‌ها در یک خط با کنترل‌کننده‌های فرم همراستا می‌شوند.</p>
+          <p>در پایان یک فرم، یک گروه از عملیات (دکمه‌ها) وجود دارد. وقتی آن‌ها را در یک کلاس <code>.form-horizontal</code> قرار دهید آن‌ها در یک خط با کنترل‌کننده‌های فرم همراستا می‌شوند.</p>
           <form class="bs-docs-example">
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
@@ -1358,7 +1358,7 @@
 
 
           <h2>وضعیت‌های کنترل‌کننده فرم</h2>
-          <p>وضعیت‌های مختلف را برای کاربران و یا مراجعه‌کنندگان بر روی کنترل‌کننده‌های فرم ویا برچسب‌ها نمایش می‌دهد.</p>
+          <p>وضعیت‌های مختلف را برای کاربران و یا مراجعه‌کنندگان بر روی کنترل‌کننده‌های فرم و یا برچسب‌ها نمایش می‌دهد.</p>
 
           <h3>Input focus</h3>
           <p>ما <code>outline</code> پیش‌فرض را از روی برخی از کنترل‌کننده‌های فرم حذف کردیم و یک سایه <code>box-shadow</code> را هنگام <code>:focus</code> اعمال می‌کنیم.</p>
@@ -1454,7 +1454,7 @@
           </div>
 
           <h2>دکمه‌های پیش‌فرض</h2>
-          <p>شیوه‌های نمایش دکمه می‌تواند با کلاس <code>.btn</code> به هرچیزی اعمال شود. اگرچه شما فقط می‌خواهید این شیوه‌ها را تگ‌های <code>&lt;a&gt;</code> و <code>&lt;button&gt;</code> برای بهترین خروجی اعمال شود.</p>
+          <p>شیوه‌های نمایش دکمه می‌تواند با کلاس <code>.btn</code> به هرچیزی اعمال شود. اگرچه شما فقط می‌خواهید این شیوه‌ها را تگ‌های <code>&lt;a&gt;</code> و <code>&lt;button&gt;</code> برای بهترین خروجی، اعمال شود.</p>
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
@@ -1502,7 +1502,7 @@
               <tr>
                 <td><button type="button" class="btn btn-link">پیوند</button></td>
                 <td><code>btn btn-link</code></td>
-                <td>تبدیل یک دکمه به یک پیوند که شبیه یک ییوند است امام رفتار یک دکمه را دارد</td>
+                <td>تبدیل یک دکمه به یک پیوند که شبیه یک پیوند است اما رفتار یک دکمه را دارد</td>
               </tr>
             </tbody>
           </table>
@@ -1549,7 +1549,7 @@
   &lt;button class="btn btn-mini" type="button"&gt;دکمه خیلی کوچک&lt;/button&gt;
 &lt;/p&gt;
 </pre>
-          <p>یک دکمهٔ بلاکی با اضافه کردن کلاس <code>.btn-block</code> ایجاد کنید، اندازه دکمه برابر عنصر پدر دکمه می‌شود.</p>
+          <p>یک دکمهٔ بلاکی را، با اضافه کردن کلاس <code>.btn-block</code> ایجاد کنید، اندازه دکمه برابر عنصر پدر دکمه می‌شود.</p>
           <div class="bs-docs-example">
             <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
               <button type="button" class="btn btn-large btn-block btn-primary">دکمه بلاکی</button>
@@ -1606,7 +1606,7 @@
 &lt;input class="btn" type="button" value="ورودی"&gt;
 &lt;input class="btn" type="submit" value="فرستادن"&gt;
 </pre>
-          <p>به عنوان یک تمرین خوب، سعی کنید برای نمایش خوب در تمام مرورگرها اگر شما از <code>input</code> استفاده می‌کنید <code>&lt;input type="submit"&gt;</code> برای دکمه استفاده کنید.</p>
+          <p>به عنوان یک تمرین خوب، سعی کنید برای نمایش بهینه در تمام مرورگرها، اگر شما از <code>input</code> استفاده می‌کنید، پس از <code>&lt;input type="submit"&gt;</code> برای دکمه استفاده کنید.</p>
 
         </section>
 
@@ -1645,7 +1645,7 @@
           </div>
 
           <h2>آیکن‌های glyphs</h2>
-          <p>۱۴۰ آیکن‌ها در فرم بلوکی و کوچک در رنگ‌های خاکستری تیره (پیش‌فرض) و سفید به‌وسیلهٔ <a href="http://glyphicons.com" target="_blank">Glyphicons</a> آماده شده‌است.</p>
+          <p>۱۴۰ آیکن در فرم بلوکی و کوچک در رنگ‌های خاکستری تیره (پیش‌فرض) و سفید به‌وسیلهٔ <a href="http://glyphicons.com" target="_blank">Glyphicons</a> آماده شده‌است.</p>
           <ul class="the-icons clearfix">
             <li><i class="icon-glass"></i> icon-glass</li>
             <li><i class="icon-music"></i> icon-music</li>
@@ -1794,7 +1794,7 @@
           </ul>
 
           <h3>یادکرد Glyphicons</h3>
-          <p><a href="http://glyphicons.com/">Glyphicons</a> که مجموعه‌ای از آیکن‌ها است به‌طور معموب رایگان نیست اما با توافقی که میان ایجادکننده Glyphicons و بوت‌استرپ به وجود آمد، آن‌ها این آیکن‌ها را بدون هیچ هزینه‌ای در اختیار توسعه‌دهنده‌ها قرار دادند. به عنوان یک تشکر بهتر است در هرجایی که ممکن است پیوندی به <a href="http://glyphicons.com/">Glyphicons</a> در سایت خود قرار دهید.</p>
+          <p><a href="http://glyphicons.com/">Glyphicons</a> که مجموعه‌ای از آیکن‌ها است به‌طور معمول رایگان نیست اما با توافقی که میان ایجادکننده Glyphicons و بوت‌استرپ به وجود آمد، آن‌ها این آیکن‌ها را بدون هیچ هزینه‌ای در اختیار توسعه‌دهنده‌ها قرار دادند. به عنوان یک تشکر بهتر است در هرجایی که ممکن است پیوندی به <a href="http://glyphicons.com/">Glyphicons</a> در سایت خود قرار دهید.</p>
 
 
           <hr class="bs-docs-separator">
@@ -1805,7 +1805,7 @@
 <pre class="prettyprint linenums">
 &lt;i class="icon-search"&gt;&lt;/i&gt;
 </pre>
-          <p>همچنین برای استفاده از رنگ متمایز سفید نیز شما می‌توانید استفاده کنید. ما پیشنهاد می‌کنیم که از آیکن‌های سفید در منوها و پیوندهای افتادنی استفاده کنید.</p>
+          <p>همچنین شما می‌توانید از رنگ سفید متمایز استفاده کنید. ما پیشنهاد می‌کنیم که از آیکن‌های سفید در منوها و پیوندهای افتادنی استفاده کنید.</p>
 <pre class="prettyprint linenums">
 &lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
 </pre>
@@ -1941,12 +1941,12 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">برگشت به بالا</a></p>
-        <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/fat" target="_blank">@jnaqsh</a>.</p>
+        <p class="pull-left"><a href="#">برگشت به بالا</a></p>
+        <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/jnaqsh" target="_blank">@jnaqsh</a>.</p>
         <p>کد تحت اجازه‌نامهٔ <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a> می‌باشد. مستندات تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشد.</p>
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
-          <li><a href="http://blog.getbootstrap.com"><a href="http://blog.getrbootstrap.com">وبلاگ را بخوانید</a></a></li>
+          <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
           <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
           <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
         </ul>
