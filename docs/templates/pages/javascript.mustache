@@ -44,7 +44,7 @@
           <p>{{_i}}اگر شما آخرین نسخهٔ بوت‌استرپ را دانلود کرده باشید، هم نسخهٔ کامل <strong>bootstrap.js</strong> و هم نسخهٔ فشرده <strong>bootstrap.min.js</strong> شامل تمام پلاگین‌های این صفحه می‌شوند.{{/i}}</p>
 
           <h3>{{_i}}خصوصیت‌های Data{{/i}}</h3>
-          <p>{{_i}}شما می‌توانید به‌وسیلهٔ API بوت‌استرپ تمام پلاگین‌ها را حتی بدون نوشتن یک خط کد جاوااسکریپت استفاده کنید. کلاس زیر نخستین کلاس API بوت‌استرپ است و شما باید در هنگام استفاده از پلاگین به این توجه داشته‌باشد.{{/i}}</p>
+          <p>{{_i}}شما می‌توانید به‌وسیلهٔ API بوت‌استرپ تمام پلاگین‌ها را حتی بدون نوشتن یک خط کد جاوااسکریپت استفاده کنید. کلاس زیر نخستین کلاس API بوت‌استرپ است و شما باید در هنگام استفاده از پلاگین، به این توجه داشته‌باشد.{{/i}}</p>
 
           <p>{{_i}}همان‌طور که گفته شد، در برخی از مواقع بهتر است این ویژگی را خاموش کنیم. بنابراین ما ویژگی‌ای را آماده کرده‌ایم که آن را به‌راحتی می‌توانید غیرفعال کنید. فقط لازم است تابع <code>off</code> را با پارامتر `'data-api'` بر روی <code>body</code> فراخوانی کنید. مانند زیر:{{/i}}
           <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
@@ -55,11 +55,11 @@
           <h3>{{_i}}API قابل برنامه‌ریزی{{/i}}</h3>
           <p>{{_i}}همچنین ما معتقد هستیم که شما باید بتوانید که از پلاگین‌های بوت‌استرپ فقط از طریق API جاوااسکریپت نیز کار کنید. تمام APIهای عمومی تکی، زنجیره‌ای و خروجی آن‌ها یک مجموعه از عمل انجام شده‌است.{{/i}}</p>
           <pre class="prettyprint linenums">$(".btn.danger").button("toggle").addClass("fat")</pre>
-          <p>{{_i}}تمام متدها باید یک شی از انتخاب‌ها را قبول کند، یک رشته که متد خاصی را صدا می‌زند و یا هیچی (که شی با رفتار پیش‌فرض مقداردهی اولیه می‌شود):{{/i}}</p>
+          <p>{{_i}}تمام توایع باید یک شی از انتخاب‌ها را قبول کند، یک رشته که تابع خاصی را صدا می‌زند و یا هیچی (که شی با رفتار پیش‌فرض مقداردهی اولیه می‌شود):{{/i}}</p>
 <pre class="prettyprint linenums">
 $("#myModal").modal()                       // مقداردهی اولیه با پیش‌فرض‌ها
 $("#myModal").modal({ keyboard: false })   // مقداردهی با انتخاب بدون صفحه کلید
-$("#myModal").modal('show')                // مقداردهی و سپس فراخوانی متد</p>
+$("#myModal").modal('show')                // مقداردهی و سپس فراخوانی تابع</p>
 </pre>
           <p>{{_i}}همچنین هر پلاگین سازندهٔ خودش را با فراخوانی خصوصیت `Constructor` نمایش می‌دهد: <code>$.fn.popover.Constructor</code>. اگر شما یک شی از پلاگین خاصی را می‌خواهید بدست آورید، به‌صورت مستقیم از عنصرش آن را بخواهید: <code>$('[rel=popover]').data('popover')</code>.{{/i}}</p>
 
@@ -86,10 +86,10 @@ $('#myModal').on('show', function (e) {
           <h3>{{_i}}استفاده‌ها{{/i}}</h3>
           <p>{{_i}}چند نمونه از استفادهٔ این پلاگین:{{/i}}</p>
           <ul>
-            <li>{{_i}}Sliding or fading in modals{{/i}}</li>
-            <li>{{_i}}Fading out tabs{{/i}}</li>
-            <li>{{_i}}Fading out alerts{{/i}}</li>
-            <li>{{_i}}Sliding carousel panes{{/i}}</li>
+            <li>{{_i}}نمایش اسلایدی و یا محو شدن در مُدال‌ها{{/i}}</li>
+            <li>{{_i}}محو شدن تب‌ها{{/i}}</li>
+            <li>{{_i}}محو شدن اخطارها{{/i}}</li>
+            <li>{{_i}}نمایش اسلایدی چرخ فلک{{/i}}</li>
           </ul>
 
           {{! Ideas: include docs for .fade.in, .slide.in, etc }}
@@ -106,7 +106,7 @@ $('#myModal').on('show', function (e) {
 
 
           <h2>{{_i}}نمونه‌ها{{/i}}</h2>
-          <p>{{_i}}مدال‌ها به‌صورت خطی هستند اما اعلان‌هایی قابل انعطاف با کمترین نیازمندی‌ها و دارای پیش‌فرض‌های هوشمند هستند.{{/i}}</p>
+          <p>{{_i}}مدال‌ها به‌صورت خطی هستند، اما اعلان‌هایی، قابل انعطاف با کمترین نیازمندی‌ها و دارای پیش‌فرض‌های هوشمند هستند.{{/i}}</p>
 
           <h3>{{_i}}نمونه‌ٔ ثابت{{/i}}</h3>
           <p>{{_i}}که مدال با تیتر و بدنه و مجموعه‌ای از عملیات در پایین آن را نمایش می‌دهد.{{/i}}</p>
@@ -154,7 +154,7 @@ $('#myModal').on('show', function (e) {
               <p>" نرم‌افزار آزاد" درباره آزادی است، نه قیمت. برای درک بهتر باید به معنای "آزاد" در "آزادی بیان" فکر کنید، نه در "آبجو مجانی".</p>
 
               <h4>{{_i}}پوب‌ها در مدال{{/i}}</h4>
-              <p>{{_i}}این <a href="#" role="button" class="btn popover-test" title="یک عنوان" data-content="و این‌جا متن مهیج دیگری وجود دارد. خیلی خوبه نه؟">دکمه</a> باعث ایجاد سیی بر روی آن می‌شود.{{/i}}</p>
+              <p>{{_i}}این <a href="#" role="button" class="btn popover-test" title="یک عنوان" data-content="و این‌جا متن مهیج دیگری وجود دارد. خیلی خوبه نه؟">دکمه</a> باعث ایجاد پوب بر روی آن می‌شود.{{/i}}</p>
 
               <h4>{{_i}}بالنک‌ها در مدال{{/i}}</h4>
               <p>{{_i}}<a href="#" class="tooltip-test" title="Tooltip">این پیوند</a> و <a href="#" class="tooltip-test" title="Tooltip">این یکی</a> باید با رفتن بر روی آن متنی را نمایش دهد.{{/i}}</p>
@@ -213,7 +213,7 @@ $('#myModal').on('show', function (e) {
           <pre class="prettyprint linenums">$('#myModal').modal(انتخاب‌ها)</pre>
 
           <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
-          <p>{{_i}}انتخاب‌ها می‌توانند به‌وسیلهٔ خصوصیات data و یا جاوااسکریپت فرستاده شوند. برای استفاده از خصوصیات data نام <code>data-</code> به <code>data-backdrop=""</code> اضافه کنید.{{/i}}</p>
+          <p>{{_i}}انتخاب‌ها می‌توانند به‌وسیلهٔ خصوصیات data و یا جاوااسکریپت فرستاده شوند. برای استفاده از خصوصیات data نام <code>data-</code> را به <code>data-backdrop=""</code> اضافه کنید.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <thead>
              <tr>
@@ -260,13 +260,13 @@ $('#myModal').modal({
   keyboard: false
 })
 </pre>
-          <h4>.modal('toggle')</h4>
+          <h4>.modal('تغییر وضعیت')</h4>
           <p>{{_i}}به‌صورت دستی مدال فعال و غیرفعال می‌کند.{{/i}}</p>
           <pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
-          <h4>.modal('show')</h4>
+          <h4>.modal('نمایش')</h4>
           <p>{{_i}}به‌صورت دستی مدال را باز می‌کند.{{/i}}</p>
           <pre class="prettyprint linenums">$('#myModal').modal('show')</pre>
-          <h4>.modal('hide')</h4>
+          <h4>.modal('مخفی')</h4>
           <p>{{_i}}به‌صورت دستی مدال را می‌بندد.{{/i}}</p>
           <pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
           <h3>{{_i}}رویدادها{{/i}}</h3>
@@ -285,7 +285,7 @@ $('#myModal').modal({
              </tr>
              <tr>
                <td>{{_i}}shown{{/i}}</td>
-               <td>{{_i}}وقتی مدال به کاربر نمایش داده‌شد (بعد از اجرای انتقال‌ها سی‌اس‌اس)، این رویداد فراخوانی می‌شود.{{/i}}</td>
+               <td>{{_i}}وقتی مدال به کاربر نمایش داده‌شد (بعد از اجرای جلوهٔ بصری انتقال‌های سی‌اس‌اس)، این رویداد فراخوانی می‌شود.{{/i}}</td>
              </tr>
              <tr>
                <td>{{_i}}hide{{/i}}</td>
@@ -293,7 +293,7 @@ $('#myModal').modal({
              </tr>
              <tr>
                <td>{{_i}}hidden{{/i}}</td>
-               <td>{{_i}}وقتی مدال از دید کاربر بسته شد (بعد از انجام انتقال‌ها سی‌اس‌اس) این رویداد اجرا می‌شود.{{/i}}</td>
+               <td>{{_i}}وقتی مدال از دید کاربر بسته شد (بعد از انجام جلوهٔ بصری انتقال‌های سی‌اس‌اس) این رویداد اجرا می‌شود.{{/i}}</td>
              </tr>
             </tbody>
           </table>
@@ -415,7 +415,7 @@ $('#myModal').on('hidden', function () {
   &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
-          <p>{{_i}}اگر آدرس‌ها به‌مانند هم هستند از خصوصیت <code>data-target</code> به‌جای <code>href="#"</code> استفاده کنید.{{/i}}</p>
+          <p>{{_i}}اگر آدرس‌ها مانند هم هستند از خصوصیت <code>data-target</code> به‌جای <code>href="#"</code> استفاده کنید.{{/i}}</p>
 <pre class="prettyprint linenums">
 &lt;div class="dropdown"&gt;
   &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="افتادنی" data-target="#" href="/page.html"&gt;
@@ -451,7 +451,7 @@ $('#myModal').on('hidden', function () {
 
 
           <h2>{{_i}}نمونه در نوار ناوبری{{/i}}</h2>
-          <p>{{_i}}پلاگین اسکرول جاسوس برای به‌روزرسانی خودکار پیوندهای ناوبری به مکان نوشته است. محتویات زیر را اسکرول کنید و ببنید که چگونه کلاس‌های مختلف فعال می‌شوند. همچنین زیرآیتم‌های افتادنی نیز رنگی می‌شوند.{{/i}}</p>
+          <p>{{_i}}پلاگین اسکرول جاسوس برای به‌روزرسانی خودکار پیوندهای ناوبری، به مکان نوشته است. محتویات زیر را اسکرول کنید و ببنید که چگونه کلاس‌های مختلف فعال می‌شوند. همچنین زیرآیتم‌های افتادنی نیز رنگی می‌شوند.{{/i}}</p>
           <div class="bs-docs-example">
             <div id="navbarExample" class="navbar navbar-static">
               <div class="navbar-inner">
@@ -496,7 +496,7 @@ $('#myModal').on('hidden', function () {
           <h2>{{_i}}استفاده{{/i}}</h2>
 
           <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
-          <p>{{_i}}برای این‌که به راحتی رفتار اسکرول جاسوس را به نوار ناوبری اضافه کنید، <code>data-spy="scroll"</code> به عنصری که می‌خواهید جاسوسی کند (که اغلب اوقات بدنه است) و <code>data-target=".navbar"</code> به عناصر ناوبری اضافه کنید.{{/i}}</p>
+          <p>{{_i}}برای این‌که به راحتی رفتار اسکرول جاسوس را به نوار ناوبری اضافه کنید، <code>data-spy="scroll"</code> به عنصری که می‌خواهید جاسوسی کند (که اغلب اوقات، بدنه است) و <code>data-target=".navbar"</code> به عناصر ناوبری اضافه کنید.{{/i}}</p>
           <pre class="prettyprint linenums">&lt;body data-spy="scroll" data-target=".navbar"&gt;...&lt;/body&gt;</pre>
 
           <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
@@ -505,11 +505,11 @@ $('#myModal').on('hidden', function () {
 
           <div class="alert alert-info">
             <strong>{{_i}}توجه کنید!{{/i}}</strong>
-            {{_i}}پیوندهای نوار ناوبری باید شناسهٔ قابل شناسایی داشته باشد. برای مثال <code>&lt;a href="#home"&gt;صفحه اصلی&lt;/a&gt;</code>،  باید تبدیل به چیزی شبیه <code>&lt;div id="صفحه اصلی"&gt;&lt;/div&gt;</code> شود.{{/i}}
+            {{_i}}پیوندهای نوار ناوبری باید شناسهٔ قابل شناسایی داشته باشند. برای مثال <code>&lt;a&gt;href="#home"&gt;Home&lt;/a&gt;</code>،  باید تبدیل به چیزی شبیه <code>&lt;div id="Home"&gt;&lt;/div&gt;</code> شود.{{/i}}
           </div>
 
           <h3>{{_i}}توابع{{/i}}</h3>
-          <h4>.scrollspy('refresh')</h4>
+          <h4>.scrollspy('به‌روزرسانی')</h4>
           <p>{{_i}}وقتی عنصر خاص در محتوا حذف یا اضافه می‌شود یا به عبارت دیگر عنصر خاصی در DOM اضافه یا حذف می‌شود باید با فراخوانی این تابع اسکرول جاسوس را به‌روز کنید:{{/i}}</p>
 <pre class="prettyprint linenums">
 $('[data-spy="scroll"]').each(function () {
@@ -518,7 +518,7 @@ $('[data-spy="scroll"]').each(function () {
 </pre>
 
           <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
-          <p>{{_i}}انتخاب‌ها می‌توانند از طریق خصوصیت data و یا توسط جاوااسکریپت فرستاده شود. برای خصوصیت data نام انتخاب را به <code>data-</code> به عنوان  <code>data-offset=""</code> اضافه کنید.{{/i}}</p>
+          <p>{{_i}}انتخاب‌ها می‌توانند از طریق خصوصیت data و یا توسط جاوااسکریپت فرستاده شوند. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید. به عنوان مثال: <code>data-offset=""</code>.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <thead>
              <tr>
@@ -615,7 +615,7 @@ $('#myTab li:eq(2) a').tab('show'); // با استفاده از تب سوم - ا
 </pre>
 
           <h3>{{_i}}نشانه‌گذاری{{/i}}</h3>
-          <p>{{_i}}شما می‌توانید هر تب یا پیلی را بدون نوشتن کد جاوااسکریپت، فعال کنید. فقط نیاز است که <code>data-toggle="tab"</code> یا <code>data-toggle="pill"</code> را در عنصر اضافه کنید. کلاس‌های <code>nav</code> و <code>nav-tabs</code> برای عنصر <code>ul</code> شیوه نمایش تبی بوت‌استرپ را فعال می‌کند.{{/i}}</p>
+          <p>{{_i}}شما می‌توانید هر تب یا پیلی را بدون نوشتن کد جاوااسکریپت، فعال کنید. فقط نیاز است که <code>data-toggle="tab"</code> یا <code>data-toggle="pill"</code> را در عنصر اضافه کنید. کلاس‌های <code>nav</code> و <code>nav-tabs</code> برای عنصر <code>ul</code>، شیوه نمایش تبی بوت‌استرپ را فعال می‌کند.{{/i}}</p>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-tabs"&gt;
   &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;{{_i}}صفحه اصلی{{/i}}&lt;/a&gt;&lt;/li&gt;
@@ -689,7 +689,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
           <h2>{{_i}}نمونه‌ها{{/i}}</h2>
           <p>{{_i}}برگرفته از پلاگین jQuery.tipsy که توسط «جیسون فریم» نوشته‌شده‌است، می‌باشد. بالنک‌ها نسخهٔ به‌روزشده آن است که مبتنی بر عکس نمی‌باشد و از پویانمایی‌ها و خصوصیت‌های data (برای local title storage) سی‌اس‌اس ۳ استفاده می‌کند.{{/i}}</p>
-          <p>{{_i}}بر روی بالنک‌های زیر بروید تا آن‌ها را ببنید:{{/i}}</p>
+          <p>{{_i}}بر روی پیوندهای زیر بروید تا آن‌ها را ببنید:{{/i}}</p>
           <div class="bs-docs-example tooltip-demo">
             <p class="muted" style="margin-bottom: 0;">{{_i}}"نرم‌افزار آزاد" به معنای "<a href="#" rel="tooltip" title="بالنک پیش‌فرض">غیرتجاری</a>" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد. توسعه تجاری نرم‌افزار آزاد دیگر غیر معمول نیست، بلکه چنین نرم‌افزارهای آزاد تجاری بسیار مهم هستند. بنابراین شما ممکن است پولی پرداخت کرده باشید تا کپی‌هایی از <a href="#" rel="tooltip" title="بالنکی دیگر">نرم‌افزار آزاد</a> را بدست آورده باشید و یا ممکن است کپی‌ها را بدون پرداخت هزینه بدست آورده باشید. اما صرفنظر از اینکه چگونه کپی‌ها را بدست آورده باشید، شما همیشه این <a href="#" rel="tooltip" title="یک بالنک دیگر">آزادی</a> را دارید تا <a href="#" rel="tooltip" title="آخرین بالنک!">نرم‌افزار</a> را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.{{/i}}
             </p>
@@ -714,7 +714,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <pre class="prettyprint linenums">$('#example').tooltip({{_i}}انتخاب‌ها{{/i}})</pre>
 
           <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
-          <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data یا جاوااسکرپیت به تابع فرستاده می‌شود. برای خصوصیت data نام انتخاب خود را به <code>data-</code> اضافه کنید مانند <code>data-animation=""</code>.{{/i}}</p>
+          <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data یا جاوااسکریپت به تابع فرستاده می‌شود. برای خصوصیت data نام انتخاب خود را به <code>data-</code> اضافه کنید مانند <code>data-animation=""</code>.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <thead>
              <tr>
@@ -735,7 +735,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                <td>{{_i}}html{{/i}}</td>
                <td>{{_i}}boolean{{/i}}</td>
                <td>true</td>
-               <td>{{_i}}اچ‌تی‌ام‌ال در داخل بالنک قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید آن را از متن ساده استفاده کنید.{{/i}}</td>
+               <td>{{_i}}اچ‌تی‌ام‌ال در داخل بالنک قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید از متن ساده استفاده کنید.{{/i}}</td>
              </tr>
              <tr>
                <td>{{_i}}placement{{/i}}</td>
@@ -785,16 +785,16 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <h3>{{_i}}توابع{{/i}}</h3>
           <h4>$().tooltip({{_i}}انتخاب‌ها{{/i}})</h4>
           <p>{{_i}}یک بالنک به عناصر انتخاب شده، می‌چسباند.{{/i}}</p>
-          <h4>.tooltip('show')</h4>
+          <h4>.tooltip('نمایش')</h4>
           <p>{{_i}}بالنک یک عنصر را نمایش می‌دهد.{{/i}}</p>
           <pre class="prettyprint linenums">$('#element').tooltip('show')</pre>
-          <h4>.tooltip('hide')</h4>
+          <h4>.tooltip('مخفی')</h4>
           <p>{{_i}}بالنک یک عنصر را مخفی می‌کند.{{/i}}</p>
           <pre class="prettyprint linenums">$('#element').tooltip('hide')</pre>
-          <h4>.tooltip('toggle')</h4>
+          <h4>.tooltip('تغییر وضعیت')</h4>
           <p>{{_i}}بالنک یک عنصر را تغییر حالت می‌دهد.{{/i}}</p>
           <pre class="prettyprint linenums">$('#element').tooltip('toggle')</pre>
-          <h4>.tooltip('destroy')</h4>
+          <h4>.tooltip('حذف')</h4>
           <p>{{_i}}بالنک یک عنصر را مخفی و حذف می‌کند.{{/i}}</p>
           <pre class="prettyprint linenums">$('#element').tooltip('destroy')</pre>
         </section>
@@ -848,11 +848,11 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
           <div class="clearfix"></div>
         </div>
-        <p>{{_i}}هیچ کد نشانه‌گذاری، جاوااسکریپت در هنگام تولید پوب تولید نمی‌کند و تمام محتویات را در داخل خصوصیت <code>data</code> قرار می‌دهد.{{/i}}</p>
+        <p>{{_i}}جاوااسکریپت هیچ کد نشانه‌گذاری، در هنگام تولید پوب تولید نمی‌کند و تمام محتویات را در داخل خصوصیت <code>data</code> قرار می‌دهد.{{/i}}</p>
 
         <h3>اجرای زنده</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟" data-placement="left">{{_i}}کلیک کنید تا پوب تغییر حالت دهد{{/i}}</a>
+          <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟">{{_i}}کلیک کنید تا پوب تغییر حالت دهد{{/i}}</a>
         </div>
 
 
@@ -885,7 +885,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
              <td>{{_i}}html{{/i}}</td>
              <td>{{_i}}boolean{{/i}}</td>
              <td>true</td>
-             <td>{{_i}}اچ‌تی‌ام‌ال در داخل پوب قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید آن را از متن ساده استفاده کنید.{{/i}}</td>
+             <td>{{_i}}اچ‌تی‌ام‌ال در داخل پوب قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید، از متن ساده استفاده کنید.{{/i}}</td>
            </tr>
            <tr>
              <td>{{_i}}placement{{/i}}</td>
@@ -939,17 +939,17 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <h3>{{_i}}توابع{{/i}}</h3>
         <h4>$().popover({{_i}}انتخاب‌ها{{/i}})</h4>
-        <p>{{_i}}یک پوب به عناصر انتخاب شده، می‌چسباند..{{/i}}</p>
-        <h4>.popover('show')</h4>
+        <p>{{_i}}یک پوب به عناصر انتخاب شده، می‌چسباند.{{/i}}</p>
+        <h4>.popover('نمایش')</h4>
         <p>{{_i}}پوب یک عنصر را نمایش می‌دهد.{{/i}}</p>
         <pre class="prettyprint linenums">$('#element').popover('show')</pre>
-        <h4>.popover('hide')</h4>
+        <h4>.popover('مخفی')</h4>
         <p>{{_i}}پوب یک عنصر را مخفی می‌کند.{{/i}}</p>
         <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
-        <h4>.popover('toggle')</h4>
+        <h4>.popover('تغییر وضعیت')</h4>
         <p>{{_i}}پوب یک عنصر را تغییر حالت می‌دهد.{{/i}}</p>
         <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
-        <h4>.popover('destroy')</h4>
+        <h4>.popover('حذف')</h4>
         <p>{{_i}}پوب یک عنصر را مخفی و حذف می‌کند.{{/i}}</p>
         <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
       </section>
@@ -999,7 +999,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <h3>{{_i}}توابع{{/i}}</h3>
         <h4>$().alert()</h4>
         <p>{{_i}}برای این‌که بتوان تمام پیام اخطار را باهم بست می‌توان از تابع زیر استفاده کرد. برای داشتن جلوهٔ بصری در هنگام بستن مطمئن شوید که کلاس‌های <code>.fade</code> و <code>.in</code> در آن‌ها وجود دارد.{{/i}}</p>
-        <h4>.alert('close')</h4>
+        <h4>.alert('بستن')</h4>
         <p>{{_i}}بستن یک اخطار.{{/i}}</p>
         <pre class="prettyprint linenums">$(".alert").alert('close')</pre>
 
@@ -1044,7 +1044,7 @@ $('#my-alert').bind('closed', function () {
             <p>{{_i}}ایجاد دکمه‌های گروهی برای ساخت نوار ابزار و کارهای بسیاری دیگر که می‌توان با دکمه‌ها انجام داد.{{/i}}</p>
 
             <h4>{{_i}}نمایش وضعیت{{/i}}</h4>
-            <p>{{_i}}برای این‌که یک دکمه وضعیت را نمایش دهد data-loading-text="در حال بارگذاری..." را به آن اضافه کنید.{{/i}}</p>
+            <p>{{_i}}برای این‌که یک دکمه وضعیت را نمایش دهد "در حال بارگذاری..."=data-loading-text را به آن اضافه کنید.{{/i}}</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <button type="button" id="fat-btn" data-loading-text="در حال بارگذاری..." class="btn btn-primary">
                 {{_i}}دانلود{{/i}}
@@ -1053,43 +1053,43 @@ $('#my-alert').bind('closed', function () {
             <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-primary" data-loading-text="در حال بارگذاری..."&gt;دانلود&lt;/button&gt;</pre>
 
             <h4>{{_i}}تغییر وضعیت یک‌حالته{{/i}}</h4>
-            <p>{{_i}}برای تبدیل یک دکمه به حالت تغییر وضعیت یک‌حالته data-toggle="button" را به آن اضافه کنید.{{/i}}</p>
+            <p>{{_i}}برای تبدیل یک دکمه به حالت تغییر وضعیت یک‌حالته <code>data-toggle="button"</code> را به آن اضافه کنید.{{/i}}</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <button type="button" class="btn btn-primary" data-toggle="button">{{_i}}تغییر وضعیت یک‌حالته{{/i}}</button>
             </div>{{! /example }}
             <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button"&gt;تغییر وضعیت یک‌حالته&lt;/button&gt;</pre>
 
             <h4>{{_i}}Checkbox{{/i}}</h4>
-            <p>{{_i}}برای تبدیل شدن دکمه به شیوه checkbox، خصوصیت data-toggle="buttons-checkbox" را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
+            <p>{{_i}}برای تبدیل شدن دکمه به شیوه checkbox، خصوصیت <code>data-toggle="buttons-checkbox"</code> را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <div class="btn-group" data-toggle="buttons-checkbox">
-                <button type="button" class="btn btn-primary">{{_i}}چپ{{/i}}</button>
-                <button type="button" class="btn btn-primary">{{_i}}وسط{{/i}}</button>
                 <button type="button" class="btn btn-primary">{{_i}}راست{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}وسط{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}چپ{{/i}}</button>
               </div>
             </div>{{! /example }}
 <pre class="prettyprint linenums">
 &lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
-  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
   &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
             <h4>{{_i}}Radio{{/i}}</h4>
-            <p>{{_i}}برای تبدیل شدن دکمه به شیوه radio، خصوصیت data-toggle="buttons-radio" را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
+            <p>{{_i}}برای تبدیل شدن دکمه به شیوه radio، خصوصیت <code>data-toggle="buttons-radio"</code> را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <div class="btn-group" data-toggle="buttons-radio">
-                <button type="button" class="btn btn-primary">{{_i}}چپ{{/i}}</button>
-                <button type="button" class="btn btn-primary">{{_i}}وسط{{/i}}</button>
                 <button type="button" class="btn btn-primary">{{_i}}راست{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}وسط{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}چپ{{/i}}</button>
               </div>
             </div>{{! /example }}
 <pre class="prettyprint linenums">
 &lt;div class="btn-group" data-toggle="buttons-radio"&gt;
-  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
   &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1108,14 +1108,14 @@ $('#my-alert').bind('closed', function () {
             <p><em>{{_i}}هیچی{{/i}}</em></p>
 
             <h3>{{_i}}توابع{{/i}}</h3>
-            <h4>$().button('toggle')</h4>
+            <h4>$().button('تغییر وضعیت')</h4>
             <p>{{_i}}با فشردن دکمه، تغییر وضعیت خواهد داد. شیوهٔ نمایش آن به حالتی تغییر خواهد کرد که فعال به‌نظر می‌رسد.{{/i}}</p>
             <div class="alert alert-info">
               <strong>{{_i}}توجه کنید!{{/i}}</strong>
               {{_i}}تغییر وضعیت خودکار با اضافه کردن خصوصیت <code>data-toggle</code> به دکمه فعال خواهد شد.{{/i}}
             </div>
             <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button" &gt;…&lt;/button&gt;</pre>
-            <h4>$().button('loading')</h4>
+            <h4>$().button('در حال بارگذاری')</h4>
             <p>{{_i}}دکمه را درحالت بارگذاری قرار می‌دهد. دکمه غیرفعال می‌شود و متن دکمه به در حال بارگذاری تغییر می‌کند. متن در حال بارگذاری باید به‌وسیلهٔ خصوصیت <code>data-loading-text</code> به دکمه اضافه شود.{{/i}}
             </p>
             <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-loading-text="در حال بارگذاری..." &gt;...&lt;/button&gt;</pre>
@@ -1123,9 +1123,9 @@ $('#my-alert').bind('closed', function () {
               <strong>{{_i}}توجه کنید!{{/i}}</strong>
               {{_i}}<a href="https://github.com/twitter/bootstrap/issues/793">فایرفاکس اصرار بر این دارد که وضعیت غیرفعال در هنگام بارگذاری صفحه اتفاق بیافتد</a>. کارهایی برای این مشکل انجام شده‌است مانند: <code>autocomplete="off"</code>.{{/i}}
             </div>
-            <h4>$().button('reset')</h4>
+            <h4>$().button('بازنشانی')</h4>
             <p>{{_i}}وضعیت دکمه دوباره به‌حالت اول برمی‌گردد. متن به متن اصلی تغییر پیدا می‌کند.{{/i}}</p>
-            <h4>$().button(string)</h4>
+            <h4>$().button(رشته)</h4>
             <p>{{_i}}وضعیت به حالت اول تغییر می‌کند. متن به متن تعریف‌شده برای این تابع تغییر پیدا می‌کند.{{/i}}</p>
 <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
 &lt;script&gt;
@@ -1278,11 +1278,11 @@ $('#myCollapsible').collapse({
   toggle: false
 })
 </pre>
-            <h4>.collapse('toggle')</h4>
+            <h4>.collapse('تغییر وضعیت')</h4>
             <p>{{_i}}باعث می‌شود یک عنصر فروریختنی نمایش داده شود و یا مخفی شود.{{/i}}</p>
-            <h4>.collapse('show')</h4>
+            <h4>.collapse('نمایش')</h4>
             <p>{{_i}}یک عنصر فروریختنی را نمایش می‌دهد.{{/i}}</p>
-            <h4>.collapse('hide')</h4>
+            <h4>.collapse('مخفی')</h4>
             <p>{{_i}}یک عنصر فروریختنی را مخفی می‌کند.{{/i}}</p>
 
             <h3>{{_i}}رویدادها{{/i}}</h3>
@@ -1394,7 +1394,7 @@ $('#myCollapsible').on('hidden', function () {
             <pre class="prettyprint linenums">$('.carousel').carousel()</pre>
 
             <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
-            <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data و یا جاوااسریپت فرستاده می‌شود. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید، مانند <code>data-interval=""</code>.{{/i}}</p>
+            <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data و یا جاوااسکریپت فرستاده می‌شود. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید، مانند <code>data-interval=""</code>.{{/i}}</p>
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
@@ -1409,7 +1409,7 @@ $('#myCollapsible').on('hidden', function () {
                  <td>{{_i}}interval{{/i}}</td>
                  <td>{{_i}}number{{/i}}</td>
                  <td>5000</td>
-                 <td>{{_i}}مقدار زمان تاخیری که به‌صورت خود آیتم بعدی نمایش داده شود. اگر یسی باشد چرخ فلک به‌صورت خودکار دور نمی‌زند. (اسلاید بعدی نمایش داده نمی‌شود.){{/i}}</td>
+                 <td>{{_i}}مقدار زمان تاخیری که آیتم بعدی نمایش داده شود. اگر false باشد چرخ فلک به‌صورت خودکار دور نمی‌زند. (اسلاید بعدی نمایش داده نمی‌شود.){{/i}}</td>
                </tr>
                <tr>
                  <td>{{_i}}pause{{/i}}</td>
@@ -1428,15 +1428,15 @@ $('.carousel').carousel({
   interval: 2000
 })
 </pre>
-            <h4>.carousel('cycle')</h4>
+            <h4>.carousel('چرخش')</h4>
             <p>{{_i}}چرخ فلک بر روی آیتم‌ها از چپ به راست دور می‌زند.{{/i}}</p>
-            <h4>.carousel('pause')</h4>
+            <h4>.carousel('توقف')</h4>
             <p>{{_i}}چرخ فلک از دور زدن بر روی آیتم‌ها متوقف می‌شود.{{/i}}</p>
-            <h4>.carousel(number)</h4>
+            <h4>.carousel(عدد)</h4>
             <p>{{_i}}چرخ فلک بر روی آیتم مشخص‌شده حرکت می‌کند (از صفر شروع می‌شود مانند آرایه).{{/i}}</p>
-            <h4>.carousel('prev')</h4>
+            <h4>.carousel('قبلی')</h4>
             <p>{{_i}}به آیتم قبلی بازمی‌گردد.{{/i}}</p>
-            <h4>.carousel('next')</h4>
+            <h4>.carousel('بعدی')</h4>
             <p>{{_i}}به آیتم بعدی می‌رود.{{/i}}</p>
 
             <h3>{{_i}}رویدادها{{/i}}</h3>
@@ -1525,7 +1525,7 @@ $('.carousel').carousel({
                  <td>{{_i}}matcher{{/i}}</td>
                  <td>{{_i}}function{{/i}}</td>
                  <td>{{_i}}case insensitive{{/i}}</td>
-                 <td>{{_i}}تابعی که برای تشخیص می‌دهد این‌که آیا یک جستجو با یک آیتم برابر شده‌است یا نه. یک یک آرگومان <code>item</code> برای آزمایش جستجو قبول می‌کند. برای دسترسی به جستجوی جاری از <code>this.query</code> استفاده می‌شود. اگر جستجو پیدا شود مقدار <code>true</code> را بازمی‌گرداند.{{/i}}</td>
+                 <td>{{_i}}تابعی که تشخیص می‌دهد آیا یک جستجو با یک آیتم برابر شده‌است یا نه. آرگومان <code>item</code> را برای آزمایش جستجو قبول می‌کند. برای دسترسی به جستجوی جاری از <code>this.query</code> استفاده کنید. اگر جستجو پیدا شود مقدار <code>true</code> را بازمی‌گرداند.{{/i}}</td>
                </tr>
                <tr>
                  <td>{{_i}}sorter{{/i}}</td>
@@ -1543,7 +1543,7 @@ $('.carousel').carousel({
             </table>
 
             <h3>{{_i}}توابع{{/i}}</h3>
-            <h4>.typeahead({{_i}}options{{/i}})</h4>
+            <h4>.typeahead({{_i}}انتخاب‌ها{{/i}})</h4>
             <p>{{_i}}یک ورودی را به کامل‌کنندهٔ نوشته تجهیز می‌کند.{{/i}}</p>
           </section>
 
@@ -1564,13 +1564,13 @@ $('.carousel').carousel({
             <h2>{{_i}}استفاده{{/i}}</h2>
 
             <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
-            <p>{{_i}}برای تبدیل هر عنصری به یک پیوست فقط نیاز است که <code>data-spy="affix"</code> به آن عنصر اضافه کنید. بعد از جابه‌جایی‌ها را تعریف کنید که چه‌وقت عنصر فعال و غیرفعال شود.{{/i}}</p>
+            <p>{{_i}}برای تبدیل هر عنصری به یک پیوست، فقط نیاز است که <code>data-spy="affix"</code> به آن عنصر اضافه کنید. سپس جابه‌جایی‌ها را تعریف کنید که چه‌وقت عنصر فعال و غیرفعال شود.{{/i}}</p>
 
             <pre class="prettyprint linenums">&lt;div data-spy="affix" data-offset-top="200"&gt;...&lt;/div&gt;</pre>
 
             <div class="alert alert-info">
               <strong>{{_i}}توجه کنید!{{/i}}</strong>
-              {{_i}}شما باید مکان عنصر چسبیده‌شده و رفتار پدر بعدی ان را مدیریت کنید.مکان‌ها با استفاده از <code>affix</code>، <code>affix-top</code> و <code>affix-bottom</code> کنترل می‌شود. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.{{/i}}
+              {{_i}}شما باید مکان عنصر چسبیده‌شده و رفتار پدر بعدی آن را مدیریت کنید.مکان‌ها با استفاده از <code>affix</code>، <code>affix-top</code> و <code>affix-bottom</code> کنترل می‌شود. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.{{/i}}
             </div>
 
             <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
@@ -1578,7 +1578,7 @@ $('.carousel').carousel({
             <pre class="prettyprint linenums">$('#navbar').affix()</pre>
 
             <h3>{{_i}}توابع{{/i}}</h3>
-            <h4>.affix('refresh')</h4>
+            <h4>.affix('به‌روزرسانی')</h4>
             <p>{{_i}}هنگام از استفاده پیوست، وقتی عنصری را در DOM اضافه یا حذف کردید، باید تابع به‌روزرسانی فراخوانی شود:{{/i}}</p>
 <pre class="prettyprint linenums">
 $('[data-spy="affix"]').each(function () {
