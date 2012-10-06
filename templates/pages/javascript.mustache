@@ -1,0 +1,1615 @@
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead">
+  <div class="container">
+    <h1>{{_i}}جاوااسکریپت برای بوت‌استرپ{{/i}}</h1>
+    <p class="lead">{{_i}}با استفاده از ۱۳ پلاگین سفارشی جی‌کوئری، صفحات خود را زنده کنید.{{/i}}
+  </div>
+</header>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#overview"><i class="icon-chevron-left"></i> {{_i}}مرور کلی{{/i}}</a></li>
+          <li><a href="#transitions"><i class="icon-chevron-left"></i> {{_i}}انتقال‌ها{{/i}}</a></li>
+          <li><a href="#modals"><i class="icon-chevron-left"></i> {{_i}}مُدال{{/i}}</a></li>
+          <li><a href="#dropdowns"><i class="icon-chevron-left"></i> {{_i}}افتادنی‌ها{{/i}}</a></li>
+          <li><a href="#scrollspy"><i class="icon-chevron-left"></i> {{_i}}اسکرول جاسوس{{/i}}</a></li>
+          <li><a href="#tabs"><i class="icon-chevron-left"></i> {{_i}}تب‌ها{{/i}}</a></li>
+          <li><a href="#tooltips"><i class="icon-chevron-left"></i> {{_i}}بالُنک{{/i}}</a></li>
+          <li><a href="#popovers"><i class="icon-chevron-left"></i> {{_i}}پوب{{/i}}</a></li>
+          <li><a href="#alerts"><i class="icon-chevron-left"></i> {{_i}}اخطار{{/i}}</a></li>
+          <li><a href="#buttons"><i class="icon-chevron-left"></i> {{_i}}دکمه{{/i}}</a></li>
+          <li><a href="#collapse"><i class="icon-chevron-left"></i> {{_i}}فروریختنی{{/i}}</a></li>
+          <li><a href="#carousel"><i class="icon-chevron-left"></i> {{_i}}چرخ فلک{{/i}}</a></li>
+          <li><a href="#typeahead"><i class="icon-chevron-left"></i> {{_i}}کامل‌کننده نوشته{{/i}}</a></li>
+          <li><a href="#affix"><i class="icon-chevron-left"></i> {{_i}}پیوست{{/i}}</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+        <!-- Overview
+        ================================================== -->
+        <section id="overview">
+          <div class="page-header">
+            <h1>{{_i}}جاوااسکریپت در بوت‌استرپ{{/i}}</h1>
+          </div>
+
+          <h3>{{_i}}منحصربه‌فرد یا کامپایل‌شده{{/i}}</h3>
+          <p>{{_i}}اگر شما آخرین نسخهٔ بوت‌استرپ را دانلود کرده باشید، هم نسخهٔ کامل <strong>bootstrap.js</strong> و هم نسخهٔ فشرده <strong>bootstrap.min.js</strong> شامل تمام پلاگین‌های این صفحه می‌شوند.{{/i}}</p>
+
+          <h3>{{_i}}خصوصیت‌های Data{{/i}}</h3>
+          <p>{{_i}}شما می‌توانید به‌وسیلهٔ API بوت‌استرپ تمام پلاگین‌ها را حتی بدون نوشتن یک خط کد جاوااسکریپت استفاده کنید. کلاس زیر نخستین کلاس API بوت‌استرپ است و شما باید در هنگام استفاده از پلاگین، به این توجه داشته‌باشد.{{/i}}</p>
+
+          <p>{{_i}}همان‌طور که گفته شد، در برخی از مواقع بهتر است این ویژگی را خاموش کنیم. بنابراین ما ویژگی‌ای را آماده کرده‌ایم که آن را به‌راحتی می‌توانید غیرفعال کنید. فقط لازم است تابع <code>off</code> را با پارامتر `'data-api'` بر روی <code>body</code> فراخوانی کنید. مانند زیر:{{/i}}
+          <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
+
+          <p>{{_i}}همچنین شما می‌توانید پلاگین خاصی را با استفاده از دستور زیر غیرفعال کنید:{{/i}}</p>
+          <pre class="prettyprint linenums">$('body').off('.alert.data-api')</pre>
+
+          <h3>{{_i}}API قابل برنامه‌ریزی{{/i}}</h3>
+          <p>{{_i}}همچنین ما معتقد هستیم که شما باید بتوانید که از پلاگین‌های بوت‌استرپ فقط از طریق API جاوااسکریپت نیز کار کنید. تمام APIهای عمومی تکی، زنجیره‌ای و خروجی آن‌ها یک مجموعه از عمل انجام شده‌است.{{/i}}</p>
+          <pre class="prettyprint linenums">$(".btn.danger").button("toggle").addClass("fat")</pre>
+          <p>{{_i}}تمام توایع باید یک شی از انتخاب‌ها را قبول کند، یک رشته که تابع خاصی را صدا می‌زند و یا هیچی (که شی با رفتار پیش‌فرض مقداردهی اولیه می‌شود):{{/i}}</p>
+<pre class="prettyprint linenums">
+$("#myModal").modal()                       // مقداردهی اولیه با پیش‌فرض‌ها
+$("#myModal").modal({ keyboard: false })   // مقداردهی با انتخاب بدون صفحه کلید
+$("#myModal").modal('show')                // مقداردهی و سپس فراخوانی تابع</p>
+</pre>
+          <p>{{_i}}همچنین هر پلاگین سازندهٔ خودش را با فراخوانی خصوصیت `Constructor` نمایش می‌دهد: <code>$.fn.popover.Constructor</code>. اگر شما یک شی از پلاگین خاصی را می‌خواهید بدست آورید، به‌صورت مستقیم از عنصرش آن را بخواهید: <code>$('[rel=popover]').data('popover')</code>.{{/i}}</p>
+
+          <h3>{{_i}}رویدادها{{/i}}</h3>
+          <p>{{_i}}بوت‌استرپ برای تمام پلاگین‌هایش رویدادهای خاص و واحدی را آماده کرده‌است. که به‌طور کلی آن‌ها به‌صورت مصدر و یا اسم مفعول می‌آیند. موقعی که از مصدر استفاده می‌شود (برای مثال: <code>show</code>) رویداد قرار است که اجرا شود و وقتی که به صورت اسم مفعول می‌آید (برای مثال: <code>shown</code>) رویداد زمانی اجرا  می‌شود که آن عمل تمام شده‌باشد.{{/i}}</p>
+          <p>{{_i}}تمام رویدادهای مصدر قابلیت preventDefault را فراهم می‌کنند. که این ویژگی به این معناست که قابلیت پیش‌فرض را قبل از اجرا شدن این عمل خنثی می‌کند.{{/i}}</p>
+<pre class="prettyprint linenums">
+$('#myModal').on('show', function (e) {
+    if (!data) return e.preventDefault() // اجازه نمی‌دهد که مُدال نمایش داده شود
+})
+</pre>
+        </section>
+
+
+
+        <!-- Transitions
+        ================================================== -->
+        <section id="transitions">
+          <div class="page-header">
+            <h1>{{_i}}انتقال‌ها{{/i}} <small>bootstrap-transition.js</small></h1>
+          </div>
+          <h3>{{_i}}درباهٔ انتقال‌ها{{/i}}</h3>
+          <p>{{_i}}برای جلوهٔ بصری سادهٔ transition، فایل bootstrap-transition.js را یک‌بار در پروژهٔ خود قرار دهید. اگر شما از نسخهٔ کامپایل‌شده (یا فشرده‌شده) bootstrap.js استفاده می‌کنید نیاز به قرار دادن در پروژهٔ خود نیست، هم‌اکنون آن وجود دارد.{{/i}}</p>
+          <h3>{{_i}}استفاده‌ها{{/i}}</h3>
+          <p>{{_i}}چند نمونه از استفادهٔ این پلاگین:{{/i}}</p>
+          <ul>
+            <li>{{_i}}نمایش اسلایدی و یا محو شدن در مُدال‌ها{{/i}}</li>
+            <li>{{_i}}محو شدن تب‌ها{{/i}}</li>
+            <li>{{_i}}محو شدن اخطارها{{/i}}</li>
+            <li>{{_i}}نمایش اسلایدی چرخ فلک{{/i}}</li>
+          </ul>
+
+          {{! Ideas: include docs for .fade.in, .slide.in, etc }}
+        </section>
+
+
+
+        <!-- Modal
+        ================================================== -->
+        <section id="modals">
+          <div class="page-header">
+            <h1>{{_i}}مُدال‌ها{{/i}} <small>bootstrap-modal.js</small></h1>
+          </div>
+
+
+          <h2>{{_i}}نمونه‌ها{{/i}}</h2>
+          <p>{{_i}}مدال‌ها به‌صورت خطی هستند، اما اعلان‌هایی، قابل انعطاف با کمترین نیازمندی‌ها و دارای پیش‌فرض‌های هوشمند هستند.{{/i}}</p>
+
+          <h3>{{_i}}نمونه‌ٔ ثابت{{/i}}</h3>
+          <p>{{_i}}که مدال با تیتر و بدنه و مجموعه‌ای از عملیات در پایین آن را نمایش می‌دهد.{{/i}}</p>
+          <div class="bs-docs-example" style="background-color: #f5f5f5;">
+            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>{{_i}}تیتر مدال{{/i}}</h3>
+              </div>
+              <div class="modal-body">
+                <p>{{_i}}نمونه‌ای از محتویات…{{/i}}</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn">{{_i}}بستن{{/i}}</a>
+                <a href="#" class="btn btn-primary">{{_i}}ذخیره تغییرات{{/i}}</a>
+              </div>
+            </div>
+          </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;div class="modal hide fade"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+    &lt;h3&gt;{{_i}}تیتر مدال{{/i}}&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;{{_i}}نمونه‌ای از محتویات…{{/i}}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="btn"&gt;{{_i}}بستن{{/i}}&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;{{_i}}ذخیره تغییرات{{/i}}&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>{{_i}}نمایشی زنده{{/i}}</h3>
+          <p>{{_i}}با کلیک کردن بر روی دکمه مدال نمایش داده می‌شود. این مدال از جلوهٔ بصری slide down و fade in از بالای صفحه به پایین استفاده می‌کند.{{/i}}</p>
+          <!-- sample modal content -->
+          <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h3 id="myModalLabel">{{_i}}تیتر مدال{{/i}}</h3>
+            </div>
+            <div class="modal-body">
+              <h4>{{_i}}نوشته‌ای در مدال{{/i}}</h4>
+              <p>" نرم‌افزار آزاد" درباره آزادی است، نه قیمت. برای درک بهتر باید به معنای "آزاد" در "آزادی بیان" فکر کنید، نه در "آبجو مجانی".</p>
+
+              <h4>{{_i}}پوب‌ها در مدال{{/i}}</h4>
+              <p>{{_i}}این <a href="#" role="button" class="btn popover-test" title="یک عنوان" data-content="و این‌جا متن مهیج دیگری وجود دارد. خیلی خوبه نه؟">دکمه</a> باعث ایجاد پوب بر روی آن می‌شود.{{/i}}</p>
+
+              <h4>{{_i}}بالنک‌ها در مدال{{/i}}</h4>
+              <p>{{_i}}<a href="#" class="tooltip-test" title="Tooltip">این پیوند</a> و <a href="#" class="tooltip-test" title="Tooltip">این یکی</a> باید با رفتن بر روی آن متنی را نمایش دهد.{{/i}}</p>
+
+              <hr>
+
+              <h4>{{_i}}نمایش اسکرول‌بار با اضافه شدن متن{{/i}}</h4>
+              <p>{{_i}}ما یک <code>max-height</code> ثابت در <code>.modal-body</code> قرار داده‌ایم. توجه کنید با زیاد شدن متون چه اتفاقی می‌افتد.{{/i}}</p>
+              <p>اگر توسعه‌دهنده نرم‌افزار قادر باشد مجوز نرم‌افزار را، بدون این که شما کاری کنید که سبب این کار شود، باطل کند، این نرم‌افزار آزاد نیست.</p>
+              <p>"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
+              <p>توسعه تجاری نرم‌افزار آزاد دیگر غیر معمول نیست، بلکه چنین نرم‌افزارهای آزاد تجاری بسیار مهم هستند.</p>
+              <p>آزادی برای استفاده از برنامه به معنای آزادی هر شخص و یا سازمانی برای استفاده از آن برنامه بر روی هر سیستم کامپیوتری، برای هر کاری، و بدون نیاز به هر گونه ارتباط بعدی با توسعه‌دهنده و یا هر نهاد خاصی می‌باشد.</p>
+              <p>مالکین نرم‌افزار می‌گویند زمانی که خود کاربران از برنامه‌ها نسخه‌برداری می‌کنند، متحمل «خسارت» یا «ضرر اقتصادی» می‌شوند. اما این کار هیچ تأثیر مستقیمی بر مالک ندارد و به هیچ کس ضرر نمی‌زند.</p>
+              <p>در این نوع آزادی، هدف کاربر اهمیت دارد نه هدف توسعه‌دهنده؛ شما به عنوان یک کاربر آزاد هستید تا برنامه را برای هدف خودتان استفاده نمایید، و اگر برنامه را به شخص دیگری نیز بدهید، او هم آزاد است تا برنامه را برای هدف خودش استفاده نماید.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn" data-dismiss="modal">{{_i}}بستن{{/i}}</button>
+              <button class="btn btn-primary">{{_i}}ذخیره تغییرات{{/i}}</button>
+            </div>
+          </div>
+          <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">{{_i}}اجرای زنده مُدال{{/i}}</a>
+          </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;-- Button to trigger modal --&gt;
+&lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;{{_i}}اجرای زنده مُدال{{/i}}&lt;/a&gt;
+
+&lt;-- Modal --&gt;
+&lt;div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&times;&lt;/button&gt;
+    &lt;h3 id="myModalLabel"&gt;تیتر مدال&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;{{_i}}نمونه‌ای از محتویات…{{/i}}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;{{_i}}بستن{{/i}}&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;{{_i}}ذخیره تغییرات{{/i}}&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}استفاده{{/i}}</h2>
+
+          <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+          <p>{{_i}}مدال را بدون نوشتن جاوااسکریپت فعال کنید. خصوصیت <code>data-toggle="modal"</code> بر روی یک کنترل‌کننده مانند دکمه به‌همراه خصوصیت <code>data-target="#foo"</code> یا <code>href="#foo"</code> که مشخص‌کنندهٔ متن مدال می‌باشد، قرار دهید.{{/i}}</p>
+          <pre class="prettyprint linenums">&lt;button type="button" data-toggle="modal" data-target="#myModal"&gt;اجرای مدال&lt;/button&gt;</pre>
+
+          <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
+          <p>{{_i}}یک مدال را با استفاده از شناسهٔ <code>myModal</code> با یک خط جاوااسکریپت صدا بزنید:{{/i}}</p>
+          <pre class="prettyprint linenums">$('#myModal').modal(انتخاب‌ها)</pre>
+
+          <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+          <p>{{_i}}انتخاب‌ها می‌توانند به‌وسیلهٔ خصوصیات data و یا جاوااسکریپت فرستاده شوند. برای استفاده از خصوصیات data نام <code>data-</code> را به <code>data-backdrop=""</code> اضافه کنید.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+               <th style="width: 50px;">{{_i}}نوع{{/i}}</th>
+               <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}backdrop{{/i}}</td>
+               <td>{{_i}}boolean{{/i}}</td>
+               <td>{{_i}}true{{/i}}</td>
+               <td>{{_i}}عنصر modal-backdrop را اضافه می‌کند. می‌توانید از <code>static</code> برای backdrop استفاده کنید تا مدال با کلیک شدن بسته نشود.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}keyboard{{/i}}</td>
+               <td>{{_i}}boolean{{/i}}</td>
+               <td>{{_i}}true{{/i}}</td>
+               <td>{{_i}}وقتی کلید escape بر روی صفحه‌کلید فشرده می‌شود، مدال بسته می‌شود.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}show{{/i}}</td>
+               <td>{{_i}}boolean{{/i}}</td>
+               <td>{{_i}}true{{/i}}</td>
+               <td>{{_i}}مدال در هنگام مقداردهی اولیه، نمایش داده می‌شود.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}remote{{/i}}</td>
+               <td>{{_i}}path{{/i}}</td>
+               <td>{{_i}}false{{/i}}</td>
+               <td><p>{{_i}}اگر یک پیوند خارجی تعریف شود، محتویات آن توسط متد <code>load</code> جی‌کوئری در داخل <code>.modal-body</code> قرار می‌گیرد. اگر شما از data api استفاده می‌کنید، می‌توانید از تگ <code>href</code> برای مشخص کردن پیوند خارجی استفاده کنید. یک نمونه از این استفاده در زیر آورده شده‌است:{{/i}}</p>
+              <pre class="prettyprint linenums"><code>&lt;a data-toggle="modal" href="remote.html" data-target="#modal"&gt;کلیک کنید&lt;/a&gt;</code></pre></td>
+             </tr>
+            </tbody>
+          </table>
+
+          <h3{{_i}}>توابع{{/i}}</h3>
+          <h4>.modal({{_i}}انتخاب‌ها{{/i}})</h4>
+          <p>{{_i}}محتویات خود را به عنوان مدال فعال کنید. انتخاب‌های اختیاری با استفاده از <code>object</code>  را قبول می‌کند.{{/i}}</p>
+<pre class="prettyprint linenums">
+$('#myModal').modal({
+  keyboard: false
+})
+</pre>
+          <h4>.modal('تغییر وضعیت')</h4>
+          <p>{{_i}}به‌صورت دستی مدال فعال و غیرفعال می‌کند.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
+          <h4>.modal('نمایش')</h4>
+          <p>{{_i}}به‌صورت دستی مدال را باز می‌کند.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#myModal').modal('show')</pre>
+          <h4>.modal('مخفی')</h4>
+          <p>{{_i}}به‌صورت دستی مدال را می‌بندد.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
+          <h3>{{_i}}رویدادها{{/i}}</h3>
+          <p>{{_i}}کلاس مدال بوت‌استرپ برای کارایی بیشتر چندین رویداد را از خود تولید می‌کند.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">{{_i}}رویداد{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}show{{/i}}</td>
+               <td>{{_i}}وقتی تابع شی <code>show</code> فراخوانی شود، این رویداد به‌سرعت اجرا می‌شود.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}shown{{/i}}</td>
+               <td>{{_i}}وقتی مدال به کاربر نمایش داده‌شد (بعد از اجرای جلوهٔ بصری انتقال‌های سی‌اس‌اس)، این رویداد فراخوانی می‌شود.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}hide{{/i}}</td>
+               <td>{{_i}}وقتی تابع شی <code>hide</code> فراخوانی شد این رویداد به‌سرعت اجرا می‌شود.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}hidden{{/i}}</td>
+               <td>{{_i}}وقتی مدال از دید کاربر بسته شد (بعد از انجام جلوهٔ بصری انتقال‌های سی‌اس‌اس) این رویداد اجرا می‌شود.{{/i}}</td>
+             </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
+$('#myModal').on('hidden', function () {
+  // {{_i}}انجام یک کاری…{{/i}}
+})
+</pre>
+        </section>
+
+
+
+        <!-- Dropdowns
+        ================================================== -->
+        <section id="dropdowns">
+          <div class="page-header">
+            <h1>{{_i}}افتادنی‌ها{{/i}} <small>bootstrap-dropdown.js</small></h1>
+          </div>
+
+
+          <h2>{{_i}}نمونه‌ها{{/i}}</h2>
+          <p>{{_i}}منوهای افتادنی را با این پلاگین ساده برای هرچیزی بسازید. چیزهایی مانند: نوار ناوبری، تب‌ها و پیل‌ها.{{/i}}</p>
+
+          <h3>{{_i}}در داخل یک نوار ناوبری{{/i}}</h3>
+          <div class="bs-docs-example">
+            <div id="navbar-example" class="navbar navbar-static">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <a class="brand" href="#">{{_i}}نام پروژه{{/i}}</a>
+                  <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">{{_i}}افتادنی{{/i}} <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li><a tabindex="-1" href="http://google.com">{{_i}}عمل{{/i}}</a></li>
+                        <li><a tabindex="-1" href="#anotherAction">{{_i}}عملی دیگر{{/i}}</a></li>
+                        <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">{{_i}}افتادنی ۲ {{/i}}<b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                        <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
+                        <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                        <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li id="fat-menu" class="dropdown">
+                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">{{_i}}افتادنی ۳{{/i}} <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                        <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
+                        <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                        <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> <!-- /navbar-example -->
+          </div> {{! /example }}
+
+          <h3>{{_i}}در داخل تب‌ها{{/i}}</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">{{_i}}پیوند معمولی{{/i}}</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">{{_i}}افتادنی{{/i}} <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">{{_i}}افتادنی ۲{{/i}} <b class="caret"></b></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">{{_i}}افتادنی ۳{{/i}} <b class="caret"></b></a>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                </ul>
+              </li>
+            </ul> <!-- /tabs -->
+          </div> {{! /example }}
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}استفاده{{/i}}</h2>
+
+          <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+          <p>{{_i}}<code>data-toggle="dropdown"</code> به یک پیوند یا دکمه برای تبدیل آن به یک افتادنی، اضافه کنید.{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;div class="dropdown"&gt;
+  &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;افتادنی&lt;/a&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+          <p>{{_i}}اگر آدرس‌ها مانند هم هستند از خصوصیت <code>data-target</code> به‌جای <code>href="#"</code> استفاده کنید.{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;div class="dropdown"&gt;
+  &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="افتادنی" data-target="#" href="/page.html"&gt;
+    {{_i}}Dropdown{{/i}}
+    &lt;b class="caret"&gt;&lt;/b&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
+          <p>{{_i}}افتادنی‌ها را به‌وسیلهٔ جاوااسکریپت صدا بزنید:{{/i}}</p>
+          <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
+
+          <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+          <p><em>{{_i}}هیچی{{/i}}</em></p>
+
+          <h3>{{_i}}توابع{{/i}}</h3>
+          <h4>$().dropdown()</h4>
+          <p>{{_i}}تبدیل شدن نوار آدرس یا ناوبری براساس تب یا پیل به منوهای افتادنی با صدا زدن این تابع.{{/i}}</p>
+        </section>
+
+
+
+        <!-- ScrollSpy
+        ================================================== -->
+        <section id="scrollspy">
+          <div class="page-header">
+            <h1>{{_i}}اسکرول جاسوس{{/i}} <small>bootstrap-scrollspy.js</small></h1>
+          </div>
+
+
+          <h2>{{_i}}نمونه در نوار ناوبری{{/i}}</h2>
+          <p>{{_i}}پلاگین اسکرول جاسوس برای به‌روزرسانی خودکار پیوندهای ناوبری، به مکان نوشته است. محتویات زیر را اسکرول کنید و ببنید که چگونه کلاس‌های مختلف فعال می‌شوند. همچنین زیرآیتم‌های افتادنی نیز رنگی می‌شوند.{{/i}}</p>
+          <div class="bs-docs-example">
+            <div id="navbarExample" class="navbar navbar-static">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <a class="brand" href="#">{{_i}}نام پروژه{{/i}}</a>
+                  <ul class="nav">
+                    <li><a href="#hamed">حامد رمضانیان</a></li>
+                    <li><a href="#richard">ریچارد استالمن</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{_i}}افتادنی{{/i}} <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#one">{{_i}}آزادی ۱{{/i}}</a></li>
+                        <li><a href="#two">{{_i}}آزادی ۲{{/i}}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#three">{{_i}}آزادی ۳{{/i}}</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
+              <h4 id="hamed">حامد رمضانیان</h4>
+              <p>یک برنامه‌نویس علاقمند به روبی آن ریلز، روبی و نرم‌افزارهای آزاد. این آدم علاقهٔ خاصی به افکار ریچارد استالمن دارد.همچنین این فرد از قهوه آماده، و چایی برای کمک به کد نوشتن استفاده می‌کند. البته علاقه‌های دیگر نیز دارد...</p>
+              <h4 id="richard">ریچارد استالمن</h4>
+              <p>ریچارد متیو استالمن (به انگلیسی: Richard Matthew Stallman) (متولد ۱۶ مارس ۱۹۵۳ در نیویورک) معروف به آر ام اس , (به انگلیسی: RMS) ، یک آمریکایی طرفدار آزادی نرم‌افزار و برنامه‌نویس کامپیوتر است. در سپتامبر سال ۱۹۸۳، او پروژه گنو را برای ساخت یک سیستم‌عامل کاملا آزاد شبه-یونیکس آغاز کرد و مدیریت و معماری این پروژه را عهده‌دار شد. با آغار پروژه گنو، او نخستین قدم را در جنبش نرم‌افزار آزاد برداشت و در اکتبر سال ۱۹۸۵ بنیاد نرم‌افزارهای آزاد را تاسیس کرد.</p>
+              <h4 id="one">آزادی ۱</h4>
+              <p>آزادی برای مطالعه و بررسی چگونگی عملکرد برنامه و تغییر آن برای نیاز خود. دسترسی به کد منبع یک پیش‌شرط برای این آزادی می‌باشد. مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن.</p>
+              <h4 id="two">آزادی ۲</h4>
+              <p>آزادی برای توزیع مجدد کپی‌هایی از آن، بنابراین شما می‌توانید به همسایگان خود کمک کنید. مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن، مقداری فضا برای فکر کردن.</p>
+              <h4 id="three">آزادی ۳</h4>
+              <p>آزادی برای بهبود برنامه و انتشار این تغییرات برای عموم، بنابراین تمام جامعه از آن بهره می‌برند دسترسی به کد منبع یک پیش‌شرط برای این آزادی می‌باشد. مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن، مقداری فضا  برای فکر کردن.</p>
+              <p>فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن، فضای بیشتری برای فکر کردن.
+              </p>
+            </div>
+          </div>{{! /example }}
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}استفاده{{/i}}</h2>
+
+          <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+          <p>{{_i}}برای این‌که به راحتی رفتار اسکرول جاسوس را به نوار ناوبری اضافه کنید، <code>data-spy="scroll"</code> به عنصری که می‌خواهید جاسوسی کند (که اغلب اوقات، بدنه است) و <code>data-target=".navbar"</code> به عناصر ناوبری اضافه کنید.{{/i}}</p>
+          <pre class="prettyprint linenums">&lt;body data-spy="scroll" data-target=".navbar"&gt;...&lt;/body&gt;</pre>
+
+          <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
+          <p>{{_i}}اسکرول جاسوس را با جاوااسکریپت فراخوانی کنید:{{/i}}</p>
+          <pre class="prettyprint linenums">$('#navbar').scrollspy()</pre>
+
+          <div class="alert alert-info">
+            <strong>{{_i}}توجه کنید!{{/i}}</strong>
+            {{_i}}پیوندهای نوار ناوبری باید شناسهٔ قابل شناسایی داشته باشند. برای مثال <code>&lt;a&gt;href="#home"&gt;Home&lt;/a&gt;</code>،  باید تبدیل به چیزی شبیه <code>&lt;div id="Home"&gt;&lt;/div&gt;</code> شود.{{/i}}
+          </div>
+
+          <h3>{{_i}}توابع{{/i}}</h3>
+          <h4>.scrollspy('به‌روزرسانی')</h4>
+          <p>{{_i}}وقتی عنصر خاص در محتوا حذف یا اضافه می‌شود یا به عبارت دیگر عنصر خاصی در DOM اضافه یا حذف می‌شود باید با فراخوانی این تابع اسکرول جاسوس را به‌روز کنید:{{/i}}</p>
+<pre class="prettyprint linenums">
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+});
+</pre>
+
+          <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+          <p>{{_i}}انتخاب‌ها می‌توانند از طریق خصوصیت data و یا توسط جاوااسکریپت فرستاده شوند. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید. به عنوان مثال: <code>data-offset=""</code>.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+               <th style="width: 100px;">{{_i}}نوع{{/i}}</th>
+               <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}offset{{/i}}</td>
+               <td>{{_i}}عدد{{/i}}</td>
+               <td>{{_i}}۱۰{{/i}}</td>
+               <td>{{_i}}تعداد پیکسلی که از بالا برای جابه‌جایی تعیین می‌شود.{{/i}}</td>
+             </tr>
+            </tbody>
+          </table>
+
+          <h3>{{_i}}رویدادها{{/i}}</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">{{_i}}رویداد{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}activate{{/i}}</td>
+               <td>{{_i}}این رویداد هنگامی فراخوانی می‌شود که آیتم جدیدی در اسکرول جاسوس فعال شود.{{/i}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+
+
+
+        <!-- Tabs
+        ================================================== -->
+        <section id="tabs">
+          <div class="page-header">
+            <h1>{{_i}}تب‌ها{{/i}} <small>bootstrap-tab.js</small></h1>
+          </div>
+
+
+          <h2>{{_i}}تب‌های نمونه{{/i}}</h2>
+          <p>{{_i}}یک تب پویا و سریع برای تغییر بین چندین محتوای محلی ایجاد کنید. حتی می‌توانید این قابلیت را برای منوهای افتادنی نیز فعال کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#home" data-toggle="tab">{{_i}}صفحه اصلی{{/i}}</a></li>
+              <li><a href="#profile" data-toggle="tab">{{_i}}پروفایل{{/i}}</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{_i}}افتادنی{{/i}} <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#dropdown1" data-toggle="tab">حامد رمضانیان</a></li>
+                  <li><a href="#dropdown2" data-toggle="tab">ریچارد استالمن</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="home">
+                <p>روبی آن ریلز که گاهی اوقات به آن ریلز یا RoR نیز می‌گویند، یک چارچوب نرم‌افزاری تحت وب، آزاد و متن‌باز است که از زبان برنامه‌نویسی روبی استفاده می‌کند. هدف ریلز، ایجاد یک چارچوب نرم‌افزاری تحت وب، که از روش توسعه سریع برای برنامه‌نویسان وب استفاده می‌کند، است.</p>
+              </div>
+              <div class="tab-pane fade" id="profile">
+                <p>یکی از مهمترین روش‌های تغییر یک برنامه ادغام پیمانه‌ها و زیرروال‌های آزادِ موجود با برنامه اصلی می‌باشد. اگر مجوز برنامه بگوید که شما نمی‌توانید پیمانه‌های موجود را با برنامه ادغام نمایید، برای مثال اگر بخواهد که شما خودتان مالک کدی باشید که با برنامه اضافه می‌کنید، در این صورت این مجوز بیشتر از حد محدود کننده است تا به عنوان یک مجوز آزاد شناخته شود. </p>
+              </div>
+              <div class="tab-pane fade" id="dropdown1">
+                <p>یک برنامه‌نویس علاقمند به روبی آن ریلز، روبی و نرم‌افزارهای آزاد. این آدم علاقهٔ خاصی به افکار ریچارد استالمن دارد.همچنین این فرد از قهوه آماده، و چایی برای کمک به کد نوشتن استفاده می‌کند. البته علاقه‌های دیگر نیز دارد...</p>
+              </div>
+              <div class="tab-pane fade" id="dropdown2">
+                <p>ریچارد متیو استالمن (به انگلیسی: Richard Matthew Stallman) (متولد ۱۶ مارس ۱۹۵۳ در نیویورک) معروف به آر ام اس , (به انگلیسی: RMS) ، یک آمریکایی طرفدار آزادی نرم‌افزار و برنامه‌نویس کامپیوتر است. در سپتامبر سال ۱۹۸۳، او پروژه گنو را برای ساخت یک سیستم‌عامل کاملا آزاد شبه-یونیکس آغاز کرد و مدیریت و معماری این پروژه را عهده‌دار شد. با آغار پروژه گنو، او نخستین قدم را در جنبش نرم‌افزار آزاد برداشت و در اکتبر سال ۱۹۸۵ بنیاد نرم‌افزارهای آزاد را تاسیس کرد.</p>
+              </div>
+            </div>
+          </div>{{! /example }}
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}استفاده{{/i}}</h2>
+          <p>{{_i}}قابلیت تب را با استفاده از جاوااسکریپت فعال کنید (هر تب باید به طور اختصاصی فعال شود):{{/i}}</p>
+<pre class="prettyprint linenums">
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})</pre>
+          <p>{{_i}}شما می‌توانید هر تب را به‌طور اختصاصی از چندین روش فعال کنید:{{/i}}</p>
+<pre class="prettyprint linenums">
+$('#myTab a[href="#profile"]').tab('show'); // با استفاده از انتخاب نام
+$('#myTab a:first').tab('show'); // با استفاده از تب نخست
+$('#myTab a:last').tab('show'); // با استفاده از تب آخر
+$('#myTab li:eq(2) a').tab('show'); // با استفاده از تب سوم - از صفر شروع شده‌است
+</pre>
+
+          <h3>{{_i}}نشانه‌گذاری{{/i}}</h3>
+          <p>{{_i}}شما می‌توانید هر تب یا پیلی را بدون نوشتن کد جاوااسکریپت، فعال کنید. فقط نیاز است که <code>data-toggle="tab"</code> یا <code>data-toggle="pill"</code> را در عنصر اضافه کنید. کلاس‌های <code>nav</code> و <code>nav-tabs</code> برای عنصر <code>ul</code>، شیوه نمایش تبی بوت‌استرپ را فعال می‌کند.{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;{{_i}}صفحه اصلی{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;{{_i}}پروفایل{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;{{_i}}پیام‌ها{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;{{_i}}تنظیمات{{/i}}&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+          <h3>{{_i}}توابع{{/i}}</h3>
+          <h4>$().tab</h4>
+          <p>
+            {{_i}}عنصر و نگهدارنده محتویات تب را فعال می‌کند. تب باید <code>data-target</code> یا <code>href</code> را به یک عنصر در DOM اشاره دهد.{{/i}}
+          </p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs" id="myTab"&gt;
+  &lt;li class="active"&gt;&lt;a href="#home"&gt;{{_i}}صفحه اصلی{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile"&gt;{{_i}}پروفایل{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages"&gt;{{_i}}پیام‌ها{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings"&gt;{{_i}}تنظیمات{{/i}}&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="messages"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="settings"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#myTab a:last').tab('show');
+  })
+&lt;/script&gt;
+</pre>
+
+          <h3>{{_i}}رویدادها{{/i}}</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">{{_i}}رویداد{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}show{{/i}}</td>
+               <td>{{_i}}این رویداد هنگامی فراخوانی می‌شود که تب نمایش داده می‌شود اما قبل از این‌که تب جدید نشان داده شود. از <code>event.target</code> و <code>event.relatedTarget</code> به ترتیب برای اشاره به تب فعال و تب فعال قبلی (در صورت وجود) استفاده کنید.{{/i}}</td>
+            </tr>
+            <tr>
+               <td>{{_i}}shown{{/i}}</td>
+               <td>{{_i}}این رویداد هنگامی فراخوانی می‌شود که تب بعدی نشان داده شده‌است. از <code>event.target</code> و <code>event.relatedTarget</code> به ترتیب برای اشاره به تب فعال و تب فعال قبلی (در صورت وجود) استفاده کنید.{{/i}}</td>
+             </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
+$('a[data-toggle="tab"]').on('shown', function (e) {
+  e.target // تب فعال‌شده
+  e.relatedTarget // تب قبلی
+})
+</pre>
+        </section>
+
+
+        <!-- Tooltips
+        ================================================== -->
+        <section id="tooltips">
+          <div class="page-header">
+            <h1>{{_i}}بالُنک‌ها{{/i}} <small>bootstrap-tooltip.js</small></h1>
+          </div>
+
+
+          <h2>{{_i}}نمونه‌ها{{/i}}</h2>
+          <p>{{_i}}برگرفته از پلاگین jQuery.tipsy که توسط «جیسون فریم» نوشته‌شده‌است، می‌باشد. بالنک‌ها نسخهٔ به‌روزشده آن است که مبتنی بر عکس نمی‌باشد و از پویانمایی‌ها و خصوصیت‌های data (برای local title storage) سی‌اس‌اس ۳ استفاده می‌کند.{{/i}}</p>
+          <p>{{_i}}بر روی پیوندهای زیر بروید تا آن‌ها را ببنید:{{/i}}</p>
+          <div class="bs-docs-example tooltip-demo">
+            <p class="muted" style="margin-bottom: 0;">{{_i}}"نرم‌افزار آزاد" به معنای "<a href="#" rel="tooltip" title="بالنک پیش‌فرض">غیرتجاری</a>" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد. توسعه تجاری نرم‌افزار آزاد دیگر غیر معمول نیست، بلکه چنین نرم‌افزارهای آزاد تجاری بسیار مهم هستند. بنابراین شما ممکن است پولی پرداخت کرده باشید تا کپی‌هایی از <a href="#" rel="tooltip" title="بالنکی دیگر">نرم‌افزار آزاد</a> را بدست آورده باشید و یا ممکن است کپی‌ها را بدون پرداخت هزینه بدست آورده باشید. اما صرفنظر از اینکه چگونه کپی‌ها را بدست آورده باشید، شما همیشه این <a href="#" rel="tooltip" title="یک بالنک دیگر">آزادی</a> را دارید تا <a href="#" rel="tooltip" title="آخرین بالنک!">نرم‌افزار</a> را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.{{/i}}
+            </p>
+          </div>{{! /example }}
+
+          <h3>{{_i}}در چهار جهت{{/i}}</h3>
+          <div class="bs-docs-example tooltip-demo">
+            <ul class="bs-docs-tooltip-examples">
+              <li><a href="#" rel="tooltip" data-placement="top" title="بالنک در بالا">بالنک در بالا</a></li>
+              <li><a href="#" rel="tooltip" data-placement="right" title="بالنک در راست">بالنک در راست</a></li>
+              <li><a href="#" rel="tooltip" data-placement="bottom" title="بالنک در پایین">بالنک در پایین</a></li>
+              <li><a href="#" rel="tooltip" data-placement="left" title="بالنک در چپ">بالنک در چپ</a></li>
+            </ul>
+          </div>{{! /example }}
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}استفاده{{/i}}</h2>
+          <p>{{_i}}با استفاده از جاوااسکریپت بالنک را فعال کنید:{{/i}}</p>
+          <pre class="prettyprint linenums">$('#example').tooltip({{_i}}انتخاب‌ها{{/i}})</pre>
+
+          <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+          <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data یا جاوااسکریپت به تابع فرستاده می‌شود. برای خصوصیت data نام انتخاب خود را به <code>data-</code> اضافه کنید مانند <code>data-animation=""</code>.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+               <th style="width: 100px;">{{_i}}عنوان{{/i}}</th>
+               <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}animation{{/i}}</td>
+               <td>{{_i}}boolean{{/i}}</td>
+               <td>true</td>
+               <td>{{_i}}جلوهٔ بصری انتقال محو را به بالنک اضافه می‌کند{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}html{{/i}}</td>
+               <td>{{_i}}boolean{{/i}}</td>
+               <td>true</td>
+               <td>{{_i}}اچ‌تی‌ام‌ال در داخل بالنک قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید از متن ساده استفاده کنید.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}placement{{/i}}</td>
+               <td>{{_i}}string|function{{/i}}</td>
+               <td>'top'</td>
+               <td>{{_i}}مکان قرارگیری بالنک را مشخص می‌کند که انتخاب‌ها می‌توانند: top | bottom | left | right باشند{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}selector{{/i}}</td>
+               <td>{{_i}}string{{/i}}</td>
+               <td>false</td>
+               <td>{{_i}}اگر انتخاب‌گر تعریف شده‌باشد، بالنک‌ها بر روی انتخاب‌ها قرار خواهند گرفت.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}title{{/i}}</td>
+               <td>{{_i}}string | function{{/i}}</td>
+               <td>''</td>
+               <td>{{_i}}در صورت عدم وجود تگ `title` به عنوان مقدار پیش‌فرض برای عنوان قرار می‌گیرد{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}trigger{{/i}}</td>
+               <td>{{_i}}string{{/i}}</td>
+               <td>'hover'</td>
+               <td>{{_i}}مشخص می‌کند که بالنک چگونه فعال شود: click | hover | focus | manual{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}delay{{/i}}</td>
+               <td>{{_i}}number | object{{/i}}</td>
+               <td>0</td>
+               <td>
+                <p>{{_i}}تاخیر نمایش و مخفی شدن بالنک به میلی‌ثانیه. اگر بالنک به‌صورت دستی (manual) فعال شود، بر آن تاثیری ندارد{{/i}}</p>
+                <p>{{_i}}اگر عددی مشخص شود، در نمایش و مخفی شدن تاثیر می‌گذارد{{/i}}</p>
+                <p>{{_i}}ساختار شی به‌صورت: <code>delay: { show: 500, hide: 100 }</code> است{{/i}}</p>
+               </td>
+             </tr>
+            </tbody>
+          </table>
+          <div class="alert alert-info">
+            <strong>{{_i}}توجه کنید!{{/i}}</strong>
+            {{_i}}انتخاب‌ها برای بالنک‌های به‌خصوص، می‌تواند از طریق استفاده از خصوصیات data انجام گیرد.{{/i}}
+          </div>
+
+          <h3>{{_i}}نشانه‌گذاری{{/i}}</h3>
+          <p>{{_i}}برای بازدهی بهتر و سرعت بیشتر بالنک‌ها و پوب‌ها از data-apis می‌توان استفاده کرد. اگر شما می‌خواهید از آن‌ها استفاده کنید، فقط نیاز است که انتخاب‌گر را مشخص کنید.{{/i}}</p>
+          <pre class="prettyprint linenums">&lt;a href="#" rel="tooltip" title="{{_i}}first tooltip{{/i}}"&gt;{{_i}}بیا این‌جا{{/i}}&lt;/a&gt;</pre>
+
+          <h3>{{_i}}توابع{{/i}}</h3>
+          <h4>$().tooltip({{_i}}انتخاب‌ها{{/i}})</h4>
+          <p>{{_i}}یک بالنک به عناصر انتخاب شده، می‌چسباند.{{/i}}</p>
+          <h4>.tooltip('نمایش')</h4>
+          <p>{{_i}}بالنک یک عنصر را نمایش می‌دهد.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#element').tooltip('show')</pre>
+          <h4>.tooltip('مخفی')</h4>
+          <p>{{_i}}بالنک یک عنصر را مخفی می‌کند.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#element').tooltip('hide')</pre>
+          <h4>.tooltip('تغییر وضعیت')</h4>
+          <p>{{_i}}بالنک یک عنصر را تغییر حالت می‌دهد.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#element').tooltip('toggle')</pre>
+          <h4>.tooltip('حذف')</h4>
+          <p>{{_i}}بالنک یک عنصر را مخفی و حذف می‌کند.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#element').tooltip('destroy')</pre>
+        </section>
+
+
+
+      <!-- Popovers
+      ================================================== -->
+      <section id="popovers">
+        <div class="page-header">
+          <h1>{{_i}}پوب‌ها{{/i}} <small>bootstrap-popover.js</small></h1>
+        </div>
+
+        <h2>{{_i}}نمونه‌ها{{/i}}</h2>
+        <p>{{_i}}یک محتوا را در کنار یک عنصر، در صورتی دارای اطلاعات اضافی باشد، به‌مانند آن‌چیزی که در آی‌پد وجود دارد، قرار می‌دهد. بر روی دکمه بروید تا پوب، تغییر حالت بدهد. <strong>پیش‌نیاز پوب <a href="#tooltips">بالنک</a> است و باید آن را نیز قرار دهید.</strong>{{/i}}</p>
+
+        <h3>{{_i}}پوب ثابت{{/i}}</h3>
+        <p>{{_i}}چهار انتخاب وجود دارد: بالا، راست، پایین و چپ.{{/i}}</p>
+        <div class="bs-docs-example bs-docs-example-popover">
+          <div class="popover top">
+            <div class="arrow"></div>
+            <h3 class="popover-title">پوب بالا</h3>
+            <div class="popover-content">
+              <p>نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
+            </div>
+          </div>
+
+          <div class="popover right">
+            <div class="arrow"></div>
+            <h3 class="popover-title">پوب راست</h3>
+            <div class="popover-content">
+              <p>"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
+            </div>
+          </div>
+
+          <div class="popover bottom">
+            <div class="arrow"></div>
+            <h3 class="popover-title">پوب پایین</h3>
+            <div class="popover-content">
+              <p>نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
+            </div>
+          </div>
+
+          <div class="popover left">
+            <div class="arrow"></div>
+            <h3 class="popover-title">پوب چپ</h3>
+            <div class="popover-content">
+              <p>نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <p>{{_i}}جاوااسکریپت هیچ کد نشانه‌گذاری، در هنگام تولید پوب تولید نمی‌کند و تمام محتویات را در داخل خصوصیت <code>data</code> قرار می‌دهد.{{/i}}</p>
+
+        <h3>اجرای زنده</h3>
+        <div class="bs-docs-example" style="padding-bottom: 24px;">
+          <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟">{{_i}}کلیک کنید تا پوب تغییر حالت دهد{{/i}}</a>
+        </div>
+
+
+        <hr class="bs-docs-separator">
+
+
+        <h2>{{_i}}استفاده{{/i}}</h2>
+        <p>{{_i}}پوب‌ها را با استفاده جاوااسکریپت فعال کنید:{{/i}}</p>
+        <pre class="prettyprint linenums">$('#example').popover({{_i}}انتخاب‌ها{{/i}})</pre>
+
+        <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+        <p>{{_i}}انتخاب‌ها می‌توانند با خصوصیت data یا جاوااسکریپت فرستاده شوند. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید، مانند <code>data-animation=""</code>.{{/i}}</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+           <tr>
+             <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+             <th style="width: 100px;">{{_i}}نوع{{/i}}</th>
+             <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+             <th>{{_i}}توصیف{{/i}}</th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+             <td>{{_i}}animation{{/i}}</td>
+             <td>{{_i}}boolean{{/i}}</td>
+             <td>true</td>
+             <td>{{_i}}جلوهٔ بصری انتقال محو را به بالنک اضافه می‌کند{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}html{{/i}}</td>
+             <td>{{_i}}boolean{{/i}}</td>
+             <td>true</td>
+             <td>{{_i}}اچ‌تی‌ام‌ال در داخل پوب قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید، از متن ساده استفاده کنید.{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}placement{{/i}}</td>
+             <td>{{_i}}string|function{{/i}}</td>
+             <td>'right'</td>
+             <td>{{_i}}مکان قرارگیری پوب را مشخص می‌کند که انتخاب‌ها می‌توانند: top | bottom | left | right باشند{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}selector{{/i}}</td>
+             <td>{{_i}}string{{/i}}</td>
+             <td>false</td>
+             <td>{{_i}}اگر انتخاب‌گر تعریف شده‌باشد، پوب‌ها بر روی انتخاب‌ها قرار خواهند گرفت.{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}trigger{{/i}}</td>
+             <td>{{_i}}string{{/i}}</td>
+             <td>'click'</td>
+             <td>{{_i}}مشخص می‌کند که پوب چگونه فعال شود: click | hover | focus | manual{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}title{{/i}}</td>
+             <td>{{_i}}string | function{{/i}}</td>
+             <td>''</td>
+             <td>{{_i}}در صورت عدم وجود تگ `title` به عنوان مقدار پیش‌فرض برای عنوان قرار می‌گیرد{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}content{{/i}}</td>
+             <td>{{_i}}string | function{{/i}}</td>
+             <td>''</td>
+             <td>{{_i}}در صورت عدم وجود تگ `data-content` به عنوان مقدار پیش‌فرض برای محتوا قرار می‌گیرد{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}delay{{/i}}</td>
+             <td>{{_i}}number | object{{/i}}</td>
+             <td>0</td>
+             <td>
+              <p>{{_i}}تاخیر نمایش و مخفی شدن پوب به میلی‌ثانیه. اگر پوب به‌صورت دستی (manual) فعال شود، بر آن تاثیری ندارد{{/i}}</p>
+              <p>{{_i}}اگر عددی مشخص شود، در نمایش و مخفی شدن تاثیر می‌گذارد{{/i}}</p>
+              <p>{{_i}}ساختار شی به‌صورت: <code>delay: { show: 500, hide: 100 }</code> است{{/i}}</p>
+             </td>
+           </tr>
+          </tbody>
+        </table>
+        <div class="alert alert-info">
+          <strong>{{_i}}توجه کنید!{{/i}}</strong>
+          {{_i}}انتخاب‌ها برای پوب‌های به‌خصوص می‌تواند از طریق استفاده از خصوصیات data انجام گیرد.{{/i}}
+        </div>
+
+        <h3>{{_i}}نشانه‌گذاری{{/i}}</h3>
+        <p>{{_i}}برای بازدهی بهتر و سرعت بیشتر پوب‌ها و بالنک‌ها از data-apis می‌توان استفاده کرد. اگر شما می‌خواهید از آن‌ها استفاده کنید، فقط نیاز است که انتخاب‌گر را مشخص کنید.{{/i}}</p>
+
+        <h3>{{_i}}توابع{{/i}}</h3>
+        <h4>$().popover({{_i}}انتخاب‌ها{{/i}})</h4>
+        <p>{{_i}}یک پوب به عناصر انتخاب شده، می‌چسباند.{{/i}}</p>
+        <h4>.popover('نمایش')</h4>
+        <p>{{_i}}پوب یک عنصر را نمایش می‌دهد.{{/i}}</p>
+        <pre class="prettyprint linenums">$('#element').popover('show')</pre>
+        <h4>.popover('مخفی')</h4>
+        <p>{{_i}}پوب یک عنصر را مخفی می‌کند.{{/i}}</p>
+        <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
+        <h4>.popover('تغییر وضعیت')</h4>
+        <p>{{_i}}پوب یک عنصر را تغییر حالت می‌دهد.{{/i}}</p>
+        <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
+        <h4>.popover('حذف')</h4>
+        <p>{{_i}}پوب یک عنصر را مخفی و حذف می‌کند.{{/i}}</p>
+        <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
+      </section>
+
+
+
+      <!-- Alert
+      ================================================== -->
+      <section id="alerts">
+        <div class="page-header">
+          <h1>{{_i}}پیام‌های اخطار{{/i}} <small>bootstrap-alert.js</small></h1>
+        </div>
+
+
+        <h2>{{_i}}نمونه‌ای از اخطارها{{/i}}</h2>
+        <p>{{_i}}دکمه حذف برای تمام پیام‌های اخطار توسط این پلاگین قرار می‌گیرد.{{/i}}</p>
+        <div class="bs-docs-example">
+          <div class="alert fade in">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>{{_i}}پسرررر!{{/i}}</strong> {{_i}}بهتره خودت رو نگاه کنی، به‌نظر خوب نیستی.{{/i}}
+          </div>
+        </div>{{! /example }}
+
+        <div class="bs-docs-example">
+          <div class="alert alert-block alert-error fade in">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 class="alert-heading">{{_i}}اوه نه!یک خطای دیگه{{/i}}</h4>
+            <p>{{_i}}این را تغییر دهید و دوباره آن را امتحان کنید. آیا مطمئن هستید که سیم کامپیوتر به برق وصل است؟ آیا مطمئن هستید پرینتر را روشن کرده‌اید؟ آیا فکر می‌کنید سیستم‌عامل را باید عوض کنید؟{{/i}}</p>
+            <p>
+              <a class="btn btn-danger" href="#">{{_i}}سیستم‌عامل رو عوض کن{{/i}}</a> <a class="btn" href="#">{{_i}}یا کامپیوتر را عوض کن{{/i}}</a>
+            </p>
+          </div>
+        </div>{{! /example }}
+
+
+        <hr class="bs-docs-separator">
+
+
+        <h2>{{_i}}استفاده{{/i}}</h2>
+        <p>{{_i}}پیام اخطار را توسط جاوااسکریپت فعال می‌کند:{{/i}}</p>
+        <pre class="prettyprint linenums">$(".alert").alert()</pre>
+
+        <h3>{{_i}}نشانه‌گذاری{{/i}}</h3>
+        <p>{{_i}}فقط نیاز است که <code>data-dismiss="alert"</code> را به دکمه اضافه کنید تا به‌صورت خودکار تبدیل به دکمهٔ بستن پیام اخطار شود.{{/i}}</p>
+        <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+
+        <h3>{{_i}}توابع{{/i}}</h3>
+        <h4>$().alert()</h4>
+        <p>{{_i}}برای این‌که بتوان تمام پیام اخطار را باهم بست می‌توان از تابع زیر استفاده کرد. برای داشتن جلوهٔ بصری در هنگام بستن مطمئن شوید که کلاس‌های <code>.fade</code> و <code>.in</code> در آن‌ها وجود دارد.{{/i}}</p>
+        <h4>.alert('بستن')</h4>
+        <p>{{_i}}بستن یک اخطار.{{/i}}</p>
+        <pre class="prettyprint linenums">$(".alert").alert('close')</pre>
+
+
+        <h3>{{_i}}رویدادها{{/i}}</h3>
+        <p>{{_i}}کلاس اخطار بوت‌استرپ چندین رویداد در هنگام کار با اخطار از خود تولید می‌کند.{{/i}}</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+           <tr>
+             <th style="width: 150px;">{{_i}}رویداد{{/i}}</th>
+             <th>{{_i}}توصیف{{/i}}</th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+             <td>{{_i}}close{{/i}}</td>
+             <td>{{_i}}این رویداد به‌سرعت پس از  فراخوانی تابع شی <code>close</code> رخ می‌دهد.{{/i}}</td>
+           </tr>
+           <tr>
+             <td>{{_i}}closed{{/i}}</td>
+             <td>{{_i}}این رویداد هنگامی رخ می‌دهد که اخطار بسته شده‌باشد (منتظر می‌شود تا جلوه‌های بصری انتقال سی‌اس‌اس به‌اتمام برسد).{{/i}}</td>
+           </tr>
+          </tbody>
+        </table>
+<pre class="prettyprint linenums">
+$('#my-alert').bind('closed', function () {
+  // {{_i}}انجام یک‌کاری…{{/i}}
+})
+</pre>
+      </section>
+
+
+
+          <!-- Buttons
+          ================================================== -->
+          <section id="buttons">
+            <div class="page-header">
+              <h1>{{_i}}دکمه‌ها{{/i}} <small>bootstrap-button.js</small></h1>
+            </div>
+
+            <h2>{{_i}}نمونه‌های استفاده{{/i}}</h2>
+            <p>{{_i}}ایجاد دکمه‌های گروهی برای ساخت نوار ابزار و کارهای بسیاری دیگر که می‌توان با دکمه‌ها انجام داد.{{/i}}</p>
+
+            <h4>{{_i}}نمایش وضعیت{{/i}}</h4>
+            <p>{{_i}}برای این‌که یک دکمه وضعیت را نمایش دهد "در حال بارگذاری..."=data-loading-text را به آن اضافه کنید.{{/i}}</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <button type="button" id="fat-btn" data-loading-text="در حال بارگذاری..." class="btn btn-primary">
+                {{_i}}دانلود{{/i}}
+              </button>
+            </div>{{! /example }}
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-primary" data-loading-text="در حال بارگذاری..."&gt;دانلود&lt;/button&gt;</pre>
+
+            <h4>{{_i}}تغییر وضعیت یک‌حالته{{/i}}</h4>
+            <p>{{_i}}برای تبدیل یک دکمه به حالت تغییر وضعیت یک‌حالته <code>data-toggle="button"</code> را به آن اضافه کنید.{{/i}}</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <button type="button" class="btn btn-primary" data-toggle="button">{{_i}}تغییر وضعیت یک‌حالته{{/i}}</button>
+            </div>{{! /example }}
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button"&gt;تغییر وضعیت یک‌حالته&lt;/button&gt;</pre>
+
+            <h4>{{_i}}Checkbox{{/i}}</h4>
+            <p>{{_i}}برای تبدیل شدن دکمه به شیوه checkbox، خصوصیت <code>data-toggle="buttons-checkbox"</code> را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <div class="btn-group" data-toggle="buttons-checkbox">
+                <button type="button" class="btn btn-primary">{{_i}}راست{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}وسط{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}چپ{{/i}}</button>
+              </div>
+            </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
+  &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+            <h4>{{_i}}Radio{{/i}}</h4>
+            <p>{{_i}}برای تبدیل شدن دکمه به شیوه radio، خصوصیت <code>data-toggle="buttons-radio"</code> را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn btn-primary">{{_i}}راست{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}وسط{{/i}}</button>
+                <button type="button" class="btn btn-primary">{{_i}}چپ{{/i}}</button>
+              </div>
+            </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;div class="btn-group" data-toggle="buttons-radio"&gt;
+  &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>{{_i}}استفاده{{/i}}</h2>
+            <p>{{_i}}دکمه‌ها را از طریق جاوااسکریپت فعال می‌کند:{{/i}}</p>
+            <pre class="prettyprint linenums">$('.nav-tabs').button()</pre>
+
+            <h3>{{_i}}نشانه‌گذاری{{/i}}</h3>
+            <p>{{_i}}خصوصیات Data برای پلاگین دکمه جداناپذیر است. به نمونه‌های زیر توجه کنید:{{/i}}</p>
+
+            <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+            <p><em>{{_i}}هیچی{{/i}}</em></p>
+
+            <h3>{{_i}}توابع{{/i}}</h3>
+            <h4>$().button('تغییر وضعیت')</h4>
+            <p>{{_i}}با فشردن دکمه، تغییر وضعیت خواهد داد. شیوهٔ نمایش آن به حالتی تغییر خواهد کرد که فعال به‌نظر می‌رسد.{{/i}}</p>
+            <div class="alert alert-info">
+              <strong>{{_i}}توجه کنید!{{/i}}</strong>
+              {{_i}}تغییر وضعیت خودکار با اضافه کردن خصوصیت <code>data-toggle</code> به دکمه فعال خواهد شد.{{/i}}
+            </div>
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button" &gt;…&lt;/button&gt;</pre>
+            <h4>$().button('در حال بارگذاری')</h4>
+            <p>{{_i}}دکمه را درحالت بارگذاری قرار می‌دهد. دکمه غیرفعال می‌شود و متن دکمه به در حال بارگذاری تغییر می‌کند. متن در حال بارگذاری باید به‌وسیلهٔ خصوصیت <code>data-loading-text</code> به دکمه اضافه شود.{{/i}}
+            </p>
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-loading-text="در حال بارگذاری..." &gt;...&lt;/button&gt;</pre>
+            <div class="alert alert-info">
+              <strong>{{_i}}توجه کنید!{{/i}}</strong>
+              {{_i}}<a href="https://github.com/twitter/bootstrap/issues/793">فایرفاکس اصرار بر این دارد که وضعیت غیرفعال در هنگام بارگذاری صفحه اتفاق بیافتد</a>. کارهایی برای این مشکل انجام شده‌است مانند: <code>autocomplete="off"</code>.{{/i}}
+            </div>
+            <h4>$().button('بازنشانی')</h4>
+            <p>{{_i}}وضعیت دکمه دوباره به‌حالت اول برمی‌گردد. متن به متن اصلی تغییر پیدا می‌کند.{{/i}}</p>
+            <h4>$().button(رشته)</h4>
+            <p>{{_i}}وضعیت به حالت اول تغییر می‌کند. متن به متن تعریف‌شده برای این تابع تغییر پیدا می‌کند.{{/i}}</p>
+<pre class="prettyprint linenums">&lt;button type="button" class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
+&lt;script&gt;
+  $('.btn').button('complete')
+&lt;/script&gt;
+</pre>
+          </section>
+
+
+
+          <!-- Collapse
+          ================================================== -->
+          <section id="collapse">
+            <div class="page-header">
+              <h1>{{_i}}فروریختنی{{/i}} <small>bootstrap-collapse.js</small></h1>
+            </div>
+
+            <h3>{{_i}}درباره{{/i}}</h3>
+            <p>{{_i}}شیوه‌های نمایش پایه و انعطاف‌پذیر را برای پشتیبانی از اجزای فروریختنی مانند آکوردئون‌ها و ناوبری‌ها دریافت کنید.{{/i}}</p>
+            <p class="muted"><strong>*</strong> {{_i}}نیاز به پلاگین انتقال‌ها دارد.{{/i}}</p>
+
+            <h2>{{_i}}نمونه‌ای از آکوردئون{{/i}}</h2>
+            <p>{{_i}}از پلاگین فروریختنی برای ساخت یک ویدجت ساده استفاده کنید:{{/i}}</p>
+
+            <div class="bs-docs-example">
+              <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                      {{_i}}گروه فروریختنی شماره ۱{{/i}}
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                       قوانین مربوط به نحوه بسته‌بندی یک بسته تغییر یافته نیز در صورتیکه بطور عملی و قابل اجرا، آزادی شما برای انتشار نسخه تغییر یافته را منع نکنند، قابل قبول هستند. قوانینی مانند "«اگر شما برنامه را به این روش در دسترس قرار دادید، باید آن را به آن روش نیز در دست قرار دهید»" نیز، با همان شرایط قبلی می‌توانند قابل قبول باشند. (به خاطر داشته باشید که چنین قانونی آزادی شما برای انتخاب انتشار و یا عدم انتشار برنامه را باقی می‌گذارد.) همچنین این برای مجوز قابل قبول است تا لازم بدارد که اگر شما یک نسخه تغییر یافته از برنامه را توزیع کردید و توسعه‌دهنده قبلی یک کپی از آن را درخواست نمود، شما باید یک کپی برای او بفرستید یا مشخص کنید که این تغییرات را شما انجام داده‌اید.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                      {{_i}}گروه فروریختنی شماره ۲{{/i}}
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                       اغلب مجوزهای نرم‌افزار آزاد بر اساس کپی‌رایت می‌باشند، ولی برای آن دسته از الزاماتی که بواسطه کپی‌رایت می‌توانند تحمیل شوند، محدودیت‌هایی وجود دارد. اگر یک مجوز مبتنی بر کپی‌رایت آزادی را به روش‌هایی که در بالا توضیح داده شد محترم بشمارد و رعایت کند، بعید به نظر می‌رسد که مشکلات دیگری که ما هرگز پیش‌بینی نمی‌کردیم بوجود بیاید (اگر چه گه گاه این اتفاق می‌افتد). اما بعضی از مجوزهای نرم‌افزار آزاد بر اساس قراردادها می‌باشند، و قردادها می‌توانند شمار بیشتری از محدودیت‌های ممکن را تحمیل کنند. این بدان معناست که راه‌های بیشماری وجود دارند تا چنین مجوزی به طرز غیر قابل قبولی محدودکننده و غیر آزاد باشد.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                      {{_i}}گروه فروریختنی شماره ۳{{/i}}
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                       در نهایت بخاطر داشته باشید که معیارها و ظوابطی مانند آنها که در تعریف نرم‌افزار آزاد ذکر شدند، برای تفسیر به تفکری دقیق نیاز دارند. برای تصمیم‌گیری در مورد اینکه آیا مجوز نرم‌افزار خاصی صلاحیت مجوز نرم‌افزار آزاد بودن را دارد، ما آن را بر مبنای همین ظوابط در نظر می‌گیریم تا تصمیم بگیریم که آیا معنی و مفهوم آن به خوبی کلمات و عبارات در آن، مناسب هست. اگر مجوز‌ی شامل موارد نامعقول باشد، ما آن را رد می‌کنیم، حتی اگر آن مورد را در این معیارها پیش‌بینی نکرده باشیم. بعضی اوقات درخواست‌های یک مجوز پی‌آمدی پیش می‌آورد که قبل از اینکه تصمیم بگیریم آیا این درخواست‌ها قابل قبول هستند، تفکر بسیاری شامل بحث و مذاکره با یک وکیل را مطالبه می‌کند. هنگامیکه ما درباره یک موضوع جدید به نتیجه می‌رسیم، غالبا این معیارها را به روز می‌کنیم تا راحت‌تر ببینید که چرا مجوز‌های خاص صلاحیت دارند و یا ندارند.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;div class="accordion" id="accordion2"&gt;
+  &lt;div class="accordion-group"&gt;
+    &lt;div class="accordion-heading"&gt;
+      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
+        {{_i}}گروه فروریختنی شماره ۱{{/i}}
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseOne" class="accordion-body collapse in"&gt;
+      &lt;div class="accordion-inner"&gt;
+        قوانین مربوط به نحوه بسته‌بندی یک بسته تغییر یافته...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-group"&gt;
+    &lt;div class="accordion-heading"&gt;
+      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
+        {{_i}}گروه فروریختنی شماره ۲{{/i}}
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseTwo" class="accordion-body collapse"&gt;
+      &lt;div class="accordion-inner"&gt;
+         اغلب مجوزهای نرم‌افزار آزاد بر اساس کپی‌رایت می‌باشند...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+...
+</pre>
+            <p>{{_i}}همچنین شما می‌توانید بدون نشانه‌گذاری آکوردئون از پلاگین استفاده کنید. یک دکمهٔ تغییر حالت بسازید که باز شدن و فرو ریختن یک عنصر دیگر را کنترل کند.{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
+  {{_i}}فرورختن ساده{{/i}}
+&lt;/button&gt;
+
+&lt;div id="demo" class="collapse in"&gt; … &lt;/div&gt;
+</pre>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>{{_i}}استفاده{{/i}}</h2>
+
+            <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+            <p>{{_i}}فقط خصوصیات <code>data-toggle="collapse"</code> و <code>data-target</code> را به عنصر خود اضافه کنید تا یک عنصر فروریختنی بسازید. خصوصیت <code>data-target</code> یک انتخاب‌گر سی‌اس‌اس را برای فروریزی آن قبول می‌کند. مطمئن شوید که کلاس <code>collapse</code> را به عنصر فروریختنی اضافه کرده‌اید. اگر شما می‌خواهید به‌صورت پیش‌فرض عنصر فروریختنی باز باشد از یک کلاس اضافی به نام <code>in</code> استفاده کنید.{{/i}}</p>
+            <p>{{_i}}برای اضافه‌کردن یک گروه از آکوردئون‌ها باید مانند دموی قبلی خصوصیت <code>data-parent="#selector"</code> را به آکوردئون اضافه کنید.{{/i}}</p>
+
+            <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
+            <p>{{_i}}فعال کردن به‌صورت دستی:{{/i}}</p>
+            <pre class="prettyprint linenums">$(".collapse").collapse()</pre>
+
+            <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+            <p>{{_i}}انتخاب‌ها می‌توانند با استفاده از خصوصیت data و یا جاوااسکریپت فرستاده شود. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید، مانند <code>data-parent=""</code>.{{/i}}</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+                 <th style="width: 50px;">{{_i}}نوع{{/i}}</th>
+                 <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+                 <th>{{_i}}توصیف{{/i}}</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>{{_i}}parent{{/i}}</td>
+                 <td>{{_i}}selector{{/i}}</td>
+                 <td>false</td>
+                 <td>{{_i}}اگر انتخاب‌گر، انتخاب شده‌باشد (true باشد) آن‌گاه عنصرهای فروریختنی مربوط به یک پدر وقتی آن آیتم انتخاب شود، بسته خواهند شد. (به مانند رفتار آکوردئون سنتی){{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}toggle{{/i}}</td>
+                 <td>{{_i}}boolean{{/i}}</td>
+                 <td>true</td>
+                 <td>{{_i}}در هنگام فراخوانی عنصر فروریختنی تغییر حالت می‌دهد{{/i}}</td>
+               </tr>
+              </tbody>
+            </table>
+
+
+            <h3>{{_i}}توابع{{/i}}</h3>
+            <h4>.collapse({{_i}}انتخاب‌ها{{/i}})</h4>
+            <p>{{_i}}محتوای شما را به عنوان یک عنصر فروریختنی فعال می‌کند. <code>object</code> نیز به عنوان یک انتخاب اختیاری دریافت می‌کند.{{/i}}
+<pre class="prettyprint linenums">
+$('#myCollapsible').collapse({
+  toggle: false
+})
+</pre>
+            <h4>.collapse('تغییر وضعیت')</h4>
+            <p>{{_i}}باعث می‌شود یک عنصر فروریختنی نمایش داده شود و یا مخفی شود.{{/i}}</p>
+            <h4>.collapse('نمایش')</h4>
+            <p>{{_i}}یک عنصر فروریختنی را نمایش می‌دهد.{{/i}}</p>
+            <h4>.collapse('مخفی')</h4>
+            <p>{{_i}}یک عنصر فروریختنی را مخفی می‌کند.{{/i}}</p>
+
+            <h3>{{_i}}رویدادها{{/i}}</h3>
+            <p>{{_i}}کلاس فروریختنی بوت‌استرپ تعدادی رویداد از خود تولید می‌کند.{{/i}}</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 150px;">{{_i}}رویداد{{/i}}</th>
+                 <th>{{_i}}توصیف{{/i}}</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>{{_i}}show{{/i}}</td>
+                 <td>{{_i}}این رویداد به‌سرعت  پس از این‌که تابع شی <code>show</code> فراخوانی شد، اجرا می‌شود.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}shown{{/i}}</td>
+                 <td>{{_i}}این رویداد هنگامی اجرا می‌شود که عنصر فروریختنی به کاربر نمایش داده‌شد (پس از این‌که انتقال‌های سی‌اس‌اس کامل شد).{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}hide{{/i}}</td>
+                 <td>
+                  {{_i}}این رویداد به‌سرعت پس از فراخوانی تابع <code>hide</code>، اجرا می‌شود.{{/i}}
+                 </td>
+               </tr>
+               <tr>
+                 <td>{{_i}}hidden{{/i}}</td>
+                 <td>{{_i}}این رویداد هنگامی اجرا می‌شود که عنصر فروریختنی ار دید کاربر مخفی شد (پس از این‌که انتقال‌های سی‌اس‌اس کامل شد).{{/i}}</td>
+               </tr>
+              </tbody>
+            </table>
+<pre class="prettyprint linenums">
+$('#myCollapsible').on('hidden', function () {
+  // {{_i}}انجام یک‌کاری…{{/i}}
+})</pre>
+          </section>
+
+
+
+           <!-- Carousel
+          ================================================== -->
+          <section id="carousel">
+            <div class="page-header">
+              <h1>{{_i}}چرخ فلک{{/i}} <small>bootstrap-carousel.js</small></h1>
+            </div>
+
+            <h2>{{_i}}نمونه‌ای از چرخ فلک{{/i}}</h2>
+            <p>{{_i}}اسلایدشوی زیر اجزا و پلاگین کلی که قابلیت چرخش بر روی عناصر مانند چرخ فلک دارند را، نشان می‌دهد.{{/i}}</p>
+            <div class="bs-docs-example">
+              <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>{{_i}}نخستین برچسب بندانگشتی{{/i}}</h4>
+                      <p>کاخ، کوشک(فارسی) یا قصر(عربی) به محل اقامت خانواده سلطنتی، رئیس دولت، مقامات عالیرتبه و اشراف گفته میشود.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>{{_i}}دومین برچسب بندانگشتی{{/i}}</h4>
+                      <p>کاخ، کوشک(فارسی) یا قصر(عربی) به محل اقامت خانواده سلطنتی، رئیس دولت، مقامات عالیرتبه و اشراف گفته میشود.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>{{_i}}سومین برچسب بندانگشتی{{/i}}</h4>
+                      <p>کاخ، کوشک(فارسی) یا قصر(عربی) به محل اقامت خانواده سلطنتی، رئیس دولت، مقامات عالیرتبه و اشراف گفته میشود.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&rsaquo;</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">&lsaquo;</a>
+              </div>
+            </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel slide"&gt;
+  &lt;!-- {{_i}}Carousel items{{/i}} --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="active item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- {{_i}}Carousel nav{{/i}} --&gt;
+  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+            <div class="alert alert-warning">
+              <strong>{{_i}}توجه کنید!{{/i}}</strong>
+              {{_i}}وقتی که این اسلایدشوی چرخ فلکی را پیاده‌سازی کردید، به‌یاد داشته باشید که عکس‌های دلخواه خود را جایگزین عکس‌های تهیه‌شده توسط ما کنید.{{/i}}
+            </div>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>{{_i}}استفاده{{/i}}</h2>
+
+            <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+            <p>{{_i}}...{{/i}}</p>
+
+            <h3>{{_i}}با استفاده از جاوااسکرپیت{{/i}}</h3>
+            <p>{{_i}}چرخ فلک را دستی فراخوانی کنید:{{/i}}</p>
+            <pre class="prettyprint linenums">$('.carousel').carousel()</pre>
+
+            <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+            <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data و یا جاوااسکریپت فرستاده می‌شود. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید، مانند <code>data-interval=""</code>.{{/i}}</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+                 <th style="width: 50px;">{{_i}}نوع{{/i}}</th>
+                 <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+                 <th>{{_i}}توصیف{{/i}}</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>{{_i}}interval{{/i}}</td>
+                 <td>{{_i}}number{{/i}}</td>
+                 <td>5000</td>
+                 <td>{{_i}}مقدار زمان تاخیری که آیتم بعدی نمایش داده شود. اگر false باشد چرخ فلک به‌صورت خودکار دور نمی‌زند. (اسلاید بعدی نمایش داده نمی‌شود.){{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}pause{{/i}}</td>
+                 <td>{{_i}}string{{/i}}</td>
+                 <td>"hover"</td>
+                 <td>{{_i}}دور زدن چرخ فلک با وارد شدن موس به منطقهٔ چرخ فلک متوقف می‌شود و وقتی از منطقهٔ چرخ فلک خارج شد، چرخ فلک کار را ادامه می‌دهد.{{/i}}</td>
+               </tr>
+              </tbody>
+            </table>
+
+            <h3>{{_i}}توابع{{/i}}</h3>
+            <h4>.carousel({{_i}}انتخاب‌ها{{/i}})</h4>
+            <p>{{_i}}مقداردهی اولیه چرخ فلک با پارامتر سی به‌عنوان انتخاب‌های اختیاری و شروع به کار چرخ فلک با دور زدن بر روی آیتم‌ها.{{/i}}</p>
+<pre class="prettyprint linenums">
+$('.carousel').carousel({
+  interval: 2000
+})
+</pre>
+            <h4>.carousel('چرخش')</h4>
+            <p>{{_i}}چرخ فلک بر روی آیتم‌ها از چپ به راست دور می‌زند.{{/i}}</p>
+            <h4>.carousel('توقف')</h4>
+            <p>{{_i}}چرخ فلک از دور زدن بر روی آیتم‌ها متوقف می‌شود.{{/i}}</p>
+            <h4>.carousel(عدد)</h4>
+            <p>{{_i}}چرخ فلک بر روی آیتم مشخص‌شده حرکت می‌کند (از صفر شروع می‌شود مانند آرایه).{{/i}}</p>
+            <h4>.carousel('قبلی')</h4>
+            <p>{{_i}}به آیتم قبلی بازمی‌گردد.{{/i}}</p>
+            <h4>.carousel('بعدی')</h4>
+            <p>{{_i}}به آیتم بعدی می‌رود.{{/i}}</p>
+
+            <h3>{{_i}}رویدادها{{/i}}</h3>
+            <p>{{_i}}کلاس چرخ فلک بوت‌استرپ از خود دو رویداد در هنگام کار تولید می‌کند.{{/i}}</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 150px;">{{_i}}رویداد{{/i}}</th>
+                 <th>{{_i}}توصیف{{/i}}</th>
+               </tr>
+              </thead>
+              <tbody>
+               <tr>
+                 <td>{{_i}}slide{{/i}}</td>
+                 <td>{{_i}}این رویداد به‌سرعت بعد از فراخوانی تابع شی <code>slide</code> اجرا می‌شود.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}slid{{/i}}</td>
+                 <td>{{_i}}این رویداد وقتی اجرا می‌شود که چرخ فلک جلوهٔ بصری انتقال اسلاید را تمام کند.{{/i}}</td>
+               </tr>
+              </tbody>
+            </table>
+          </section>
+
+
+
+          <!-- Typeahead
+          ================================================== -->
+          <section id="typeahead">
+            <div class="page-header">
+              <h1>{{_i}}کامل‌کننده نوشته{{/i}} <small>bootstrap-typeahead.js</small></h1>
+            </div>
+
+
+            <h2>{{_i}}نمونه{{/i}}</h2>
+            <p>{{_i}}یک پلاگین پایه‌ای، ساده و قابل گسترش برای ایجاد کامل‌کنندهٔ نوشته بر روی هر ورودی متن فرم.{{/i}}</p>
+            <div class="bs-docs-example" style="background-color: #f5f5f5;">
+              <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["آذربایجان شرقی","آذربایجان غربی","اردبیل","اصفهان","البرز","ایلام","بوشهر","تهران","چهارمحال و بختیاری","خراسان جنوبی","خراسان رضوی","خراسان شمالی","خوزستان","زنجان","سمنان","سیستان و بلوچستان","فارس","قزوین","قم","کردستان","کرمان","کرمانشاه","کهگیلویه و بویراحمد","گلستان","گیلان","لرستان","مازندران","مرکزی","هرمزگان","همدان","یزد"]'>
+            </div>{{! /example }}
+            <pre class="prettyprint linenums">&lt;input type="text" data-provide="typeahead"&gt;</pre>
+
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>{{_i}}استفاده{{/i}}</h2>
+
+            <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+            <p>{{_i}}خصوصیت data را به یک عنصر اضافه کنید تا قابلیت کامل‌کننده نوشته را بدست آورد مانند مثال بالا.{{/i}}</p>
+
+            <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
+            <p>{{_i}}کامل‌کننده نوشته را دستی فراخوانی کنید:{{/i}}</p>
+            <pre class="prettyprint linenums">$('.typeahead').typeahead()</pre>
+
+            <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+            <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data و یا جاوااسکریپت فرستاده می‌شود. برای خصوصیت data نام انتخاب را به <code>data-</code> اضافه کنید مانند <code>data-source=""</code>.{{/i}}</p>
+            <table class="table table-bordered table-striped">
+              <thead>
+               <tr>
+                 <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+                 <th style="width: 50px;">{{_i}}نوع{{/i}}</th>
+                 <th style="width: 100px;">{{_i}}پیش‌فرض{{/i}}</th>
+                 <th>{{_i}}توصیف{{/i}}</th>
+               </tr>
+              </thead>
+              <tbody>
+                <tr>
+                 <td>{{_i}}source{{/i}}</td>
+                 <td>{{_i}}array, function{{/i}}</td>
+                 <td>[ ]</td>
+                 <td>{{_i}}منبع داده برای جستجو است. ممکن است یک آرایه از رشته‌ها و یا تابع‌ها باشد.تابع دو آرگومان ارسال می‌کند، یکی مقدار <code>query</code> در فیلد ورودی و دیگر بازفراخوانی <code>process</code>. تابع ممکن است همزمان منبع داده را بازگرداند و یا همزمان از طریق بازفراخوانی تابع <code>process</code>.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}items{{/i}}</td>
+                 <td>{{_i}}number{{/i}}</td>
+                 <td>8</td>
+                 <td>{{_i}}بیشترین تعداد آیتمی که در افتادنی می‌توان نمایش داد.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}minLength{{/i}}</td>
+                 <td>{{_i}}number{{/i}}</td>
+                 <td>{{_i}}1{{/i}}</td>
+                 <td>{{_i}}کمترین کاراکتری که نیاز است کامل‌کنندهٔ نوشته فعال شود.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}matcher{{/i}}</td>
+                 <td>{{_i}}function{{/i}}</td>
+                 <td>{{_i}}case insensitive{{/i}}</td>
+                 <td>{{_i}}تابعی که تشخیص می‌دهد آیا یک جستجو با یک آیتم برابر شده‌است یا نه. آرگومان <code>item</code> را برای آزمایش جستجو قبول می‌کند. برای دسترسی به جستجوی جاری از <code>this.query</code> استفاده کنید. اگر جستجو پیدا شود مقدار <code>true</code> را بازمی‌گرداند.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}sorter{{/i}}</td>
+                 <td>{{_i}}function{{/i}}</td>
+                 <td>{{_i}}exact match,<br> case sensitive,<br> case insensitive{{/i}}</td>
+                 <td>{{_i}}تابعی که نتایج کامل‌کننده‌ها را مرتب می‌کند. آرگومان <code>items</code> را دریافت می‌کند و شی کامل‌کننده نوشته را می‌تواند ببیند. <code>this.query</code> به جستجوی جاری اشاره می‌کند.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}highlighter{{/i}}</td>
+                 <td>{{_i}}function{{/i}}</td>
+                 <td>{{_i}}highlights all default matches{{/i}}</td>
+                 <td>{{_i}}تابعی که برای رنگی کردن نتایج کامل‌کننده استفاده می‌شود. آرگومان <code>item</code> در دریافت می‌کند و می‌تواند شی کامل‌کننده نوشته را ببیند.{{/i}}</td>
+               </tr>
+              </tbody>
+            </table>
+
+            <h3>{{_i}}توابع{{/i}}</h3>
+            <h4>.typeahead({{_i}}انتخاب‌ها{{/i}})</h4>
+            <p>{{_i}}یک ورودی را به کامل‌کنندهٔ نوشته تجهیز می‌کند.{{/i}}</p>
+          </section>
+
+
+
+          <!-- Affix
+          ================================================== -->
+          <section id="affix">
+            <div class="page-header">
+              <h1>{{_i}}پیوست{{/i}} <small>bootstrap-affix.js</small></h1>
+            </div>
+
+            <h2>{{_i}}نمونه{{/i}}</h2>
+            <p>{{_i}}زیرناوبری در سمت راست نمونه‌ای از نمایش زندهٔ پلاگین پیوست می‌باشد.{{/i}}</p>
+
+            <hr class="bs-docs-separator">
+
+            <h2>{{_i}}استفاده{{/i}}</h2>
+
+            <h3>{{_i}}با استفاده از خصوصیت data{{/i}}</h3>
+            <p>{{_i}}برای تبدیل هر عنصری به یک پیوست، فقط نیاز است که <code>data-spy="affix"</code> به آن عنصر اضافه کنید. سپس جابه‌جایی‌ها را تعریف کنید که چه‌وقت عنصر فعال و غیرفعال شود.{{/i}}</p>
+
+            <pre class="prettyprint linenums">&lt;div data-spy="affix" data-offset-top="200"&gt;...&lt;/div&gt;</pre>
+
+            <div class="alert alert-info">
+              <strong>{{_i}}توجه کنید!{{/i}}</strong>
+              {{_i}}شما باید مکان عنصر چسبیده‌شده و رفتار پدر بعدی آن را مدیریت کنید.مکان‌ها با استفاده از <code>affix</code>، <code>affix-top</code> و <code>affix-bottom</code> کنترل می‌شود. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.{{/i}}
+            </div>
+
+            <h3>{{_i}}با استفاده از جاوااسکریپت{{/i}}</h3>
+            <p>{{_i}}پلاگین پیوست با استفاده از جاوااسکریپت فراخوانی کنید:{{/i}}</p>
+            <pre class="prettyprint linenums">$('#navbar').affix()</pre>
+
+            <h3>{{_i}}توابع{{/i}}</h3>
+            <h4>.affix('به‌روزرسانی')</h4>
+            <p>{{_i}}هنگام از استفاده پیوست، وقتی عنصری را در DOM اضافه یا حذف کردید، باید تابع به‌روزرسانی فراخوانی شود:{{/i}}</p>
+<pre class="prettyprint linenums">
+$('[data-spy="affix"]').each(function () {
+  $(this).affix('refresh')
+});
+</pre>
+          <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+          <p>{{_i}}انتخاب‌ها با استفاده از خصوصیت data و یا جاوااسکریپت فرستاده می‌شوند. برای خصوصیت data نام انتخاب  را به <code>data-</code> اضافه کنید مانند <code>data-offset-top="200"</code>.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">{{_i}}نام{{/i}}</th>
+               <th style="width: 100px;">{{_i}}نوع{{/i}}</th>
+               <th style="width: 50px;">{{_i}}پیش‌فرض{{/i}}</th>
+               <th>{{_i}}توصیف{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}offset{{/i}}</td>
+               <td>{{_i}}number | function | object{{/i}}</td>
+               <td>{{_i}}10{{/i}}</td>
+               <td>{{_i}}تعدادی پیکسلی که در هنگام اسکرول کردن از صفحه نمایش باید فاصله داشته باشد را، محاسبه می‌کند. اگر یک عدد وارد شود، فاصله در جهت‌های بالا و چپ محاسبه و اعمال می‌شود. برای انتخاب فاصلهٔ یک جهت و یا چندین جهت شی <code>offset: { x: 10 }</code> آماده شده‌است. از یک تابع برای تعیین پویای فاصله استفاده کنید (بیشتر برای طراحی‌های پاسخگو مناسب است).{{/i}}</td>
+             </tr>
+            </tbody>
+          </table>
+        </section>
+
+
+
+      </div>{{! /span9 }}
+    </div>{{! row}}
+
+  </div>{{! /.container }}

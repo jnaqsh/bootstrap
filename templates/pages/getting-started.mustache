@@ -1,0 +1,218 @@
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>{{_i}}از این‌جا شروع کنید{{/i}}</h1>
+    <p class="lead">{{_i}}مرور کلی بر این پروژه و محتویات آن، و این‌که چگونه یک قالب ساده را بسازیم.{{/i}}</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#download-bootstrap"><i class="icon-chevron-left"></i> {{_i}}دانلود{{/i}}</a></li>
+          <li><a href="#file-structure"><i class="icon-chevron-left"></i> {{_i}}ساختار فایل{{/i}}</a></li>
+          <li><a href="#contents"><i class="icon-chevron-left"></i> {{_i}}چه چیزهایی را شامل می‌شود؟{{/i}}</a></li>
+          <li><a href="#html-template"><i class="icon-chevron-left"></i> {{_i}}قالب اچ‌تی‌ام‌ال{{/i}}</a></li>
+          <li><a href="#examples"><i class="icon-chevron-left"></i> {{_i}}نمونه‌ها{{/i}}</a></li>
+          <li><a href="#what-next"><i class="icon-chevron-left"></i> {{_i}}بعد از این، چه‌کار کنم؟{{/i}}</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Download
+        ================================================== -->
+        <section id="download-bootstrap">
+          <div class="page-header">
+            <h1>{{_i}}۱. دانلود{{/i}}</h1>
+          </div>
+          <p class="lead">{{_i}} قبل از شروع، مطمئن شوید یک ویرایشگر کد خوب دارید (ما پیشنهاد می‌کنیم از <a href="http://projects.gnome.org/gedit/">جی ادیت</a> استفاده کنید) و همچنین کمی اطلاعات اچ‌تی‌ام‌ال و سی‌اس‌اس خود را افزایش دهید. ما این‌جا داخل فایل‌های منبع فریم‌ورک نمی‌شویم، اما آن‌ها قابل دانلود هستند. تمرکز ما برای شروع کار، با فایل‌های کامپایل‌شده است.{{/i}}</p>
+
+          <div class="row-fluid">
+            <div class="span6">
+              <h2>{{_i}}کامپایل‌شده{{/i}}</h2>
+              <p>{{_i}}<strong>سریع‌ترین روش برای شروع:</strong> فایل‌های کامپایل‌شده و نسخه‌های فشرده سی‌اس‌اس، جاوااسکریپت و عکس‌ها را دانلود کنید. فایل‌های منبع اصلی و مستندات نیازی نیست.{{/i}}</p>
+              <p><a class="btn btn-large btn-primary" href="assets/bootstrap.zip" {{#production}}onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);"{{/production}}>{{_i}}دانلود بوت‌استرپ{{/i}}</a></p>
+            </div>
+            <div class="span6">
+              <h2>کد منبع</h2>
+              <p>فایل‌های سی‌اس‌اس و جاوااسکریپت اصلی را دریافت کنید، با دانلود آخرین نسخه از گیت‌هاب، یک نسخه از مستندات را نیز به صورت محلی در دیسک خود، خواهید داشت.</p>
+              <p><a class="btn btn-large" href="https://github.com/jnaqsh/bootstrap/zipball/master" {{#production}}onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);"{{/production}}>{{_i}}دانلود کد منبع بوت‌استرپ{{/i}}</a></p>
+            </div>
+          </div>
+        </section>
+
+
+
+        <!-- File structure
+        ================================================== -->
+        <section id="file-structure">
+          <div class="page-header">
+            <h1>{{_i}}۲. ساختار فایل{{/i}}</h1>
+          </div>
+          <p class="lead">{{_i}}بعد از دانلود، ساختار فایل و محتویات به‌صورت منطقی، در  دسته‌های مشترک طبقه‌بندی می‌شوند و دارای دو نسخهٔ فشرده و غیرفشرده هستند.{{/i}}</p>
+          <p>{{_i}}بعد از دانلود و خارج کردن از حالت فشرده، شما ساختاری شبیه به ساختار زیر را خواهید دید:{{/i}}</p>
+<pre class="prettyprint">
+  bootstrap/
+  ├── css/
+  │   ├── bootstrap.css
+  │   ├── bootstrap.min.css
+  ├── js/
+  │   ├── bootstrap.js
+  │   ├── bootstrap.min.js
+  ├── img/
+  │   ├── glyphicons-halflings.png
+  │   ├── glyphicons-halflings-white.png
+  └── README.md
+</pre>
+          <p>{{_i}}ابتدا‌یی‌ترین روش برای استفاده از بوت‌استرپ: استفاده از فایل‌های کامپایل‌شده برای استفاده سریع در بیشتر پروژه‌های وب. ما فایل‌های کامپایل‌شده سی‌اس‌اس و جاوااسکریپت (<code>bootstrap.*</code>) و همچنین فایل‌های فشرده کامپایل‌شدهٔ سی‌اس‌اس و جاوااسکریپت (<code>bootstrap.min.*</code>) را نیز آماده کرده‌ایم. فایل‌های عکس به‌وسیله نرم‌افزار <a href="http://imageoptim.com/">ImageOptim</a> که یک نرم‌افزار برای سیستم‌عامل مک برای فشرده‌سازی عکس‌های PNG .است، فشرده شده‌است{{/i}}</p>
+          <p>{{_i}}لطفا توجه کنید که تمام پلاگین‌های جاوااسکریپت نیاز به جی‌کوئری دارند.{{/i}}</p>
+        </section>
+
+
+
+        <!-- Contents
+        ================================================== -->
+        <section id="contents">
+          <div class="page-header">
+            <h1>{{_i}}۳. چه چیزهایی را شامل می‌شود؟{{/i}}</h1>
+          </div>
+          <p class="lead">{{_i}}بوت‌استرپ به‌وسیله اچ‌تی‌ام‌ال، سی‌اس‌اس و جاوااسکریپت برای تمام اجزا وب آماده است، این اجزا با رده‌بندی مناسب در بالای صفحه <a href="http://rbootstrap.ir">مستندات بوت‌استرپ</a> خلاصه شده‌اند.{{/i}}</p>
+
+          <h2>{{_i}}بخش‌های مستندات{{/i}}</h2>
+          <h4><a href="http://jnaqsh.github.com/bootstrap/scaffolding.html">{{_i}}چارچوب اصلی{{/i}}</a></h4>
+          <p>{{_i}}استایل‌های کلی برای body برای دوباره‌نشانی نوع و پیش‌زمینه، شیوهٔ نمایش پیوندها، سامانه شبکه‌بندی و دو لایهٔ ساده.{{/i}}</p>
+          <h4><a href="http://jnaqsh.github.com/bootstrap/base-css.html">{{_i}}سی‌اس‌اس پایه{{/i}}</a></h4>
+          <p>{{_i}}شیوه‌های نمایش برای اجزای مشترک اچ‌تی‌ام‌ال مانند گرافیک قلم، کد، جدول‌ها، فرم‌ها و دکمه‌ها. همچنین یک مجموعه بزرگ از آیکن‌های کوچک به نام <a href="http://glyphicons.com">Glyphicons</a>.{{/i}}</p>
+          <h4><a href="http://jnaqsh.github.com/bootstrap/components.html">{{_i}}اجزا{{/i}}</a></h4>
+          <p>{{_i}}شیوه‌های نمایش پایه برای اجزای رابط مشترک مانند تب‌ها و پیل‌ها، منوهای ناوبری، هشدارها، تیترهای صفحه و خیلی چیزهای دیگر.{{/i}}</p>
+          <h4><a href="http://jnaqsh.github.com/bootstrap/javascript.html">{{_i}}پلاگین‌های جاوااسکریپت{{/i}}</a></h4>
+          <p>{{_i}}به‌مانند اجزا، این پلاگین‌های جاوااسکریپت اجزای مهاوره‌ای هستند مانند بالنک‌ها، پوب‌ها، مُدال‌ها و خیلی چیزهای دیگر.{{/i}}</p>
+
+          <h2>{{_i}}فهرست اجزا{{/i}}</h2>
+          <p>{{_i}}<strong>اجزا</strong> و <strong>پلاگین‌های جاوااسکریپت</strong> یا یکدیگر اجزای رابط کاربری  زیر را آماده می‌کنند:{{/i}}</p>
+          <ul>
+            <li>{{_i}}مجموعه دکمه{{/i}}</li>
+            <li>{{_i}}دکمه‌های افتادنی{{/i}}</li>
+            <li>{{_i}}فهرست‌ها، پیل‌ها و تب‌های ناوبری{{/i}}</li>
+            <li>{{_i}}نوار ناوبری{{/i}}</li>
+            <li>{{_i}}برچسب‌ها{{/i}}</li>
+            <li>{{_i}}نشان‌ها{{/i}}</li>
+            <li>{{_i}}تیترهای صفحه و واحدهای قهرمان{{/i}}</li>
+            <li>{{_i}}بندانگشتی‌ها{{/i}}</li>
+            <li>{{_i}}هشدارها{{/i}}</li>
+            <li>{{_i}}نوارهای پیشرفت{{/i}}</li>
+            <li>{{_i}}مُدال‌ها{{/i}}</li>
+            <li>{{_i}}افتادنی‌ها{{/i}}</li>
+            <li>{{_i}}بالنک‌ها{{/i}}</li>
+            <li>{{_i}}پوب‌ها{{/i}}</li>
+            <li>{{_i}}آکوردئون{{/i}}</li>
+            <li>{{_i}}چرخ فلک{{/i}}</li>
+            <li>{{_i}}کامل‌کننده نوشته{{/i}}</li>
+          </ul>
+          <p>{{_i}}در راهنماهای آتی، این اجزا به‌صورت تک به تک با اطلاعات بیشتری بررسی خواهدشد. تا آن موقع، به دنبال این اجزا در مستندات برای بدست آوردن اطلاعات بیشتر و طریقه سفارشی کردن آن باشید.{{/i}}</p>
+        </section>
+
+
+
+        <!-- HTML template
+        ================================================== -->
+        <section id="html-template">
+          <div class="page-header">
+            <h1>{{_i}}۴. قالب اچ‌تی‌ام‌ال پایه{{/i}}</h1>
+          </div>
+          <p class="lead">{{_i}}با یک تعریف اجمالی، حالا می‌توان به سراغ این رفت که چگونه می‌توان از بوت‌استرپ استفاده کرد. برای استفاده، یک قالب پایه اچ‌تی‌ام‌ال را، تجهیز به چیزهایی که در <a href="#file-structure">ساختار فایل</a> گفته شد، می‌کنیم.{{/i}}</p>
+          <p>{{_i}}این یک <strong>قالب پایه اچ‌تی‌ام‌ال</strong> است:{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;قالب ۱۰۱ بوت‌استرپ&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;سلام، دنیا!&lt;/h1&gt;
+    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          <p>{{_i}}برای تجهیز این قالب، به <strong>یک قالب بوت‌استرپ</strong>، فایل‌های مناسب سی‌اس‌اس و جاوااسکریپت را در آن قرار می‌دهیم:{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;قالب ۱۰۱ بوت‌استرپ&lt;/title&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;سلام، دنیا!&lt;/h1&gt;
+    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+    &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          <p>{{_i}}<strong>و حالا موفق شدید!</strong>با قرار دادن آن دو فایل، می‌توانید توسعه سایت و یا برنامهٔ خود را با بوت‌استرپ آغاز کنید.{{/i}}</p>
+        </section>
+
+
+
+        <!-- Examples
+        ================================================== -->
+        <section id="examples">
+          <div class="page-header">
+            <h1>{{_i}}۵. نمونه‌ها{{/i}}</h1>
+          </div>
+          <p class="lead">{{_i}}ما توسعه‌دهندگان و طراحان را تشویق می‌کنیم که از این نمونه‌ها فراتر روند و با خلاقیت خود لایه‌های جدیدی را طراحی کنند و فقط به این نمونه‌ها بسنده نکنند.{{/i}}</p>
+          <ul class="thumbnails bootstrap-examples">
+            <li class="span3">
+              <a class="thumbnail" href="examples/hero.html">
+                <img src="assets/img/examples/bootstrap-example-hero.jpg" alt="">
+              </a>
+              <h4>{{_i}}یک سایت فروشگاه پایه{{/i}}</h4>
+              <p>{{_i}}تجهیز صفحه اصلی به یک واحد قهرمان که در آن پیام اصلی قرار دارد و با سه جزء دیگر.{{/i}}</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/fluid.html">
+                <img src="assets/img/examples/bootstrap-example-fluid.jpg" alt="">
+              </a>
+              <h4>{{_i}}لایه متحرک{{/i}}</h4>
+              <p>{{_i}}استفاده از سامانه شبکه‌ای متحرک پاسخگو برای ایجاد طراحی لایه‌ای روان و پاسخگو.{{/i}}</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/starter-template.html">
+                <img src="assets/img/examples/bootstrap-example-starter.jpg" alt="">
+              </a>
+              <h4>{{_i}}الگوی آغازین{{/i}}</h4>
+              <p>{{_i}}یک سند اچ‌تی‌ام‌ال پایه که تجهیز به بوت‌استرپ شده‌است.{{/i}}</p>
+            </li>
+          </ul>
+        </section>
+
+
+
+
+        <!-- Next
+        ================================================== -->
+        <section id="what-next">
+          <div class="page-header">
+            <h1>{{_i}}بعد از این، چه‌کار کنم؟{{/i}}</h1>
+          </div>
+          <p class="lead">{{_i}}برای اطلاعات بیشتر، مستندات، نمونه‌ها، تکه کدها و یا حتی بوت‌استرپ را سفارشی کنید و برای پروژه‌های بعدی خود از آن استفاده کنید.{{/i}}</p>
+          <a class="btn btn-large btn-primary" href="./scaffolding.html" {{#production}}onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Visit docs']);"{{/production}}>{{_i}}مستندات بوت‌استرپ{{/i}}</a>
+          <a class="btn btn-large" href="./customize.html" style="margin-right: 5px;" {{#production}}onclick="_gaq.push(['_trackEvent', 'Getting started', 'Next steps', 'Customize']);"{{/production}}>{{_i}}بوت‌استرپ را سفارشی کنید{{/i}}</a>
+        </section>
+
+
+
+
+      </div>{{! /span9 }}
+    </div>{{! row}}
+
+  </div>{{! /.container }}

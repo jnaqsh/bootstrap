@@ -1,0 +1,1873 @@
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>{{_i}}سی‌اس‌اس پایه{{/i}}</h1>
+    <p class="lead">{{_i}}با کلاس‌های توسعه‌یافته، اجزای اصلی اچ‌تی‌ام‌ال شکل و بهبود داده می‌شوند.{{/i}}</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#typography"><i class="icon-chevron-left"></i> {{_i}}گرافیک قلم{{/i}}</a></li>
+          <li><a href="#code"><i class="icon-chevron-left"></i> {{_i}}کد{{/i}}</a></li>
+          <li><a href="#tables"><i class="icon-chevron-left"></i> {{_i}}جدول‌ها{{/i}}</a></li>
+          <li><a href="#forms"><i class="icon-chevron-left"></i> {{_i}}فرم‌ها{{/i}}</a></li>
+          <li><a href="#buttons"><i class="icon-chevron-left"></i> {{_i}}دکمه‌ها{{/i}}</a></li>
+          <li><a href="#images"><i class="icon-chevron-left"></i> {{_i}}عکس‌ها{{/i}}</a></li>
+          <li><a href="#icons"><i class="icon-chevron-left"></i> {{_i}}آیکن‌ها{{/i}}</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Typography
+        ================================================== -->
+        <section id="typography">
+          <div class="page-header">
+            <h1>{{_i}}گرافیک قلم{{/i}}</h1>
+          </div>
+
+          {{! تیترها }}
+          <h2 id="headings">{{_i}}تیترها{{/i}}</h2>
+          <p>{{_i}}تمام تیترهای اچ‌تی‌ام‌ال از <code>&lt;h1&gt;</code> تا <code>&lt;h6&gt;</code> در دسترس هستند.{{/i}}</p>
+          <div class="bs-docs-example">
+            <h1>h1. {{_i}}تیتر ۱{{/i}}</h1>
+            <h2>h2. {{_i}}تیتر ۲{{/i}}</h2>
+            <h3>h3. {{_i}}تیتر ۳{{/i}}</h3>
+            <h4>h4. {{_i}}تیتر ۴{{/i}}</h4>
+            <h5>h5. {{_i}}تیتر ۵{{/i}}</h5>
+            <h6>h6. {{_i}}تیتر ۶{{/i}}</h6>
+          </div>
+
+          {{! Body copy }}
+          <h2 id="body-copy">{{_i}}Body copy{{/i}}</h2>
+          <p>{{_i}}اندازه فونت <code>font-size</code> پیش‌فرض کلی بوت‌استرپ ۱۴ پیکسل و ارتفاع بین خطوط <code>line-height</code> ۲۰ پیکسل است. این بر روی <code>&lt;body&gt;</code> و تمام پاراگراف‌ها اعمال می‌شود.
+          همچنین اندازه حاشیهٔ پایینی هر پاراگراف <code>&lt;p&gt;</code> برابر نصف اندازه ارتفاع خطوط است. (که به صورت پیش‌فرض ۱۰ پیکسل است){{/i}}</p>
+          <div class="bs-docs-example">
+            <p>ما تعریف نرم‌افزار آزاد را ارائه می‌دهیم تا بطور واضح نشان دهیم که چه مواردی در مورد یک نرم‌افزار خاص باید صدق کند تا به عنوان یک نرم‌افزار آزاد تلقی شود.</p>
+            <p>آزادی برای استفاده از برنامه به معنای آزادی هر شخص و یا سازمانی برای استفاده از آن برنامه بر روی هر سیستم کامپیوتری، برای هر کاری، و بدون نیاز به هر گونه ارتباط بعدی با توسعه‌دهنده و یا هر نهاد خاصی می‌باشد.</p>
+            <p>"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد. توسعه تجاری نرم‌افزار آزاد دیگر غیر معمول نیست، بلکه چنین نرم‌افزارهای آزاد تجاری بسیار مهم هستند.</p>
+          </div>
+          <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+
+          {{! Body copy .lead }}
+          <h3>{{_i}}Lead body copy{{/i}}</h3>
+          <p>{{_i}}یک پاراگراف را با اضافه کردن <code>.lead</code> متمایز کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p class="lead">هنگامی‌که درباره نرم‌افزار آزاد صحبت می‌شود بهتر است تا از به کار بردن عباراتی مانند "هدیه دادن" و یا "بطور رایگان" خودداری شود، زیرا این عبارات این مفهوم را می‌رسانند که موضوع در مورد قیمت می‌باشد، نه آزادی.</p>
+          </div>
+          <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+
+          {{! استفاده از LESS }}
+          <h3>{{_i}}ساخته‌شده به‌وسیلهٔ Less{{/i}}</h3>
+          <p>{{_i}}اندازه گرافیک قلم براساس دو متغیر تعریف‌شده در فایل <strong>variables.less</strong> است: <code>@baseFontSize</code> و <code>@baseLineHeight</code>. نخستین، اندازه فونت پایه است و دومی ارتفاع خطوط است. ما از آن متغیرها و کمی عملیات ریاضی ساده، اندازه حاشیه‌های داخلی و خارجی و ارتفاع خطوط را محاسبه می‌کنیم. آن‌ها را سفارشی کنید و از بوت‌استرپ استفاده کنید.{{/i}}</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          {{! تاکیدها }}
+          <h2 id="emphasis">{{_i}}تاکیدها{{/i}}</h2>
+          <p>{{_i}}از تگ‌های تاکید پیش‌فرض اچ‌تی‌ام‌ال برای شیوه‌های نمایش مختلف استفاده کنید.{{/i}}</p>
+
+          <h3><code>&lt;small&gt;</code></h3>
+          <p>{{_i}}برای این‌که بتوانید یک نوشته بلاکی و یا اینلاین از حالت پراهمیت و تاکید خارج کنید، <small>از تگ small استفاده کنید.</small>{{/i}}</p>
+          <div class="bs-docs-example">
+            <p><small>این خط به این معنا است که کوچک چاپ شده‌است.</small></p>
+          </div>
+<pre class="prettyprint">
+&lt;p&gt;
+  &lt;small&gt;این خط به این معنا است که کوچک چاپ شده‌است&lt;/small&gt;
+&lt;/p&gt;
+</pre>
+
+          <h3>{{_i}}درشت{{/i}}</h3>
+          <p>{{_i}}برای تاکید این‌که یک تکه از یک متن <strong>مهم</strong> است.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p>تکه متنی که در ادامه می‌آید یک متن <strong>درشت و مهم</strong> است.</p>
+          </div>
+          <pre class="prettyprint">&lt;strong&gt;درشت و مهم&lt;/strong&gt;</pre>
+
+          <h3>{{_i}}مورب‌ها{{/i}}</h3>
+          <p>{{_i}}برای <em>مورب کردن</em> یک تکه متن استفاده می‌شود.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p>تکه متنی که در ادامه خواهد آمد، یک <em>متن مورب است</em>.</p>
+          </div>
+          <pre class="prettyprint">&lt;em&gt;یک متن مورب است&lt;/em&gt;</pre>
+
+          <p><span class="label label-info">{{_i}}توجه کنید!{{/i}}</span> {{_i}}راحت باشید و از <code>&lt;b&gt;</code> و <code>&lt;i&gt;</code> می‌توانید در اچ‌تی‌ام‌ال ۵ استفاده کنید. با <code>&lt;b&gt;</code> می‌توانید کلمه و یا جملاتی را که اهمیت مضاعف ندارند را مشخص کرد و <code>&lt;i&gt;</code> بیشتر برای آواها، کلمات تخصصی و یا غیره استفاده می‌شود.{{/i}}</p>
+
+          <h3>{{_i}}کلاس‌های تکیه‌دهنده{{/i}}</h3>
+          <p>{{_i}}با استفاده از کلاس‌های کمکی به‌وسیله رنگ می‌توان اهمیت را مشخص کرد.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p class="muted">"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست.</p>
+            <p class="text-warning">"نرم‌افزار آزاد" درباره آزادی است، نه قیمت.</p>
+            <p class="text-error">یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری و توزیع تجاری در دسترس باشد.</p>
+            <p class="text-info">شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.</p>
+            <p class="text-success">اگر حق تغییر شما، محدود به چیزی باشد که دیگری آن را بهبود می‌داند، این آزادی نیست. </p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p class="muted"&gt;"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست.&lt;/p&gt;
+&lt;p class="text-warning"&gt;"نرم‌افزار آزاد" درباره آزادی است، نه قیمت.&lt;/p&gt;
+&lt;p class="text-error"&gt;یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری و توزیع تجاری در دسترس باشد.&lt;/p&gt;
+&lt;p class="text-info"&gt;شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.&lt;/p&gt;
+&lt;p class="text-success"&gt;اگر حق تغییر شما، محدود به چیزی باشد که دیگری آن را بهبود می‌داند، این آزادی نیست.&lt;/p&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          {{! مخفف‌ها }}
+          <h2 id="abbreviations">{{_i}}مخفف‌ها{{/i}}</h2>
+          <p>{{_i}}پیاده‌سازی کد مخفف <code>&lt;abbr&gt;</code> اچ‌تی‌ام‌ال برای هنگامی که موس بر روی مخفف قرار می‌گیرد، اصل کلمات نمایان شوند. مخفف‌هایی که خصوصیت <code>title</code> را داشته باشند، بر زیر آن خط‌چینی کشیده می‌شود و وقتی موس بر روی آن قرار گرفته ‌می‌شود اصل کلمات نمایان می‌شود.{{/i}}</p>
+
+          <h3><code>&lt;abbr&gt;</code></h3>
+          <p>{{_i}}برای این‌که اصل کلمات مخفف نمایان شود، در خصوصیت <code>title</code> اصل کلمات را قرار دهید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p>{{_i}}مخفف ابراهیم، <abbr title="ابراهیم">ابی</abbr> است.{{/i}}</p>
+          </div>
+          <pre class="prettyprint">&lt;abbr title="ابراهیم"&gt;ابی&lt;/abbr&gt;</pre>
+
+          <h3><code>&lt;abbr class="initialism"&gt;</code></h3>
+          <p>{{_i}}کلاس <code>.initialism</code> به مخفف اضافه کنید تا کمی اندازه فونت آن کوچک‌تر شود.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p>{{_i}}<abbr title="HyperText Markup Language" class="initialism">اچ‌تی‌ام‌ال</abbr> بهترین زبان نشانه‌گذاری است.{{/i}}</p>
+          </div>
+          <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;اچ‌تی‌ام‌ال&lt;/abbr&gt;</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          {{! نشانی‌ها }}
+          <h2 id="addresses">{{_i}}نشانی‌ها{{/i}}</h2>
+          <p>{{_i}}تقریبا زیرشاخهٔ تمام کارها، اطلاعات تماس، و یکی از آن‌ها نشانی‌ها و یا آدرس‌ها است.{{/i}}</p>
+
+          <h3><code>&lt;address&gt;</code></h3>
+          <p>{{_i}}با گذاشتن تگ <code>&lt;br&gt;</code> در آخر تمام خطوط شیوهٔ نوشتن نشانی را رعایت کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <address>
+              <strong>شرکت نقش</strong><br>
+              خیابان آزادی، آزادی ۳۶، پلاک ۱۳<br>
+              ایران، مشهد<br>
+              <abbr title="تلفن">ت:</abbr> ۶۰۹۹۳۹۳-۵۱۱ (۹۸)
+            </address>
+            <address>
+              <strong>نام و نام خانوادگی</strong><br>
+              <a href="mailto:#">first.last@gmail.com</a>
+            </address>
+          </div>
+<pre class="prettyprint linenums">
+&lt;address&gt;
+  &lt;strong&gt;شرکت نقش&lt;/strong&gt;&lt;br&gt;
+  خیابان آزادی، آزادی ۳۶، پلاک ۱۳&lt;br&gt;
+  ایران، مشهد&lt;br&gt;
+  &lt;abbr title="تلفن"&gt;ت:&lt;/abbr&gt; ۶۰۹۹۳۹۳-۵۱۱ (۹۸)
+&lt;/address&gt;
+
+&lt;address&gt;
+  &lt;strong&gt;نام و نام خانوادگی&lt;/strong&gt;&lt;br&gt;
+  &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
+&lt;/address&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          {{! گفتاوردها }}
+          <h2 id="blockquotes">{{_i}}گفتاوردها{{/i}}</h2>
+          <p>{{_i}}برای قرار دادن یک گفتاورد در متن از دیگر منابع{{/i}}</p>
+
+          <h3>{{_i}}گفتاورد پیش‌فرض{{/i}}</h3>
+          <p>{{_i}}تگ <code>&lt;blockquote&gt;</code> اطرف هر <abbr title="HyperText Markup Language">HTML</abbr> به عنوان گفتاورد قرار دهید. برای گفتاورد مستقیم ما پیشنهاد می‌کنیم که از تگ <code>&lt;p&gt;</code> استفاده کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <blockquote>
+              <p>اگر حق تغییر شما، محدود به چیزی باشد که دیگری آن را بهبود می‌داند، این آزادی نیست.</p>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;اگر حق تغییر شما، محدود به چیزی باشد که دیگری آن را بهبود می‌داند، این آزادی نیست.&lt;/p&gt;
+&lt;/blockquote&gt;
+</pre>
+
+          <h3>{{_i}}تنظیمات گفتاورد{{/i}}</h3>
+          <p>{{_i}}شیوه نمایش و محتویات برای یک گفتاورد ساده می‌تواند چندین حالت داشته‌باشد.{{/i}}</p>
+
+          <h4>{{_i}}آوردن نام منبع{{/i}}</h4>
+          <p>{{_i}}تگ <code>&lt;small&gt;</code> برای تشخیص منبع بیاورید. نام شخص یا منبع را در داخل تگ <code>&lt;cite&gt;</code> بیاورید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <blockquote>
+              <p>شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.</p>
+              <small>ریچارد متیو استالمن از  <cite title="مقالات بنیاد نرم‌افزار آزاد">مقالات بنیاد نرم‌افزار آزاد</cite></small>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید و یا حتی کپی‌هایی از آن را بفروشید.&lt;/p&gt;
+  &lt;small&gt;ریچارد متیو استالمن از &lt;cite title="مقالات بنیاد نرم‌افزار آزاد"&gt;مقالات بنیاد نرم‌افزار آزاد&lt;/cite&gt;&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre>
+
+          <h4>{{_i}}نمایش متفاوت{{/i}}</h4>
+          <p>{{_i}}از تگ <code>.pull-left</code> برای این‌که گفتاورد چپ‌چین شود استفاده کنید.{{/i}}</p>
+          <div class="bs-docs-example" style="overflow: hidden;">
+            <blockquote class="pull-left">
+              <p>شما همیشه این آزادی را دارید تا نرم‌افزار را کپی کنید و تغییر دهید.</p>
+              <small>ریچارد متیو استالمن از  <cite title="مقالات بنیاد نرم‌افزار آزاد">مقالات بنیاد نرم‌افزار آزاد</cite></small>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote class="pull-left"&gt;
+  ...
+&lt;/blockquote&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <!-- Lists -->
+          <h2 id="lists">{{_i}}فهرست‌ها{{/i}}</h2>
+
+          <h3>{{_i}}غیرترتیبی{{/i}}</h3>
+          <p>{{_i}}یک فهرست از آیتم‌هایی که ترتیب آن‌ها برای ما مهم <em>نیست</em>.{{/i}}</p>
+          <div class="bs-docs-example">
+            <ul>
+              <li>چایی برای سربازها</li>
+              <li>پول آب را می‌دهیم برق جدا</li>
+              <li>پوتین برای سربازها به تعداد کافی</li>
+              <li>قند به مقدار کافی</li>
+              <li>پول برق را می‌دهیم
+                <ul>
+                  <li>آب جدا</li>
+                  <li>پوتین برای سربازها</li>
+                  <li>سقف اتاق نم کشیده</li>
+                  <li>چایی برای سربازها</li>
+                </ul>
+              </li>
+              <li>قند به قدر کافی</li>
+              <li>به به به بله</li>
+              <li>پول آب را می‌دهیم برق جدا</li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>{{_i}}ترتیبی{{/i}}</h3>
+          <p>{{_i}}یک فهرست از آیتم‌هایی که ترتیب آن‌ها برای ما مهم <em>هستند</em>.{{/i}}</p>
+          <div class="bs-docs-example">
+            <ol>
+              <li>کتری را آب می‌کنیم</li>
+              <li>آب را بر روی شعله می‌گذاریم</li>
+              <li>۱۵ تا ۲۰ دقیقه منتظر می‌شویم تا آب به جوش آید</li>
+              <li>در قوری چای خشک می‌ریزیم</li>
+              <li>آب را داخل قوی می‌ریزیم</li>
+              <li>قوری را بر روی کتری می‌گذاریم</li>
+              <li>۵ تا ۱۰ دقیقه منتظر می‌شویم که چای دم کشد</li>
+              <li>چای را داخل فنجان می‌ریزیم و میل می‌کنیم</li>
+            </ol>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+        <h3>{{_i}}بدون نقاط و اعداد اول هر سطر{{/i}}</h3>
+        <p>{{_i}}یک فهرست از آیتم‌هایی که تگ <code>list-style</code> را ندارد و یا حاشیه چپ بیشتری دارند.{{/i}}</p>
+        <div class="bs-docs-example">
+          <ul class="unstyled">
+            <li>چایی برای سربازها</li>
+              <li>پول آب را می‌دهیم برق جدا</li>
+              <li>پوتین برای سربازها به تعداد کافی</li>
+              <li>قند به مقدار کافی</li>
+              <li>پول برق را می‌دهیم
+                <ul>
+                  <li>آب جدا</li>
+                  <li>پوتین برای سربازها</li>
+                  <li>سقف اتاق نم کشیده</li>
+                  <li>چایی برای سربازها</li>
+                </ul>
+              </li>
+              <li>قند به قدر کافی</li>
+              <li>به به به بله</li>
+              <li>پول آب را می‌دهیم برق جدا</li>
+          </ul>
+        </div>
+<pre class="prettyprint linenums">
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        <h3>{{_i}}توصیفی{{/i}}</h3>
+        <p>{{_i}}یک فهرست از عناوین که دارای توصیف مختص به خود هستند.{{/i}}</p>
+        <div class="bs-docs-example">
+          <dl>
+            <dt>فهرست توصیف</dt>
+            <dd>یک توصیف که عنوان مورد نظر به خوبی توصیف می‌کند.</dd>
+            <dt>نرم‌افزا آزاد</dt>
+            <dd>نرم‌افزاری که دارای چهار آزادی مشخص شده باشد.</dd>
+            <dd>نرم‌افزاری که انحصاری و اختصاصی نباشد.</dd>
+            <dt>نرم‌افزار متن‌باز</dt>
+            <dd>نرم‌افزاری که دارای ویژگی‌های مشخصی باشد.</dd>
+          </dl>
+        </div>
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+        <h4>{{_i}}توصیف افقی{{/i}}</h4>
+        <p>{{_i}}برای توصیفاتی که عناوین و توصیفات باید در یک ستون در کنار یکدیگر باشند.{{/i}}</p>
+        <div class="bs-docs-example">
+          <dl class="dl-horizontal">
+            <dt>{{_i}}فهرست توصیف{{/i}}</dt>
+            <dd>{{_i}}یک توصیف که عنوان مورد نظر به خوبی توصیف می‌کند.{{/i}}</dd>
+            <dt>نرم‌افزا آزاد</dt>
+            <dd>نرم‌افزاری که دارای چهار آزادی مشخص شده باشد.</dd>
+            <dd>نرم‌افزاری که انحصاری و اختصاصی نباشد.</dd>
+            <dt>نرم‌افزار متن‌باز</dt>
+            <dd>نرم‌افزاری که دارای ویژگی‌های مشخصی باشد.</dd>
+          </dl>
+        </div>
+<pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+        <p>
+          <span class="label label-info">{{_i}}توجه کنید!{{/i}}</span>
+          {{_i}}توصیفات افقی طولانی براساس اندازه ستون، کوچک خواهند شد و این توسط تگ <code>text-overflow</code> انجام خواهد گرفت. در صفحه نمایش‌های کوچک‌تر آن‌ها به حالت لایه روی‌هم قرار می‌گیرند.{{/i}}
+        </p>
+      </section>
+
+
+
+        <!-- Code
+        ================================================== -->
+        <section id="code">
+          <div class="page-header">
+            <h1>{{_i}}کد{{/i}}</h1>
+          </div>
+
+          <h2>اینلاین</h2>
+          <p>یک تکه کد را در داخل تگ <code>&lt;code&gt;</code> قرار دهید.</p>
+<div class="bs-docs-example">
+  برای مثال تگ <code>&lt;section&gt;</code> به صورت اینلاین تبدیل خواهد شد.
+</div>
+<pre class="prettyprint linenums">
+{{_i}}برای مثال تگ, &lt;code&gt;&lt;section&gt;&lt;/code&gt; به صورت اینلاین تبدیل خواهد شد.{{/i}}
+</pre>
+
+          <h2>بلاک پایه</h2>
+          <p>{{_i}}از تگ <code>&lt;pre&gt;</code> برای چندین خط کد استفاده کنید. مطمئن شوید که علائم کوچک‌تر و بزرگ‌تر را escape کرده‌اید، تا کد شما به صورت کامل نمایش داده شود.{{/i}}</p>
+<div class="bs-docs-example">
+  <pre>&lt;p&gt;{{_i}}یک نمونه متن آزمایشی...{{/i}}&lt;/p&gt;</pre>
+</div>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre&gt;
+  &amp;lt;p&amp;gt;{{_i}}یک نمونه متن آزمایشی...{{/i}}&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+          <p><span class="label label-info">{{_i}}توجه کنید!{{/i}}</span> {{_i}}مطمئن شوید که در داخل تگ <code>&lt;pre&gt;</code> به‌اندازه کافی به سمت چپ رفته‌اید، به خاطر این‌که تمام فاصله‌ها نمایش داده خواهد شد.{{/i}}</p>
+          <p>{{_i}}شما ممکن است از کلاس <code>.pre-scrollable</code> برای قرارگیری اسکرول‌بار برای متون بیش از ارتفاع ۳۵۰ پیکسل استفاده کنید.{{/i}}</p>
+        </section>
+
+
+
+        <!-- Tables
+        ================================================== -->
+        <section id="tables">
+          <div class="page-header">
+            <h1>{{_i}}جدول‌ها{{/i}}</h1>
+          </div>
+
+          <h2>{{_i}}شیوهٔ نمایش پیش‌فرض{{/i}}</h2>
+          <p>{{_i}}برای شیوهٔ نمایش پایه (شامل حاشیهٔ داخلی خیلی کم و جداکننده‌های افقی) کلاس <code>.table</code> را برای هر جدول <code>&lt;table&gt;</code> قرار دهید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{_i}}نام{{/i}}</th>
+                  <th>{{_i}}نام خانوادگی{{/i}}</th>
+                  <th>{{_i}}نام کاربری{{/i}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱</td>
+                  <td>حامد</td>
+                  <td>رمضانیان</td>
+                  <td>@jnaqsh</td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td>مارک</td>
+                  <td>اوتو</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td>جیکوب</td>
+                  <td>تورنتون</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;table class="table"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}کلاس‌های اختیاری{{/i}}</h2>
+          <p>{{_i}}کلاس‌هایی که در زیر آمده‌است را می‌توانید با کلاس <code>.table</code> استفاده کنید.{{/i}}</p>
+
+          <h3><code>{{_i}}.table-striped{{/i}}</code></h3>
+          <p>{{_i}}با اضافه کردن این کلاس به هر جدولی، ردیف‌ها در <code>&lt;tbody&gt;</code> به‌وسیله <code>:nth-child</code> به‌صورت یک درمیان دارای رنگ متفاوتی خواهند شد (در اینترنت اکسپلورر ۷ و ۸ پشتیبانی نمی‌شود).{{/i}}</p>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{_i}}نام{{/i}}</th>
+                  <th>{{_i}}نام خانوادگی{{/i}}</th>
+                  <th>{{_i}}نام کاربری{{/i}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱</td>
+                  <td>حامد</td>
+                  <td>رمضانیان</td>
+                  <td>@jnaqsh</td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td>مارک</td>
+                  <td>اوتو</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td>جیکوب</td>
+                  <td>تورنتون</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>{{! /example }}
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-striped"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+          <h3><code>{{_i}}.table-bordered{{/i}}</code></h3>
+          <p>{{_i}}به جدول لبه اضافه می‌کند و گوشه‌های جدول را گرد می‌کند.{{/i}}</p>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{_i}}نام{{/i}}</th>
+                  <th>{{_i}}نام خانوادگی{{/i}}</th>
+                  <th>{{_i}}نام کاربری{{/i}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱</td>
+                  <td>حامد</td>
+                  <td>رمضانیان</td>
+                  <td>@jnaqsh</td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td>مارک</td>
+                  <td>اوتو</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td>جیکوب</td>
+                  <td>تورنتون</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+          <h3><code>{{_i}}.table-hover{{/i}}</code></h3>
+          <p>{{_i}}با حرکت موس بر روی هر ردیف جدول رنگ آن متفاوت خواهد شد.{{/i}}</p>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{_i}}نام{{/i}}</th>
+                  <th>{{_i}}نام خانوادگی{{/i}}</th>
+                  <th>{{_i}}نام کاربری{{/i}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱</td>
+                  <td>حامد</td>
+                  <td>رمضانیان</td>
+                  <td>@jnaqsh</td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td>مارک</td>
+                  <td>اوتو</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td>جیکوب</td>
+                  <td>تورنتون</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>{{! /example }}
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-hover"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+          <h3><code>{{_i}}.table-condensed{{/i}}</code></h3>
+          <p>{{_i}}با نصف کردن حاشیه‌ها جدول کوچک‌تر می‌شود{{/i}}</p>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{_i}}نام{{/i}}</th>
+                  <th>{{_i}}نام خانوادگی{{/i}}</th>
+                  <th>{{_i}}نام کاربری{{/i}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱</td>
+                  <td>حامد</td>
+                  <td>رمضانیان</td>
+                  <td>@jnaqsh</td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td>مارک</td>
+                  <td>اوتو</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td>جیکوب</td>
+                  <td>تورنتون</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>{{! /example }}
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-condensed"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}کلاس‌های اختیاری برای ردیف‌ها{{/i}}</h2>
+          <p>{{_i}}برای رنگی کردن ردیف‌های جدول از کلاس‌های زیر استفاده کنید.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>{{_i}}کلاس{{/i}}</th>
+                <th>{{_i}}توصیف{{/i}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>.success</code>
+                </td>
+                <td>{{_i}}نشان‌دهنده یک عمل موفقیت‌آمیز و یا عملی مثبت است.{{/i}}</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.error</code>
+                </td>
+                <td>{{_i}}نشان‌دهنده خطر و یا عملی که نتیجه منفی دارد.{{/i}}</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.warning</code>
+                </td>
+                <td>{{_i}}نشان‌دهنده هشدار که نیاز به توجه به آن است.{{/i}}</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.info</code>
+                </td>
+                <td>{{_i}}به عنوان یک جایگزین برای شیوهٔ نمایش پیش‌فرض است.{{/i}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{_i}}محصول{{/i}}</th>
+                  <th>{{_i}}تاریخ دریافت پرداختی{{/i}}</th>
+                  <th>{{_i}}وضعیت{{/i}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="success">
+                  <td>۱</td>
+                  <td>بوت‌استرپ - ماهانه</td>
+                  <td>۱۳۹۱/۰۶/۰۱</td>
+                  <td>تاییدشده</td>
+                </tr>
+                <tr class="error">
+                  <td>۲</td>
+                  <td>بوت‌استرپ - ماهانه</td>
+                  <td>۱۳۹۱/۰۶/۰۲</td>
+                  <td>برگشت‌خورده</td>
+                </tr>
+                <tr class="warning">
+                  <td>۳</td>
+                  <td>بوت‌استرپ - ماهانه</td>
+                  <td>۱۳۹۱/۰۶/۰۳</td>
+                  <td>در حال انتظار</td>
+                </tr>
+                <tr class="info">
+                  <td>۴</td>
+                  <td>بوت‌استرپ - ماهانه</td>
+                  <td>۱۳۹۱/۰۶/۰۴</td>
+                  <td>تماس برای تایید</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>{{! /example }}
+<pre class="prettyprint linenums">
+...
+  &lt;tr class="success"&gt;
+    &lt;td&gt;۱&lt;/td&gt;
+    &lt;td&gt;بوت‌استرپ - ماهانه&lt;/td&gt;
+    &lt;td&gt;۱۳۹۱/۰۶/۰۱&lt;/td&gt;
+    &lt;td&gt;تاییدشده&lt;/td&gt;
+  &lt;/tr&gt;
+...
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}نشان‌های جدول پشتیبانی‌شده{{/i}}</h2>
+          <p>{{_i}}فهرستی از نشان‌های جدول اچ‌تی‌ام‌ال پشتیبانی شده در زیر به همراه چگونگی استفاده از آن در زیر آورده شده‌است.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>{{_i}}تگ{{/i}}</th>
+                <th>{{_i}}توصیف{{/i}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>&lt;table&gt;</code>
+                </td>
+                <td>
+                  {{_i}}اجزا را در یک قالب جدولی نمایش می‌دهد.{{/i}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;thead&gt;</code>
+                </td>
+                <td>
+                  {{_i}}نگهدارنده برای ردیف‌های تیتر جدول (<code>&lt;tr&gt;</code>){{/i}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tbody&gt;</code>
+                </td>
+                <td>
+                  {{_i}}نگهدارنده اجزا ردیف‌های جدول (<code>&lt;tr&gt;</code>) در قسمت بدنهٔ جدول{{/i}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tr&gt;</code>
+                </td>
+                <td>
+                  {{_i}}نگهدارندهٔ اجزا برای مجموعه‌ای از سلول‌های جدول (<code>&lt;td&gt;</code> یا <code>&lt;th&gt;</code>) که در یک ردیف ظاهر می‌شوند.{{/i}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;td&gt;</code>
+                </td>
+                <td>
+                  {{_i}}سلول پیش‌فرض جدول{{/i}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;th&gt;</code>
+                </td>
+                <td>
+                  {{_i}}یک سلول خاص جدول برای ستون‌هایی (یا ردیف، بستگی قرارگیری و استفاده) که در داخل <code>&lt;thead&gt;</code> قرار گرفته‌اند.{{/i}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;caption&gt;</code>
+                </td>
+                <td>
+                  {{_i}}توصیف یا خلاصه‌ای از این‌که جدول چه چیزی را نگهداری می‌کند، می‌تواند برای کسی که آن را می‌خواند مفید باشد.{{/i}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
+&lt;table&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Forms
+        ================================================== -->
+        <section id="forms">
+          <div class="page-header">
+            <h1>{{_i}}فرم‌ها{{/i}}</h1>
+          </div>
+
+          <h2>{{_i}}شیوهٔ نمایش پیش‌فرض{{/i}}</h2>
+          <p>{{_i}}برخی از کنترل‌کننده‌های فرم به‌صورت پیش‌فرض بدون اضافه کردن کلاسی به <code>&lt;form&gt;</code> و یا تغییر در اچ‌تی‌ام‌ال، شیوهٔ نمایش خاصی به خود می‌گیرند. نتیجهٔ آن قرارگیری کنترل‌کننده بر روی هم که برچسب‌ها راست‌چین شده‌اند.{{/i}}</p>
+          <form class="bs-docs-example">
+            <legend>راهنما</legend>
+            <label>{{_i}}نام برچسب{{/i}}</label>
+            <input type="text" placeholder="{{_i}}یک چیزی بنویسید…{{/i}}">
+            <span class="help-block">{{_i}}نمونه‌ای از نوشته راهنما که به‌صورت بلاکی است.{{/i}}</span>
+            <label class="checkbox">
+              <input type="checkbox"> {{_i}}مرا تیک بزنید{{/i}}
+            </label>
+            <button type="submit" class="btn">{{_i}}فرستادن{{/i}}</button>
+          </form>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;legend&gt;{{_i}}راهنما{{/i}}&lt;/legend&gt;
+  &lt;label&gt;{{_i}}نام برچسب{{/i}}&lt;/label&gt;
+  &lt;input type="text" placeholder="{{_i}}یک چیزی بنویسید…{{/i}}"&gt;
+  &lt;span class="help-block"&gt;نمونه‌ای از نوشته راهنما که به‌صورت بلاکی است&lt;/span&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; {{_i}}مرا تیک بزنید{{/i}}
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;{{_i}}فرستادن{{/i}}&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}لایه‌های اختیاری{{/i}}</h2>
+          <p>{{_i}}با استفاده از بوت‌استرپ، سه لایهٔ فرم اختیاری برای استفاده‌های رایج به شما داده می‌شود.{{/i}}</p>
+
+          <h3>{{_i}}فرم جستجو{{/i}}</h3>
+          <p>{{_i}}کلاس <code>.form-search</code> را به فرم اضافه کنید و برای این‌که حاشیه‌های ورودی بیشتر گرد شود از کلاس <code>.search-query</code> برای <code>&lt;input&gt;</code> استفاده کنید.{{/i}}</p>
+          <form class="bs-docs-example form-search">
+            <input type="text" class="input-medium search-query">
+            <button type="submit" class="btn">{{_i}}جستجو{{/i}}</button>
+          </form>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;input type="text" class="input-medium search-query"&gt;
+  &lt;button type="submit" class="btn"&gt;{{_i}}جستجو{{/i}}&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>{{_i}}فرم اینلاین{{/i}}</h3>
+          <p>{{_i}}برای فرمی کوچک‌تر که فضای کمتری را اشغال می‌کند از <code>.form-inline</code> استفاده کنید.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <input type="text" class="input-small" placeholder="{{_i}}ایمیل{{/i}}">
+            <input type="password" class="input-small" placeholder="{{_i}}گذرواژه{{/i}}">
+            <label class="checkbox">
+              <input type="checkbox"> {{_i}}مرا به خاطر بسپار{{/i}}
+            </label>
+            <button type="submit" class="btn">{{_i}}ورود{{/i}}</button>
+          </form>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+  &lt;input type="text" class="input-small" placeholder="{{_i}}ایمیل{{/i}}"&gt;
+  &lt;input type="password" class="input-small" placeholder="{{_i}}گذرواژه{{/i}}"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; {{_i}}مرا به خاطر بسپار{{/i}}
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;{{_i}}ورود{{/i}}&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>{{_i}}فرم افقی{{/i}}</h3>
+          <p>{{_i}}برای چپ‌چین کردن برچسب‌ها و قرار دادن آن‌ها در یک خط با کنترل‌کننده خود نیاز دارید تغییرات زیر را در فرم پیش‌فرض بدهید:{{/i}}</p>
+          <ul>
+            <li>{{_i}}کلاس <code>.form-horizontal</code> به فرم اضافه کنید{{/i}}</li>
+            <li>{{_i}}برچسب‌ها و کنترل‌کننده‌ها را در <code>.control-group</code> قرار دهید{{/i}}</li>
+            <li>{{_i}}کلاس <code>.control-label</code> برای برچسب قرار دهید{{/i}}</li>
+            <li>{{_i}}برای قرارگیری در یک ستون، هر کنترل‌کنندهٔ مرتبط را در <code>.controls</code> قرار دهید.{{/i}}</li>
+          </ul>
+          <form class="bs-docs-example form-horizontal">
+            <legend>راهنما</legend>
+            <div class="control-group">
+              <label class="control-label" for="inputEmail">{{_i}}ایمیل{{/i}}</label>
+              <div class="controls">
+                <input type="text" id="inputEmail" placeholder="{{_i}}ایمیل{{/i}}">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputPassword">{{_i}}گذرواژه{{/i}}</label>
+              <div class="controls">
+                <input type="password" id="inputPassword" placeholder="{{_i}}گذرواژه{{/i}}">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <label class="checkbox">
+                  <input type="checkbox"> {{_i}}مرا به خاطر بسپار{{/i}}
+                </label>
+                <button type="submit" class="btn">{{_i}}ورود{{/i}}</button>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;{{_i}}ایمیل{{/i}}&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="{{_i}}ایمیل{{/i}}"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;{{_i}}گذرواژه{{/i}}&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="{{_i}}گذرواژه{{/i}}"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; {{_i}}مرا به خاطر بسپار{{/i}}
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;{{_i}}ورود{{/i}}&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}کنترل‌کننده‌های فرم قابل پشتیبانی{{/i}}</h2>
+          <p>{{_i}}نمونه‌هایی از کنترل‌کننده‌های فرم استاندارد قابل پشتیبانی در نمونه‌های لایه فرم زیر نشان داده می‌شود.{{/i}}</p>
+
+          <h3>{{_i}}ورودی‌ها{{/i}}</h3>
+          <p>{{_i}}اکثر کنترل‌کننده‌های فرم، فیلدهای ورودی متنی. که شامل پشتیبانی از انواع اچ‌تی‌ام‌ال ۵ نیز هست مانند: text، password، datetime، datetime-local، date، month، time، week، number، email، url، search، tel و color.{{/i}}</p>
+          <p>{{_i}}می‌توانید از هر نوعی <code>type</code> استفاده کنید.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <input type="text" placeholder="متن ورودی">
+          </form>
+<pre class="prettyprint linenums">
+&lt;input type="text" placeholder="متن ورودی"&gt;
+</pre>
+
+          <h3>{{_i}}Textarea{{/i}}</h3>
+          <p>{{_i}}کنترل‌کنندهٔ فرمی که از چندین خط نوشته پشتیبانی می‌کند. تعداد ردیف‌ها <code>rows</code> را اگر نیازی بود تغییر دهید.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <textarea rows="3"></textarea>
+          </form>
+<pre class="prettyprint linenums">
+&lt;textarea rows="3"&gt;&lt;/textarea&gt;
+</pre>
+
+          <h3>{{_i}}Checkboxها و radioها{{/i}}</h3>
+          <p>{{_i}}از Checkboxها برای انتخاب یک یا چندین انتخاب از بین چندین انتخاب استفاده می‌کنیم در حالی که از radioها برای انتخاب یک انتخاب از چندین انتخاب استفاده می‌کنیم.{{/i}}</p>
+          <h4>{{_i}}پیش‌فرض (پشته‌ای){{/i}}</h4>
+          <form class="bs-docs-example">
+            <label class="checkbox">
+              <input type="checkbox" value="">
+              {{_i}}انتخاب نخست این هست{{/i}}
+            </label>
+            <br>
+            <label class="radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              {{_i}}انتخاب نخست این هست{{/i}}
+            </label>
+            <label class="radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              {{_i}}انتخاب دوم چیز دیگری است که با انتخاب این، انتخاب نخست از بین می‌رود{{/i}}
+            </label>
+          </form>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" value=""&gt;
+  {{_i}}انتخاب نخست این هست{{/i}}
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+  {{_i}}انتخاب نخست این هست{{/i}}
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+  {{_i}}انتخاب دوم چیز دیگری است که با انتخاب این، انتخاب نخست از بین می‌رود{{/i}}
+&lt;/label&gt;
+</pre>
+
+          <h4>{{_i}}checkboxهای اینلاین{{/i}}</h4>
+          <p>{{_i}}کلاس <code>.inline</code> را به یک سری checkboxها یا radioها اضافه کنید تا کنترل‌کننده‌ها در یک خط ظاهر شوند.{{/i}}</p>
+          <form class="bs-docs-example">
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox1" value="option1"> ۱
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> ۲
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> ۳
+            </label>
+          </form>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; ۱
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; ۲
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; ۳
+&lt;/label&gt;
+</pre>
+
+          <h3>{{_i}}انتخاب‌ها{{/i}}</h3>
+          <p>{{_i}}از تنظیمات پیش‌فرض استفاده کنید و یا برای این‌که بتوان چندین انتخاب داشت کلاس <code>multiple="multiple"</code> به آن اضافه کنید.{{/i}}</p>
+          <form class="bs-docs-example">
+            <select>
+              <option>۱</option>
+              <option>۲</option>
+              <option>۳</option>
+              <option>۴</option>
+              <option>۵</option>
+            </select>
+            <br>
+            <select multiple="multiple">
+              <option>۱</option>
+              <option>۲</option>
+              <option>۳</option>
+              <option>۴</option>
+              <option>۵</option>
+            </select>
+          </form>
+<pre class="prettyprint linenums">
+&lt;select&gt;
+  &lt;option&gt;۱&lt;/option&gt;
+  &lt;option&gt;۲&lt;/option&gt;
+  &lt;option&gt;۳&lt;/option&gt;
+  &lt;option&gt;۴&lt;/option&gt;
+  &lt;option&gt;۵&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select multiple="multiple"&gt;
+  &lt;option&gt;۱&lt;/option&gt;
+  &lt;option&gt;۲&lt;/option&gt;
+  &lt;option&gt;۳&lt;/option&gt;
+  &lt;option&gt;۴&lt;/option&gt;
+  &lt;option&gt;۵&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}گسترش کنترل‌کننده‌های فرم{{/i}}</h2>
+          <p>{{_i}}بوت‌استرپ شامل اجزای مفیدی برای کنترل‌کننده‌های فرم است.{{/i}}</p>
+
+          <h3>{{_i}}ورودی‌های تغییریافته{{/i}}</h3>
+          <p>{{_i}}متن یا دکمه‌هایی قبل و یا بعد از ورودی برپایه متن می‌توانید اضافه کنید. تگ <code>select</code> این قابلیت را پشتیبانی نمی‌کند.{{/i}}</p>
+
+          <h4>{{_i}}انتخاب‌های پیش‌فرض{{/i}}</h4>
+          <p>{{_i}}کلاس <code>input-prepend</code> و یک <code>input</code> با یکدیگر در یکی از کلاس‌های <code>.add-on</code> و <code>input-append</code> قرار دهید.{{/i}}</p>
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <span class="add-on">@</span>
+              <input class="span2" id="prependedInput" size="16" type="text" placeholder="{{_i}}نام کاربری{{/i}}">
+            </div>
+            <br>
+            <div class="input-append">
+              <input class="span2" id="appendedInput" size="16" type="text">
+              <span class="add-on">﷼</span>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend"&gt;
+  &lt;span class="add-on"&gt;@&lt;/span&gt;&lt;input class="span2" id="prependedInput" size="16" type="text" placeholder="{{_i}}نام کاربری{{/i}}"&gt;
+&lt;/div&gt;
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;﷼&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>{{_i}}ترکیبی{{/i}}</h4>
+          <p>{{_i}}از هر دو کلاس و دو نمونه از کلاس <code>.add-on</code> برای ایجاد یک ورودی با متن قبل و بعد استفاده کنید.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <div class="input-prepend input-append">
+              <span class="add-on">٫۰۰</span>
+              <input class="span2" id="appendedPrependedInput" size="16" type="text">
+              <span class="add-on">﷼</span>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+  &lt;span class="add-on"&gt;٫۰۰&lt;/span&gt;&lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;﷼&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>{{_i}}دکمه به‌جای متن{{/i}}</h4>
+          <p>{{_i}}به‌جای استفاده از <code>&lt;span&gt;</code> با متن از یک دکمه با کلاس <code>.btn</code> استفاده کنید تا یک دکمه به قبل یا بعد ورودی بچسبد.{{/i}}</p>
+          <form class="bs-docs-example">
+            <div class="input-append">
+              <input class="span2" id="appendedInputButton" size="16" type="text">
+              <button class="btn" type="button">برو!</button>
+            </div>
+            <br>
+            <div class="input-append">
+              <input class="span2" id="appendedInputButtons" size="16" type="text">
+              <button class="btn" type="button">جستجو</button>
+              <button class="btn" type="button">تنظیمات</button>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButton" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;برو!&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButtons" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;جستجو&lt;/button&gt;&lt;button class="btn" type="button"&gt;تنظیمات&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>{{_i}}فرم جستجو{{/i}}</h4>
+          <form class="bs-docs-example form-search">
+            <div class="input-append">
+              <input type="text" class="span2 search-query">
+              <button type="submit" class="btn">{{_i}}جستجو{{/i}}</button>
+            </div>
+            <div class="input-prepend">
+              <button type="submit" class="btn">{{_i}}جستجو{{/i}}</button>
+              <input type="text" class="span2 search-query">
+            </div>
+          </form>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;{{_i}}جستجو{{/i}}&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;button type="submit" class="btn"&gt;{{_i}}جستجو{{/i}}&lt;/button&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>{{_i}}اندازه کنترل‌ها{{/i}}</h3>
+          <p>{{_i}}از اندازه‌های نسبی مانند <code>.input-large</code> استفاده کنید و یا اندازهٔ ورودی‌ها را مانند ستون شبکه‌ای به‌وسیلهٔ <code>.span*</code> مشخص کنید.{{/i}}</p>
+
+          <h4>{{_i}}اندازه نسبی{{/i}}</h4>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls docs-input-sizes">
+              <input class="input-mini" type="text" placeholder=".input-mini">
+              <input class="input-small" type="text" placeholder=".input-small">
+              <input class="input-medium" type="text" placeholder=".input-medium">
+              <input class="input-large" type="text" placeholder=".input-large">
+              <input class="input-xlarge" type="text" placeholder=".input-xlarge">
+              <input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
+&lt;input class="input-small" type="text" placeholder=".input-small"&gt;
+&lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
+&lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+&lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;
+&lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
+</pre>
+          <p>
+            <span class="label label-info">{{_i}}توجه کنید!{{/i}}</span> در نسخه‌های آینده، وقتی شما از کلاس‌های نسبی برای اندازه استفاده کنید، اندازه ورودی با اندازه دکمه‌ها با یکدیگر متناسب می‌شوند. برای مثال اگر شما از <code>.input-large</code> استفاده کنید اندازه حاشیه و اندازه فونت ورودی نیز تغییر می‌کند.
+          </p>
+
+          <h4>{{_i}}اندازه شبکه‌ای{{/i}}</h4>
+          <p>{{_i}}از کلاس <code>.span1</code> تا <code>.span12</code> برای ورودی استفاده کنید که با اندازه ستون‌های شبکه‌ای متناسب شود.{{/i}}</p>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls docs-input-sizes">
+              <input class="span1" type="text" placeholder=".span1">
+              <input class="span2" type="text" placeholder=".span2">
+              <input class="span3" type="text" placeholder=".span3">
+              <select class="span1">
+                <option>۱</option>
+                <option>۲</option>
+                <option>۳</option>
+                <option>۴</option>
+                <option>۵</option>
+              </select>
+              <select class="span2">
+                <option>۱</option>
+                <option>۲</option>
+                <option>۳</option>
+                <option>۴</option>
+                <option>۵</option>
+              </select>
+              <select class="span3">
+                <option>۱</option>
+                <option>۲</option>
+                <option>۳</option>
+                <option>۴</option>
+                <option>۵</option>
+              </select>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;input class="span2" type="text" placeholder=".span2"&gt;
+&lt;input class="span3" type="text" placeholder=".span3"&gt;
+&lt;select class="span1"&gt;
+  ...
+&lt;/select&gt;
+&lt;select class="span2"&gt;
+  ...
+&lt;/select&gt;
+&lt;select class="span3"&gt;
+  ...
+&lt;/select&gt;
+</pre>
+
+          <p>{{_i}}برای استفاده چندین ورودی شبکه‌ای در هر خط از کلاس <code>.controls-row</code> استفاده کنید. با این روش فضاهای اضافه از بین می‌روند، حاشیه مناسب داده می‌شودو متحرک‌های اضافه پاک می‌شوند.{{/i}}</p>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls">
+              <input class="span5" type="text" placeholder=".span5">
+            </div>
+            <div class="controls controls-row">
+              <input class="span4" type="text" placeholder=".span4">
+              <input class="span1" type="text" placeholder=".span1">
+            </div>
+            <div class="controls controls-row">
+              <input class="span3" type="text" placeholder=".span3">
+              <input class="span2" type="text" placeholder=".span2">
+            </div>
+            <div class="controls controls-row">
+              <input class="span2" type="text" placeholder=".span2">
+              <input class="span3" type="text" placeholder=".span3">
+            </div>
+            <div class="controls controls-row">
+              <input class="span1" type="text" placeholder=".span1">
+              <input class="span4" type="text" placeholder=".span4">
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="controls"&gt;
+  &lt;input class="span5" type="text" placeholder=".span5"&gt;
+&lt;/div&gt;
+&lt;div class="controls controls-row"&gt;
+  &lt;input class="span4" type="text" placeholder=".span4"&gt;
+  &lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;/div&gt;
+...
+</pre>
+
+          <h3>{{_i}}ورودی‌های فقط خواندنی{{/i}}</h3>
+          <p>{{_i}}داده را در یک فرم فقط خواندنی نمایش می‌دهد و بدون نشانه‌گذاری فرم واقعی نمی‌توان داده را تغییر داد.{{/i}}</p>
+          <form class="bs-docs-example">
+            <span class="input-xlarge uneditable-input">یک متن غیرقابل تغییر</span>
+          </form>
+<pre class="prettyprint linenums">
+&lt;span class="input-xlarge uneditable-input"&gt;یک متن غیرقابل تغییر&lt;/span&gt;
+</pre>
+
+          <h3>{{_i}}عملیات فرم{{/i}}</h3>
+          <p>{{_i}}در پایان یک فرم، یک گروه از عملیات (دکمه‌ها) وجود دارد. وقتی آن‌ها را در یک کلاس <code>.form-horizontal</code> قرار دهید آن‌ها در یک خط با کنترل‌کننده‌های فرم همراستا می‌شوند.{{/i}}</p>
+          <form class="bs-docs-example">
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">{{_i}}ذخیره تغییرات{{/i}}</button>
+              <button type="button" class="btn">{{_i}}لغو{{/i}}</button>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="form-actions"&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;{{_i}}ذخیره تغییرات{{/i}}&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;{{_i}}لغو{{/i}}&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>{{_i}}نوشته راهنما{{/i}}</h3>
+          <p>{{_i}}در حالت خطی و بلاکی نوشتهٔ راهنما در اطراف کنترل‌کننده‌ها ظاهر می‌شود.{{/i}}</p>
+          <h4>{{_i}}راهنمای خطی{{/i}}</h4>
+          <form class="bs-docs-example form-inline">
+            <input type="text"> <span class="help-inline">نوشته راهنمای خطی</span>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input type="text"&gt;&lt;span class="help-inline"&gt;نوشته راهنمای خطی&lt;/span&gt;
+</pre>
+
+          <h4>{{_i}}راهنمای بلاکی{{/i}}</h4>
+          <form class="bs-docs-example form-inline">
+            <input type="text">
+            <span class="help-block">یک نوشتهٔ راهنمای طولانی‌تر که ممکن است در چندین خط قرار گیرد.</span>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input type="text"&gt;&lt;span class="help-block"&gt; یک نوشتهٔ راهنمای طولانی‌تر که ممکن است در چندین خط قرار گیرد.&lt;/span&gt;
+</pre>
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}وضعیت‌های کنترل‌کننده فرم{{/i}}</h2>
+          <p>{{_i}}وضعیت‌های مختلف را برای کاربران و یا مراجعه‌کنندگان بر روی کنترل‌کننده‌های فرم و یا برچسب‌ها نمایش می‌دهد.{{/i}}</p>
+
+          <h3>{{_i}}Input focus{{/i}}</h3>
+          <p>{{_i}}ما <code>outline</code> پیش‌فرض را از روی برخی از کنترل‌کننده‌های فرم حذف کردیم و یک سایه <code>box-shadow</code> را هنگام <code>:focus</code> اعمال می‌کنیم.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <input class="input-xlarge focused" id="focusedInput" type="text" value="{{_i}}این focus شده‌است...{{/i}}">
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-xlarge" id="focusedInput" type="text" value="{{_i}}این focus شده‌است...{{/i}}"&gt;
+</pre>
+
+          <h3>{{_i}}ورودی‌های غیرفعال{{/i}}</h3>
+          <p>{{_i}}با اضافه کردن ویژگی <code>disabled</code> به ورودی از تغییر ورودی توسط کاربر جلوگیری کنید.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <input class="input-xlarge" id="disabledInput" type="text" placeholder="{{_i}}این یک ورودی غیرفعال است...{{/i}}" disabled>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="{{_i}}این یک ورودی غیرفعال است...{{/i}}" disabled&gt;
+</pre>
+
+          <h3>{{_i}}وضعیت‌های اعتبارسنجی{{/i}}</h3>
+          <p>{{_i}}بوت‌استرپ شامل شیوه‌های نمایش برای خطا، هشدار، اطلاعاتی، و پیام‌های موفقیت برای اعتبارسنجی می‌باشد. برای استفاده کلاس مناسب را در <code>.control-group</code> قرار دهید.{{/i}}</p>
+
+          <form class="bs-docs-example form-horizontal">
+            <div class="control-group warning">
+              <label class="control-label" for="inputWarning">{{_i}}ورودی با warning{{/i}}</label>
+              <div class="controls">
+                <input type="text" id="inputWarning">
+                <span class="help-inline">{{_i}}چیزی ممکن است اشتباه شده باشد{{/i}}</span>
+              </div>
+            </div>
+            <div class="control-group error">
+              <label class="control-label" for="inputError">{{_i}}ورودی با error{{/i}}</label>
+              <div class="controls">
+                <input type="text" id="inputError">
+                <span class="help-inline">{{_i}}لطفا خطا را تصحیح کنید{{/i}}</span>
+              </div>
+            </div>
+            <div class="control-group info">
+              <label class="control-label" for="inputError">{{_i}}ورودی با info{{/i}}</label>
+              <div class="controls">
+                <input type="text" id="inputError">
+                <span class="help-inline">{{_i}}نام کاربری پیش‌تر گرفته شده‌است{{/i}}</span>
+              </div>
+            </div>
+            <div class="control-group success">
+              <label class="control-label" for="inputSuccess">{{_i}}ورودی با success{{/i}}</label>
+              <div class="controls">
+                <input type="text" id="inputSuccess">
+                <span class="help-inline">{{_i}}واوووو!{{/i}}</span>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="control-group warning"&gt;
+  &lt;label class="control-label" for="inputWarning"&gt;{{_i}}ورودی با warning{{/i}}&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputWarning"&gt;
+    &lt;span class="help-inline"&gt;{{_i}}چیزی ممکن است اشتباه شده باشد{{/i}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control-group error"&gt;
+  &lt;label class="control-label" for="inputError"&gt;{{_i}}ورودی با error{{/i}}&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputError"&gt;
+    &lt;span class="help-inline"&gt;{{_i}}لطفا خطا را تصحیح کنید{{/i}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control-group error"&gt;
+  &lt;label class="control-label" for="inputError"&gt;{{_i}}ورودی با info{{/i}}&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputError"&gt;
+    &lt;span class="help-inline"&gt;{{_i}}نام کاربری قبلا گرفته شده‌است{{/i}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control-group success"&gt;
+  &lt;label class="control-label" for="inputSuccess"&gt;{{_i}}ورودی با success{{/i}}&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputSuccess"&gt;
+    &lt;span class="help-inline"&gt;{{_i}}واوووو!{{/i}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Buttons
+        ================================================== -->
+        <section id="buttons">
+          <div class="page-header">
+            <h1>{{_i}}دکمه‌ها{{/i}}</h1>
+          </div>
+
+          <h2>دکمه‌های پیش‌فرض</h2>
+          <p>{{_i}}شیوه‌های نمایش دکمه می‌تواند با کلاس <code>.btn</code> به هرچیزی اعمال شود. اگرچه شما فقط می‌خواهید این شیوه‌ها را تگ‌های <code>&lt;a&gt;</code> و <code>&lt;button&gt;</code> برای بهترین خروجی، اعمال شود.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>{{_i}}دکمه{{/i}}</th>
+                <th>{{_i}}class=""{{/i}}</th>
+                <th>{{_i}}توصیف{{/i}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn">{{_i}}پیش‌فرض{{/i}}</button></td>
+                <td><code>btn</code></td>
+                <td>{{_i}}دکمه خاکستری استاندارد دارای گرادیانت{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-primary">{{_i}}اصلی{{/i}}</button></td>
+                <td><code>btn btn-primary</code></td>
+                <td>{{_i}} رنگ مناسب و ویژگی‌های مناسب برای استفاده در عملیات اصلی مانند فرستادن یک فرم{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-info">{{_i}}اطلاعاتی{{/i}}</button></td>
+                <td><code>btn btn-info</code></td>
+                <td>{{_i}}یک جایگزین برای شیوهٔ نمایش پیش‌فرض{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-success">{{_i}}موفق{{/i}}</button></td>
+                <td><code>btn btn-success</code></td>
+                <td>{{_i}}نشان‌دهندهٔ یک موفقیت و یا یک عمل مثبت{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-warning">{{_i}}هشدار{{/i}}</button></td>
+                <td><code>btn btn-warning</code></td>
+                <td>{{_i}}نشان‌دهندهٔ هشدار برای انجام این عمل{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-danger">{{_i}}خطر{{/i}}</button></td>
+                <td><code>btn btn-danger</code></td>
+                <td>{{_i}}نشان‌دهندهٔ خطر و یا یک عملی که پیامدهای منفی دربر دارد{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-inverse">{{_i}}مخالف{{/i}}</button></td>
+                <td><code>btn btn-inverse</code></td>
+                <td>{{_i}}یک دکمه خاکستری تیره، که مفهوم و معنای خاصی برای انجام عملی نیست.{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-link">{{_i}}پیوند{{/i}}</button></td>
+                <td><code>btn btn-link</code></td>
+                <td>{{_i}}تبدیل یک دکمه به یک پیوند که شبیه یک پیوند است اما رفتار یک دکمه را دارد{{/i}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>{{_i}}سازگاری با مرورگرهای مختلف{{/i}}</h4>
+          <p>{{_i}}اینترنت اکسپلورر ۹ گوشه‌های پیش‌زمینهٔ گرادیانت را گرد نمی‌کند، بنابراین ما آن را حذف کردیم. همچنین اینترنت اکسپلورر ۹ دکمه‌های غیرفعال، را با سایهٔ زشت و متن خاکستری نمایش می‌دهد که ما آن را نتوانستیم درست کنیم.{{/i}}</p>
+
+
+          <h2>{{_i}}اندازه دکمه‌ها{{/i}}</h2>
+          <p>{{_i}}دکمه‌های بزرگ‌تر یا کوچک‌تر؟ کلاس <code>.btn-large</code>، <code>.btn-small</code> و یا <code>.btn-mini</code> را برای اندازه‌های مختلف استفاده کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p>
+              <button type="button" class="btn btn-large btn-primary">{{_i}}دکمه بزرگ{{/i}}</button>
+              <button type="button" class="btn btn-large">{{_i}}دکمه بزرگ{{/i}}</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary">{{_i}}دکمه پیش‌فرض{{/i}}</button>
+              <button type="button" class="btn">{{_i}}دکمه پیش‌فرض{{/i}}</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-small btn-primary">{{_i}}دکمه کوچک{{/i}}</button>
+              <button type="button" class="btn btn-small">{{_i}}دکمه کوچک{{/i}}</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-mini btn-primary">{{_i}}دکمه خیلی کوچک{{/i}}</button>
+              <button type="button" class="btn btn-mini">{{_i}}دکمه خیلی کوچک{{/i}}</button>
+            </p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p&gt;
+  &lt;button class="btn btn-large btn-primary" type="button"&gt;{{_i}}دکمه بزرگ{{/i}}&lt;/button&gt;
+  &lt;button class="btn btn-large" type="button"&gt;{{_i}}دکمه بزرگ{{/i}}&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;{{_i}}دکمه پیش‌فرض{{/i}}&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;{{_i}}دکمه پیش‌فرض{{/i}}&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-small btn-primary" type="button"&gt;{{_i}}دکمه کوچک{{/i}}&lt;/button&gt;
+  &lt;button class="btn btn-small" type="button"&gt;{{_i}}دکمه کوچک{{/i}}&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-mini btn-primary" type="button"&gt;{{_i}}دکمه خیلی کوچک{{/i}}&lt;/button&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;{{_i}}دکمه خیلی کوچک{{/i}}&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+          <p>{{_i}}یک دکمهٔ بلاکی را، با اضافه کردن کلاس <code>.btn-block</code> ایجاد کنید، اندازه دکمه برابر عنصر پدر دکمه می‌شود.{{/i}}</p>
+          <div class="bs-docs-example">
+            <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+              <button type="button" class="btn btn-large btn-block btn-primary">{{_i}}دکمه بلاکی{{/i}}</button>
+              <button type="button" class="btn btn-large btn-block">{{_i}}دکمه بلاکی{{/i}}</button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;{{_i}}دکمه بلاکی{{/i}}&lt;/button&gt;
+&lt;button class="btn btn-large btn-block" type="button"&gt;{{_i}}دکمه بلاکی{{/i}}&lt;/button&gt;
+</pre>
+
+
+          <h2>{{_i}}وضعیت غیرفعال{{/i}}</h2>
+          <p>{{_i}}با محو کردن ۵۰ درصد پشت دکمه‌ها، آن‌ها را شبیه دکمه‌های غیرقابل کلیک بسازید.{{/i}}</p>
+
+          <h3>تگ پیوند</h3>
+          <p>{{_i}}کلاس <code>.disabled</code> به تگ <code>&lt;a&gt;</code> اضافه کنید.{{/i}}</p>
+          <p class="bs-docs-example">
+            <a href="#" class="btn btn-large btn-primary disabled">{{_i}}پیوند اصلی{{/i}}</a>
+            <a href="#" class="btn btn-large disabled">{{_i}}Link{{/i}}</a>
+          </p>
+<pre class="prettyprint linenums">
+&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;{{_i}}Primary link{{/i}}&lt;/a&gt;
+&lt;a href="#" class="btn btn-large disabled"&gt;{{_i}}پیوند{{/i}}&lt;/a&gt;
+</pre>
+          <p>
+            <span class="label label-info">{{_i}}توجه کنید!{{/i}}</span>
+            {{_i}}ما از <code>.disabled</code> به عنوان یک ابزار کمکی استفاده می‌کنیم، به‌مانند کلاس رایج <code>.active</code>، پس هیچ پیشوندی نیازی نیست. همچنین توجه کنید که این کلاس فقط ظاهر را تغییر می‌دهد، برای این‌که پیوند را غیرفعال کنید باید از جاوااسکریپت استفاده کنید.{{/i}}
+          </p>
+
+          <h3>عنصر دکمه</h3>
+          <p>{{_i}}ویژگی <code>disabled</code> را به <code>&lt;button&gt;</code> اضافه کنید.{{/i}}</p>
+          <p class="bs-docs-example">
+            <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">{{_i}}دکمه اصلی{{/i}}</button>
+            <button type="button" class="btn btn-large" disabled>{{_i}}دکمه{{/i}}</button>
+          </p>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;{{_i}}دکمه اصلی{{/i}}&lt;/button&gt;
+&lt;button type="button" class="btn btn-large" disabled&gt;{{_i}}دکمه{{/i}}&lt;/button&gt;
+</pre>
+
+
+          <h2>{{_i}}یک کلاس، چندین تگ{{/i}}</h2>
+          <p>{{_i}}از کلاس <code>.btn</code> برای تگ‌های <code>&lt;a&gt;</code>، <code>&lt;button&gt;</code> و <code>&lt;input&gt;</code> استفاده کنید.{{/i}}</p>
+          <form class="bs-docs-example">
+            <a class="btn" href="">{{_i}}پیوند{{/i}}</a>
+            <button class="btn" type="submit">{{_i}}دکمه{{/i}}</button>
+            <input class="btn" type="button" value="{{_i}}ورودی{{/i}}">
+            <input class="btn" type="submit" value="{{_i}}فرستادن{{/i}}">
+          </form>
+<pre class="prettyprint linenums">
+&lt;a class="btn" href=""&gt;{{_i}}پیوند{{/i}}&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;{{_i}}دکمه{{/i}}&lt;/button&gt;
+&lt;input class="btn" type="button" value="{{_i}}ورودی{{/i}}"&gt;
+&lt;input class="btn" type="submit" value="{{_i}}فرستادن{{/i}}"&gt;
+</pre>
+          <p>{{_i}}به عنوان یک تمرین خوب، سعی کنید برای نمایش بهینه در تمام مرورگرها، اگر شما از <code>input</code> استفاده می‌کنید، پس از <code>&lt;input type="submit"&gt;</code> برای دکمه استفاده کنید.{{/i}}</p>
+
+        </section>
+
+
+
+        <!-- Images
+        ================================================== -->
+        <section id="images">
+          <div class="page-header">
+            <h1>{{_i}}عکس‌ها{{/i}}</h1>
+          </div>
+
+          <p>{{_i}}با اضافه کردن کلاس‌های زیر به تگ <code>&lt;img&gt;</code> به راحتی شیوهٔ نمایش عکس‌ها را تغییر دهید.{{/i}}</p>
+          <div class="bs-docs-example bs-docs-example-images">
+            <img src="http://placehold.it/140x140" class="img-rounded">
+            <img src="http://placehold.it/140x140" class="img-circle">
+            <img src="http://placehold.it/140x140" class="img-polaroid">
+          </div>
+<pre class="prettyprint linenums">
+&lt;img src="..." class="img-rounded"&gt;
+&lt;img src="..." class="img-circle"&gt;
+&lt;img src="..." class="img-polaroid"&gt;
+</pre>
+          <p><span class="label label-info">{{_i}}توجه کنید!{{/i}}</span> {{_i}}کلاس <code>.img-rounded</code> و <code>.img-circle</code> بر روی اینترنت اکسپلورر ۷ و ۸ به دلیل پشتیبانی نکردن <code>border-radius</code> نمایش داده نمی‌شود.{{/i}}</p>
+
+
+        </section>
+
+
+
+        <!-- Icons
+        ================================================== -->
+        <section id="icons">
+          <div class="page-header">
+            <h1>{{_i}}آیکن‌های <small><a href="http://glyphicons.com" target="_blank">Glyphicons</a></small>{{/i}}</h1>
+          </div>
+
+          <h2>{{_i}}آیکن‌های glyphs{{/i}}</h2>
+          <p>{{_i}}۱۴۰ آیکن در فرم بلوکی و کوچک در رنگ‌های خاکستری تیره (پیش‌فرض) و سفید به‌وسیلهٔ <a href="http://glyphicons.com" target="_blank">Glyphicons</a> آماده شده‌است.{{/i}}</p>
+          <ul class="the-icons clearfix">
+            <li><i class="icon-glass"></i> icon-glass</li>
+            <li><i class="icon-music"></i> icon-music</li>
+            <li><i class="icon-search"></i> icon-search</li>
+            <li><i class="icon-envelope"></i> icon-envelope</li>
+            <li><i class="icon-heart"></i> icon-heart</li>
+            <li><i class="icon-star"></i> icon-star</li>
+            <li><i class="icon-star-empty"></i> icon-star-empty</li>
+            <li><i class="icon-user"></i> icon-user</li>
+            <li><i class="icon-film"></i> icon-film</li>
+            <li><i class="icon-th-large"></i> icon-th-large</li>
+            <li><i class="icon-th"></i> icon-th</li>
+            <li><i class="icon-th-list"></i> icon-th-list</li>
+            <li><i class="icon-ok"></i> icon-ok</li>
+            <li><i class="icon-remove"></i> icon-remove</li>
+            <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+            <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+            <li><i class="icon-off"></i> icon-off</li>
+            <li><i class="icon-signal"></i> icon-signal</li>
+            <li><i class="icon-cog"></i> icon-cog</li>
+            <li><i class="icon-trash"></i> icon-trash</li>
+            <li><i class="icon-home"></i> icon-home</li>
+            <li><i class="icon-file"></i> icon-file</li>
+            <li><i class="icon-time"></i> icon-time</li>
+            <li><i class="icon-road"></i> icon-road</li>
+            <li><i class="icon-download-alt"></i> icon-download-alt</li>
+            <li><i class="icon-download"></i> icon-download</li>
+            <li><i class="icon-upload"></i> icon-upload</li>
+            <li><i class="icon-inbox"></i> icon-inbox</li>
+
+            <li><i class="icon-play-circle"></i> icon-play-circle</li>
+            <li><i class="icon-repeat"></i> icon-repeat</li>
+            <li><i class="icon-refresh"></i> icon-refresh</li>
+            <li><i class="icon-list-alt"></i> icon-list-alt</li>
+            <li><i class="icon-lock"></i> icon-lock</li>
+            <li><i class="icon-flag"></i> icon-flag</li>
+            <li><i class="icon-headphones"></i> icon-headphones</li>
+            <li><i class="icon-volume-off"></i> icon-volume-off</li>
+            <li><i class="icon-volume-down"></i> icon-volume-down</li>
+            <li><i class="icon-volume-up"></i> icon-volume-up</li>
+            <li><i class="icon-qrcode"></i> icon-qrcode</li>
+            <li><i class="icon-barcode"></i> icon-barcode</li>
+            <li><i class="icon-tag"></i> icon-tag</li>
+            <li><i class="icon-tags"></i> icon-tags</li>
+            <li><i class="icon-book"></i> icon-book</li>
+            <li><i class="icon-bookmark"></i> icon-bookmark</li>
+            <li><i class="icon-print"></i> icon-print</li>
+            <li><i class="icon-camera"></i> icon-camera</li>
+            <li><i class="icon-font"></i> icon-font</li>
+            <li><i class="icon-bold"></i> icon-bold</li>
+            <li><i class="icon-italic"></i> icon-italic</li>
+            <li><i class="icon-text-height"></i> icon-text-height</li>
+            <li><i class="icon-text-width"></i> icon-text-width</li>
+            <li><i class="icon-align-left"></i> icon-align-left</li>
+            <li><i class="icon-align-center"></i> icon-align-center</li>
+            <li><i class="icon-align-right"></i> icon-align-right</li>
+            <li><i class="icon-align-justify"></i> icon-align-justify</li>
+            <li><i class="icon-list"></i> icon-list</li>
+
+            <li><i class="icon-indent-left"></i> icon-indent-left</li>
+            <li><i class="icon-indent-right"></i> icon-indent-right</li>
+            <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+            <li><i class="icon-picture"></i> icon-picture</li>
+            <li><i class="icon-pencil"></i> icon-pencil</li>
+            <li><i class="icon-map-marker"></i> icon-map-marker</li>
+            <li><i class="icon-adjust"></i> icon-adjust</li>
+            <li><i class="icon-tint"></i> icon-tint</li>
+            <li><i class="icon-edit"></i> icon-edit</li>
+            <li><i class="icon-share"></i> icon-share</li>
+            <li><i class="icon-check"></i> icon-check</li>
+            <li><i class="icon-move"></i> icon-move</li>
+            <li><i class="icon-step-backward"></i> icon-step-backward</li>
+            <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+            <li><i class="icon-backward"></i> icon-backward</li>
+            <li><i class="icon-play"></i> icon-play</li>
+            <li><i class="icon-pause"></i> icon-pause</li>
+            <li><i class="icon-stop"></i> icon-stop</li>
+            <li><i class="icon-forward"></i> icon-forward</li>
+            <li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+            <li><i class="icon-step-forward"></i> icon-step-forward</li>
+            <li><i class="icon-eject"></i> icon-eject</li>
+            <li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+            <li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+            <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+            <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+            <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+            <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+
+            <li><i class="icon-question-sign"></i> icon-question-sign</li>
+            <li><i class="icon-info-sign"></i> icon-info-sign</li>
+            <li><i class="icon-screenshot"></i> icon-screenshot</li>
+            <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+            <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+            <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+            <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+            <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+            <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+            <li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+            <li><i class="icon-share-alt"></i> icon-share-alt</li>
+            <li><i class="icon-resize-full"></i> icon-resize-full</li>
+            <li><i class="icon-resize-small"></i> icon-resize-small</li>
+            <li><i class="icon-plus"></i> icon-plus</li>
+            <li><i class="icon-minus"></i> icon-minus</li>
+            <li><i class="icon-asterisk"></i> icon-asterisk</li>
+            <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+            <li><i class="icon-gift"></i> icon-gift</li>
+            <li><i class="icon-leaf"></i> icon-leaf</li>
+            <li><i class="icon-fire"></i> icon-fire</li>
+            <li><i class="icon-eye-open"></i> icon-eye-open</li>
+            <li><i class="icon-eye-close"></i> icon-eye-close</li>
+            <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+            <li><i class="icon-plane"></i> icon-plane</li>
+            <li><i class="icon-calendar"></i> icon-calendar</li>
+            <li><i class="icon-random"></i> icon-random</li>
+            <li><i class="icon-comment"></i> icon-comment</li>
+            <li><i class="icon-magnet"></i> icon-magnet</li>
+
+            <li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+            <li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+            <li><i class="icon-retweet"></i> icon-retweet</li>
+            <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+            <li><i class="icon-folder-close"></i> icon-folder-close</li>
+            <li><i class="icon-folder-open"></i> icon-folder-open</li>
+            <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+            <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+            <li><i class="icon-hdd"></i> icon-hdd</li>
+            <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+            <li><i class="icon-bell"></i> icon-bell</li>
+            <li><i class="icon-certificate"></i> icon-certificate</li>
+            <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+            <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+            <li><i class="icon-hand-right"></i> icon-hand-right</li>
+            <li><i class="icon-hand-left"></i> icon-hand-left</li>
+            <li><i class="icon-hand-up"></i> icon-hand-up</li>
+            <li><i class="icon-hand-down"></i> icon-hand-down</li>
+            <li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+            <li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+            <li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+            <li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+            <li><i class="icon-globe"></i> icon-globe</li>
+            <li><i class="icon-wrench"></i> icon-wrench</li>
+            <li><i class="icon-tasks"></i> icon-tasks</li>
+            <li><i class="icon-filter"></i> icon-filter</li>
+            <li><i class="icon-briefcase"></i> icon-briefcase</li>
+            <li><i class="icon-fullscreen"></i> icon-fullscreen</li>
+          </ul>
+
+          <h3>یادکرد Glyphicons</h3>
+          <p>{{_i}}<a href="http://glyphicons.com/">Glyphicons</a> که مجموعه‌ای از آیکن‌ها است به‌طور معمول رایگان نیست اما با توافقی که میان ایجادکننده Glyphicons و بوت‌استرپ به وجود آمد، آن‌ها این آیکن‌ها را بدون هیچ هزینه‌ای در اختیار توسعه‌دهنده‌ها قرار دادند. به عنوان یک تشکر بهتر است در هرجایی که ممکن است پیوندی به <a href="http://glyphicons.com/">Glyphicons</a> در سایت خود قرار دهید.{{/i}}</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}چگونه استفاده کنیم؟{{/i}}</h2>
+          <p>{{_i}}تمام آیکن‌ها نیاز به تگ <code>&lt;i&gt;</code> با یک کلاس منحصربه‌فرد و پیشوند <code>icon-</code> را دارند. برای استفاده، این کد را درهرجایی که نیاز است، استفاده کنید:{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;i class="icon-search"&gt;&lt;/i&gt;
+</pre>
+          <p>{{_i}}همچنین شما می‌توانید از رنگ سفید متمایز استفاده کنید. ما پیشنهاد می‌کنیم که از آیکن‌های سفید در منوها و پیوندهای افتادنی استفاده کنید.{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
+</pre>
+          <p>
+            <span class="label label-info">{{_i}}توجه کنید!{{/i}}</span>
+            {{_i}}وقتی از آیکن‌ها در کنار نوشته، دکمه و پیوندهای منوها استفاده می‌کنید، مطمئن شوید که بعد از <code>&lt;i&gt;</code>  یک فضای خالی یا space بگذارید.{{/i}}
+          </p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>{{_i}}نمونه‌هایی از آیکن{{/i}}</h2>
+          <p>{{_i}}از آن‌ها در دکمه‌ها، گروه‌های دکمه برای نوار ابزار، منوهای ناوبری و یا برای ورودی‌های فرم استفاده کنید.{{/i}}</p>
+
+          <h4>{{_i}}دکمه‌ها{{/i}}</h4>
+
+          <h5>{{_i}}گروهی از دکمه‌ها در نوار ابزار{{/i}}</h5>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <a class="btn" href="#"><i class="icon-align-left"></i></a>
+                <a class="btn" href="#"><i class="icon-align-center"></i></a>
+                <a class="btn" href="#"><i class="icon-align-right"></i></a>
+                <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+              </div>
+            </div>
+          </div>{{! /bs-docs-example }}
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h5>{{_i}}در دکمه‌های افتادنی{{/i}}</h5>
+          <div class="bs-docs-example">
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> {{_i}}کاربر{{/i}}</a>
+              <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="icon-pencil"></i> {{_i}}ویرایش{{/i}}</a></li>
+                <li><a href="#"><i class="icon-trash"></i> {{_i}}حذف{{/i}}</a></li>
+                <li><a href="#"><i class="icon-ban-circle"></i> {{_i}}بستن{{/i}}</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="i"></i> {{_i}}مدیر کردن{{/i}}</a></li>
+              </ul>
+            </div>
+          </div>{{! /bs-docs-example }}
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="icon-user icon-white"&gt;&lt;/i&gt; {{_i}}کاربر{{/i}}&lt;/a&gt;
+  &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; {{_i}}ویرایش{{/i}}&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-trash"&gt;&lt;/i&gt; {{_i}}حذف{{/i}}&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-ban-circle"&gt;&lt;/i&gt; {{_i}}بستن{{/i}}&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; {{_i}}مدیر کردن{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h5>{{_i}}دکمه کوچک{{/i}}</h5>
+          <div class="bs-docs-example">
+            <a class="btn btn-small" href="#"><i class="icon-star"></i></a>
+          </div>{{! /bs-docs-example }}
+<pre class="prettyprint linenums">
+&lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt;&lt;/a&gt;
+</pre>
+
+
+          <h4>{{_i}}ناوبری{{/i}}</h4>
+          <div class="bs-docs-example">
+            <div class="well" style="padding: 8px 0; margin-bottom: 0;">
+              <ul class="nav nav-list">
+                <li class="active"><a href="#"><i class="icon-home icon-white"></i> {{_i}}صفحه اصلی{{/i}}</a></li>
+                <li><a href="#"><i class="icon-book"></i> {{_i}}کتابخانه{{/i}}</a></li>
+                <li><a href="#"><i class="icon-pencil"></i> {{_i}}برنامه‌ها{{/i}}</a></li>
+                <li><a href="#"><i class="i"></i> {{_i}}مختلف{{/i}}</a></li>
+              </ul>
+            </div>{{! /well }}
+          </div>{{! /bs-docs-example }}
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;i class="icon-home icon-white"&gt;&lt;/i&gt; {{_i}}صفحه اصلی{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-book"&gt;&lt;/i&gt; {{_i}}کتابخانه{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; {{_i}}برنامه‌ها{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; {{_i}}مختلف{{/i}}&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h4>{{_i}}ورودی‌های فرم{{/i}}</h4>
+          <form class="bs-docs-example form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputIcon">{{_i}}آدرس ایمیل{{/i}}</label>
+              <div class="controls">
+                <div class="input-prepend">
+                  <span class="add-on"><i class="icon-envelope"></i></span><input class="span2" id="inputIcon" type="text">
+                </div>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="control-group"&gt;
+  &lt;label class="control-label" for="inputIcon"&gt;{{_i}}آدرس ایمیل{{/i}}&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;div class="input-prepend"&gt;
+      &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;input class="span2" id="inputIcon" type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+      </div>{{! /span9 }}
+    </div>{{! row}}
+
+  </div>{{! /.container }}
