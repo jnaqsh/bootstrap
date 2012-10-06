@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Components · توییتر بوت‌استرپ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35290892-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">بوت‌استرپ</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">صفحه اصلی</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">از این‌جا شروع کنید</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">چارچوب اصلی</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">سی‌اس‌اس پایه</a>
+              </li>
+              <li class="active">
+                <a href="./components.html">اجزا</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">جاوااسکریپت</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">سفارشی</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>اجزا</h1>
+    <p class="lead">تعداد زیادی از اجزای قابل استفاده که می‌توانند چیزهایی مانند منوهای ناوبری، اخطارها، و ... را بسازند.</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#dropdowns"><i class="icon-chevron-left"></i> افتادنی‌ها</a></li>
+          <li><a href="#buttonGroups"><i class="icon-chevron-left"></i> گروه‌های دکمه</a></li>
+          <li><a href="#buttonDropdowns"><i class="icon-chevron-left"></i> افتادنی‌های دکمه‌ای</a></li>
+          <li><a href="#navs"><i class="icon-chevron-left"></i> ناوبری‌ها</a></li>
+          <li><a href="#navbar"><i class="icon-chevron-left"></i> نوارهای ناوبری</a></li>
+          <li><a href="#breadcrumbs"><i class="icon-chevron-left"></i> تکه کیک‌ها</a></li>
+          <li><a href="#pagination"><i class="icon-chevron-left"></i> صفحه‌بندی</a></li>
+          <li><a href="#labels-badges"><i class="icon-chevron-left"></i> برچسب‌ها و نشان‌ها</a></li>
+          <li><a href="#typography"><i class="icon-chevron-left"></i> گرافیک قلم</a></li>
+          <li><a href="#thumbnails"><i class="icon-chevron-left"></i> بندانگشتی‌ها</a></li>
+          <li><a href="#alerts"><i class="icon-chevron-left"></i> اخطارها</a></li>
+          <li><a href="#progress"><i class="icon-chevron-left"></i> نوارهای پیشرفت</a></li>
+          <li><a href="#misc"><i class="icon-chevron-left"></i> مختلف</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Dropdowns
+        ================================================== -->
+        <section id="dropdowns">
+          <div class="page-header">
+            <h1>منوهای افتادنی</h1>
+          </div>
+
+          <h2>نمونه</h2>
+          <p>منوهای دوحالته، بر روی متن، برای نمایش فهرستی از پیوندها. می‌توانید آن را به‌وسیلهٔ <a href="./javascript.html#dropdowns">پلاگین افتادنی جاوااسکریپت</a> محاوره‌ای کنید.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">عمل</a></li>
+                <li><a tabindex="-1" href="#">عملی دیگر</a></li>
+                <li><a tabindex="-1" href="#">یک چیز دیگر</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#">پیوند جداشده</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;عمل&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;عملی دیگر&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;یک چیز دیگر&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;پیوند جداشده&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h2>نشانه‌گذاری</h2>
+          <p>به منوی افتادنی زیر نگاه کنید، این اچ‌تی‌ام‌ال مورد نیاز است. منوی افتادنی خود را باید در یک راه‌انداز افتادنی با کلاس <code>.dropdown</code> قرا دهید و یا در عنصری که <code>position: relative;</code> در آن تعریف شده‌باشد.</p>
+
+<pre class="prettyprint linenums">
+&lt;div class="dropdown"&gt;
+  &lt;!-- Link or button to toggle dropdown --&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;عمل&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;عملی دیگر&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;یک چیز دیگر&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;پیوند جداشده&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h2>انتخاب‌ها</h2>
+          <p>منوی خود را راست‌چین کنید و یا سطوح افتادنی دیگری به آن اضافه کنید.</p>
+
+          <h3>راست‌چین کردن منوها</h3>
+          <p>کلاس <code>.pull-right</code> را به <code>.dropdown-menu</code> برای راست‌چین شدن منوی خود اضافه کنید.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>زیرمنوها در افتادنی‌ها</h3>
+          <p>با اضافه کردن کمی زبان نشانه‌گذاری، می‌توانید یک سطح اضافه به منوهای افتادنی اضافه کنید. با اضافه کردن کلاس <code>.dropdown-submenu</code> به هر <code>li</code> در یک منوی افتادنی شما می‌توانید زیرمنو ایجاد کنید.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">عمل</a></li>
+                <li><a tabindex="-1" href="#">عملی دیگر</a></li>
+                <li><a tabindex="-1" href="#">یک چیز دیگر</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="-1" href="#">انتخاب‌های بیشتر</a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">پیوند سطح دوم</a></li>
+                    <li><a tabindex="-1" href="#">پیوند سطح دوم</a></li>
+                    <li><a tabindex="-1" href="#">پیوند سطح دوم</a></li>
+                    <li><a tabindex="-1" href="#">پیوند سطح دوم</a></li>
+                    <li><a tabindex="-1" href="#">پیوند سطح دوم</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+  ...
+  &lt;li class="dropdown-submenu"&gt;
+    &lt;a tabindex="-1" href="#"&gt;انتخاب‌های بیشتر&lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        </section>
+
+
+
+
+        <!-- Button Groups
+        ================================================== -->
+        <section id="buttonGroups">
+          <div class="page-header">
+            <h1>گروه‌های دکمه</h1>
+          </div>
+
+          <h2>نمونه‌ها</h2>
+          <p>دو انتخاب پایه به‌همراه دو گونهٔ خاص.</p>
+
+          <h3>گروه دکمه تکی</h3>
+          <p>یک مجموعه‌ از دکمه‌ها با کلاس <code>.btn</code> در داخل یک کلاس <code>.btn-group</code> قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="btn-group" style="margin: 9px 0 5px;">
+              <button class="btn">راست</button>
+              <button class="btn">وسط</button>
+              <button class="btn">چپ</button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;راست&lt;/button&gt;
+  &lt;button class="btn"&gt;وسط&lt;/button&gt;
+  &lt;button class="btn"&gt;چپ&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>گروهی از چندین دکمه</h3>
+          <p>برای ایجاد اجزای پیچیده‌تر، مجموعهٔ <code>&lt;div class="btn-group"&gt;</code> را در داخل <code>&lt;div class="btn-toolbar"&gt;</code> قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn">۱</button>
+                <button class="btn">۲</button>
+                <button class="btn">۳</button>
+                <button class="btn">۴</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn">۵</button>
+                <button class="btn">۶</button>
+                <button class="btn">۷</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn">۸</button>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>گروه‌های دکمه عمودی</h3>
+          <p>مجموعه‌ای از دکمه‌های عمودی را به جای مجموعه‌ای از دکمه‌های افقی ایجاد کنید.</p>
+          <div class="bs-docs-example">
+            <div class="btn-group btn-group-vertical">
+              <button type="button" class="btn"><i class="icon-align-left"></i></button>
+              <button type="button" class="btn"><i class="icon-align-center"></i></button>
+              <button type="button" class="btn"><i class="icon-align-right"></i></button>
+              <button type="button" class="btn"><i class="icon-align-justify"></i></button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group btn-group-vertical"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h4>عملکرد به‌مانند Checkboxها و radioها</h4>
+          <p>گروه‌های دکمه می‌توانند به مانند radioها عمل کنند. وقتی که ممکن است یک دکمه فعال باشد و یا به مانند checkboxها که ممکن است چندین دکمه همزمان فعال باشند. برای اطلاعات بیشتر به <a href="./javascript.html#buttons">مستندات جاوااسکریپت</a> را ببینید.</p>
+
+          <h4>افتادنی‌ها در گروه‌های دکمه</h4>
+          <p><span class="label label-info">توجه کنید!</span> دکمه‌هایی که افتادنی هستند باید به‌صورت اختصاصی در <code>.btn-group</code> قرار گیرند سپس برای نمایش صحیح در داخل <code>.btn-toolbar</code> قرار گیرند.</p>
+        </section>
+
+
+
+        <!-- Split button dropdowns
+        ================================================== -->
+        <section id="buttonDropdowns">
+          <div class="page-header">
+            <h1>منوهای افتادنی دکمه‌ای</h1>
+          </div>
+
+
+          <h2>مرور کلی و نمونه‌ها</h2>
+          <p>از هر دکمه‌ای برای فعال کردن منوی افتادنی، با قرار دادن در کلاس <code>.btn-group</code> و آماده کردن کد نشانه‌گذاری منو، استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">عمل <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">عمل <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">خطر <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">هشدار <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">موفقیت <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">اطلاعات <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">متفاوت <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    عمل
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>با تمام اندازه‌ها به خوبی کار می‌کنند</h3>
+          <p>دکمه‌ها با هر اندازه‌ای کار می‌کنند، اندازه‌هایی به‌مانند: <code>.btn-large</code>، <code>.btn-mini</code> و یا <code>.btn-small</code>.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">دکمه بزرگ <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">دکمه کوچک <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">دکمه خیلی کوچک <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+
+          <h3>جاوااسکریپت نیاز دارد</h3>
+          <p>دکمه‌های افتادنی نیاز به <a href="./javascript.html#dropdowns">پلاگین افتادنی بوت‌استرپ</a> برای کار کردن، دارند.</p>
+          <p>در برخی از موارد، مانند موبایل‌ها، منوهای افتادنی از اندازه صفحه نمایش بزرگ‌تر می‌شوند. برای رفع این مشکل نیاز است که به صورت دستی و یا کد جاوااسکریپت سفارشی، آن را درست کرد.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>دکمه‌های افتادنی جدا</h2>
+          <p>ما به راحتی به‌وسیلهٔ تغییر شیوه نمایش گروه دکمه و کد نشانه‌گذاری، می‌توانیم یک دکمه جدا بسازیم. ویژگی یک دکمه جدا، داشتن یک عمل استاندارد در راست و پیوند فعال کردن دکمهٔ افتادنی در چپ است.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn">عمل</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-primary">عمل</button>
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-danger">خطر</button>
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-warning">هشدار</button>
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-success">موفقیت</button>
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-info">اطلاعات</button>
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-inverse">متفاوت</button>
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;عمل&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- پیوندهای منوی افتادنی --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>اندازه‌ها</h3>
+          <p>از کلاس‌های کمکی دکمه مانند <code>.btn-mini</code>، <code>.btn-small</code> و یا <code>.btn-large</code> برای تغییر اندازه استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-large">عمل بزرگ</button>
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-small">عمل کوچک</button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-mini">عملی خیلی کوچک</button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-mini"&gt;عمل&lt;/button&gt;
+  &lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- پیوندهای منوی افتادنی --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>منوهای بالارونده</h3>
+          <p>منوهای افتادنی می‌توانند از پایین به بالا نیز باز شوند. با اضافه کردن کلاس <code>.dropup</code> به پدر عنصری که کلاس آن <code>.dropdown-menu</code> است. این کلاس جهت فلش <code>.caret</code> و جهت باز شدن منو را از پایین به بالا تغییر می‌دهد.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group dropup">
+                <button class="btn">بالارونده</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group dropup">
+                <button class="btn primary">بالارونده از راست</button>
+                <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn"&gt;بالارونده&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- پیوندهای منوی افتادنی --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Nav, Tabs, & Pills
+        ================================================== -->
+        <section id="navs">
+          <div class="page-header">
+            <h1>ناوبری‌ها: تب‌ها، پیل‌ها و فهرست‌ها</h1>
+          </div>
+
+          <h2>پیش‌فرض‌های سبک <small>کلاس‌های متفاوت، نشانه‌گذاری شبیه به‌هم</small></h2>
+          <p>تمام اجزای ناوبری، مانند تب‌ها، پیل‌ها و فهرست‌ها، یک شیوهٔ نمایش و کد نشانه‌گذاری را از طریق کلاس <code>.nav</code>، به اشتراک می‌گذارند.</p>
+
+          <h3>تب‌های پایه</h3>
+          <p>یک <code>&lt;ul&gt;</code> معمولی از پیوندها به‌همراه کلاس <code>.nav-tabs</code>:</p>
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">صفحه اصلی</a></li>
+              <li><a href="#">پروفایل</a></li>
+              <li><a href="#">پیام‌ها</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;صفحه اصلی&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>پیل‌های پایه</h3>
+          <p>اچ‌تی‌ام‌ال آن به‌مانند تب است فقط از کلاس <code>.nav-pills</code> استفاده می‌کنیم:</p>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">صفحه اصلی</a></li>
+              <li><a href="#">پروفایل</a></li>
+              <li><a href="#">پیام‌ها</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;صفحه اصلی&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>وضعیت غیرفعال</h3>
+          <p>برای هر جزء ناوبری (تب‌ها، پیل‌ها و یا فهرست‌ها) کلاس <code>.disabled</code> را اضافه کنید تا پیوندها به‌رنگ خاکستری درآید و جلوه‌های بصری ازبین برود. پیوندها همچنان قابل کلیک شدن هستند مگر این‌که کد جاوااسکرپتی نوشته شود تا جلوی کلیک شدن را بگیرد.</p>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li><a href="#">پیوند قابل کلیک</a></li>
+              <li><a href="#">پیوند قابل کلیک</a></li>
+              <li class="disabled"><a href="#">پیوند غیرفعال</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  ...
+  &lt;li class="disabled"&gt;&lt;a href="#"&gt;صفحه اصلی&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>همراستایی اجزا</h3>
+          <p>برای همراستا کردن پیوندهای ناوبری از کلاس‌های <code>.pull-left</code> و یا <code>.pull-right</code> استفاده کنید. هر دو کلاس در راستای مورد نظر شیوهٔ float را اضافه می‌کند.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>پشته‌ای</h2>
+          <p>برای همراستا کردن پیوندهای ناوبری از کلاس‌های <code>.pull-left</code> و یا <code>.pull-right</code> استفاده کنید. هر دو کلاس در راستای مورد نظر شیوهٔ float را اضافه می‌کند.</p>
+
+          <h3>تب‌های پشته‌ای</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs nav-stacked">
+              <li class="active"><a href="#">صفحه اصلی</a></li>
+              <li><a href="#">پروفایل</a></li>
+              <li><a href="#">پیام‌ها</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>پیل‌های پشته‌ای</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">صفحه اصلی</a></li>
+              <li><a href="#">پروفایل</a></li>
+              <li><a href="#">پیام‌ها</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>افتادنی‌ها</h2>
+          <p>منوهای افتادنی را با کمی اچ‌تی‌ام‌ال اضافی و <a href="./javascript.html#dropdowns">پلاگین جاوااسکریپت افتادنی‌ها</a> اضافه کنید.</p>
+
+          <h3>تب‌ها با افتادنی‌ها</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">صفحه اصلی</a></li>
+              <li><a href="#">راهنما</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">افتادنی <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        افتادنی
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- پیوندها --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>پیل‌ها با افتادنی‌ها</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">صفحه اصلی</a></li>
+              <li><a href="#">راهنما</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">افتادنی <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        افتادنی
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- پیوندها --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>فهرست‌های ناوبری</h2>
+          <p>راهی ساده و آسان برای ساخت گروهی از پیوندهای ناوبری و تیترهای اختیاری. بهترین برای استفاده در کنار صفحه مانند Finder در سیستم‌عامل مک اواس ده.</p>
+
+          <h3>نمونه‌ای از فهرست ناوبری</h3>
+          <p>فهرستی از پیوندها را آماده کنید و کلاس <code>class="nav nav-list"</code> را به آن اضافه کنید:</p>
+          <div class="bs-docs-example">
+            <div class="well" style="max-width: 340px; padding: 8px 0;">
+              <ul class="nav nav-list">
+                <li class="nav-header">تیتر فهرست</li>
+                <li class="active"><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">کتابخانه</a></li>
+                <li><a href="#">برنامه‌ها</a></li>
+                <li class="nav-header">یک تیتر فهرست دیگر</li>
+                <li><a href="#">پروفایل</a></li>
+                <li><a href="#">تنظیمات</a></li>
+                <li class="divider"></li>
+                <li><a href="#">راهنما</a></li>
+              </ul>
+            </div> <!-- /well -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="nav-header"&gt;تیتر فهرست&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;صفحه اصلی&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;کتابخانه&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+          <p>
+            <span class="label label-info">توجه</span>
+            برای تودرتو کردن داخل یک فهرست ناوبری کلاس <code>class="nav nav-list"</code>  را برای هر <code>&lt;ul&gt;</code> تودرتو قرار دهید.
+          </p>
+
+          <h3>جداکننده‌های افقی</h3>
+          <p>برای ایجاد یک جداکنندهٔ افقی، یک <code>&lt;li&gt;</code> خالی با کلاس <code>.divider</code> ایجاد کنید. مانند:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  ...
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>ناوبری با قابلیت تب</h2>
+          <p>بوت‌استرپ از تب‌های قابل تغییر در چهار حالت بالا (پیش‌فرض)، راست، پایین و چپ پشتیبانی می‌کند.</p>
+
+          <h3>نمونه</h3>
+          <p>برای ایجاد این‌گونه تب‌ها، تب‌هایی با کلاس <code>.tab-pane</code> و شناسه (ID) منحصر‌به‌فرد ایجاد کنید و آن‌ها را در کلاس <code>.tab-content</code> قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable" style="margin-bottom: 18px;">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">بخش ۱</a></li>
+                <li><a href="#tab2" data-toggle="tab">بخش ۲</a></li>
+                <li><a href="#tab3" data-toggle="tab">بخش ۳</a></li>
+              </ul>
+              <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                <div class="tab-pane active" id="tab1">
+                  <p>من در بخش ۱ هستم.</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>واو، من در بخش ۲ هستم.</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>چه خبر! من در بخش ۳ هستم.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;بخش ۱&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;بخش ۲&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;من در بخش ۱ هستم.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;واو، من در بخش ۲ هستم.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>محو شدن تب‌ها</h4>
+          <p>برای این‌که تب‌ها محو شوند،  کلاس <code>.fade</code> را به هر کدام از تب‌ها با کلاس <code>.tab-pane</code>، اضافه کنید.</p>
+
+          <h4>پلاگین جی‌کوئری نیاز است</h4>
+          <p>تمام تب‌های قابل تغییر به‌وسیلهٔ پلاگین جی‌کوئری سبک ما ساخته شده‌است. برای این‌که بیشتر در این‌باره بدانید <a href="./javascript.html#tabs">صفحه مستندات جاوااسکریپت</a> ما را مطالعه کنید.</p>
+
+          <h3>تغییر تب‌ها در هر جهتی</h3>
+
+          <h4>تب‌ها در پایین</h4>
+          <p>ترتیب نوشتن کد اچ‌تی‌ام‌ال را برعکس کنید و کلاس <code>.tabs-below</code> را اضافه کنید.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-below">
+              <div class="tab-content">
+                <div class="tab-pane active" id="A">
+                  <p>من در بخش الف هستم.</p>
+                </div>
+                <div class="tab-pane" id="B">
+                  <p>واو، من در بخش ب هستم.</p>
+                </div>
+                <div class="tab-pane" id="C">
+                  <p>چه خبر! من در بخش پ هستم.</p>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#A" data-toggle="tab">بخش ۱</a></li>
+                <li><a href="#B" data-toggle="tab">بخش ۲</a></li>
+                <li><a href="#C" data-toggle="tab">بخش ۳</a></li>
+              </ul>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>تب‌ها در چپ</h4>
+          <p>کلاس را عوض کنید تا تب‌ها به سمت چپ بروند.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">بخش ۱</a></li>
+                <li><a href="#lB" data-toggle="tab">بخش ۲</a></li>
+                <li><a href="#lC" data-toggle="tab">بخش ۳</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="lA">
+                  <p>من در بخش الف هستم.</p>
+                </div>
+                <div class="tab-pane" id="lB">
+                  <p>واو، من بخش ب هستم.</p>
+                </div>
+                <div class="tab-pane" id="lC">
+                  <p>چه خبر! من در بخش پ هستم.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>تب‌ها در راست</h4>
+          <p>کلاس را عوض کنید تا تب‌ها به سمت راست بروند.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-right">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#rA" data-toggle="tab">بخش ۱</a></li>
+                <li><a href="#rB" data-toggle="tab">بخش ۲</a></li>
+                <li><a href="#rC" data-toggle="tab">بخش ۳</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="rA">
+                  <p>من در بخش الف هستم.</p>
+                </div>
+                <div class="tab-pane" id="rB">
+                  <p>واو، من در بخش ب هستم.</p>
+                </div>
+                <div class="tab-pane" id="rC">
+                  <p>چه خبر! من در بخش پ هستم.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Navbar
+        ================================================== -->
+        <section id="navbar">
+          <div class="page-header">
+            <h1>نوار ناوبری</h1>
+          </div>
+
+
+          <h2>نوار ناوبری پایه</h2>
+          <p>برای شروع نوارهای ناوبری، نوارهایی ثابت (نه این‌که به بالای صفحه ثابت شده باشند) و برای نام پروژه و یک ناوبری پایه استفاده می‌شود. آن‌ها را در هرکجا داخل کلاس <code>.container</code> قرار دهید که اندازه آن براساس اندازه سایت شما و محتوای آن محاسبه می‌شود.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href="#">عنوان</a>
+                <ul class="nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+                  <li><a href="#">پیوند</a></li>
+                  <li><a href="#">پیوند</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="brand" href="#"&gt;عنوان&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;صفحه اصلی&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;پیوند&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;پیوند&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>اجزای نوار ناوبری</h2>
+
+          <h3>برَند</h3>
+          <p>یک پیوند ساده که برند شما و یا نام پروژه شما را مشخص می‌کند که فقط نیاز به تگ anchor دارد.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href="#">عنوان</a>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;a class="brand" href="#"&gt;نام پروژه&lt;/a&gt;
+</pre>
+
+          <h3>پیوندهای ناوبری</h3>
+          <p>به‌وسیله فهرست غیرترتیبی به‌سادگی، آیتم‌ها اضافه می‌شوند.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+                  <li><a href="#">پیوند</a></li>
+                  <li><a href="#">پیوند</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#">صفحه اصلی&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;پیوند&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;پیوند&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+          <p>شما به راحتی می‌توانید، با اضافه کردن یک آیتم خالی با کلاس <code>.divider-vertical</code> یک جداکننده داشته باشید. فقط بین پیوندها این را اضافه کنید:</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#">پیوند</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#">پیوند</a></li>
+                  <li class="divider-vertical"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  ...
+  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>فرم‌ها</h3>
+          <p>برای این‌که یک فرم در داخل یک نوار ناوبری به‌خوبی نمایش داده شود، کلاس‌های زیر را در جای مناسب قرار دهید. به صورت پیش‌فرض فرم باید کلاس <code>.navbar-form</code> داشته باشد و برای قرارگیری در سمت چپ و یا راست از کلاس‌های <code>.pull-left</code> و <code>.pull-right</code> استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <form class="navbar-form pull-right">
+                  <input type="text" class="span2">
+                  <button type="submit" class="btn">فرستادن</button>
+                </form>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-form pull-right"&gt;
+  &lt;input type="text" class="span2"&gt;
+  &lt;button type="submit" class="btn"&gt;فرستادن&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>فرم جستجو</h3>
+          <p>برای سفارشی سازی یک فرم جستجو، کلاس <code>.navbar-search</code> را به فرم و کلاس <code>.search-query</code> را برای ورودی، برای نمایش بهتر در نوار ناوبری قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <form class="navbar-search pull-right">
+                  <input type="text" class="search-query" placeholder="جستجو">
+                </form>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-search pull-right"&gt;
+  &lt;input type="text" class="search-query" placeholder="جستجو"&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>همراستاسازی اجزا</h3>
+          <p>با استفاده از کلاس‌های <code>.pull-left</code> یا <code>.pull-right</code> پیوندهای ناوبری، فرم جستجو و یا متن را همراستا کنید. هر دو کلاس‌ها خصوصیت <code>float</code> شیوهٔ نمایش را، در راستای موردنظر تغییر می‌دهد.</p>
+
+          <h3>استفاده از افتادنی‌ها</h3>
+          <p>با تغییر کوچک نشانه‌گذاری و <a href="./javascript.html#dropdowns">پلاگین افتادنی جاوااسکریپت</a>، افتادنی‌ها و بالارونده‌ها را به ناوبری اضافه کنید.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      حساب
+      &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+          <p>به <a href="./javascript.html#dropdowns">مستندات افتادنی‌های جاوااسکریپت</a> برای اطلاعات بیشتر و کد زبان نشانه‌گذاری مراجعه کنید.</p>
+
+          <h3>متن</h3>
+          <p>متون را در داخل یک عنصر با کلاس <code>.navbar-text</code> قرار دهید، معمولا بهتر است از تگ <code>&lt;p&gt;</code> برای رنگ و فاصله مناسب استفاده کنید.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>گونه‌های نمایش دیگر</h2>
+          <p>نوار ناوبری را به بالا یا پایین صفحه با اضافه کردن کلاس <code>.navbar</code> به خارجی‌ترین <code>div</code>، بچسبانید.</p>
+
+          <h3>چسباندن به بالا</h3>
+          <p>کلاس <code>.navbar-fixed-top</code> را اضافه کنید و به‌یاد داشته باشید که فضای مخفی در زیر آن را با اضافه کردن ۴۰ پیکسل به <code>padding</code> برای عنصر <code>&lt;body&gt;</code>، نمایان کنید. مطمئن باشید که این را بعد از سی‌اس‌اس بوت‌استرپ اصلی و قبل از سی‌اس‌اس پاسخگوی اختیاری قرار می‌دهید.</p>
+          <div class="bs-docs-example bs-navbar-top-example">
+            <div class="navbar navbar-fixed-top" style="position: absolute;">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;">
+                  <a class="brand" href="#">عنوان</a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">صفحه اصلی</a></li>
+                    <li><a href="#">پیوند</a></li>
+                    <li><a href="#">پیوند</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-top"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>چسباندن به پایین</h3>
+          <p>کلاس <code>.navbar-fixed-bottom</code> را به‌جای قبلی اضافه کنید.</p>
+          <div class="bs-docs-example bs-navbar-bottom-example">
+            <div class="navbar navbar-fixed-bottom" style="position: absolute;">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;">
+                  <a class="brand" href="#">عنوان</a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">صفحه اصلی</a></li>
+                    <li><a href="#">پیوند</a></li>
+                    <li><a href="#">پیوند</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-bottom"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>نوار ناوبری ثابت در بالا</h3>
+          <p>با اضافه کردن کلاس <code>.navbar-static-top</code> شما یک نوار ناوبری با عرض کامل که هنگام اسکرول کردن صفحه، دیده نمی‌شود، دارید. برخلاف کلاس <code>.navbar-fixed-top</code> شما نیازی ندارید که <code>padding</code> عنصر <code>body</code> تغییر دهید.</p>
+          <div class="bs-docs-example bs-navbar-top-example">
+            <div class="navbar navbar-static-top" style="margin: -1px -1px 0;">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;">
+                  <a class="brand" href="#">عنوان</a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">صفحه اصلی</a></li>
+                    <li><a href="#">پیوند</a></li>
+                    <li><a href="#">پیوند</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-static-top"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>نوار ناوبری پاسخگو</h2>
+          <p>برای ساخت یک نوار ناوبری پاسخگو، محتویات نوار ناوبری خود را در داخل یک <code>div</code> با کلاس <code>.nav-collapse.collapse</code> قرار دهید و دکمه تغییر وضعیت نوار ناوبری را با کلاس <code>.btn-navbar</code> قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">عنوان</a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">صفحه اصلی</a></li>
+                      <li><a href="#">پیوند</a></li>
+                      <li><a href="#">پیوند</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">افتادنی <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">عمل</a></li>
+                          <li><a href="#">عملی دیگر</a></li>
+                          <li><a href="#">یک چیز دیگر</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">تیتر ناوبری</li>
+                          <li><a href="#">پیوند جداشده</a></li>
+                          <li><a href="#">پیوند جداشده دیگر</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="جستجو">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">پیوند</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">افتادنی <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">عمل</a></li>
+                          <li><a href="#">عملی دیگر</a></li>
+                          <li><a href="#">یک چیز دیگر</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">پیوند جداشده</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+
+      &lt;!-- .btn-navbar برای تغییر وضعیت محتویات نوار ناوبری استفاده می‌شود --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;!-- اگر می‌خواهید نام برند شما نمایش داده شود، مطمئن شوید آن را این‌جا نوشته‌اید --&gt;
+      &lt;a class="brand" href="#"&gt;نام پروژه&lt;/a&gt;
+
+      &lt;!-- هرچیزی که می‌خواهید در اندازه ۹۴۰ پیکسل و کمتر از نمایش داده شود، در این‌جا قرار دهید --&gt;
+      &lt;div class="nav-collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          <div class="alert alert-info">
+            <strong>توجه کنید!</strong> نوار ناوبری پاسخگو نیاز به <a href="./javascript.html#collapse">پلاگین افتادنی</a> و <a href="./scaffolding.html#responsive">فایل سی‌اس‌اس بوت‌استرپ پاسخگو</a> دارد.</div>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>گونه متفاوت</h2>
+          <p>ظاهر نوار ناوبری را با اضافه کردن کلاس <code>.navbar-inverse</code> تغییر دهید.</p>
+          <div class="bs-docs-example">
+            <div class="navbar navbar-inverse" style="position: static;">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".subnav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">عنوان</a>
+                  <div class="nav-collapse subnav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">صفحه اصلی</a></li>
+                      <li><a href="#">پیوند</a></li>
+                      <li><a href="#">پیوند</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">افتادنی <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">عمل</a></li>
+                          <li><a href="#">عملی دیگر</a></li>
+                          <li><a href="#">یک چیز دیگر</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">تیتر ناوبری</li>
+                          <li><a href="#">پیوند جداشده</a></li>
+                          <li><a href="#">پیوند جداشده دیگر</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="جستجو">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">پیوند</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">افتادنی <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">عمل</a></li>
+                          <li><a href="#">عملی دیگر</a></li>
+                          <li><a href="#">یک چیز دیگر</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">پیوند جداشده</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-inverse"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Breadcrumbs
+        ================================================== -->
+        <section id="breadcrumbs">
+          <div class="page-header">
+            <h1>تکه کیک‌ها <small></small></h1>
+          </div>
+
+          <h2>نمونه‌ها</h2>
+          <p>یک نمونه که می‌تواند در صفحه‌های مختلف نمایش داده شود.</p>
+          <div class="bs-docs-example">
+            <ul class="breadcrumb">
+              <li class="active">صفحه اصلی</li>
+            </ul>
+            <ul class="breadcrumb">
+              <li><a href="#">صفحه اصلی</a> <span class="divider">/</span></li>
+              <li class="active">کتابخانه</li>
+            </ul>
+            <ul class="breadcrumb" style="margin-bottom: 5px;">
+              <li><a href="#">صفحه اصلی</a> <span class="divider">/</span></li>
+              <li><a href="#">کتابخانه</a> <span class="divider">/</span></li>
+              <li class="active">داده</li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;صفحه اصلی&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;کتابخانه&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;داده&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Pagination
+        ================================================== -->
+        <section id="pagination">
+          <div class="page-header">
+            <h1>صفحه‌بندی <small>دو انتخاب برای صفحه‌بندی</small></h1>
+          </div>
+
+          <h2>صفحه‌بندی استاندارد</h2>
+          <p>صفحه‌بندی ساده برگرفته از Rdio است، این نوع صفحه‌بندی مناسب برای نتایج جستجوها و برنامه‌ها است. اندازه بزرگ بلاک‌ها کمک می‌کند که سریع‌تر پیدا شوند و همچنین قابلیت تغییر اندازه را دارند و همچنین فضای بزرگی را برای کلیک کردن فراهم می‌کنند.</p>
+          <div class="bs-docs-example">
+            <div class="pagination">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">۱</a></li>
+                <li><a href="#">۲</a></li>
+                <li><a href="#">۳</a></li>
+                <li><a href="#">۴</a></li>
+                <li><a href="#">۵</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;۱&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;۲&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;۳&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;۴&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>انتخاب‌ها</h2>
+
+          <h3>وضعیت‌های فعال و غیرفعال</h3>
+          <p>برای حالت‌های مختلف پیوندها قابل سفارشی شدن هستند. از کلاس <code>.disabled</code> برای این‌که پیوندها قابل کلیک شدن نباشند و از کلاس <code>.active</code> برای مشخص کردن صفحه جاری استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">۱</a></li>
+                <li><a href="#">۲</a></li>
+                <li><a href="#">۳</a></li>
+                <li><a href="#">۴</a></li>
+                <li><a href="#">۵</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;۱&lt;/a&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+          <p>همچنین برای این‌که قابلیت کلیک شدن برای پیوندهای فعال و غیرفعال بگیرید، از <code>&lt;span&gt;</code> استفاده کنید.</p>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;Prev&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>همراستاسازی</h3>
+          <p>با اضافه کردن دو کلاس اختیاری <code>.pagination-centered</code> و <code>.pagination-right</code> آن‌ها را در وسط و راست قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">۱</a></li>
+                <li><a href="#">۲</a></li>
+                <li><a href="#">۳</a></li>
+                <li><a href="#">۴</a></li>
+                <li><a href="#">۵</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination pagination-centered"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-right">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">۱</a></li>
+                <li><a href="#">۲</a></li>
+                <li><a href="#">۳</a></li>
+                <li><a href="#">۴</a></li>
+                <li><a href="#">۵</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination pagination-right"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>ناوبر صفحه</h2>
+          <p>پیوندهای بعدی و قبلی برای پیاده‌سازی صفحه‌بندی ساده که با شیوهٔ نمایش و نشانه‌گذاری سبک ایجاد می‌شود برای وبلاگ‌ها و مجله‌ها خیلی مناسب است.</p>
+
+          <h3>نمونه پیش‌فرض</h3>
+          <p>به‌صورت پیش‌فرض پیوندهای ناوبر صفحه در وسط قرار دارند.</p>
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li><a href="#">قبلی</a></li>
+              <li><a href="#">بعدی</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;قبلی&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;بعدی&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>پیوندهای همراستا</h3>
+          <p>همچنین شما می‌توانید پیوندها را در طرفین قرار دهید:</p>
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li class="previous"><a href="#">&rarr; قبلی</a></li>
+              <li class="next"><a href="#">بعدی &larr;</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;rarr; قبلی&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;بعدی &amp;larr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>وضعیت غیرفعال اختیاری</h3>
+          <p>برای غیرفعال کردن می‌توانید از کلاس کلی <code>.disabled</code> استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li class="previous disabled"><a href="#">&rarr; قبلی</a></li>
+              <li class="next"><a href="#">بعدی &larr;</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous disabled"&gt;
+    &lt;a href="#"&gt;&amp;rarr; قبلی&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Labels and badges
+        ================================================== -->
+        <section id="labels-badges">
+          <div class="page-header">
+            <h1>برچسب‌ها و نشان‌ها</h1>
+          </div>
+          <h3>برچسب‌ها</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>برچسب‌ها</th>
+                <th>نشانه‌گذاری</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="label">پیش‌فرض</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label"&gt;پیش‌فرض&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-success">موفقیت</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-success"&gt;موفقیت&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-warning">هشدار</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-warning"&gt;هشدار&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-important">مهم</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-important"&gt;مهم&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-info">اطلاعات</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-info"&gt;اطلاعات&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-inverse">متفاوت</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-inverse"&gt;متفاوت&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>نشان‌ها</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>نام</th>
+                <th>نمونه</th>
+                <th>نشانه‌گذاری</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  پیش‌فرض
+                </td>
+                <td>
+                  <span class="badge">۱</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge"&gt;۱&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  موفقیت
+                </td>
+                <td>
+                  <span class="badge badge-success">۲</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-success"&gt;۲&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  هشدار
+                </td>
+                <td>
+                  <span class="badge badge-warning">۴</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-warning"&gt;۴&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  مهم
+                </td>
+                <td>
+                  <span class="badge badge-important">۶</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-important"&gt;۶&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  اطلاعات
+                </td>
+                <td>
+                  <span class="badge badge-info">۸</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-info"&gt;۸&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  متفاوت
+                </td>
+                <td>
+                  <span class="badge badge-inverse">۱۰</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-inverse"&gt;۱۰&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+
+
+        <!-- Typographic components
+        ================================================== -->
+        <section id="typography">
+          <div class="page-header">
+            <h1>اجزای گرافیک قلم</h1>
+          </div>
+
+          <h2>واحد قهرمان</h2>
+          <p>یک جزء سبک و قابل انعطاف برای نمایش محتوای کلیدی سایت. این جزء برای فروشگاه‌ها و سایت‌هایی که مطالب زیادی در آن‌ها است، مناسب می‌باشد.</p>
+          <div class="bs-docs-example">
+            <div class="hero-unit">
+              <h1>سلام، دنیا!</h1>
+              <p>این یک واحد قهرمان ساده است. این جزء برای جلب توجه و دادن اطلاعات مهم و کلیدی به خواننده است.</p>
+              <p><a class="btn btn-primary btn-large">بیشتر بدانید</a></p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="hero-unit"&gt;
+  &lt;h1&gt;تیتر&lt;/h1&gt;
+  &lt;p&gt;متن مهم&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      بیشتر بدانید
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+          <h2>تیتر صفحه</h2>
+          <p>یک پوستهٔ ساده برای <code>h1</code> که به‌طور مناسب فضای خالی برای قرارگیری محتویات صفحه ایجاد می‌کند. همچنین می‌توان در تگ <code>h1</code> از تگ <code>small</code> برای توضیح تیتر استفاده کرد.</p>
+          <div class="bs-docs-example">
+            <div class="page-header">
+              <h1>نمونه‌ای از تیتر صفحه <small>زیرنوشته برای تیتر</small></h1>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;نمونه‌ای از تیتر صفحه &lt;small&gt;زیرنوشته برای تیتر&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Thumbnails
+        ================================================== -->
+        <section id="thumbnails">
+          <div class="page-header">
+            <h1>بندانگشتی‌ها <small>شبکه‌ای از عکس‌ها، ویدیو‌ها، متن و چیزهای دیگر</small></h1>
+          </div>
+
+          <h2>بندانگشتی‌های پیش‌فرض</h2>
+          <p>به‌صورت پیش‌فرض، بوت‌استرپ بندانگشتی‌ها را برای نمایش عکس‌ها آماده کرده‌است که با کمترین زبان نشانه‌گذاری قابل پیاده‌سازی باشد.</p>
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <h2>به‌طور کامل قابل سفارشی</h2>
+          <p>با تغییر کوچکی در کدهای نشانه‌گذاری، می‌توان هر محتوای اچ‌تی‌ام‌ال مانند تیترها، پاراگراف‌ها و یا دکمه‌ها را در بندانگشتی‌ها استفاده کرد.</p>
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+                  <div class="caption">
+                    <h3>برچسب بندانگشتی</h3>
+                    <p>"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
+                    <p><a href="#" class="btn btn-primary">عمل</a> <a href="#" class="btn">عمل</a></p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+                  <div class="caption">
+                    <h3>برچسب بندانگشتی</h3>
+                    <p>به منظور داشتن آزادی برای تغییر دادن، شما باید به کدهای منبع برنامه دسترسی داشته باشید. بنابراین دسترسی به کد منبع یک شرط ضروری می‌باشد.</p>
+                    <p><a href="#" class="btn btn-primary">عمل</a> <a href="#" class="btn">عمل</a></p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+                  <div class="caption">
+                    <h3>برچسب بندانگشتی</h3>
+                    <p>اگر توسعه‌دهنده نرم‌افزار قادر باشد مجوز نرم‌افزار را، بدون این که شما کاری کنید که سبب این کار شود، باطل کند، این نرم‌افزار آزاد نیست.</p>
+                    <p><a href="#" class="btn btn-primary">عمل</a> <a href="#" class="btn">عمل</a></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h3>چرا از بندانگشتی‌ها استفاده کنم؟</h3>
+          <p>بندانگشتی‌ها بسیار مناسب برای شبکه‌ای از عکس‌ها یا ویدیوها، نتایج جستجوی عکس، محصولات تجاری، نمونه‌کارها و خیلی چیزهای دیگر است. آن‌ها می‌توانند پیوند به جایی شده‌باشند.</p>
+
+          <h3>نشانه‌گذاری ساده و انعطاف‌پذیر</h3>
+          <p>نشانه‌گذاری بندانگشتی یک <code>ul</code> ساده با تعدادی <code>li</code> است. فقط همین! همچنین قابلیت انعطاف بالایی دارد، به‌راحتی می‌توان هر نوع محتوایی را با کمی تغییر در آن قرار داد.</p>
+
+          <h3>از اندازه‌های ستون شبکه‌ای استفاده کنید</h3>
+          <p>در نمونهٔ قبل، بندانگشتی از کلاس‌های سامانهٔ شبکه‌ای مانند <code>.span2</code> یا <code>.span3</code> برای کنترل اندازه بندانگشتی‌ها استفاده کرده‌است.</p>
+
+          <h2>نشانه‌گذاری</h2>
+          <p>همان‌طور در قبل گفته شد، نشانه‌گذاری بندانگشتی موردنیاز خیلی آسان و سبک است. این یک نمونه از عکس‌های پیوندشده پیش‌فرض است:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/300x200" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+          <p>برای محتوای سفارشی اچ‌تی‌ام‌ال در بندانگشتی‌ها، نشانه‌گذاری کمی تغییر می‌کند. برای این‌که از محتوای بلاکی استفاده کنیم، ما <code>&lt;a&gt;</code> را با <code>&lt;div&gt;</code> عوض کردیم و نتیجه شد:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/300x200" alt=""&gt;
+      &lt;h3&gt;برچسب بندانگشتی&lt;/h3&gt;
+      &lt;p&gt;عنوان بندانگشتی...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h2>نمونه‌های بیشتر</h2>
+          <p>با استفاده از تنظیمات کلاس‌های شبکه‌ای شما می‌توانید اندازه‌های مختلف را باهم داشته باشید.</p>
+          <ul class="thumbnails">
+            <li class="span4">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/360x270" alt="">
+              </a>
+            </li>
+            <li class="span3">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/260x120" alt="">
+              </a>
+            </li>
+            <li class="span2">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/160x120" alt="">
+              </a>
+            </li>
+            <li class="span3">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/260x120" alt="">
+              </a>
+            </li>
+            <li class="span2">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/160x120" alt="">
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+
+
+        <!-- Alerts
+        ================================================== -->
+        <section id="alerts">
+          <div class="page-header">
+            <h1>اخطارها <small>شیوه‌های نمایش برای موفقیت، هشدار و پیام‌های خطا</small></h1>
+          </div>
+
+          <h2>اخطار پیش‌فرض</h2>
+          <p>هر نوشته‌ای را با دکمهٔ حذف اختیاری در کلاس <code>.alert</code> برای پیام اخطار هشدار پایه قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>هشدار!</strong> بهتر است به خودتان نگاه کنید، به‌نظر خوب نیستید.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;strong&gt;هشدار!&lt;/strong&gt; بهتر است به خودتان نگاه کنید، به‌نظر خوب نیستید.
+&lt;/div&gt;
+</pre>
+
+          <h3>دکمه‌های حذف</h3>
+          <p>مرورگرهای موبایل سافاری و اپرا، برای استفاده از دکمه‌های حذف پیام‌های هشدار نیاز به ویژگی <code>data-dismiss="alert"</code> و استفاده از <code>href="#"</code> را دارند.</p>
+          <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;</pre>
+          <p>همچنین می‌توانید از عنصر <code>&lt;button&gt;</code> با ویژگی <code>data</code> که در مستندات آمده‌است، استفاده کنید وقتی از <code>&lt;button&gt;</code> استفاده می‌کنید باید <code>type="button"</code> رو به دکمهٔ خود اضافه کنید.</p>
+          <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
+
+          <h3>اخطارها را با جاوااسکریپت حذف کنید</h3>
+          <p>از <a href="./javascript.html#alerts">پلاگین اخطار جی‌کوئری</a> برای حذف آسان و سریع استفاده کنید.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>انتخاب‌ها</h2>
+          <p>برای پیام‌های طولانی، حاشیهٔ بالا و پایین را با استفاده از کلاس <code>.alert-block</code> افزایش دهید.</p>
+          <div class="bs-docs-example">
+            <div class="alert alert-block">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h4>هشدار!</h4>
+              <p>شما برای من پنج فایل در قالب غیر استاندارد و حجیم .doc که یکی از اسرار مایکروسافت است ارسال کرده‌اید، به جای اینکه از قالب بین‌المللی، عمومی، و موثرتر متن ساده استفاده کنید.</p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;h4&gt;هشدار!&lt;/h4&gt;
+  شما برای من پنج فایل در قالب غیر استاندارد و حجیم...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>جایگزین‌های پیش‌فرض</h2>
+          <p>برای تغییر اخطار پیش‌فرض از کلاس‌های زیر استفاده کنید.</p>
+
+          <h3>خطا یا خطر</h3>
+          <div class="bs-docs-example">
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>اوه نه!</strong> رایانه شما دارای یک ویروس بزرگ است.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-error"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>موفقیت</h3>
+          <div class="bs-docs-example">
+            <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>خوب تموم شد!</strong> مهاجرت شما با موفقیت انجام شد.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>اطلاعاتی</h3>
+          <div class="bs-docs-example">
+            <div class="alert alert-info">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>توجه کنید!</strong> شما در حال استفاده از مرورگر اینترنت اکسپلورر هستید که دارای مالیات است.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-info"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Progress bars
+        ================================================== -->
+        <section id="progress">
+          <div class="page-header">
+            <h1>نوارهای پیشرفت <small>برای بارگذاری، تغییر مسیر و یا وضعیت عملی خاص</small></h1>
+          </div>
+
+          <h2>نمونه‌ها و نشانه‌گذاری</h2>
+
+          <h3>پایه</h3>
+          <p>نوار پیشرفت پیش‌فرض با گرادیانت عمودی.</p>
+          <div class="bs-docs-example">
+            <div class="progress">
+              <div class="bar" style="width: 60%;"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>راه‌راه</h3>
+          <p>از گرادیانت برای ساخت جلوهٔ بصری راه‌راه استفاده کنید. در اینترنت اکسپلورر ۷ و ۸ موجود نیست.</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-striped">
+              <div class="bar" style="width: 20%;"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="bar" style="width: 20%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>دارای حرکت</h3>
+          <p>کلاس <code>.active</code> را به <code>.progress-striped</code> برای ایجاد حرکت از راست به چپ اضافه کنید. در هیچ نسخهٔ اینترنت اکسپلورر موجود نیست.</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-striped active">
+              <div class="bar" style="width: 45%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped active"&gt;
+  &lt;div class="bar" style="width: 40%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>پشته‌ای</h3>
+          <p>چندین نوار را در یک <code>.progress</code> به‌صورت پشته‌ای قرار دهید.</p>
+          <div class="bs-docs-example">
+            <div class="progress">
+              <div class="bar bar-success" style="width: 35%"></div>
+              <div class="bar bar-warning" style="width: 20%"></div>
+              <div class="bar bar-danger" style="width: 10%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar bar-success" style="width: 35%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-warning" style="width: 20%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-danger" style="width: 10%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>انتخاب‌ها</h2>
+
+          <h3>رنگ‌های بیشتر</h3>
+          <p>نوارهای پیشرفت از کلاس‌های دکمه‌ها و اخطارها برای شیوهٔ نمایش یک‌دست استفاده می‌کند.</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-info" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-success" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-warning" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-danger">
+              <div class="bar" style="width: 80%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-info"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>نوارهای راه‌راه</h3>
+          <p>به‌مانند تک‌رنگ‌ها، ما می‌توانیم از نوارهای پیشرفت راه‌راه استفاده کنیم.</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-danger progress-striped">
+              <div class="bar" style="width: 80%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-info progress-striped"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success progress-striped"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning progress-striped"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger progress-striped"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>پشتیبانی مرورگرها</h2>
+          <p>نوارهای پیشرفت از گرادیانت، انتقال‌ها و پویانمایی‌ها برای جلوه‌های بصری استفاده می‌کند. این ویژگی‌ها در مرورگر اینترنت اکسپلورر ۷ تا ۹ و نسخه‌های قدیمی فایرفاکس پشتیبانی نمی‌شود.</p>
+          <p>نسخه‌های قدیمی‌تر از اینترنت اکسپلورر ۱۰ و اپرا ۱۲ از پویانمایی‌ها پشتیبانی نمی‌کنند.</p>
+
+        </section>
+
+
+
+
+
+        <!-- Miscellaneous
+        ================================================== -->
+        <section id="misc">
+          <div class="page-header">
+            <h1>مختلف <small>اجزای کمکی سبک</small></h1>
+          </div>
+
+          <h2>چاه‌ها</h2>
+          <p>از چاه برای ایجاد جلوه بصری inset بر روی یک عنصر استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <div class="well">
+              ببین، من در چاه هستم!
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="well"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <h3>کلاس‌های اختیاری</h3>
+          <p>حاشیه‌ها و گرد کردن گوشه‌ها را با استفاده از دو کلاس زیر، کنترل کنید.</p>
+          <div class="bs-docs-example">
+            <div class="well well-large">
+               ببین، من در چاه هستم!
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="well well-large"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <div class="bs-docs-example">
+            <div class="well well-small">
+               ببین، من در چاه هستم!
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="well well-small"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h2>آیکن بستن</h2>
+          <p>از آیکن بستن برای حذف محتواهایی مانند مُدال‌ها و اخطارها استفاده کنید.</p>
+          <div class="bs-docs-example">
+            <p><button class="close" style="float: none;">&times;</button></p>
+          </div>
+          <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
+          <p>سیستم‌عامل iOS نیاز به یک <code>href="#"</code> برای کلیک کردن یک رویداد نیاز دارد.</p>
+          <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+
+          <h2>کلاس‌های کمکی</h2>
+          <p>کلاس‌های ساده برای استفاده از صفحه نمایش‌های کوچک و تغییر رفتار.</p>
+
+          <h4>.pull-left</h4>
+          <p>یک عنصر را به سمت چپ می‌برد.</p>
+<pre class="prettyprint linenums">
+class="pull-left"
+</pre>
+<pre class="prettyprint linenums">
+.pull-left {
+  float: left;
+}
+</pre>
+
+          <h4>.pull-right</h4>
+          <p>یک عنصر را به سمت راست می‌برد.</p>
+<pre class="prettyprint linenums">
+class="pull-right"
+</pre>
+<pre class="prettyprint linenums">
+.pull-right {
+  float: right;
+}
+</pre>
+
+          <h4>.muted</h4>
+          <p>رنگ یک عنصر را به <code>#999</code> تغییر می‌دهد.</p>
+<pre class="prettyprint linenums">
+class="muted"
+</pre>
+<pre class="prettyprint linenums">
+.muted {
+  color: #999;
+}
+</pre>
+
+          <h4>.clearfix</h4>
+          <p><code>float</code> در هر عنصری را حذف می‌کند.</p>
+<pre class="prettyprint linenums">
+class="clearfix"
+</pre>
+<pre class="prettyprint linenums">
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+</pre>
+
+        </section>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-left"><a href="#">برگشت به بالا</a></p>
+        <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/jnaqsh" target="_blank">@jnaqsh</a>.</p>
+        <p>کد تحت اجازه‌نامهٔ <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a> می‌باشد. مستندات تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشد.</p>
+        <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
+        <ul class="footer-links">
+          <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+
+  </body>
+</html>

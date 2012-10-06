@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Customize · توییتر بوت‌استرپ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35290892-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">بوت‌استرپ</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">صفحه اصلی</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">از این‌جا شروع کنید</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">چارچوب اصلی</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">سی‌اس‌اس پایه</a>
+              </li>
+              <li class="">
+                <a href="./components.html">اجزا</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">جاوااسکریپت</a>
+              </li>
+              <li class="active">
+                <a href="./customize.html">سفارشی</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>سفارشی و دانلود کنید</h1>
+    <p class="lead"><a href="https://github.com/jnaqsh/bootstrap/zipball/master">بوت‌استرپ را دانلود کنید</a> یا متغیرها، اجزا، پلاگین‌های جاوااسکریپت و چیزهای دیگر را سفارشی کنید.</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#components"><i class="icon-chevron-left"></i> ۱. اجزا را انتخاب کنید</a></li>
+          <li><a href="#plugins"><i class="icon-chevron-left"></i> ۲. پلاگین‌های جی‌کوئری را انتخاب کنید</a></li>
+          <li><a href="#variables"><i class="icon-chevron-left"></i> ۳. متغیرها را سفارشی کنید</a></li>
+          <li><a href="#download"><i class="icon-chevron-left"></i> ۴. دانلود کنید</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+        <!-- Customize form
+        ================================================== -->
+        <form>
+          <section class="download" id="components">
+            <div class="page-header">
+              <a class="btn btn-small pull-left toggle-all" href="#">تغییر وضعیت همه</a>
+              <h1>
+                ۱. اجزا را انتخاب کنید
+              </h1>
+            </div>
+            <div class="row download-builder">
+              <div class="span3">
+                <h3>چارچوب اصلی</h3>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="reset.less"> Normalize and reset</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="scaffolding.less"> Body type and links</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="grid.less"> سامانه شبکه‌ای</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="layouts.less"> لایه‌ها</label>
+                <h3>سی‌اس‌اس پایه</h3>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="type.less"> تیترها، بدنه و غیره</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="code.less"> کد و pre</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="labels-badges.less"> برچسب‌ها و نشان‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="tables.less"> جدول‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="forms.less"> فرم‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="buttons.less"> دکمه‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="sprites.less"> آیکن‌ها</label>
+              </div><!-- /span -->
+              <div class="span3">
+                <h3>اجزا</h3>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="button-groups.less"> گروه دکمه‌ها و افتادنی‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="navs.less"> ناوبری‌ها، تب‌ها و پیل‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="navbar.less"> نوار ناوبری</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="breadcrumbs.less"> تکه کیک‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="pagination.less"> صفحه‌بندی</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="pager.less"> ناوبر صفحه</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="thumbnails.less"> بندانگشتی‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="alerts.less"> اخطارها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="progress-bars.less"> نوارهای پیشرفت</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="hero-unit.less"> واحد قهرمان</label>
+                <h3>اجزای جاوااسکریپت</h3>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="tooltip.less"> بالنک‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="popovers.less"> پوب‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="modals.less"> مُدال‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="dropdowns.less"> افتادنی‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="accordion.less"> فروریختنی‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="carousel.less"> چرخ فلک</label>
+              </div><!-- /span -->
+              <div class="span3">
+                <h3>مختلف</h3>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="wells.less"> چاه‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="close.less"> آیکن بستن</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="utilities.less"> کلاس‌های کمکی</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="component-animations.less"> اجزای پویانمایی‌ها</label>
+                <h3>پاسخگو</h3>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-utilities.less"> کلاس‌های نمایان/مخفی</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-767px-max.less"> تبلت‌های باریک و کوچک‌تر (کمتر از ۷۶۷ پیکسل)</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-768px-979px.less"> تبلت‌ها تا دسکتاپ‌ها (۷۶۷ تا ۹۷۹ پیکسل)</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-1200px-min.less"> دسکتاپ‌ها بزرگ (بیشتر از ۱۲۰۰ پیکسل)</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-navbar.less"> نوار ناوبری پاسخگو</label>
+              </div><!-- /span -->
+            </div><!-- /row -->
+          </section>
+
+          <section class="download" id="plugins">
+            <div class="page-header">
+              <a class="btn btn-small pull-left toggle-all" href="#">تغییر وضعیت همه</a>
+              <h1>
+                ۲. پلاگین‌های جی‌کوئری را انتخاب کنید
+              </h1>
+            </div>
+            <div class="row download-builder">
+              <div class="span3">
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-transition.js">
+                  انتقال‌ها <small>(برای هر پویانمایی لازم است)</small>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-modal.js">
+                  مُدال‌ها
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-dropdown.js">
+                  افتادنی‌ها
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-scrollspy.js">
+                  اسکرول جاسوس
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-tab.js">
+                  تب‌ها
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-tooltip.js">
+                  بالنک‌ها
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-popover.js">
+                  پوب‌ها <small>(نیازمند بالنک‌ها)</small>
+                </label>
+              </div><!-- /span -->
+              <div class="span3">
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-affix.js">
+                  پیوست
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-alert.js">
+                  پیام‌های اخطار
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-button.js">
+                  دکمه‌ها
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-collapse.js">
+                  فروریختنی‌ها
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-carousel.js">
+                  چرخ فلک
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" checked="true" value="bootstrap-typeahead.js">
+                  کامل‌کننده نوشته
+                </label>
+              </div><!-- /span -->
+              <div class="span3">
+                <h4 class="muted">توجه کنید!</h4>
+                <p class="muted">تمام پلاگین‌های انتخابی در فایل bootstrap.js کامپایل خواهند شد. تمام پلاگین‌ها نیاز به آخرین نسخهٔ <a href="http://jquery.com/" target="_blank">جی‌کوئری</a> را دارند.</p>
+              </div><!-- /span -->
+            </div><!-- /row -->
+          </section>
+
+
+          <section class="download" id="variables">
+            <div class="page-header">
+              <a class="btn btn-small pull-left toggle-all" href="#">بازنشانی به پیش‌فرض‌ها</a>
+              <h1>
+                ۳. متغیرهای سفارشی
+              </h1>
+            </div>
+            <div class="row download-builder">
+              <div class="span3">
+                <h3>چارچوب اصلی</h3>
+                <label>@bodyBackground</label>
+                <input type="text" class="span3" placeholder="@white">
+                <label>@textColor</label>
+                <input type="text" class="span3" placeholder="@grayDark">
+
+                <h3>پیوندها</h3>
+                <label>@linkColor</label>
+                <input type="text" class="span3" placeholder="#08c">
+                <label>@linkColorHover</label>
+                <input type="text" class="span3" placeholder="darken(@linkColor, 15%)">
+                <h3>رنگ‌ها</h3>
+                <label>@blue</label>
+                <input type="text" class="span3" placeholder="#049cdb">
+                <label>@green</label>
+                <input type="text" class="span3" placeholder="#46a546">
+                <label>@red</label>
+                <input type="text" class="span3" placeholder="#9d261d">
+                <label>@yellow</label>
+                <input type="text" class="span3" placeholder="#ffc40d">
+                <label>@orange</label>
+                <input type="text" class="span3" placeholder="#f89406">
+                <label>@pink</label>
+                <input type="text" class="span3" placeholder="#c3325f">
+                <label>@purple</label>
+                <input type="text" class="span3" placeholder="#7a43b6">
+
+                <h3>Sprites</h3>
+                <label>@iconSpritePath</label>
+                <input type="text" class="span3" placeholder="'../img/glyphicons-halflings.png'">
+                <label>@iconWhiteSpritePath</label>
+                <input type="text" class="span3" placeholder="'../img/glyphicons-halflings-white.png'">
+
+                <h3>سامانه شبکه‌ای</h3>
+                <label>@gridColumns</label>
+                <input type="text" class="span3" placeholder="12">
+                <label>@gridColumnWidth</label>
+                <input type="text" class="span3" placeholder="60px">
+                <label>@gridGutterWidth</label>
+                <input type="text" class="span3" placeholder="20px">
+                <label>@gridColumnWidth1200</label>
+                <input type="text" class="span3" placeholder="70px">
+                <label>@gridGutterWidth1200</label>
+                <input type="text" class="span3" placeholder="30px">
+                <label>@gridColumnWidth768</label>
+                <input type="text" class="span3" placeholder="42px">
+                <label>@gridGutterWidth768</label>
+                <input type="text" class="span3" placeholder="20px">
+
+              </div><!-- /span -->
+              <div class="span3">
+
+                <h3>گرافیک قلم</h3>
+                <label>@sansFontFamily</label>
+                <input type="text" class="span3" placeholder="'Helvetica Neue', Helvetica, Arial, sans-serif">
+                <label>@serifFontFamily</label>
+                <input type="text" class="span3" placeholder="Georgia, 'Times New Roman', Times, serif">
+                <label>@monoFontFamily</label>
+                <input type="text" class="span3" placeholder="Menlo, Monaco, 'Courier New', monospace">
+                <label>@baseFontSize</label>
+                <input type="text" class="span3" placeholder="14px">
+                <label>@baseFontFamily</label>
+                <input type="text" class="span3" placeholder="@sansFontFamily">
+                <label>@baseLineHeight</label>
+                <input type="text" class="span3" placeholder="20px">
+                <label>@altFontFamily</label>
+                <input type="text" class="span3" placeholder="@serifFontFamily">
+                <label>@headingsFontFamily</label>
+                <input type="text" class="span3" placeholder="inherit">
+                <label>@headingsFontWeight</label>
+                <input type="text" class="span3" placeholder="bold">
+                <label>@headingsColor</label>
+                <input type="text" class="span3" placeholder="inherit">
+                <label>@heroUnitBackground</label>
+                <input type="text" class="span3" placeholder="@grayLighter">
+                <label>@heroUnitHeadingColor</label>
+                <input type="text" class="span3" placeholder="inherit">
+                <label>@heroUnitLeadColor</label>
+                <input type="text" class="span3" placeholder="inherit">
+
+                <h3>جدول‌ها</h3>
+                <label>@tableBackground</label>
+                <input type="text" class="span3" placeholder="transparent">
+                <label>@tableBackgroundAccent</label>
+                <input type="text" class="span3" placeholder="#f9f9f9">
+                <label>@tableBackgroundHover</label>
+                <input type="text" class="span3" placeholder="#f5f5f5">
+                <label>@tableBorder</label>
+                <input type="text" class="span3" placeholder="#ddd">
+
+                <h3>فرم‌ها</h3>
+                <label>@placeholderText</label>
+                <input type="text" class="span3" placeholder="@grayLight">
+                <label>@inputBackground</label>
+                <input type="text" class="span3" placeholder="@white">
+                <label>@inputBorder</label>
+                <input type="text" class="span3" placeholder="#ccc">
+                <label>@inputBorderRadius</label>
+                <input type="text" class="span3" placeholder="3px">
+                <label>@inputDisabledBackground</label>
+                <input type="text" class="span3" placeholder="@grayLighter">
+                <label>@formActionsBackground</label>
+                <input type="text" class="span3" placeholder="#f5f5f5">
+                <label>@btnPrimaryBackground</label>
+                <input type="text" class="span3" placeholder="@linkColor">
+                <label>@btnPrimaryBackgroundHighlight</label>
+                <input type="text" class="span3" placeholder="darken(@white, 10%);">
+
+              </div><!-- /span -->
+              <div class="span3">
+
+                <h3>وضیعت‌عای فرم &amp; اخطارها</h3>
+                <label>@warningText</label>
+                <input type="text" class="span3" placeholder="#c09853">
+                <label>@warningBackground</label>
+                <input type="text" class="span3" placeholder="#fcf8e3">
+                <label>@errorText</label>
+                <input type="text" class="span3" placeholder="#b94a48">
+                <label>@errorBackground</label>
+                <input type="text" class="span3" placeholder="#f2dede">
+                <label>@successText</label>
+                <input type="text" class="span3" placeholder="#468847">
+                <label>@successBackground</label>
+                <input type="text" class="span3" placeholder="#dff0d8">
+                <label>@infoText</label>
+                <input type="text" class="span3" placeholder="#3a87ad">
+                <label>@infoBackground</label>
+                <input type="text" class="span3" placeholder="#d9edf7">
+
+                <h3>نوار ناوبری</h3>
+                <label>@navbarHeight</label>
+                <input type="text" class="span3" placeholder="40px">
+                <label>@navbarBackground</label>
+                <input type="text" class="span3" placeholder="@grayDarker">
+                <label>@navbarBackgroundHighlight</label>
+                <input type="text" class="span3" placeholder="@grayDark">
+                <label>@navbarText</label>
+                <input type="text" class="span3" placeholder="@grayLight">
+                <label>@navbarBrandColor</label>
+                <input type="text" class="span3" placeholder="@navbarLinkColor">
+                <label>@navbarLinkColor</label>
+                <input type="text" class="span3" placeholder="@grayLight">
+                <label>@navbarLinkColorHover</label>
+                <input type="text" class="span3" placeholder="@white">
+                <label>@navbarLinkColorActive</label>
+                <input type="text" class="span3" placeholder="@navbarLinkColorHover">
+                <label>@navbarLinkBackgroundHover</label>
+                <input type="text" class="span3" placeholder="transparent">
+                <label>@navbarLinkBackgroundActive</label>
+                <input type="text" class="span3" placeholder="@navbarBackground">
+                <label>@navbarSearchBackground</label>
+                <input type="text" class="span3" placeholder="lighten(@navbarBackground, 25%)">
+                <label>@navbarSearchBackgroundFocus</label>
+                <input type="text" class="span3" placeholder="@white">
+                <label>@navbarSearchBorder</label>
+                <input type="text" class="span3" placeholder="darken(@navbarSearchBackground, 30%)">
+                <label>@navbarSearchPlaceholderColor</label>
+                <input type="text" class="span3" placeholder="#ccc">
+
+                <h3>افتادنی‌ها</h3>
+                <label>@dropdownBackground</label>
+                <input type="text" class="span3" placeholder="@white">
+                <label>@dropdownBorder</label>
+                <input type="text" class="span3" placeholder="rgba(0,0,0,.2)">
+                <label>@dropdownLinkColor</label>
+                <input type="text" class="span3" placeholder="@grayDark">
+                <label>@dropdownLinkColorHover</label>
+                <input type="text" class="span3" placeholder="@white">
+                <label>@dropdownLinkBackgroundHover</label>
+                <input type="text" class="span3" placeholder="@linkColor">
+              </div><!-- /span -->
+            </div><!-- /row -->
+          </section>
+
+          <section class="download" id="download">
+            <div class="page-header">
+              <h1>
+                ۴. دانلود کنید
+              </h1>
+            </div>
+            <div class="download-btn">
+              <a class="btn btn-primary" href="#" onclick="_gaq.push(['_trackEvent', 'Customize', 'Download', 'Customize and Download']);">سفارشی و دانلود کن</a>
+              <h4>چه چیزی در داخل آن است؟</h4>
+              <p>دانلود شامل سی‌اس‌اس کامپایل‌شده، سی‌اس‌اس کامپایل و فشرده‌شده و پلاگین‌های جی‌کوئری است که همه در یک فایل zip هستند.</p>
+            </div>
+          </section><!-- /download -->
+        </form>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-left"><a href="#">برگشت به بالا</a></p>
+        <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/jnaqsh" target="_blank">@jnaqsh</a>.</p>
+        <p>کد تحت اجازه‌نامهٔ <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a> می‌باشد. مستندات تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشد.</p>
+        <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
+        <ul class="footer-links">
+          <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+
+  </body>
+</html>
