@@ -54,7 +54,7 @@
 }
 .nav-list > li > a,
 .nav-list .nav-header {
-  margin-left:  -15px;
+  margin-left: -15px;
   margin-right: -15px;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
@@ -68,7 +68,7 @@
   background-color: @linkColor;
 }
 .nav-list [class^="icon-"] {
-  margin-right: 2px;
+  margin-left: 2px;
 }
 // Dividers (basically an hr) within the dropdown
 .nav-list .divider {
@@ -114,7 +114,7 @@
   padding-bottom: 8px;
   line-height: @baseLineHeight;
   border: 1px solid transparent;
-  .border-radius(4px 4px 0 0 0);
+  .border-radius(4px 4px 0 0);
   &:hover {
     border-color: @grayLighter @grayLighter #ddd;
   }
@@ -195,7 +195,7 @@
 // ---------
 
 .nav-tabs .dropdown-menu {
-  .border-radius(0 6px 6px 0); // remove the top rounded corners here since there is a hard edge above the menu
+  .border-radius(0 0 6px 6px); // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-pills .dropdown-menu {
   .border-radius(6px); // make rounded corners match the pills
@@ -329,40 +329,40 @@
   margin-bottom: 3px;
 }
 
-// Tabs on the right
-.tabs-right > .nav-tabs {
-  float: right;
+// Tabs on the left
+.tabs-left > .nav-tabs {
+  float: left;
   margin-right: 19px;
   border-right: 1px solid #ddd;
 }
-.tabs-right > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  .border-radius(4px 4px 0 0);
+  .border-radius(4px 0 0 4px);
 }
-.tabs-right > .nav-tabs > li > a:hover {
+.tabs-left > .nav-tabs > li > a:hover {
   border-color: @grayLighter #ddd @grayLighter @grayLighter;
 }
-.tabs-right > .nav-tabs .active > a,
-.tabs-right > .nav-tabs .active > a:hover {
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover {
   border-color: #ddd transparent #ddd #ddd;
   *border-right-color: @white;
 }
 
-// Tabs on the left
-.tabs-left > .nav-tabs {
-  float: left;
+// Tabs on the right
+.tabs-right > .nav-tabs {
+  float: right;
   margin-left: 19px;
   border-left: 1px solid #ddd;
 }
-.tabs-left > .nav-tabs > li > a {
+.tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
   .border-radius(0 4px 4px 0);
 }
-.tabs-left > .nav-tabs > li > a:hover {
+.tabs-right > .nav-tabs > li > a:hover {
   border-color: @grayLighter @grayLighter @grayLighter #ddd;
 }
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover {
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: @white;
 }
