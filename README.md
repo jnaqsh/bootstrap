@@ -1,16 +1,16 @@
-[Twitter Bootstrap](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+[Twitter Bootstrap RTL](http://jnaqsh.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
 =================
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat) at Twitter.
+Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat) at Twitter originally and make compatible with RTL languages by Hamed Ramezanian at Naqsh Jahan Toos Inc.
 
-To get started, checkout http://getbootstrap.com!
+To get started, checkout http://rbootstrap.ir!
 
 
 
 Quick start
 -----------
 
-Clone the repo, `git clone git://github.com/twitter/bootstrap.git`, or [download the latest release](https://github.com/twitter/bootstrap/zipball/master).
+Clone the repo, `git clone git://github.com/jnaqsh/bootstrap.git`, or [download the latest release](https://github.com/jnaqsh/bootstrap/zipball/master).
 
 
 
@@ -38,14 +38,14 @@ Bug tracker
 
 Have a bug? Please create an issue here on GitHub that conforms with [necolas's guidelines](https://github.com/necolas/issue-guidelines).
 
-https://github.com/twitter/bootstrap/issues
+https://github.com/jnaqsh/bootstrap/issues
 
 
 
 Twitter account
 ---------------
 
-Keep up to date on announcements and more by following Bootstrap on Twitter, [@TwBootstrap](http://twitter.com/TwBootstrap).
+Keep up to date on announcements and more by following Bootstrap RTL on Twitter, [@rBootstrap](http://twitter.com/rBootstrap).
 
 
 
@@ -89,7 +89,7 @@ $ npm install recess connect uglify-js jshint -g
 ```
 
 + **build** - `make`
-Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://twitter.github.com/bootstrap/less.html#compiling">Read more in our docs &raquo;</a>
+Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://jnaqsh.github.com/bootstrap/less.html#compiling">Read more in our docs &raquo;</a>
 
 + **test** - `make test`
 Runs jshint and qunit tests headlessly in [phantomjs](http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
@@ -109,22 +109,16 @@ Please submit all pull requests against *-wip branches. If your unit test contai
 Authors
 -------
 
-**Mark Otto**
+**Hamed Ramezanian**
 
-+ http://twitter.com/mdo
-+ http://github.com/markdotto
-
-**Jacob Thornton**
-
-+ http://twitter.com/fat
-+ http://github.com/fat
++ http://github.com/iCEAGE
 
 
 
 Copyright and license
 ---------------------
 
-Copyright 2012 Twitter, Inc.
+Copyright 2012 Naqsh Jahan Toos, Inc. This product based on twitter bootstrap, which is Copyright 2012 Twitter Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
