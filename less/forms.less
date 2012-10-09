@@ -424,7 +424,7 @@ select:focus:required:invalid {
     *margin-right: 0;
     font-size: @baseFontSize;
     vertical-align: top;
-    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
     // Make input on top when focused so blue border and shadow always show
     &:focus {
       z-index: 2;
@@ -461,14 +461,14 @@ select:focus:required:invalid {
   }
   .add-on:first-child,
   .btn:first-child {
-    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
   }
 }
 .input-append {
   input,
   select,
   .uneditable-input {
-    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
   }
   .add-on,
   .btn {
@@ -476,7 +476,7 @@ select:focus:required:invalid {
   }
   .add-on:last-child,
   .btn:last-child {
-    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
   }
 }
 // Remove all border-radius for inputs with both prepend and append
@@ -489,12 +489,12 @@ select:focus:required:invalid {
   .add-on:first-child,
   .btn:first-child {
     margin-left: -1px;
-    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
   }
   .add-on:last-child,
   .btn:last-child {
     margin-right: -1px;
-    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
   }
 }
 
