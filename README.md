@@ -13,7 +13,6 @@ Quick start
 Clone the repo, `git clone git://github.com/jnaqsh/bootstrap.git`, or [download the latest release](https://github.com/jnaqsh/bootstrap/zipball/master).
 
 
-
 Versioning
 ----------
 
@@ -89,6 +88,7 @@ $ npm install recess connect uglify-js jshint -g
 ```
 
 + **build** - `make`
+
 Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://jnaqsh.github.com/bootstrap/less.html#compiling">Read more in our docs &raquo;</a>
 
 + **test** - `make test`

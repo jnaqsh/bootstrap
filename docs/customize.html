@@ -123,7 +123,7 @@
               </div><!-- /span -->
               <div class="span3">
                 <h3>اجزا</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="button-groups.less"> گروه دکمه‌ها و افتادنی‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="button-groups.less"> گروه‌های دکمه و افتادنی‌ها</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="navs.less"> ناوبری‌ها، تب‌ها و پیل‌ها</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="navbar.less"> نوار ناوبری</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="breadcrumbs.less"> تکه کیک‌ها</label>
@@ -133,25 +133,27 @@
                 <label class="checkbox"><input checked="checked" type="checkbox" value="alerts.less"> اخطارها</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="progress-bars.less"> نوارهای پیشرفت</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="hero-unit.less"> واحد قهرمان</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="media.less"> واحد رسانه</label>
                 <h3>اجزای جاوااسکریپت</h3>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="tooltip.less"> بالنک‌ها</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="popovers.less"> پوب‌ها</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="modals.less"> مُدال‌ها</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="dropdowns.less"> افتادنی‌ها</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="accordion.less"> فروریختنی‌ها</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="carousel.less"> چرخ فلک</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="accordion.less"> فروریختنی</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="carousel.less"> چرخ و فلک</label>
               </div><!-- /span -->
               <div class="span3">
                 <h3>مختلف</h3>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="wells.less"> چاه‌ها</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="media.less"> شی رسانه</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="wells.less"> Wells</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="close.less"> آیکن بستن</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="utilities.less"> کلاس‌های کمکی</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="utilities.less"> ابزار کاربردی</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="component-animations.less"> اجزای پویانمایی‌ها</label>
                 <h3>پاسخگو</h3>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-utilities.less"> کلاس‌های نمایان/مخفی</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-767px-max.less"> تبلت‌های باریک و کوچک‌تر (کمتر از ۷۶۷ پیکسل)</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-768px-979px.less"> تبلت‌ها تا دسکتاپ‌ها (۷۶۷ تا ۹۷۹ پیکسل)</label>
-                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-1200px-min.less"> دسکتاپ‌ها بزرگ (بیشتر از ۱۲۰۰ پیکسل)</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-767px-max.less"> تبلت‌های باریک و یا کوچک‌تر (کمتر از ۷۶۷ پیکسل)</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-768px-979px.less"> تبلت‌ها تا دسکتاپ‌ها (۷۶۷ پیکسل تا ۹۷۹ پیکسل)</label>
+                <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-1200px-min.less"> دسکتاپ‌های بزرگ (بیشتر از ۱۲۰۰ پیکسل)</label>
                 <label class="checkbox"><input checked="checked" type="checkbox" value="responsive-navbar.less"> نوار ناوبری پاسخگو</label>
               </div><!-- /span -->
             </div><!-- /row -->
@@ -297,12 +299,14 @@
                 <input type="text" class="span3" placeholder="Georgia, 'Times New Roman', Times, serif">
                 <label>@monoFontFamily</label>
                 <input type="text" class="span3" placeholder="Menlo, Monaco, 'Courier New', monospace">
+
                 <label>@baseFontSize</label>
                 <input type="text" class="span3" placeholder="14px">
                 <label>@baseFontFamily</label>
                 <input type="text" class="span3" placeholder="@sansFontFamily">
                 <label>@baseLineHeight</label>
                 <input type="text" class="span3" placeholder="20px">
+
                 <label>@altFontFamily</label>
                 <input type="text" class="span3" placeholder="@serifFontFamily">
                 <label>@headingsFontFamily</label>
@@ -311,6 +315,28 @@
                 <input type="text" class="span3" placeholder="bold">
                 <label>@headingsColor</label>
                 <input type="text" class="span3" placeholder="inherit">
+
+                <label>@fontSizeLarge</label>
+                <input type="text" class="span3" placeholder="@baseFontSize * 1.25">
+                <label>@fontSizeSmall</label>
+                <input type="text" class="span3" placeholder="@baseFontSize * 0.85">
+                <label>@fontSizeMini</label>
+                <input type="text" class="span3" placeholder="@baseFontSize * 0.75">
+
+                <label>@paddingLarge</label>
+                <input type="text" class="span3" placeholder="11px 19px">
+                <label>@paddingSmall</label>
+                <input type="text" class="span3" placeholder="2px 10px">
+                <label>@paddingMini</label>
+                <input type="text" class="span3" placeholder="1px 6px">
+
+                <label>@baseBorderRadius</label>
+                <input type="text" class="span3" placeholder="4px">
+                <label>@borderRadiusLarge</label>
+                <input type="text" class="span3" placeholder="6px">
+                <label>@borderRadiusSmall</label>
+                <input type="text" class="span3" placeholder="3px">
+
                 <label>@heroUnitBackground</label>
                 <input type="text" class="span3" placeholder="@grayLighter">
                 <label>@heroUnitHeadingColor</label>
@@ -396,6 +422,11 @@
                 <input type="text" class="span3" placeholder="darken(@navbarSearchBackground, 30%)">
                 <label>@navbarSearchPlaceholderColor</label>
                 <input type="text" class="span3" placeholder="#ccc">
+
+                <label>@navbarCollapseWidth</label>
+                <input type="text" class="span3" placeholder="979px">
+                <label>@navbarCollapseDesktopWidth</label>
+                <input type="text" class="span3" placeholder="@navbarCollapseWidth + 1">
 
                 <h3>افتادنی‌ها</h3>
                 <label>@dropdownBackground</label>
