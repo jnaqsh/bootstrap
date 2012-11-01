@@ -41,7 +41,7 @@
           </div>
 
           <h3>{{_i}}منحصربه‌فرد یا کامپایل‌شده{{/i}}</h3>
-          <p>{{_i}}اگر شما آخرین نسخهٔ بوت‌استرپ را دانلود کرده باشید، هم نسخهٔ کامل <strong>bootstrap.js</strong> و هم نسخهٔ فشرده <strong>bootstrap.min.js</strong> شامل تمام پلاگین‌های این صفحه می‌شوند.{{/i}}</p>
+          <p>{{_i}}پلاگین‌ها می‌توانند به‌صورت جدا (اگرچه بعضی از آن‌ها دارای نیازمندی‌هایی هستند) و یا یک‌جا با هم استفاده شوند. هم <strong>bootstrap.js</strong> و <strong>bootstrap.min.js</strong> شامل تمام پلاگین‌ها در یک فایل هستند.{{/i}}</p>
 
           <h3>{{_i}}خصوصیت‌های Data{{/i}}</h3>
           <p>{{_i}}شما می‌توانید به‌وسیلهٔ API بوت‌استرپ تمام پلاگین‌ها را حتی بدون نوشتن یک خط کد جاوااسکریپت استفاده کنید. کلاس زیر نخستین کلاس API بوت‌استرپ است و شما باید در هنگام استفاده از پلاگین، به این توجه داشته‌باشد.{{/i}}</p>
@@ -49,7 +49,7 @@
           <p>{{_i}}همان‌طور که گفته شد، در برخی از مواقع بهتر است این ویژگی را خاموش کنیم. بنابراین ما ویژگی‌ای را آماده کرده‌ایم که آن را به‌راحتی می‌توانید غیرفعال کنید. فقط لازم است تابع <code>off</code> را با پارامتر `'data-api'` بر روی <code>body</code> فراخوانی کنید. مانند زیر:{{/i}}
           <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
 
-          <p>{{_i}}همچنین شما می‌توانید پلاگین خاصی را با استفاده از دستور زیر غیرفعال کنید:{{/i}}</p>
+          <p>{{_i}}همچنین شما می‌توانید پلاگین خاصی را با استفاده از نام پلاگین به عنوان فضای نام همراه با data-api استفاده کنید. مانند:{{/i}}</p>
           <pre class="prettyprint linenums">$('body').off('.alert.data-api')</pre>
 
           <h3>{{_i}}API قابل برنامه‌ریزی{{/i}}</h3>
@@ -117,7 +117,7 @@ $('#myModal').on('show', function (e) {
                 <h3>{{_i}}تیتر مدال{{/i}}</h3>
               </div>
               <div class="modal-body">
-                <p>{{_i}}نمونه‌ای از محتویات…{{/i}}</p>
+                <p>{{_i}}نمونه‌ای از محتویات&hellip;{{/i}}</p>
               </div>
               <div class="modal-footer">
                 <a href="#" class="btn">{{_i}}بستن{{/i}}</a>
@@ -132,7 +132,7 @@ $('#myModal').on('show', function (e) {
     &lt;h3&gt;{{_i}}تیتر مدال{{/i}}&lt;/h3&gt;
   &lt;/div&gt;
   &lt;div class="modal-body"&gt;
-    &lt;p&gt;{{_i}}نمونه‌ای از محتویات…{{/i}}&lt;/p&gt;
+    &lt;p&gt;{{_i}}نمونه‌ای از محتویات&hellip;{{/i}}&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
     &lt;a href="#" class="btn"&gt;{{_i}}بستن{{/i}}&lt;/a&gt;
@@ -179,17 +179,17 @@ $('#myModal').on('show', function (e) {
             <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">{{_i}}اجرای زنده مُدال{{/i}}</a>
           </div>{{! /example }}
 <pre class="prettyprint linenums">
-&lt;-- Button to trigger modal --&gt;
+&lt!-- Button to trigger modal --&gt;
 &lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;{{_i}}اجرای زنده مُدال{{/i}}&lt;/a&gt;
 
-&lt;-- Modal --&gt;
-&lt;div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+&lt!-- Modal --&gt;
+&lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
   &lt;div class="modal-header"&gt;
     &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&times;&lt;/button&gt;
     &lt;h3 id="myModalLabel"&gt;تیتر مدال&lt;/h3&gt;
   &lt;/div&gt;
   &lt;div class="modal-body"&gt;
-    &lt;p&gt;{{_i}}نمونه‌ای از محتویات…{{/i}}&lt;/p&gt;
+    &lt;p&gt;{{_i}}نمونه‌ای از محتویات&hellip;{{/i}}&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
     &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;{{_i}}بستن{{/i}}&lt;/button&gt;
@@ -436,8 +436,8 @@ $('#myModal').on('hidden', function () {
           <p><em>{{_i}}هیچی{{/i}}</em></p>
 
           <h3>{{_i}}توابع{{/i}}</h3>
-          <h4>$().dropdown()</h4>
-          <p>{{_i}}تبدیل شدن نوار آدرس یا ناوبری براساس تب یا پیل به منوهای افتادنی با صدا زدن این تابع.{{/i}}</p>
+          <h4>$().dropdown('toggle')</h4>
+          <p>{{_i}}یک api برنامه‌ریزی شده برای تغییر وضعیت منوها در نوار ناوبری و ناوبری‌های تبی.{{/i}}</p>
         </section>
 
 
@@ -734,7 +734,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
              <tr>
                <td>{{_i}}html{{/i}}</td>
                <td>{{_i}}boolean{{/i}}</td>
-               <td>true</td>
+               <td>false</td>
                <td>{{_i}}اچ‌تی‌ام‌ال در داخل بالنک قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید از متن ساده استفاده کنید.{{/i}}</td>
              </tr>
              <tr>
@@ -855,6 +855,16 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟">{{_i}}کلیک کنید تا پوب تغییر حالت دهد{{/i}}</a>
         </div>
 
+        <h4>{{_i}}Four directions{{/i}}</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+          </ul>
+        </div>{{! /example }}
+
 
         <hr class="bs-docs-separator">
 
@@ -884,7 +894,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
            <tr>
              <td>{{_i}}html{{/i}}</td>
              <td>{{_i}}boolean{{/i}}</td>
-             <td>true</td>
+             <td>false</td>
              <td>{{_i}}اچ‌تی‌ام‌ال در داخل پوب قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید، از متن ساده استفاده کنید.{{/i}}</td>
            </tr>
            <tr>
@@ -1532,6 +1542,12 @@ $('.carousel').carousel({
                  <td>{{_i}}function{{/i}}</td>
                  <td>{{_i}}exact match,<br> case sensitive,<br> case insensitive{{/i}}</td>
                  <td>{{_i}}تابعی که نتایج کامل‌کننده‌ها را مرتب می‌کند. آرگومان <code>items</code> را دریافت می‌کند و شی کامل‌کننده نوشته را می‌تواند ببیند. <code>this.query</code> به جستجوی جاری اشاره می‌کند.{{/i}}</td>
+               </tr>
+               <tr>
+                 <td>{{_i}}updater{{/i}}</td>
+                 <td>{{_i}}function{{/i}}</td>
+                 <td>{{_i}}returns selected item{{/i}}</td>
+                 <td>{{_i}}The method used to return selected item. Accepts a single argument, the <code>item</code> and has the scope of the typeahead instance.{{/i}}</td>
                </tr>
                <tr>
                  <td>{{_i}}highlighter{{/i}}</td>

@@ -122,7 +122,7 @@
           </div>
 
           <h3>منحصربه‌فرد یا کامپایل‌شده</h3>
-          <p>اگر شما آخرین نسخهٔ بوت‌استرپ را دانلود کرده باشید، هم نسخهٔ کامل <strong>bootstrap.js</strong> و هم نسخهٔ فشرده <strong>bootstrap.min.js</strong> شامل تمام پلاگین‌های این صفحه می‌شوند.</p>
+          <p>پلاگین‌ها می‌توانند به‌صورت جدا (اگرچه بعضی از آن‌ها دارای نیازمندی‌هایی هستند) و یا یک‌جا با هم استفاده شوند. هم <strong>bootstrap.js</strong> و <strong>bootstrap.min.js</strong> شامل تمام پلاگین‌ها در یک فایل هستند.</p>
 
           <h3>خصوصیت‌های Data</h3>
           <p>شما می‌توانید به‌وسیلهٔ API بوت‌استرپ تمام پلاگین‌ها را حتی بدون نوشتن یک خط کد جاوااسکریپت استفاده کنید. کلاس زیر نخستین کلاس API بوت‌استرپ است و شما باید در هنگام استفاده از پلاگین، به این توجه داشته‌باشد.</p>
@@ -130,7 +130,7 @@
           <p>همان‌طور که گفته شد، در برخی از مواقع بهتر است این ویژگی را خاموش کنیم. بنابراین ما ویژگی‌ای را آماده کرده‌ایم که آن را به‌راحتی می‌توانید غیرفعال کنید. فقط لازم است تابع <code>off</code> را با پارامتر `'data-api'` بر روی <code>body</code> فراخوانی کنید. مانند زیر:
           <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
 
-          <p>همچنین شما می‌توانید پلاگین خاصی را با استفاده از دستور زیر غیرفعال کنید:</p>
+          <p>همچنین شما می‌توانید پلاگین خاصی را با استفاده از نام پلاگین به عنوان فضای نام همراه با data-api استفاده کنید. مانند:</p>
           <pre class="prettyprint linenums">$('body').off('.alert.data-api')</pre>
 
           <h3>API قابل برنامه‌ریزی</h3>
@@ -197,7 +197,7 @@ $('#myModal').on('show', function (e) {
                 <h3>تیتر مدال</h3>
               </div>
               <div class="modal-body">
-                <p>نمونه‌ای از محتویات…</p>
+                <p>نمونه‌ای از محتویات&hellip;</p>
               </div>
               <div class="modal-footer">
                 <a href="#" class="btn">بستن</a>
@@ -212,7 +212,7 @@ $('#myModal').on('show', function (e) {
     &lt;h3&gt;تیتر مدال&lt;/h3&gt;
   &lt;/div&gt;
   &lt;div class="modal-body"&gt;
-    &lt;p&gt;نمونه‌ای از محتویات…&lt;/p&gt;
+    &lt;p&gt;نمونه‌ای از محتویات&hellip;&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
     &lt;a href="#" class="btn"&gt;بستن&lt;/a&gt;
@@ -259,17 +259,17 @@ $('#myModal').on('show', function (e) {
             <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">اجرای زنده مُدال</a>
           </div>
 <pre class="prettyprint linenums">
-&lt;-- Button to trigger modal --&gt;
+&lt!-- Button to trigger modal --&gt;
 &lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;اجرای زنده مُدال&lt;/a&gt;
 
-&lt;-- Modal --&gt;
-&lt;div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+&lt!-- Modal --&gt;
+&lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
   &lt;div class="modal-header"&gt;
     &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&times;&lt;/button&gt;
     &lt;h3 id="myModalLabel"&gt;تیتر مدال&lt;/h3&gt;
   &lt;/div&gt;
   &lt;div class="modal-body"&gt;
-    &lt;p&gt;نمونه‌ای از محتویات…&lt;/p&gt;
+    &lt;p&gt;نمونه‌ای از محتویات&hellip;&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
     &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;بستن&lt;/button&gt;
@@ -516,8 +516,8 @@ $('#myModal').on('hidden', function () {
           <p><em>هیچی</em></p>
 
           <h3>توابع</h3>
-          <h4>$().dropdown()</h4>
-          <p>تبدیل شدن نوار آدرس یا ناوبری براساس تب یا پیل به منوهای افتادنی با صدا زدن این تابع.</p>
+          <h4>$().dropdown('toggle')</h4>
+          <p>یک api برنامه‌ریزی شده برای تغییر وضعیت منوها در نوار ناوبری و ناوبری‌های تبی.</p>
         </section>
 
 
@@ -814,7 +814,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
              <tr>
                <td>html</td>
                <td>boolean</td>
-               <td>true</td>
+               <td>false</td>
                <td>اچ‌تی‌ام‌ال در داخل بالنک قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید از متن ساده استفاده کنید.</td>
              </tr>
              <tr>
@@ -935,6 +935,16 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟">کلیک کنید تا پوب تغییر حالت دهد</a>
         </div>
 
+        <h4>Four directions</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+          </ul>
+        </div>
+
 
         <hr class="bs-docs-separator">
 
@@ -964,7 +974,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
            <tr>
              <td>html</td>
              <td>boolean</td>
-             <td>true</td>
+             <td>false</td>
              <td>اچ‌تی‌ام‌ال در داخل پوب قرار می‌دهد. اگر غیرفعال باشد تابع <code>text</code> جی‌کوئری در داخل dom محتویات متنی قرار می‌دهد. اگر از حملات XSS نگران هستید، از متن ساده استفاده کنید.</td>
            </tr>
            <tr>
@@ -1612,6 +1622,12 @@ $('.carousel').carousel({
                  <td>function</td>
                  <td>exact match,<br> case sensitive,<br> case insensitive</td>
                  <td>تابعی که نتایج کامل‌کننده‌ها را مرتب می‌کند. آرگومان <code>items</code> را دریافت می‌کند و شی کامل‌کننده نوشته را می‌تواند ببیند. <code>this.query</code> به جستجوی جاری اشاره می‌کند.</td>
+               </tr>
+               <tr>
+                 <td>updater</td>
+                 <td>function</td>
+                 <td>returns selected item</td>
+                 <td>The method used to return selected item. Accepts a single argument, the <code>item</code> and has the scope of the typeahead instance.</td>
                </tr>
                <tr>
                  <td>highlighter</td>

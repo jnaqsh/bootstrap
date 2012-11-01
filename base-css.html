@@ -953,7 +953,6 @@
             <li>برای قرارگیری در یک ستون، هر کنترل‌کنندهٔ مرتبط را در <code>.controls</code> قرار دهید.</li>
           </ul>
           <form class="bs-docs-example form-horizontal">
-            <legend>راهنما</legend>
             <div class="control-group">
               <label class="control-label" for="inputEmail">ایمیل</label>
               <div class="controls">
@@ -1158,14 +1157,16 @@
           <p>از هر دو کلاس و دو نمونه از کلاس <code>.add-on</code> برای ایجاد یک ورودی با متن قبل و بعد استفاده کنید.</p>
           <form class="bs-docs-example form-inline">
             <div class="input-prepend input-append">
-              <span class="add-on">٫۰۰</span>
+              <span class="add-on">٫۰</span>
               <input class="span2" id="appendedPrependedInput" size="16" type="text">
               <span class="add-on">﷼</span>
             </div>
           </form>
 <pre class="prettyprint linenums">
 &lt;div class="input-prepend input-append"&gt;
-  &lt;span class="add-on"&gt;٫۰۰&lt;/span&gt;&lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;&lt;span class="add-on"&gt;﷼&lt;/span&gt;
+  &lt;span class="add-on"&gt;٫۰۰&lt;/span&gt;
+  &lt;input class="span2" id="appendedPrependedInput" size="16" type="text"&gt;
+  &lt;span class="add-on"&gt;﷼&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1173,23 +1174,139 @@
           <p>به‌جای استفاده از <code>&lt;span&gt;</code> با متن از یک دکمه با کلاس <code>.btn</code> استفاده کنید تا یک دکمه به قبل یا بعد ورودی بچسبد.</p>
           <form class="bs-docs-example">
             <div class="input-append">
-              <input class="span2" id="appendedInputButton" size="16" type="text">
+              <input class="span2" id="appendedInputButton" type="text">
               <button class="btn" type="button">برو!</button>
             </div>
-            <br>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButton" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;برو!&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+          <form class="bs-docs-example">
             <div class="input-append">
-              <input class="span2" id="appendedInputButtons" size="16" type="text">
+              <input class="span2" id="appendedInputButtons" type="text">
               <button class="btn" type="button">جستجو</button>
               <button class="btn" type="button">تنظیمات</button>
             </div>
           </form>
 <pre class="prettyprint linenums">
 &lt;div class="input-append"&gt;
-  &lt;input class="span2" id="appendedInputButton" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;برو!&lt;/button&gt;
+  &lt;input class="span2" id="appendedInputButton" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;جستجو&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;تنظیمات&lt;/button&gt;
 &lt;/div&gt;
+</pre>
 
+          <h4>دکمه‌های افتادنی</h4>
+          <p></p>
+          <form class="bs-docs-example">
+            <div class="input-append">
+              <input class="span2" id="appendedDropdownButton" type="text">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">عمل <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /input-append -->
+          </form>
+<pre class="prettyprint linenums">
 &lt;div class="input-append"&gt;
-  &lt;input class="span2" id="appendedInputButtons" size="16" type="text"&gt;&lt;button class="btn" type="button"&gt;جستجو&lt;/button&gt;&lt;button class="btn" type="button"&gt;تنظیمات&lt;/button&gt;
+  &lt;input class="span2" id="appendedDropdownButton" type="text"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">عمل <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input class="span2" id="prependedDropdownButton" type="text">
+            </div><!-- /input-prepend -->
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      عمل
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;input class="span2" id="prependedDropdownButton" type="text"&gt;
+&lt;/div&gt;
+</pre>
+
+          <form class="bs-docs-example">
+            <div class="input-prepend input-append">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">عمل <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input class="span2" id="appendedPrependedDropdownButton" type="text">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">عمل <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">عمل</a></li>
+                  <li><a href="#">عملی دیگر</a></li>
+                  <li><a href="#">یک چیز دیگر</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">پیوند جداشده</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /input-prepend input-append -->
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      عمل
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;input class="span2" id="appendedPrependedDropdownButton" type="text"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      عمل
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1220,7 +1337,18 @@
           <h3>اندازه کنترل‌ها</h3>
           <p>از اندازه‌های نسبی مانند <code>.input-large</code> استفاده کنید و یا اندازهٔ ورودی‌ها را مانند ستون شبکه‌ای به‌وسیلهٔ <code>.span*</code> مشخص کنید.</p>
 
-          <h4>اندازه نسبی</h4>
+          <h4>ورودی‌های سطح بلاکی</h4>
+          <p>هر عنصر <code>&lt;input&gt;</code> یا <code>&lt;textarea&gt;</code> می‌تواند به‌مانند یک عنصر بلاکی شود.</p>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls">
+              <input class="input-block-level" type="text" placeholder=".input-block-level">
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
+</pre>
+
+          <h4>اندازه‌های نسبی</h4>
           <form class="bs-docs-example" style="padding-bottom: 15px;">
             <div class="controls docs-input-sizes">
               <input class="input-mini" type="text" placeholder=".input-mini">
@@ -1407,9 +1535,9 @@
               </div>
             </div>
             <div class="control-group info">
-              <label class="control-label" for="inputError">ورودی با info</label>
+              <label class="control-label" for="inputInfo">ورودی با info</label>
               <div class="controls">
-                <input type="text" id="inputError">
+                <input type="text" id="inputInfo">
                 <span class="help-inline">نام کاربری پیش‌تر گرفته شده‌است</span>
               </div>
             </div>
