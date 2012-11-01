@@ -60,10 +60,10 @@
      -moz-background-clip: padding;
           background-clip: padding-box;
 
-  // Aligns the dropdown menu to right
-  &.pull-right {
-    right: 0;
-    left: auto;
+  // Aligns the dropdown menu to left
+  &.pull-left {
+    left: 0;
+    right: auto;
   }
 
   // Dividers (basically an hr) within the dropdown
@@ -182,9 +182,9 @@
   bottom: 0;
   margin-top: 0;
   margin-bottom: -2px;
-  -webkit-border-radius: 5px 5px 5px 0;
-     -moz-border-radius: 5px 5px 5px 0;
-          border-radius: 5px 5px 5px 0;
+  -webkit-border-radius: 5px 5px 0 5px;
+     -moz-border-radius: 5px 5px 0 5px;
+          border-radius: 5px 5px 0 5px;
 }
 
 // Caret to indicate there is a submenu
@@ -205,19 +205,19 @@
   border-right-color: @dropdownLinkColorHover;
 }
 
-// Left aligned submenus
-.dropdown-submenu.pull-left {
+// Right aligned submenus
+.dropdown-submenu.pull-right {
   // Undo the float
-  // Yes, this is awkward since .pull-left adds a float, but it sticks to our conventions elsewhere.
+  // Yes, this is awkward since .pull-right adds a float, but it sticks to our conventions elsewhere.
   float: none;
 
   // Positioning the submenu
   > .dropdown-menu {
-    left: -100%;
-    margin-left: 10px;
-    -webkit-border-radius: 6px 0 6px 6px;
-       -moz-border-radius: 6px 0 6px 6px;
-            border-radius: 6px 0 6px 6px;
+    right: -100%;
+    margin-right: 10px;
+    -webkit-border-radius: 0 6px 6px 6px;
+       -moz-border-radius: 0 6px 6px 6px;
+            border-radius: 0 6px 6px 6px;
   }
 }
 
