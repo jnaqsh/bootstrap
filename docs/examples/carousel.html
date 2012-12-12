@@ -28,10 +28,16 @@
 
     /* Special class on .container surrounding .navbar, used for positioning it into place. */
     .navbar-wrapper {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 10;
       margin-top: 20px;
       margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
     }
 
     /* Remove border and change up box shadow for more contrast */
@@ -71,24 +77,26 @@
     }
 
     .carousel .container {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      position: relative;
+      z-index: 9;
     }
 
     .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
       background-color: transparent;
       border: 0;
-      font-size: 120px;
-      margin-top: 0;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
     }
 
     .carousel .item {
       height: 500px;
     }
     .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
       min-width: 100%;
       height: 500px;
     }
@@ -98,7 +106,7 @@
       position: static;
       max-width: 550px;
       padding: 0 20px;
-      margin-bottom: 100px;
+      margin-top: 200px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -219,7 +227,7 @@
       .carousel-caption {
         width: 65%;
         padding: 0 70px;
-        margin-bottom: 40px;
+        margin-top: 100px;
       }
       .carousel-caption h1 {
         font-size: 30px;
@@ -250,11 +258,11 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
 
   <body>
@@ -263,43 +271,45 @@
 
     <!-- NAVBAR
     ================================================== -->
-    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
-    <div class="container navbar-wrapper">
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
 
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">نام پروژه</a>
-          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">صفحه اصلی</a></li>
-              <li><a href="#about">درباره ما</a></li>
-              <li><a href="#contact">تماس با ما</a></li>
-              <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">افتادنی <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">عمل</a></li>
-                  <li><a href="#">عملی دیگر</a></li>
-                  <li><a href="#">یک چیز دیگر</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">تیتر ناوبری</li>
-                  <li><a href="#">پیوند جداشده</a></li>
-                  <li><a href="#">پیوند جداشده دیگر</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!-- /.navbar-inner -->
-      </div><!-- /.navbar -->
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">نام پروژه</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">صفحه اصلی</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#contact">تماس با ما</a></li>
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">افتادنی <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">عمل</a></li>
+                    <li><a href="#">عملی دیگر</a></li>
+                    <li><a href="#">یک چیز دیگر</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">عنوان ناوبری</li>
+                    <li><a href="#">پیوند جداشده</a></li>
+                    <li><a href="#">یک پیوند جداشده دیگر</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
 
-    </div><!-- /.container -->
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
 
 
 
@@ -353,19 +363,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
-          <img class="img-circle" src="http://placehold.it/140x140">
+          <img class="img-circle" data-src="holder.js/140x140">
           <h2>تیتر</h2>
           <p> آزادی برای استفاده از برنامه به معنای آزادی هر شخص و یا سازمانی برای استفاده از آن برنامه بر روی هر سیستم کامپیوتری، برای هر کاری، و بدون نیاز به هر گونه ارتباط بعدی با توسعه‌دهنده و یا هر نهاد خاصی می‌باشد. در این نوع آزادی، هدف کاربر اهمیت دارد نه هدف توسعه‌دهنده.</p>
           <p><a class="btn" href="#">جزئیات &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="http://placehold.it/140x140">
+          <img class="img-circle" data-src="holder.js/140x140">
           <h2>تیتر</h2>
           <p> آزادی برای استفاده از برنامه به معنای آزادی هر شخص و یا سازمانی برای استفاده از آن برنامه بر روی هر سیستم کامپیوتری، برای هر کاری، و بدون نیاز به هر گونه ارتباط بعدی با توسعه‌دهنده و یا هر نهاد خاصی می‌باشد. در این نوع آزادی، هدف کاربر اهمیت دارد نه هدف توسعه‌دهنده.</p>
           <p><a class="btn" href="#">جزئیات &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="http://placehold.it/140x140">
+          <img class="img-circle" data-src="holder.js/140x140">
           <h2>تیتر</h2>
           <p> آزادی برای استفاده از برنامه به معنای آزادی هر شخص و یا سازمانی برای استفاده از آن برنامه بر روی هر سیستم کامپیوتری، برای هر کاری، و بدون نیاز به هر گونه ارتباط بعدی با توسعه‌دهنده و یا هر نهاد خاصی می‌باشد. در این نوع آزادی، هدف کاربر اهمیت دارد نه هدف توسعه‌دهنده.</p>
           <p><a class="btn" href="#">جزئیات &raquo;</a></p>

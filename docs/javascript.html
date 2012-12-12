@@ -19,11 +19,11 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
 
   </head>
 
@@ -134,6 +134,14 @@ $("#myModal").modal('show')                // مقداردهی و سپس فرا�
 </pre>
           <p>همچنین هر پلاگین سازندهٔ خودش را با فراخوانی خصوصیت `Constructor` نمایش می‌دهد: <code>$.fn.popover.Constructor</code>. اگر شما یک شی از پلاگین خاصی را می‌خواهید بدست آورید، به‌صورت مستقیم از عنصرش آن را بخواهید: <code>$('[rel=popover]').data('popover')</code>.</p>
 
+          <h3>بدون تداخل</h3>
+          <p>گاهی اوقات نیاز است که پلاگین‌های بوت‌استرپ را با دیگر چارچوب‌های رابط کاربری استفاده کرد. در این موارد تداخل فضای نام‌ها پیش می‌آید. اگر این اتفاق افتاد از <code>.noConflict</code> در پلاگینی که نیاز است، استفاده کنید.</p>
+
+<pre class="prettyprint linenums">
+var bootstrapButton = $.fn.button.noConflict() // به مقداری تخصیص داده شده، $.fn.button را برمی‌گرداند.
+$.fn.bootstrapBtn = bootstrapButton            // به $.fn.button کارایی بوت‌استرپ را اعمال می‌کند.
+</pre>
+
           <h3>رویدادها</h3>
           <p>بوت‌استرپ برای تمام پلاگین‌هایش رویدادهای خاص و واحدی را آماده کرده‌است. که به‌طور کلی آن‌ها به‌صورت مصدر و یا اسم مفعول می‌آیند. موقعی که از مصدر استفاده می‌شود (برای مثال: <code>show</code>) رویداد قرار است که اجرا شود و وقتی که به صورت اسم مفعول می‌آید (برای مثال: <code>shown</code>) رویداد زمانی اجرا  می‌شود که آن عمل تمام شده‌باشد.</p>
           <p>تمام رویدادهای مصدر قابلیت preventDefault را فراهم می‌کنند. که این ویژگی به این معناست که قابلیت پیش‌فرض را قبل از اجرا شدن این عمل خنثی می‌کند.</p>
@@ -181,7 +189,7 @@ $('#myModal').on('show', function (e) {
           <h3>نمونه‌ٔ ثابت</h3>
           <p>که مدال با تیتر و بدنه و مجموعه‌ای از عملیات در پایین آن را نمایش می‌دهد.</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
-            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h3>تیتر مدال</h3>
@@ -227,7 +235,7 @@ $('#myModal').on('show', function (e) {
               <p>این <a href="#" role="button" class="btn popover-test" title="یک عنوان" data-content="و این‌جا متن مهیج دیگری وجود دارد. خیلی خوبه نه؟">دکمه</a> باعث ایجاد پوب بر روی آن می‌شود.</p>
 
               <h4>بالنک‌ها در مدال</h4>
-              <p><a href="#" class="tooltip-test" title="Tooltip">این پیوند</a> و <a href="#" class="tooltip-test" title="Tooltip">این یکی</a> باید با رفتن بر روی آن متنی را نمایش دهد.</p>
+              <p><a href="#" class="tooltip-test" title="بالنک">این پیوند</a> و <a href="#" class="tooltip-test" title="بالنک">این یکی</a> باید با رفتن بر روی آن متنی را نمایش دهد.</p>
 
               <hr>
 
@@ -925,13 +933,13 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟">کلیک کنید تا پوب تغییر حالت دهد</a>
         </div>
 
-        <h4>Four directions</h4>
+        <h4>چهار جهت</h4>
         <div class="bs-docs-example tooltip-demo">
           <ul class="bs-docs-tooltip-examples">
-            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در بالا">پوب در بالا</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در راست">پوب در راست</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در پایین">پوب در پایین</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در چپ">پوب در چپ</a></li>
           </ul>
         </div>
 
@@ -1137,7 +1145,7 @@ $('#my-alert').bind('closed', function () {
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <button type="button" class="btn btn-primary" data-toggle="button">تغییر وضعیت یک‌حالته</button>
             </div>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button"&gt;تغییر وضعیت یک‌حالته&lt;/button&gt;</pre>
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-primary" data-toggle="button"&gt;تغییر وضعیت یک‌حالته&lt;/button&gt;</pre>
 
             <h4>Checkbox</h4>
             <p>برای تبدیل شدن دکمه به شیوه checkbox، خصوصیت <code>data-toggle="buttons-checkbox"</code> را به عنصری که کلاس آن btn-group است، اضافه کنید.</p>
@@ -1150,9 +1158,9 @@ $('#my-alert').bind('closed', function () {
             </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
-  &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1167,9 +1175,9 @@ $('#my-alert').bind('closed', function () {
             </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group" data-toggle="buttons-radio"&gt;
-  &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1706,9 +1714,7 @@ $('[data-spy="affix"]').each(function () {
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-left"><a href="#">برگشت به بالا</a></p>
         <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/jnaqsh" target="_blank">@jnaqsh</a>.</p>
-        <p>کد تحت اجازه‌نامهٔ <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a> می‌باشد. مستندات تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشد.</p>
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
           <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
@@ -1725,7 +1731,6 @@ $('[data-spy="affix"]').each(function () {
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -1739,6 +1744,10 @@ $('[data-spy="affix"]').each(function () {
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
     <script src="assets/js/application.js"></script>
 
 

@@ -94,12 +94,12 @@
 
           <h3>{{_i}}زیرمنوها در افتادنی‌ها{{/i}}</h3>
           <p>{{_i}}با اضافه کردن کمی زبان نشانه‌گذاری، می‌توانید یک سطح اضافه به منوهای افتادنی اضافه کنید. با اضافه کردن کلاس <code>.dropdown-submenu</code> به هر <code>li</code> در یک منوی افتادنی شما می‌توانید زیرمنو ایجاد کنید.{{/i}}</p>
-          <div class="bs-docs-example" style="min-height: 180px;">
+          <div class="bs-docs-example bs-docs-example-submenus">
 
             <div class="pull-right">
               <p class="muted">پیش‌فرض</p>
               <div class="dropdown clearfix">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
                   <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
                   <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
@@ -118,10 +118,10 @@
               </div>
             </div>{{! /.pull-right }}
 
-            <div class="pull-right" style="margin-right: 20px;">
+            <div class="pull-right">
               <p class="muted">بالاافتادنی</p>
               <div class="dropup">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
                   <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
                   <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
@@ -140,10 +140,10 @@
               </div>
             </div>{{! /.pull-right }}
 
-            <div class="pull-right" style="margin-right: 20px;">
+            <div class="pull-right">
               <p class="muted">زیرمنوی راست</p>
               <div class="dropdown">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a tabindex="-1" href="#">{{_i}}عمل{{/i}}</a></li>
                   <li><a tabindex="-1" href="#">{{_i}}عملی دیگر{{/i}}</a></li>
                   <li><a tabindex="-1" href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
@@ -1786,6 +1786,9 @@
             </tbody>
           </table>
 
+          <h3>{{_i}}یه راحتی حذف می‌شوند{{/i}}</h3>
+          <p>{{_i}}برای پیاده‌سازی ساده، برچسب‌ها و نشان‌ها به راحتی حذف می‌گردند (با استفاده از انتخاب‌گر <code>:empty</code> سی‌اس‌اس) وقتی که در آن‌ها محتوایی وجود ندارد.{{/i}}</p>
+
         </section>
 
 
@@ -1848,22 +1851,22 @@
             <ul class="thumbnails">
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
             </ul>
@@ -1875,7 +1878,7 @@
             <ul class="thumbnails">
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
+                  <img data-src="holder.js/300x200" alt="">
                   <div class="caption">
                     <h3>{{_i}}برچسب بندانگشتی{{/i}}</h3>
                     <p>"نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد.</p>
@@ -1885,7 +1888,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
+                  <img data-src="holder.js/300x200" alt="">
                   <div class="caption">
                     <h3>{{_i}}برچسب بندانگشتی{{/i}}</h3>
                     <p>به منظور داشتن آزادی برای تغییر دادن، شما باید به کدهای منبع برنامه دسترسی داشته باشید. بنابراین دسترسی به کد منبع یک شرط ضروری می‌باشد.</p>
@@ -1895,7 +1898,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
+                  <img data-src="holder.js/300x200" alt="">
                   <div class="caption">
                     <h3>{{_i}}برچسب بندانگشتی{{/i}}</h3>
                     <p>اگر توسعه‌دهنده نرم‌افزار قادر باشد مجوز نرم‌افزار را، بدون این که شما کاری کنید که سبب این کار شود، باطل کند، این نرم‌افزار آزاد نیست.</p>
@@ -1921,7 +1924,7 @@
 &lt;ul class="thumbnails"&gt;
   &lt;li class="span4"&gt;
     &lt;a href="#" class="thumbnail"&gt;
-      &lt;img src="http://placehold.it/300x200" alt=""&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   ...
@@ -1932,7 +1935,7 @@
 &lt;ul class="thumbnails"&gt;
   &lt;li class="span4"&gt;
     &lt;div class="thumbnail"&gt;
-      &lt;img src="http://placehold.it/300x200" alt=""&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
       &lt;h3&gt;{{_i}}برچسب بندانگشتی{{/i}}&lt;/h3&gt;
       &lt;p&gt;{{_i}}عنوان بندانگشتی...{{/i}}&lt;/p&gt;
     &lt;/div&gt;
@@ -1946,27 +1949,27 @@
           <ul class="thumbnails">
             <li class="span4">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/360x270" alt="">
+                <img data-src="holder.js/360x270" alt="">
               </a>
             </li>
             <li class="span3">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/260x120" alt="">
+                <img data-src="holder.js/260x120" alt="">
               </a>
             </li>
             <li class="span2">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/160x120" alt="">
+                <img data-src="holder.js/160x120" alt="">
               </a>
             </li>
             <li class="span3">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/260x120" alt="">
+                <img data-src="holder.js/260x120" alt="">
               </a>
             </li>
             <li class="span2">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/160x120" alt="">
+                <img data-src="holder.js/160x120" alt="">
               </a>
             </li>
           </ul>
@@ -2022,7 +2025,7 @@
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-block"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
   &lt;h4&gt;{{_i}}هشدار!{{/i}}&lt;/h4&gt;
   {{_i}}شما برای من پنج فایل در قالب غیر استاندارد و حجیم...{{/i}}
 &lt;/div&gt;
@@ -2238,7 +2241,7 @@
           <div class="bs-docs-example">
             <div class="media">
               <a class="pull-right" href="#">
-                <img class="media-object" src="http://placehold.it/64x64">
+                <img class="media-object" data-src="holder.js/64x64">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">{{_i}}تیتر رسانه{{/i}}</h4>
@@ -2247,14 +2250,14 @@
             </div>
             <div class="media">
               <a class="pull-right" href="#">
-                <img class="media-object" src="http://placehold.it/64x64">
+                <img class="media-object" data-src="holder.js/64x64">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">{{_i}}تیتر رسانه{{/i}}</h4>
                 "نرم‌افزار آزاد" به معنای "غیر تجاری" نیست. یک برنامه آزاد باید برای استفاده تجاری، توسعه تجاری، و توزیع تجاری در دسترس باشد. توسعه تجاری نرم‌افزار آزاد دیگر غیر معمول نیست، بلکه چنین نرم‌افزارهای آزاد تجاری بسیار مهم هستند.
                 <div class="media">
                   <a class="pull-right" href="#">
-                    <img class="media-object" src="http://placehold.it/64x64">
+                    <img class="media-object" data-src="holder.js/64x64">
                   </a>
                   <div class="media-body">
                     <h4 class="media-heading">{{_i}}تیتر رسانه{{/i}}</h4>
@@ -2267,7 +2270,7 @@
 <pre class="prettyprint linenums">
 &lt;div class="media"&gt;
   &lt;a class="pull-right" href="#"&gt;
-    &lt;img class="media-object" src="http://placehold.it/64x64"&gt;
+    &lt;img class="media-object" data-src="holder.js/64x64"&gt;
   &lt;/a&gt;
   &lt;div class="media-body"&gt;
     &lt;h4 class="media-heading"&gt;{{_i}}تیتر رسانه{{/i}}&lt;/h4&gt;
@@ -2291,7 +2294,7 @@
             <ul class="media-list">
               <li class="media">
                 <a class="pull-right" href="#">
-                  <img class="media-object" src="http://placehold.it/64x64">
+                  <img class="media-object" data-src="holder.js/64x64">
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading">{{_i}}تیتر رسانه{{/i}}</h4>
@@ -2299,7 +2302,7 @@
                   <!-- Nested media object -->
                   <div class="media">
                     <a class="pull-right" href="#">
-                      <img class="media-object" src="http://placehold.it/64x64">
+                      <img class="media-object" data-src="holder.js/64x64">
                     </a>
                     <div class="media-body">
                       <h4 class="media-heading">{{_i}}تیتر فرورفته رسانه{{/i}}</h4>
@@ -2307,7 +2310,7 @@
                       <!-- Nested media object -->
                       <div class="media">
                         <a class="pull-right" href="#">
-                          <img class="media-object" src="http://placehold.it/64x64">
+                          <img class="media-object" data-src="holder.js/64x64">
                         </a>
                         <div class="media-body">
                           <h4 class="media-heading">{{_i}}تیتر فرورفته رسانه{{/i}}</h4>
@@ -2319,7 +2322,7 @@
                   <!-- Nested media object -->
                   <div class="media">
                     <a class="pull-right" href="#">
-                      <img class="media-object" src="http://placehold.it/64x64">
+                      <img class="media-object" data-src="holder.js/64x64">
                     </a>
                     <div class="media-body">
                       <h4 class="media-heading">{{_i}}تیتر فرورفته رسانه{{/i}}</h4>
@@ -2330,7 +2333,7 @@
               </li>
               <li class="media">
                 <a class="pull-right" href="#">
-                  <img class="media-object" src="http://placehold.it/64x64">
+                  <img class="media-object" data-src="holder.js/64x64">
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading">{{_i}}تیتر رسانه{{/i}}</h4>
@@ -2343,7 +2346,7 @@
 &lt;ul class="media-list"&gt;
   &lt;li class="media"&gt;
     &lt;a class="pull-right" href="#"&gt;
-      &lt;img class="media-object" src="http://placehold.it/64x64"&gt;
+      &lt;img class="media-object" data-src="holder.js/64x64"&gt;
     &lt;/a&gt;
     &lt;div class="media-body"&gt;
       &lt;h4 class="media-heading"&gt;{{_i}}تیتر رسانه{{/i}}&lt;/h4&gt;

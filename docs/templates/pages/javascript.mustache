@@ -63,6 +63,14 @@ $("#myModal").modal('show')                // مقداردهی و سپس فرا�
 </pre>
           <p>{{_i}}همچنین هر پلاگین سازندهٔ خودش را با فراخوانی خصوصیت `Constructor` نمایش می‌دهد: <code>$.fn.popover.Constructor</code>. اگر شما یک شی از پلاگین خاصی را می‌خواهید بدست آورید، به‌صورت مستقیم از عنصرش آن را بخواهید: <code>$('[rel=popover]').data('popover')</code>.{{/i}}</p>
 
+          <h3>{{_i}}بدون تداخل{{/i}}</h3>
+          <p>{{_i}}گاهی اوقات نیاز است که پلاگین‌های بوت‌استرپ را با دیگر چارچوب‌های رابط کاربری استفاده کرد. در این موارد تداخل فضای نام‌ها پیش می‌آید. اگر این اتفاق افتاد از <code>.noConflict</code> در پلاگینی که نیاز است، استفاده کنید.{{/i}}</p>
+
+<pre class="prettyprint linenums">
+var bootstrapButton = $.fn.button.noConflict() // به مقداری تخصیص داده شده، $.fn.button را برمی‌گرداند.
+$.fn.bootstrapBtn = bootstrapButton            // به $.fn.button کارایی بوت‌استرپ را اعمال می‌کند.
+</pre>
+
           <h3>{{_i}}رویدادها{{/i}}</h3>
           <p>{{_i}}بوت‌استرپ برای تمام پلاگین‌هایش رویدادهای خاص و واحدی را آماده کرده‌است. که به‌طور کلی آن‌ها به‌صورت مصدر و یا اسم مفعول می‌آیند. موقعی که از مصدر استفاده می‌شود (برای مثال: <code>show</code>) رویداد قرار است که اجرا شود و وقتی که به صورت اسم مفعول می‌آید (برای مثال: <code>shown</code>) رویداد زمانی اجرا  می‌شود که آن عمل تمام شده‌باشد.{{/i}}</p>
           <p>{{_i}}تمام رویدادهای مصدر قابلیت preventDefault را فراهم می‌کنند. که این ویژگی به این معناست که قابلیت پیش‌فرض را قبل از اجرا شدن این عمل خنثی می‌کند.{{/i}}</p>
@@ -111,7 +119,7 @@ $('#myModal').on('show', function (e) {
           <h3>{{_i}}نمونه‌ٔ ثابت{{/i}}</h3>
           <p>{{_i}}که مدال با تیتر و بدنه و مجموعه‌ای از عملیات در پایین آن را نمایش می‌دهد.{{/i}}</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
-            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h3>{{_i}}تیتر مدال{{/i}}</h3>
@@ -157,7 +165,7 @@ $('#myModal').on('show', function (e) {
               <p>{{_i}}این <a href="#" role="button" class="btn popover-test" title="یک عنوان" data-content="و این‌جا متن مهیج دیگری وجود دارد. خیلی خوبه نه؟">دکمه</a> باعث ایجاد پوب بر روی آن می‌شود.{{/i}}</p>
 
               <h4>{{_i}}بالنک‌ها در مدال{{/i}}</h4>
-              <p>{{_i}}<a href="#" class="tooltip-test" title="Tooltip">این پیوند</a> و <a href="#" class="tooltip-test" title="Tooltip">این یکی</a> باید با رفتن بر روی آن متنی را نمایش دهد.{{/i}}</p>
+              <p>{{_i}}<a href="#" class="tooltip-test" title="بالنک">این پیوند</a> و <a href="#" class="tooltip-test" title="بالنک">این یکی</a> باید با رفتن بر روی آن متنی را نمایش دهد.{{/i}}</p>
 
               <hr>
 
@@ -855,13 +863,13 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <a href="#" class="btn btn-large btn-danger" rel="popover" title="عنوان" data-content="و یک متن مهیج و خواندنی، این‌طور نیست؟">{{_i}}کلیک کنید تا پوب تغییر حالت دهد{{/i}}</a>
         </div>
 
-        <h4>{{_i}}Four directions{{/i}}</h4>
+        <h4>{{_i}}چهار جهت{{/i}}</h4>
         <div class="bs-docs-example tooltip-demo">
           <ul class="bs-docs-tooltip-examples">
-            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در بالا">پوب در بالا</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در راست">پوب در راست</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در پایین">پوب در پایین</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="نرم‌افزار آزاد به معنای غیرتجاری نیست." title="پوب در چپ">پوب در چپ</a></li>
           </ul>
         </div>{{! /example }}
 
@@ -1067,7 +1075,7 @@ $('#my-alert').bind('closed', function () {
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <button type="button" class="btn btn-primary" data-toggle="button">{{_i}}تغییر وضعیت یک‌حالته{{/i}}</button>
             </div>{{! /example }}
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn" data-toggle="button"&gt;تغییر وضعیت یک‌حالته&lt;/button&gt;</pre>
+            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-primary" data-toggle="button"&gt;تغییر وضعیت یک‌حالته&lt;/button&gt;</pre>
 
             <h4>{{_i}}Checkbox{{/i}}</h4>
             <p>{{_i}}برای تبدیل شدن دکمه به شیوه checkbox، خصوصیت <code>data-toggle="buttons-checkbox"</code> را به عنصری که کلاس آن btn-group است، اضافه کنید.{{/i}}</p>
@@ -1080,9 +1088,9 @@ $('#my-alert').bind('closed', function () {
             </div>{{! /example }}
 <pre class="prettyprint linenums">
 &lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
-  &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1097,9 +1105,9 @@ $('#my-alert').bind('closed', function () {
             </div>{{! /example }}
 <pre class="prettyprint linenums">
 &lt;div class="btn-group" data-toggle="buttons-radio"&gt;
-  &lt;button type="button" class="btn"&gt;راست&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;وسط&lt;/button&gt;
-  &lt;button type="button" class="btn"&gt;چپ&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;راست&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;وسط&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;چپ&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
