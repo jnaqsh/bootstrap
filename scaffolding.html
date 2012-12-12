@@ -19,11 +19,11 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -133,7 +133,7 @@
           <p>این شیوه‌های نمایش را شما می‌توانید در فایل <strong>scaffolding.less</strong> بیابید.</p>
 
           <h3>بازنشانی با استفاده از Normalize</h3>
-          <p>در بوت‌استرپ ۲، بلاک بازنشانی قدیمی را با <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a> تعویض کردیم. این پروژه توسط <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> که <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a> را نیز اجرا کرده‌است، نوشته شده‌است. از آن‌جایی که در داخل <strong>reset.less</strong> ما از Normalize زیاد استفاده می‌کنیم، ما یک سری از عناصر را به‌طور مشخص برای بوت‌استرپ حذف کردیم.</p>
+          <p>در بوت‌استرپ ۲، بلاک بازنشانی قدیمی را با <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a> تعویض کردیم. این پروژه توسط <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> و <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> که <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a> را نیز اجرا کرده‌اند، نوشته شده‌است. از آن‌جایی که در داخل <strong>reset.less</strong> ما از Normalize زیاد استفاده می‌کنیم، ما یک سری از عناصر را به‌طور مشخص برای بوت‌استرپ حذف کردیم.</p>
 
         </section>
 
@@ -311,13 +311,21 @@
 </pre>
 
           <h2>ردیف‌های تودرتو در شبکه متحرک</h2>
-          <p>ردیف‌های تودرتو در شبکه متحرک مقداری با ثابت فرق می‌کند: تعداد ستون‌های داخلی نباید اعدادشان با ستون پدرشان یکی شود. در هر سطح اندازه ستون‌ها بازنشانی می‌شود به دلیل این‌که هر ردیف اندازه‌اش ۱۰۰٪ اندازه ردیف پدرش است.</p>
+          <p>ردیف‌های تودرتو در شبکه متحرک مقداری با ثابت فرق می‌کند: هر سطح تودرتوی ستون‌ها تا ۱۲ ستون را در خود جای می‌دهند. این به خاطر این‌است که شبکه‌بندی متحرک از درصد به‌جای پیکسل برای عرض استفاده می‌کند.</p>
           <div class="row-fluid show-grid">
             <div class="span12">
               متحرک ۱۲
               <div class="row-fluid show-grid">
                 <div class="span6">
                   متحرک ۶
+                  <div class="row-fluid show-grid">
+                    <div class="span6">
+                      متحرک ۶
+                    </div>
+                    <div class="span6">
+                      متحرک ۶
+                    </div>
+                  </div>
                 </div>
                 <div class="span6">
                   متحرک ۶
@@ -330,7 +338,13 @@
   &lt;div class="span12"&gt;
     متحرک ۱۲
     &lt;div class="row-fluid"&gt;
-      &lt;div class="span6"&gt;متحرک ۶&lt;/div&gt;
+      &lt;div class="span6"&gt;
+        متحرک ۶
+        &lt;div class="row-fluid"&gt;
+          &lt;div class="span6"&gt;متحرک ۶&lt;/div&gt;
+          &lt;div class="span6"&gt;متحرک ۶&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;div class="span6"&gt;متحرک ۶&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -553,9 +567,7 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-left"><a href="#">برگشت به بالا</a></p>
         <p>طراحی و ساخته‌شده توسط <a href="http://twitter.com/mdo" target="_blank">@mdo</a> و <a href="http://twitter.com/fat" target="_blank">@fat</a> و سازگاری با زبان‌های راست به چپ و مستندات فارسی توسط <a href="http://twitter.com/jnaqsh" target="_blank">@jnaqsh</a>.</p>
-        <p>کد تحت اجازه‌نامهٔ <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a> می‌باشد. مستندات تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشد.</p>
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
           <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
@@ -572,7 +584,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -586,6 +597,10 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
     <script src="assets/js/application.js"></script>
 
 

@@ -163,7 +163,7 @@
             </address>
             <address>
               <strong>نام و نام خانوادگی</strong><br>
-              <a href="mailto:#">first.last@gmail.com</a>
+              <a href="mailto:#">first.last@example.com</a>
             </address>
           </div>
 <pre class="prettyprint linenums">
@@ -176,7 +176,7 @@
 
 &lt;address&gt;
   &lt;strong&gt;نام و نام خانوادگی&lt;/strong&gt;&lt;br&gt;
-  &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
+  &lt;a href="mailto:#"&gt;first.last@example.com&lt;/a&gt;
 &lt;/address&gt;
 </pre>
 
@@ -288,7 +288,7 @@
 </pre>
 
         <h3>{{_i}}بدون نقاط و اعداد اول هر سطر{{/i}}</h3>
-        <p>{{_i}}یک فهرست از آیتم‌هایی که تگ <code>list-style</code> را ندارد و یا حاشیه چپ بیشتری دارند.{{/i}}</p>
+        <p>{{_i}}یک فهرست از آیتم‌هایی که تگ <code>list-style</code> را ندارد و یا حاشیه راست بیشتری دارند(فقط بعد از فرزندها).{{/i}}</p>
         <div class="bs-docs-example">
           <ul class="unstyled">
             <li>چایی برای سربازها</li>
@@ -310,6 +310,21 @@
         </div>
 <pre class="prettyprint linenums">
 &lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        <h3>{{_i}}اینلاین{{/i}}</h3>
+        <p>{{_i}}تمام فهرست آیتم‌ها را در یم خط با <code>inline-block</code> و کمی حاشیه قرار می‌دهد.{{/i}}</p>
+        <div class="bs-docs-example">
+          <ul class="inline">
+            <li>قند برای شرکت</li>
+            <li>پوتین برای سربازها</li>
+            <li>سقف اتاق نم کشیده</li>
+          </ul>
+        </div>
+<pre class="prettyprint linenums">
+&lt;ul class="inline"&gt;
   &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
@@ -1237,6 +1252,54 @@
 &lt;/div&gt;
 </pre>
 
+          <h4>{{_i}}گروه‌های افتادنی تقسیم‌شده{{/i}}</h4>
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <div class="btn-group">
+                <button class="btn" tabindex="-1">عمل</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">{{_i}}عمل{{/i}}</a></li>
+                  <li><a href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                  <li><a href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                </ul>
+              </div>
+              <input type="text">
+            </div>
+            <div class="input-append">
+              <input type="text">
+              <div class="btn-group">
+                <button class="btn" tabindex="-1">عمل</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">{{_i}}عمل{{/i}}</a></li>
+                  <li><a href="#">{{_i}}عملی دیگر{{/i}}</a></li>
+                  <li><a href="#">{{_i}}یک چیز دیگر{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">{{_i}}پیوند جداشده{{/i}}</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;div class="btn-group"&gt;...&lt;/div&gt;
+    &lt;input type="text"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text"&gt;
+    &lt;div class="btn-group"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
           <h4>{{_i}}فرم جستجو{{/i}}</h4>
           <form class="bs-docs-example form-search">
             <div class="input-append">
@@ -1434,8 +1497,17 @@
 &lt;input class="input-xlarge" id="focusedInput" type="text" value="{{_i}}این focus شده‌است...{{/i}}"&gt;
 </pre>
 
+          <h3>{{_i}}ورودی‌های نامعتبر{{/i}}</h3>
+          <p>{{_i}}ورودی‌های را با استفاده از ویژگی پیش‌فرض مرورگر توسط <code>:invalid</code> استایل می‌دهد. ویژگی‌های <code>type</code> و <code>required</code> مشخص کنید.{{/i}}</p>
+          <form class="bs-docs-example form-inline">
+            <input class="span3" type="email" placeholder="test@example.com" required>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="span3" type="email" required&gt;
+</pre>
+
           <h3>{{_i}}ورودی‌های غیرفعال{{/i}}</h3>
-          <p>{{_i}}با اضافه کردن ویژگی <code>disabled</code> به ورودی از تغییر ورودی توسط کاربر جلوگیری کنید.{{/i}}</p>
+          <p>{{_i}}با اضافه کردن ویژگی <code>disabled</code> به ورودی از تغییر ورودی توسط کاربر جلوگیری کنید و کمی نمایش آن متفاوت می‌شود.{{/i}}</p>
           <form class="bs-docs-example form-inline">
             <input class="input-xlarge" id="disabledInput" type="text" placeholder="{{_i}}این یک ورودی غیرفعال است...{{/i}}" disabled>
           </form>
@@ -1686,9 +1758,9 @@
 
           <p>{{_i}}با اضافه کردن کلاس‌های زیر به تگ <code>&lt;img&gt;</code> به راحتی شیوهٔ نمایش عکس‌ها را تغییر دهید.{{/i}}</p>
           <div class="bs-docs-example bs-docs-example-images">
-            <img src="http://placehold.it/140x140" class="img-rounded">
-            <img src="http://placehold.it/140x140" class="img-circle">
-            <img src="http://placehold.it/140x140" class="img-polaroid">
+            <img data-src="holder.js/140x140" class="img-rounded">
+            <img data-src="holder.js/140x140" class="img-circle">
+            <img data-src="holder.js/140x140" class="img-polaroid">
           </div>
 <pre class="prettyprint linenums">
 &lt;img src="..." class="img-rounded"&gt;
@@ -1939,12 +2011,16 @@
 &lt;/div&gt;
 </pre>
 
-          <h5>{{_i}}دکمه کوچک{{/i}}</h5>
+          <h5>{{_i}}اندازه‌های دکمه{{/i}}</h5>
           <div class="bs-docs-example">
-            <a class="btn btn-small" href="#"><i class="icon-star"></i></a>
+            <a class="btn btn-large" href="#"><i class="icon-star"></i> ستاره</a>
+            <a class="btn btn-small" href="#"><i class="icon-star"></i> ستاره</a>
+            <a class="btn btn-mini" href="#"><i class="icon-star"></i> ستاره</a>
           </div>{{! /bs-docs-example }}
 <pre class="prettyprint linenums">
-&lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="btn btn-large" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt; ستاره&lt;/a&gt;
+&lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt; ستاره&lt;/a&gt;
+&lt;a class="btn btn-mini" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt; ستاره&lt;/a&gt;
 </pre>
 
 

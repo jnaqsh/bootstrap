@@ -52,7 +52,7 @@
           <p>{{_i}}این شیوه‌های نمایش را شما می‌توانید در فایل <strong>scaffolding.less</strong> بیابید.{{/i}}</p>
 
           <h3>{{_i}}بازنشانی با استفاده از Normalize{{/i}}</h3>
-          <p>{{_i}}در بوت‌استرپ ۲، بلاک بازنشانی قدیمی را با <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a> تعویض کردیم. این پروژه توسط <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> که <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a> را نیز اجرا کرده‌است، نوشته شده‌است. از آن‌جایی که در داخل <strong>reset.less</strong> ما از Normalize زیاد استفاده می‌کنیم، ما یک سری از عناصر را به‌طور مشخص برای بوت‌استرپ حذف کردیم.{{/i}}</p>
+          <p>{{_i}}در بوت‌استرپ ۲، بلاک بازنشانی قدیمی را با <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a> تعویض کردیم. این پروژه توسط <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> و <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> که <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a> را نیز اجرا کرده‌اند، نوشته شده‌است. از آن‌جایی که در داخل <strong>reset.less</strong> ما از Normalize زیاد استفاده می‌کنیم، ما یک سری از عناصر را به‌طور مشخص برای بوت‌استرپ حذف کردیم.{{/i}}</p>
 
         </section>
 
@@ -230,13 +230,21 @@
 </pre>
 
           <h2>{{_i}}ردیف‌های تودرتو در شبکه متحرک{{/i}}</h2>
-          <p>{{_i}}ردیف‌های تودرتو در شبکه متحرک مقداری با ثابت فرق می‌کند: تعداد ستون‌های داخلی نباید اعدادشان با ستون پدرشان یکی شود. در هر سطح اندازه ستون‌ها بازنشانی می‌شود به دلیل این‌که هر ردیف اندازه‌اش ۱۰۰٪ اندازه ردیف پدرش است.{{/i}}</p>
+          <p>{{_i}}ردیف‌های تودرتو در شبکه متحرک مقداری با ثابت فرق می‌کند: هر سطح تودرتوی ستون‌ها تا ۱۲ ستون را در خود جای می‌دهند. این به خاطر این‌است که شبکه‌بندی متحرک از درصد به‌جای پیکسل برای عرض استفاده می‌کند.{{/i}}</p>
           <div class="row-fluid show-grid">
             <div class="span12">
               {{_i}}متحرک ۱۲{{/i}}
               <div class="row-fluid show-grid">
                 <div class="span6">
                   {{_i}}متحرک ۶{{/i}}
+                  <div class="row-fluid show-grid">
+                    <div class="span6">
+                      {{_i}}متحرک ۶{{/i}}
+                    </div>
+                    <div class="span6">
+                      {{_i}}متحرک ۶{{/i}}
+                    </div>
+                  </div>
                 </div>
                 <div class="span6">
                   {{_i}}متحرک ۶{{/i}}
@@ -249,7 +257,13 @@
   &lt;div class="span12"&gt;
     {{_i}}متحرک ۱۲{{/i}}
     &lt;div class="row-fluid"&gt;
-      &lt;div class="span6"&gt;{{_i}}متحرک ۶{{/i}}&lt;/div&gt;
+      &lt;div class="span6"&gt;
+        {{_i}}متحرک ۶{{/i}}
+        &lt;div class="row-fluid"&gt;
+          &lt;div class="span6"&gt;{{_i}}متحرک ۶{{/i}}&lt;/div&gt;
+          &lt;div class="span6"&gt;{{_i}}متحرک ۶{{/i}}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;div class="span6"&gt;{{_i}}متحرک ۶{{/i}}&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
