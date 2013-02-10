@@ -15,7 +15,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -180,6 +180,19 @@
           <pre class="prettyprint">&lt;em&gt;یک متن مورب است&lt;/em&gt;</pre>
 
           <p><span class="label label-info">توجه کنید!</span> راحت باشید و از <code>&lt;b&gt;</code> و <code>&lt;i&gt;</code> می‌توانید در اچ‌تی‌ام‌ال ۵ استفاده کنید. با <code>&lt;b&gt;</code> می‌توانید کلمه و یا جملاتی را که اهمیت مضاعف ندارند را مشخص کرد و <code>&lt;i&gt;</code> بیشتر برای آواها، کلمات تخصصی و یا غیره استفاده می‌شود.</p>
+
+          <h3>کلاس‌های همراستاسازی</h3>
+          <p>به‌راحتی متون را نسبت به اجزا با استفاده از کلاس‌های همراستاسازی، همراستا کنید.</p>
+          <div class="bs-docs-example">
+            <p class="text-left">متن چپ‌چین.</p>
+            <p class="text-center">متن وسطچین.</p>
+            <p class="text-right">متن راست‌چین.</p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p class="text-left"&gt;متن چپ‌چین.&lt;/p&gt;
+&lt;p class="text-center"&gt;متن وسطچین.&lt;/p&gt;
+&lt;p class="text-right"&gt;متن راست‌چین.&lt;/p&gt;
+</pre>
 
           <h3>کلاس‌های تکیه‌دهنده</h3>
           <p>با استفاده از کلاس‌های کمکی به‌وسیله رنگ می‌توان اهمیت را مشخص کرد.</p>
@@ -462,7 +475,7 @@
   برای مثال تگ <code>&lt;section&gt;</code> به صورت اینلاین تبدیل خواهد شد.
 </div>
 <pre class="prettyprint linenums">
-برای مثال تگ, &lt;code&gt;&lt;section&gt;&lt;/code&gt; به صورت اینلاین تبدیل خواهد شد.
+برای مثال تگ, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; به صورت اینلاین تبدیل خواهد شد.
 </pre>
 
           <h2>بلاک پایه</h2>
@@ -1571,7 +1584,8 @@
 </pre>
 
           <h3>ورودی‌های نامعتبر</h3>
-          <p>ورودی‌های را با استفاده از ویژگی پیش‌فرض مرورگر توسط <code>:invalid</code> استایل می‌دهد. ویژگی‌های <code>type</code> و <code>required</code> مشخص کنید.</p>
+          <p>ورودی‌ها را با استفاده از ویژگی پیش‌فرض مرورگر توسط <code>:invalid</code> استایل می‌دهد. <code>type</code> را مشخص کنید، خصوصیت <code>required</code> را در صورتی که اختیاری نیست و (اگر قابل پیاده‌سازی بود) <code>pattern</code> را نیز مشخص کنید.</p>
+          <p>در نسخه‌های اینترنت اکسپلورر ۷ تا ۹ به دلیل پشتیبانی نکردن از انتخاب‌گرهای سی‌اس‌اس pseudo، وجود ندارد.</p>
           <form class="bs-docs-example form-inline">
             <input class="span3" type="email" placeholder="test@example.com" required>
           </form>
@@ -1629,6 +1643,7 @@
     &lt;span class="help-inline"&gt;چیزی ممکن است اشتباه شده باشد&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="control-group error"&gt;
   &lt;label class="control-label" for="inputError"&gt;ورودی با error&lt;/label&gt;
   &lt;div class="controls"&gt;
@@ -1643,6 +1658,15 @@
     &lt;span class="help-inline"&gt;نام کاربری قبلا گرفته شده‌است&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div class="control-group info"&gt;
+  &lt;label class="control-label" for="inputInfo"&gt;Input with info&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputInfo"&gt;
+    &lt;span class="help-inline"&gt;Username is already taken&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class="control-group success"&gt;
   &lt;label class="control-label" for="inputSuccess"&gt;ورودی با success&lt;/label&gt;
   &lt;div class="controls"&gt;
@@ -2047,7 +2071,6 @@
 <pre class="prettyprint linenums">
 &lt;div class="btn-toolbar"&gt;
   &lt;div class="btn-group"&gt;
-
     &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
     &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
     &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
@@ -2159,8 +2182,10 @@
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
           <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
+          <li class="muted">&middot;</li>
           <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
-          <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/blob/master/CHANGELOG.md">تاریخچه تغییرات</a></li>
         </ul>
       </div>
     </footer>

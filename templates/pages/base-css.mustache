@@ -105,6 +105,19 @@
 
           <p><span class="label label-info">{{_i}}توجه کنید!{{/i}}</span> {{_i}}راحت باشید و از <code>&lt;b&gt;</code> و <code>&lt;i&gt;</code> می‌توانید در اچ‌تی‌ام‌ال ۵ استفاده کنید. با <code>&lt;b&gt;</code> می‌توانید کلمه و یا جملاتی را که اهمیت مضاعف ندارند را مشخص کرد و <code>&lt;i&gt;</code> بیشتر برای آواها، کلمات تخصصی و یا غیره استفاده می‌شود.{{/i}}</p>
 
+          <h3>{{_i}}کلاس‌های همراستاسازی{{/i}}</h3>
+          <p>{{_i}}به‌راحتی متون را نسبت به اجزا با استفاده از کلاس‌های همراستاسازی، همراستا کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <p class="text-left">متن چپ‌چین.</p>
+            <p class="text-center">متن وسطچین.</p>
+            <p class="text-right">متن راست‌چین.</p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p class="text-left"&gt;متن چپ‌چین.&lt;/p&gt;
+&lt;p class="text-center"&gt;متن وسطچین.&lt;/p&gt;
+&lt;p class="text-right"&gt;متن راست‌چین.&lt;/p&gt;
+</pre>
+
           <h3>{{_i}}کلاس‌های تکیه‌دهنده{{/i}}</h3>
           <p>{{_i}}با استفاده از کلاس‌های کمکی به‌وسیله رنگ می‌توان اهمیت را مشخص کرد.{{/i}}</p>
           <div class="bs-docs-example">
@@ -389,7 +402,7 @@
   برای مثال تگ <code>&lt;section&gt;</code> به صورت اینلاین تبدیل خواهد شد.
 </div>
 <pre class="prettyprint linenums">
-{{_i}}برای مثال تگ, &lt;code&gt;&lt;section&gt;&lt;/code&gt; به صورت اینلاین تبدیل خواهد شد.{{/i}}
+{{_i}}برای مثال تگ, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; به صورت اینلاین تبدیل خواهد شد.{{/i}}
 </pre>
 
           <h2>بلاک پایه</h2>
@@ -1498,7 +1511,8 @@
 </pre>
 
           <h3>{{_i}}ورودی‌های نامعتبر{{/i}}</h3>
-          <p>{{_i}}ورودی‌های را با استفاده از ویژگی پیش‌فرض مرورگر توسط <code>:invalid</code> استایل می‌دهد. ویژگی‌های <code>type</code> و <code>required</code> مشخص کنید.{{/i}}</p>
+          <p>{{_i}}ورودی‌ها را با استفاده از ویژگی پیش‌فرض مرورگر توسط <code>:invalid</code> استایل می‌دهد. <code>type</code> را مشخص کنید، خصوصیت <code>required</code> را در صورتی که اختیاری نیست و (اگر قابل پیاده‌سازی بود) <code>pattern</code> را نیز مشخص کنید.{{/i}}</p>
+          <p>{{_i}}در نسخه‌های اینترنت اکسپلورر ۷ تا ۹ به دلیل پشتیبانی نکردن از انتخاب‌گرهای سی‌اس‌اس pseudo، وجود ندارد.{{/i}}</p>
           <form class="bs-docs-example form-inline">
             <input class="span3" type="email" placeholder="test@example.com" required>
           </form>
@@ -1556,6 +1570,7 @@
     &lt;span class="help-inline"&gt;{{_i}}چیزی ممکن است اشتباه شده باشد{{/i}}&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;div class="control-group error"&gt;
   &lt;label class="control-label" for="inputError"&gt;{{_i}}ورودی با error{{/i}}&lt;/label&gt;
   &lt;div class="controls"&gt;
@@ -1570,6 +1585,15 @@
     &lt;span class="help-inline"&gt;{{_i}}نام کاربری قبلا گرفته شده‌است{{/i}}&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div class="control-group info"&gt;
+  &lt;label class="control-label" for="inputInfo"&gt;{{_i}}Input with info{{/i}}&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputInfo"&gt;
+    &lt;span class="help-inline"&gt;{{_i}}Username is already taken{{/i}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class="control-group success"&gt;
   &lt;label class="control-label" for="inputSuccess"&gt;{{_i}}ورودی با success{{/i}}&lt;/label&gt;
   &lt;div class="controls"&gt;
@@ -1974,7 +1998,6 @@
 <pre class="prettyprint linenums">
 &lt;div class="btn-toolbar"&gt;
   &lt;div class="btn-group"&gt;
-
     &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
     &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
     &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;

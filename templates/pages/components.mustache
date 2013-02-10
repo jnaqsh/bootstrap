@@ -92,6 +92,25 @@
 &lt;/ul&gt;
 </pre>
 
+          <h3>{{_i}}انتخاب‌های منوی غیرفعال{{/i}}</h3>
+          <p>{{_i}}کلاس <code>.disabled</code> را به <code>&lt;li&gt;</code> در یک افتادنی برای غیرفعال کردن پیوند، اضافه کنید.{{/i}}</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">{{_i}}پیوند معمولی{{/i}}</a></li>
+                <li class="disabled"><a tabindex="-1" href="#">{{_i}}پیوند غیرفعال{{/i}}</a></li>
+                <li><a tabindex="-1" href="#">{{_i}}پیوندی دیگر{{/i}}</a></li>
+              </ul>
+            </div>
+          </div>{{! /example }}
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;{{_i}}پیوند معمولی{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;{{_i}}پیوند غیرفعال{{/i}}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;{{_i}}پیوندی دیگر{{/i}}&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
           <h3>{{_i}}زیرمنوها در افتادنی‌ها{{/i}}</h3>
           <p>{{_i}}با اضافه کردن کمی زبان نشانه‌گذاری، می‌توانید یک سطح اضافه به منوهای افتادنی اضافه کنید. با اضافه کردن کلاس <code>.dropdown-submenu</code> به هر <code>li</code> در یک منوی افتادنی شما می‌توانید زیرمنو ایجاد کنید.{{/i}}</p>
           <div class="bs-docs-example bs-docs-example-submenus">
@@ -1462,7 +1481,7 @@
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
   &lt;ul&gt;
-    &lt;li class="disabled"&gt;&lt;span&gt;Prev&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
     &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
     ...
   &lt;/ul&gt;
