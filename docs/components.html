@@ -15,7 +15,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -160,6 +160,25 @@
 <pre class="prettyprint linenums">
 &lt;ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"&gt;
   ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>انتخاب‌های منوی غیرفعال</h3>
+          <p>کلاس <code>.disabled</code> را به <code>&lt;li&gt;</code> در یک افتادنی برای غیرفعال کردن پیوند، اضافه کنید.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">پیوند معمولی</a></li>
+                <li class="disabled"><a tabindex="-1" href="#">پیوند غیرفعال</a></li>
+                <li><a tabindex="-1" href="#">پیوندی دیگر</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;پیوند معمولی&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;پیوند غیرفعال&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;پیوندی دیگر&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -1533,7 +1552,7 @@
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
   &lt;ul&gt;
-    &lt;li class="disabled"&gt;&lt;span&gt;Prev&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
     &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
     ...
   &lt;/ul&gt;
@@ -2563,8 +2582,10 @@ class="clearfix"
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
           <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
+          <li class="muted">&middot;</li>
           <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
-          <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/blob/master/CHANGELOG.md">تاریخچه تغییرات</a></li>
         </ul>
       </div>
     </footer>

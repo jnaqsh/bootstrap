@@ -1,8 +1,12 @@
-# [Twitter Bootstrap RTL v2.2.2](http://jnaqsh.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+<a href="http://rbootstrap.ir">
+  <img src="http://jnaqsh.github.com/bootstrap/assets/img/bootstrap-docs-readme.png" width="100px">
+</a>
+
+# [Twitter Bootstrap RTL v2.3.0](http://jnaqsh.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat) at Twitter originally and make compatible with RTL languages by Hamed Ramezanian at Naqsh Jahan Toos Inc.
 
-To get started, checkout http://rbootstrap.ir!
+To get started, checkout [http://rbootstrap.ir](http://rbootstrap.ir)!
 
 
 
@@ -30,7 +34,7 @@ And constructed with the following guidelines:
 * New additions without breaking backward compatibility bumps the minor (and resets the patch)
 * Bug fixes and misc changes bumps the patch
 
-For more information on SemVer, please visit http://semver.org/.
+For more information on SemVer, please visit [http://semver.org/](http://semver.org/).
 
 
 
@@ -86,7 +90,17 @@ Thanks!
 
 **Hamed Ramezanian**
 
-+ http://github.com/iCEAGE
++ [http://github.com/iCEAGE](http://github.com/iCEAGE)
+
+**Mark Otto**
+
++ [http://twitter.com/mdo](http://twitter.com/mdo)
++ [http://github.com/mdo](http://github.com/mdo)
+
+**Jacob Thornton**
+
++ [http://twitter.com/fat](http://twitter.com/fat)
++ [http://github.com/fat](http://github.com/fat)
 
 
 
@@ -98,7 +112,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
 You may obtain a copy of the License in the LICENSE file, or at:
 
-   http://www.apache.org/licenses/LICENSE-2.0
+  [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

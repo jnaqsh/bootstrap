@@ -127,17 +127,18 @@
           <div class="page-header">
             <h1>{{_i}}۴. قالب اچ‌تی‌ام‌ال پایه{{/i}}</h1>
           </div>
-          <p class="lead">{{_i}}با یک تعریف اجمالی، حالا می‌توان به سراغ این رفت که چگونه می‌توان از بوت‌استرپ استفاده کرد. برای استفاده، یک قالب پایه اچ‌تی‌ام‌ال را، تجهیز به چیزهایی که در <a href="#file-structure">ساختار فایل</a> گفته شد، می‌کنیم.{{/i}}</p>
+          <p class="lead">{{_i}}با یک تعریف اجمالی، حالا می‌توان به سراغ این رفت که چگونه می‌توان از بوت‌استرپ استفاده کرد. برای استفاده، یک قالب پایه اچ‌تی‌ام‌ال را، تجهیز به چیزهایی که در <a href="./getting-started.html#file-structure">ساختار فایل</a> گفته شد، می‌کنیم.{{/i}}</p>
           <p>{{_i}}این یک <strong>قالب پایه اچ‌تی‌ام‌ال</strong> است:{{/i}}</p>
 <pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;قالب ۱۰۱ بوت‌استرپ&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;سلام، دنیا!&lt;/h1&gt;
-    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -147,12 +148,13 @@
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;قالب ۱۰۱ بوت‌استرپ&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;!-- Bootstrap --&gt;
     &lt;link href="css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;سلام، دنیا!&lt;/h1&gt;
-    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
     &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -172,21 +174,21 @@
           <ul class="thumbnails bootstrap-examples">
             <li class="span3">
               <a class="thumbnail" href="examples/starter-template.html">
-                <img src="assets/img/examples/bootstrap-example-starter.jpg" alt="">
+                <img src="assets/img/examples/bootstrap-example-starter.png" alt="">
               </a>
               <h4>{{_i}}الگوی آغازین{{/i}}</h4>
               <p>{{_i}}یک سند اچ‌تی‌ام‌ال پایه که تجهیز به بوت‌استرپ شده‌است.{{/i}}</p>
             </li>
             <li class="span3">
               <a class="thumbnail" href="examples/hero.html">
-                <img src="assets/img/examples/bootstrap-example-hero.jpg" alt="">
+                <img src="assets/img/examples/bootstrap-example-marketing.png" alt="">
               </a>
               <h4>{{_i}}یک سایت فروشگاه پایه{{/i}}</h4>
               <p>{{_i}}تجهیز صفحه اصلی به یک واحد قهرمان که در آن پیام اصلی قرار دارد و با سه جزء دیگر.{{/i}}</p>
             </li>
             <li class="span3">
               <a class="thumbnail" href="examples/fluid.html">
-                <img src="assets/img/examples/bootstrap-example-fluid.jpg" alt="">
+                <img src="assets/img/examples/bootstrap-example-fluid.png" alt="">
               </a>
               <h4>{{_i}}لایه متحرک{{/i}}</h4>
               <p>{{_i}}استفاده از سامانه شبکه‌ای متحرک پاسخگو برای ایجاد طراحی لایه‌ای روان و پاسخگو.{{/i}}</p>
@@ -200,12 +202,20 @@
               <p>{{_i}}الگوی فروشگاه باریک و سبک برای پروژه‌ها و گروه‌های کوچک مناسب است.{{/i}}</p>
             </li>
             <li class="span3">
+              <a class="thumbnail" href="examples/justified-nav.html">
+                <img src="assets/img/examples/bootstrap-example-justified-nav.png" alt="">
+              </a>
+              <h4>{{_i}}ناوبری با اندازه یکسان{{/i}}</h4>
+              <p>{{_i}}صفحه فروشگاه با پیوندهای ناوبری هم‌عرض.{{/i}}</p>
+            </li>
+            <li class="span3">
               <a class="thumbnail" href="examples/signin.html">
                 <img src="assets/img/examples/bootstrap-example-signin.png" alt="">
               </a>
               <h4>{{_i}}ورود به سیستم{{/i}}</h4>
               <p>{{_i}}یک فرم پایه‌ای ورود به سیستم با کنترل‌کننده‌های بزرگ‌تر و لایهٔ متحرک.{{/i}}</p>
             </li>
+
             <li class="span3">
               <a class="thumbnail" href="examples/sticky-footer.html">
                 <img src="assets/img/examples/bootstrap-example-sticky-footer.png" alt="">
@@ -213,7 +223,6 @@
               <h4>{{_i}}صفحه پایینی چسبنده{{/i}}</h4>
               <p>{{_i}}یک صفحه پایینی با ارتفاع ثابت که به پایین صفحه چسبیده است.{{/i}}</p>
             </li>
-
             <li class="span3">
               <a class="thumbnail" href="examples/carousel.html">
                 <img src="assets/img/examples/bootstrap-example-carousel.png" alt="">

@@ -15,7 +15,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
@@ -136,16 +136,8 @@
 
           <h2>ابزارها برای کامپایل</h2>
 
-          <h3>Node with makefile</h3>
-          <p>با استفاده از دستور زیر کامپایل خط فرمان LESS، JSHint، Recess و uglify-js را با استفاده از npm نصب کنید:</p>
-          <pre>$ npm install -g less jshint recess uglify-js</pre>
-          <p>یک‌بار که آن نصب کردید دستور <code>make</code> را در زیرشاخهٔ بوت‌استرپ اجرا کنید.</p>
-          <p>به‌علاوه، اگر شما <a href="https://github.com/mynyml/watchr">watchr</a> را نصب کرده‌اید، می‌توانید دستور <code>make watch</code> را برای ساخت دوباره بوت‌استرپ به‌صورت خودکار بعد از ویرایش فایل‌های بوت‌استرپ، وارد کنید (این فقط کار را راحت‌تر می‌کند و نیازی نیست).</p>
-
           <h3>خط فرمان</h3>
-          <p>ابزار خط فرمان LESS را با استفاده از Node نصب کنید و دستور زیر را اجرا کنید:</p>
-          <pre>$ lessc ./less/bootstrap.less > bootstrap.css</pre>
-          <p>مطمئن شوید که دستور خط فرمان شامل <code>--compress</code> می‌شود، اگر می‌خواهید که کمی فشرده‌سازی انجام دهید.</p>
+          <p><a href="https://github.com/twitter/bootstrap#developers">دستورات readme پروژه</a> در گیت‌هاب را برای کامپایل در خط فرمان، دنبال کنید.</p>
 
           <h3>جاوااسکریپت</h3>
           <p><a href="http://lesscss.org/">آخرین نسخهٔ Less.js را دانلود کنید</a>و مسیر آن و بوت‌استرپ را در <code>&lt;head&gt;</code> قرار دهید.</p>
@@ -249,8 +241,10 @@
         <p>آیکن‌ها از <a href="http://glyphicons.com">Glyphicons Free</a> هستند که تحت اجازه‌نامه <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> می‌باشند.</p>
         <ul class="footer-links">
           <li><a href="http://blog.rbootstrap.ir"><a href="http://blog.rbootstrap.ir">وبلاگ را بخوانید</a></a></li>
+          <li class="muted">&middot;</li>
           <li><a href="https://github.com/jnaqsh/bootstrap/issues?state=open">مشکلات را بفرستید</a></li>
-          <li><a href="https://github.com/jnaqsh/bootstrap/wiki">نقشه راه و تغییرات</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/jnaqsh/bootstrap/blob/master/CHANGELOG.md">تاریخچه تغییرات</a></li>
         </ul>
       </div>
     </footer>
