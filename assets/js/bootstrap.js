@@ -1888,7 +1888,7 @@
         .insertAfter(this.$element)
         .css({
           top: pos.top + pos.height
-        , left: pos.left
+        , right: "19px"
         })
         .show()
 
