@@ -2,7 +2,7 @@
   <img src="http://jnaqsh.github.com/bootstrap/assets/img/bootstrap-docs-readme.png" width="100px">
 </a>
 
-# [Twitter Bootstrap RTL v2.3.1](http://jnaqsh.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+# [Twitter Bootstrap RTL v2.3.2](http://jnaqsh.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat) at Twitter originally and make compatible with RTL languages by Hamed Ramezanian at Naqsh Jahan Toos Inc.
 

@@ -1,3 +1,10 @@
+## 2.3.2 (March 28, 2013)
+
+This patch comes from just rbootstrap not original twitter bootstrap
+
+- fix position of typeahead
+- adds nerdnews as example site
+
 ## 2.3.1 (February 28, 2013)
 
 Patch release for @fat's n00bery
