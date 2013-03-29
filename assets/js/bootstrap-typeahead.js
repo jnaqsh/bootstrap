@@ -57,14 +57,16 @@
 
   , show: function () {
       var pos = $.extend({}, this.$element.position(), {
-        height: this.$element[0].offsetHeight
+        height: this.$element[0].offsetHeight,
+        width: this.$element[0].offsetWidth
       })
 
       this.$menu
         .insertAfter(this.$element)
         .css({
           top: pos.top + pos.height
-        , right: "19px"
+        , left: (pos.left + pos.width) - this.$menu.outerWidth()
+        , right: "auto"
         })
         .show()
 
