@@ -1,4 +1,7 @@
-## 2.3.2 (March 28, 2013)
+## 2.3.2 (May 17, 2013)
+- Fix dropdown for firefox (middleclick) and mobile
+
+## 2.3.2.1 (March 28, 2013)
 
 This patch comes from just rbootstrap not original twitter bootstrap
 
