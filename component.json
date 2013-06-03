@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
+  "name": "rbootstrap",
   "version": "2.3.2",
   "main": ["./docs/assets/js/bootstrap.js", "./docs/assets/css/bootstrap.css"],
   "dependencies": {
